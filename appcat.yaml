@@ -1,0 +1,23 @@
+--- !<Application>
+id: "e4d50aaf-5c53-426b-a4c6-7aba9d8abbe7"
+modelType: "Application"
+appCode: "react-ts-template"
+atlasId: "APP-11389"
+name: "React TS Template"
+appType: "Built"
+description: "This template provides a minimal setup to get React working in Vite\
+  \ with Redux Toolkit, Mui Material, React Router Dom, Vitest, i18next and Storybook."
+state: "Active"
+financialData:
+  applies: false
+personalData:
+  applies: false
+usages:
+- "Internal"
+hostedBy: "aws"
+deploymentModel: "Clustered"
+areaSetByUser: "technology-professional-learning"
+functionalArea: "technology-talent"
+systemId: "39f98a1a-fe88-47d4-b1e5-4257582a73d7"
+shortCode: "rcttstmplt"
+isSystem: false

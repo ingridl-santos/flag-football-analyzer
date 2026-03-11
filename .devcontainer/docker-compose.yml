@@ -1,0 +1,17 @@
+services:
+  app:
+    hostname: react-ts-template
+    build:
+      context: ../
+      dockerfile: ./.devcontainer/development.dockerfile
+    volumes:
+      - '../:/app'
+      - '/app/node_modules'
+    networks:
+      - PL_AUTOMATION-network
+    stdin_open: true
+    tty: true
+
+networks:
+  PL_AUTOMATION-network:
+    name: PL_AUTOMATION-network

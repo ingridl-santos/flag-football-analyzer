@@ -1,0 +1,10 @@
+# This file is here for additional IDE support
+# to enforce consistent indentations across files
+# https://editorconfig.org/
+
+[*]
+charset = utf-8
+indent_style = space
+end_of_line = lf
+indent_size = 2
+insert_final_newline = true

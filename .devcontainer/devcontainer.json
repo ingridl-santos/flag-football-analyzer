@@ -1,0 +1,31 @@
+{
+  "name": "react-ts-template",
+  "dockerComposeFile": [ "docker-compose.yml" ],
+  "service": "app",
+  "workspaceFolder": "/app",
+  "postCreateCommand": "git config --system --add safe.directory ${containerWorkspaceFolder}; ./generate_environment.sh \"PUBLIC_*\" ./public/environment.js",
+  "containerEnv": {
+    "NODE_ENV": "development",
+    "PUBLIC_NODE_ENV": "development"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "eslint.format.enable": true,
+        "eslint.validate": [
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact"
+        ],
+        "editor.tabSize": 2,
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "stylelint.vscode-stylelint",
+        "vitest.explorer",
+        "editorconfig.editorconfig"
+      ]
+    }
+  }
+}

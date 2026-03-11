@@ -1,0 +1,5 @@
+{
+  "header": "Wiley Frontend Template",
+  "description": "React + TypeScript + Vite + MUI Material + Redux Toolkit + Eslint + Stylelint + Vitest + React Router Dom + i18next + Storybook",
+  "goToTodo": "Go to To Do List"
+}
