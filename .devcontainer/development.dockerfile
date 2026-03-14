@@ -5,7 +5,6 @@ WORKDIR /app
 RUN apk add --no-cache git
 
 COPY ./package*.json ./
-COPY ./.npmrc ./
 
 RUN npm install
 

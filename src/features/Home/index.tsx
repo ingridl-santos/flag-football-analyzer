@@ -34,12 +34,6 @@ const Home = () => {
           />
         </Link>
 
-        <img
-          data-testid="WileyLogoImg-test-id"
-          src="/wileyLogo.png"
-          alt="Wiley Logo"
-          style={{ maxWidth: 300 }}
-        />
       </Stack>
 
       <Typography variant="h1">
