@@ -56,19 +56,14 @@ This application allows coaches to:
     ├── __tests__/
     │   └── snapshots.test.ts
     ├── components/       # Shared UI components
-    │   ├── ComponentExample/
-    │   ├── InputForm/
-    │   └── TodoItem/
     ├── config/           # Test and story setup
     │   ├── setupPortableStories.ts
     │   └── setupTests.ts
     ├── features/         # Domain features
-    │   ├── Home/
-    │   └── TodoListPage/
+    │   └── Home/
     ├── redux/            # Redux store and slices
     │   ├── hooks.ts
-    │   ├── store.ts
-    │   └── TodoSlice/
+    │   └── store.ts
     ├── router/           # Route definitions
     │   ├── routeDefinitions.tsx
     │   └── router.tsx
