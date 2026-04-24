@@ -3,7 +3,7 @@
   "dockerComposeFile": [ "docker-compose.yml" ],
   "service": "app",
   "workspaceFolder": "/app",
-  "postCreateCommand": "git config --system --add safe.directory ${containerWorkspaceFolder}; ./generate_environment.sh \"PUBLIC_*\" ./public/environment.js",
+  "postCreateCommand": "git config --system --add safe.directory ${containerWorkspaceFolder}; ./generate_environment.sh \"PUBLIC_*\" ./public/environment.js; npm run prepare",
   "containerEnv": {
     "NODE_ENV": "development",
     "PUBLIC_NODE_ENV": "development"
@@ -11,6 +11,7 @@
   "customizations": {
     "vscode": {
       "settings": {
+        "remote.localPortHost": "allInterfaces",
         "eslint.format.enable": true,
         "eslint.validate": [
           "javascript",
@@ -19,6 +20,9 @@
           "typescriptreact"
         ],
         "editor.tabSize": 2,
+        "chat.tools.terminal.terminalProfile.linux": {
+          "path": "/bin/ash"
+        }
       },
       "extensions": [
         "dbaeumer.vscode-eslint",
