@@ -1,0 +1,88 @@
+<div>
+  <div
+    class="MuiStack-root css-ralwq-MuiStack-root"
+  >
+    <div
+      class="MuiStack-root css-g79vgv-MuiStack-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-quufyz-MuiTypography-root"
+      >
+        Contained · Outlined · Text
+      </h5>
+      <div
+        class="MuiStack-root css-mua9th-MuiStack-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-13fqfg1-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Contained
+          <span
+            class="MuiButton-icon MuiButton-endIcon MuiButton-iconSizeMedium css-1gnd1fd-MuiButton-endIcon"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="ChevronRightIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+              />
+            </svg>
+          </span>
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-11hdqfe-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Outlined
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-rfv1e0-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Text
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiStack-root css-g79vgv-MuiStack-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-quufyz-MuiTypography-root"
+      >
+        Custom: underlined
+      </h5>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-wgl6ki-MuiTypography-root"
+      >
+        Used for navigation items. Shows an animated underline when when aria-current="page" is set.
+      </p>
+      <div
+        class="MuiStack-root css-10phrut-MuiStack-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-underlined MuiButton-underlinedPrimary MuiButton-sizeMedium MuiButton-underlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-underlined MuiButton-underlinedPrimary MuiButton-sizeMedium MuiButton-underlinedSizeMedium MuiButton-colorPrimary css-q5hlgp-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Inactive
+        </button>
+        <button
+          aria-current="page"
+          class="MuiButtonBase-root MuiButton-root MuiButton-underlined MuiButton-underlinedPrimary MuiButton-sizeMedium MuiButton-underlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-underlined MuiButton-underlinedPrimary MuiButton-sizeMedium MuiButton-underlinedSizeMedium MuiButton-colorPrimary css-q5hlgp-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Active page
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

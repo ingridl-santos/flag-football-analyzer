@@ -1,0 +1,37 @@
+<div>
+  <div
+    class="MuiStack-root css-q8krst-MuiStack-root"
+  >
+    <div
+      class="MuiStack-root css-g79vgv-MuiStack-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-quufyz-MuiTypography-root"
+      >
+        Wave animation (default)
+      </h5>
+      <div
+        class="MuiStack-root css-10phrut-MuiStack-root"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-circular MuiSkeleton-wave css-cstn6z-MuiSkeleton-root"
+          style="width: 3rem; height: 3rem;"
+        />
+        <div
+          class="MuiStack-root css-3m5r2w-MuiStack-root"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-flecig-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1sczdnj-MuiSkeleton-root"
+          />
+        </div>
+      </div>
+      <span
+        class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-1phdgz1-MuiSkeleton-root"
+        style="width: 100%; height: 8rem;"
+      />
+    </div>
+  </div>
+</div>

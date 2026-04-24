@@ -12,7 +12,7 @@
       style="display: block; border-radius: 100%; box-sizing: border-box; border-style: none; border-color: #fff; border-width: 0.25rem; width: 1rem; height: 1rem;"
     />
     <p
-      class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-1w9rufw-MuiTypography-root"
     >
       exampleString
     </p>

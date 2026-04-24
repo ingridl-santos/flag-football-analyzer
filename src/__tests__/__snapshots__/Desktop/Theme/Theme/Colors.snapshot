@@ -1,0 +1,747 @@
+<div>
+  <div
+    class="MuiStack-root css-121tpim-MuiStack-root"
+  >
+    <div
+      class="MuiStack-root css-g79vgv-MuiStack-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-2n8v65-MuiTypography-root"
+      >
+        primary
+      </h5>
+      <table
+        class="MuiTable-root css-1f3tcj6-MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head css-uuuc7l-MuiTableRow-root"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-fg6vj8-MuiTableCell-root"
+              scope="col"
+            >
+              primary/
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1wk5prm-MuiTableCell-root"
+              scope="col"
+            >
+              Swatch
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
+              scope="col"
+            >
+              Notes
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              main
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-1h51awr"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              Gold #C9A227 — brand accent
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              dark
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-17x6m4f"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              Dark Gold #7A5C00 — AA text on white (6.25:1) ✓
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              light
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-1ffosds"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              Light Gold #DDB94E — decorative only, do not use as text
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              contrastText
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-18odb4d"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              Near-black #121212 on Gold = 8.68:1 AAA ✓
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              hover
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-1izyi56"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              primary.main at action.hoverOpacity (0.04)
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              selected
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-145k8bz"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              primary.main at action.selectedOpacity (0.08)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="MuiStack-root css-g79vgv-MuiStack-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-2n8v65-MuiTypography-root"
+      >
+        secondary
+      </h5>
+      <table
+        class="MuiTable-root css-1f3tcj6-MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head css-uuuc7l-MuiTableRow-root"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-fg6vj8-MuiTableCell-root"
+              scope="col"
+            >
+              secondary/
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1wk5prm-MuiTableCell-root"
+              scope="col"
+            >
+              Swatch
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
+              scope="col"
+            >
+              Notes
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              main
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-1ja5yx0"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              Mid-grey #616161 — AA on white (6.19:1) ✓
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              dark
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-1ukbka9"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              Dark grey #373737 — AAA on all backgrounds ✓
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              light
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-t5mf43"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              Silver #C0C0C0 — decorative only
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              contrastText
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-1isu3dx"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              White on #616161 = 6.19:1 AA ✓
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="MuiStack-root css-g79vgv-MuiStack-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-2n8v65-MuiTypography-root"
+      >
+        background
+      </h5>
+      <table
+        class="MuiTable-root css-1f3tcj6-MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head css-uuuc7l-MuiTableRow-root"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-fg6vj8-MuiTableCell-root"
+              scope="col"
+            >
+              background/
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1wk5prm-MuiTableCell-root"
+              scope="col"
+            >
+              Swatch
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
+              scope="col"
+            >
+              Notes
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              default
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-ha0kic"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              #F5F5F5 — page background
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              paper
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-1isu3dx"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              #FFFFFF — card / surface background
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="MuiStack-root css-g79vgv-MuiStack-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-2n8v65-MuiTypography-root"
+      >
+        text
+      </h5>
+      <table
+        class="MuiTable-root css-1f3tcj6-MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head css-uuuc7l-MuiTableRow-root"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-fg6vj8-MuiTableCell-root"
+              scope="col"
+            >
+              text/
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1wk5prm-MuiTableCell-root"
+              scope="col"
+            >
+              Swatch
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
+              scope="col"
+            >
+              Notes
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              primary
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-18odb4d"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              -
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              secondary
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-1o1u6i9"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              -
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              disabled
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-3ojkbo"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              -
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="MuiStack-root css-g79vgv-MuiStack-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-2n8v65-MuiTypography-root"
+      >
+        action
+      </h5>
+      <table
+        class="MuiTable-root css-1f3tcj6-MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head css-uuuc7l-MuiTableRow-root"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-fg6vj8-MuiTableCell-root"
+              scope="col"
+            >
+              action/
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1wk5prm-MuiTableCell-root"
+              scope="col"
+            >
+              Swatch
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
+              scope="col"
+            >
+              Notes
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              active
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-1soleub"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              -
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              hover
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-kghte2"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              -
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              selected
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-1b5a33l"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              -
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              disabledBackground
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-1jwg09k"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              -
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              focus
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-1jwg09k"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              -
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              disabled
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-1xaemvl"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              -
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="MuiStack-root css-g79vgv-MuiStack-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-2n8v65-MuiTypography-root"
+      >
+        common
+      </h5>
+      <table
+        class="MuiTable-root css-1f3tcj6-MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head css-uuuc7l-MuiTableRow-root"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-fg6vj8-MuiTableCell-root"
+              scope="col"
+            >
+              common/
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1wk5prm-MuiTableCell-root"
+              scope="col"
+            >
+              Swatch
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
+              scope="col"
+            >
+              Notes
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              white
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-b72rbn"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              -
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-1ei2iar-MuiTableCell-root"
+            >
+              black
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <div
+                class="MuiBox-root css-1etxbjy"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              -
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
