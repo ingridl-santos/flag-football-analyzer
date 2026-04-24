@@ -3,8 +3,9 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import { I18nextProvider } from 'react-i18next';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 
-import { theme } from '../src/theme/base';
 import i18n from './i18n';
+import i18nEmpty from './i18nEmpty';
+import { theme } from '../src/theme';
 
 const preview: Preview = {
   parameters: {
@@ -20,30 +21,55 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    viewport: {
+      options: {
+        xs: {
+          name: 'Extra small',
+          type: 'mobile',
+          styles: { width: '360px', height: '100%' },
+        },
+        sm: {
+          name: 'Small',
+          type: 'mobile',
+          styles: { width: '600px', height: '100%' },
+        },
+        md: {
+          name: 'Medium',
+          type: 'tablet',
+          styles: { width: '900px', height: '100%' },
+        },
+        lg: {
+          name: 'Large',
+          type: 'desktop',
+          styles: { width: '1200px', height: '100%' },
+        },
+        xl: {
+          name: 'Extra large',
+          type: 'desktop',
+          styles: { width: '1536px', height: '100%' },
+        },
+      },
+    },
     i18n,
-    locale: 'en',
-    locales: {
-      en: 'English',
-      pt: 'Portuguese',
+    a11y: {
+      runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'best-practice', 'wcag2aaa'],
     },
   },
   decorators: [
-    (Story) => (
-      <>
-        <CssBaseline />
-
+    (Story, { parameters }) => (
+      <I18nextProvider i18n={parameters.noTranslations ? i18nEmpty : i18n}>
         <ThemeProvider theme={theme}>
-          <I18nextProvider i18n={i18n}>
-            <MemoryRouter>
-              <Routes>
-                <Route path='/*' element={<Story />} />
-              </Routes>
-            </MemoryRouter>
-          </I18nextProvider>
+          <CssBaseline />
+
+          <MemoryRouter>
+            <Routes>
+              <Route path="*" element={<Story />} />
+            </Routes>
+          </MemoryRouter>
         </ThemeProvider>
-      </>
-    )
-  ]
+      </I18nextProvider>
+    ),
+  ],
 };
 
 export default preview;

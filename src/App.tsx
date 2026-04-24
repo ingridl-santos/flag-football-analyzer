@@ -4,7 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import { Outlet } from 'react-router-dom';
 
-import { theme } from './theme/base';
+import { theme } from './theme';
 
 function App() {
   return (

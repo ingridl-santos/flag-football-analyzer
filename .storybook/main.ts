@@ -5,9 +5,12 @@ const config: StorybookConfig = {
     disableTelemetry: true,
   },
 
+  features: {
+    sidebarOnboardingChecklist: false,
+  },
+
   stories: [
-    '../src/**/*.mdx',
-    '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'
+    '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)',
   ],
 
   addons: [
@@ -26,7 +29,7 @@ const config: StorybookConfig = {
   staticDirs: ['../public'],
 
   typescript: {
-    reactDocgen: 'react-docgen-typescript'
-  }
+    reactDocgen: 'react-docgen-typescript',
+  },
 };
 export default config;
