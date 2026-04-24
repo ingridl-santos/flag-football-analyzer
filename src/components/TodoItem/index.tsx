@@ -1,4 +1,3 @@
-/* eslint-disable @darwin/no-hard-coded-text */
 import {
   Box, Button, Checkbox, Typography,
 } from '@mui/material';

@@ -8,7 +8,6 @@ module.exports = {
     'airbnb',
     'plugin:storybook/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@darwin/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {

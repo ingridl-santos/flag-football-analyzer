@@ -1,4 +1,3 @@
-/* eslint-disable @darwin/no-hard-coded-text */
 import { useState } from 'react';
 
 import { TextField } from '@mui/material';

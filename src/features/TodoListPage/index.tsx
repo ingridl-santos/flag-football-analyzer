@@ -1,4 +1,3 @@
-/* eslint-disable @darwin/no-hard-coded-text */
 import { Box, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
@@ -6,9 +5,9 @@ import InputForm from '../../components/InputForm';
 import TodoItem from '../../components/TodoItem';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import {
-  todoSelect,
   addTask,
   removeTask,
+  todoSelect,
   updateTask,
 } from '../../redux/TodoSlice';
 import { ROUTES } from '../../router/routeDefinitions';

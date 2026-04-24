@@ -34,7 +34,7 @@ the repository directly inside your WSL2 instance if you value your time (anywhe
 
 If you're not running the above combo, you may clone the repository with no worries.
 
-`git clone https://github.com/wiley/react-ts-template.git`
+`git clone https://github.com/wiley/flag-football-analyzer.git`
 
 ## 4. Open the Project in VS Code
 Now you may open the project, make sure you install the recommended extensions.\

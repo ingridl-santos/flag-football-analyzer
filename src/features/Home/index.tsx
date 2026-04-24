@@ -1,4 +1,3 @@
-/* eslint-disable @darwin/no-hard-coded-text */
 import { Button, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';

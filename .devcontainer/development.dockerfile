@@ -6,7 +6,4 @@ RUN apk add --no-cache git
 
 COPY ./package*.json ./
 
-RUN npm install
-
-EXPOSE 8080
-EXPOSE 6006
+RUN npm install --loglevel info
