@@ -76,6 +76,52 @@
     <div
       class="MuiStack-root css-1jr2p5d-MuiStack-root"
     >
+      <div
+        class="MuiBox-root css-1hnsdw5"
+      >
+        <nav
+          aria-label="breadcrumbs"
+          class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-rh2u9u-MuiTypography-root-MuiBreadcrumbs-root"
+        >
+          <ol
+            class="MuiBreadcrumbs-ol css-4pdmu4-MuiBreadcrumbs-ol"
+          >
+            <li
+              class="MuiBreadcrumbs-li"
+            >
+              <div
+                class="MuiBox-root css-0"
+              >
+                <a
+                  class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-oxnzzu-MuiTypography-root-MuiLink-root"
+                  href="/"
+                >
+                  Home
+                </a>
+              </div>
+            </li>
+            <li
+              aria-hidden="true"
+              class="MuiBreadcrumbs-separator css-1wuw8dw-MuiBreadcrumbs-separator"
+            >
+              /
+            </li>
+            <li
+              class="MuiBreadcrumbs-li"
+            >
+              <div
+                class="MuiBox-root css-0"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-nkp87h-MuiTypography-root"
+                >
+                  Game Footage
+                </p>
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
       <main
         class="MuiStack-root css-1uelwx5-MuiStack-root"
         id="main"

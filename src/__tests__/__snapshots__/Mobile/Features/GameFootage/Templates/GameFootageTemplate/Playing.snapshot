@@ -2,413 +2,386 @@
   <div
     class="MuiStack-root css-wcshwo-MuiStack-root"
   >
-    <nav
-      aria-label="breadcrumb"
-    >
-      <nav
-        class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-rh2u9u-MuiTypography-root-MuiBreadcrumbs-root"
-      >
-        <ol
-          class="MuiBreadcrumbs-ol css-4pdmu4-MuiBreadcrumbs-ol"
-        >
-          <li
-            class="MuiBreadcrumbs-li"
-          >
-            <div
-              class="MuiBox-root css-0"
-            >
-              <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-oxnzzu-MuiTypography-root-MuiLink-root"
-                href="/"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                  data-testid="HomeIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
-                  />
-                </svg>
-                header.goHome
-              </a>
-            </div>
-          </li>
-          <li
-            aria-hidden="true"
-            class="MuiBreadcrumbs-separator css-1wuw8dw-MuiBreadcrumbs-separator"
-          >
-            /
-          </li>
-          <li
-            class="MuiBreadcrumbs-li"
-          >
-            <div
-              class="MuiBox-root css-0"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-nkp87h-MuiTypography-root"
-              >
-                title
-              </p>
-            </div>
-          </li>
-        </ol>
-      </nav>
-    </nav>
-    <h1
-      class="MuiTypography-root MuiTypography-h2 css-1xo9vd1-MuiTypography-root"
-    >
-      title
-    </h1>
     <div
-      class="MuiStack-root css-wcshwo-MuiStack-root"
+      class="MuiGrid-root MuiGrid-container css-1fo4kw6-MuiGrid-root"
     >
       <div
-        class="MuiStack-root css-8r4r5m-MuiStack-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-7 css-117e5y7-MuiGrid-root"
       >
-        <h6
-          class="MuiTypography-root MuiTypography-subtitle2 css-1ix5vma-MuiTypography-root"
-        >
-          game-footage.mp4
-        </h6>
         <div
           class="MuiStack-root css-8r4r5m-MuiStack-root"
         >
           <div
-            class="MuiBox-root css-1443bnk"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1ljvscb-MuiPaper-root-MuiCard-root"
           >
-            <video
-              src="mock://game-footage.mp4"
-              style="width: 100%; height: 100%; display: block; object-fit: contain;"
+            <div
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <track
-                kind="captions"
-              />
-            </video>
-          </div>
-          <span
-            class="MuiSlider-root MuiSlider-colorPrimary MuiSlider-sizeSmall css-1lbe5cq-MuiSlider-root"
-          >
-            <span
-              class="MuiSlider-rail css-7o8aqz-MuiSlider-rail"
-            />
-            <span
-              class="MuiSlider-track css-nl6333-MuiSlider-track"
-              style="left: 0%; width: 23.333333333333332%;"
-            />
-            <span
-              class="MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary css-1k6vk9i-MuiSlider-thumb"
-              data-index="0"
-              style="left: 23.333333333333332%;"
-            >
-              <input
-                aria-label="timeline"
-                aria-orientation="horizontal"
-                aria-valuemax="180"
-                aria-valuemin="0"
-                aria-valuenow="42"
-                data-index="0"
-                max="180"
-                min="0"
-                step="0.1"
-                style="border: 0px; height: 100%; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 100%; direction: ltr;"
-                type="range"
-                value="42"
-              />
-            </span>
-          </span>
-          <div
-            class="MuiStack-root css-1qgb5gw-MuiStack-root"
-          >
-            <button
-              aria-label="pause"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
-              tabindex="0"
-              type="button"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="PauseIcon"
-                focusable="false"
-                viewBox="0 0 24 24"
+              <div
+                class="MuiStack-root css-8r4r5m-MuiStack-root"
               >
-                <path
-                  d="M6 19h4V5H6zm8-14v14h4V5z"
-                />
-              </svg>
-            </button>
-            <p
-              class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
-            >
-              0:42 / 3:00
-            </p>
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-1ab93ov-MuiTypography-root"
+                >
+                  game-footage.mp4
+                </h6>
+                <div
+                  class="MuiStack-root css-8r4r5m-MuiStack-root"
+                >
+                  <div
+                    class="MuiBox-root css-1443bnk"
+                  >
+                    <video
+                      src="mock://game-footage.mp4"
+                      style="width: 100%; height: 100%; display: block; object-fit: contain;"
+                    >
+                      <track
+                        kind="captions"
+                      />
+                    </video>
+                  </div>
+                  <span
+                    class="MuiSlider-root MuiSlider-colorPrimary MuiSlider-sizeSmall css-1lbe5cq-MuiSlider-root"
+                  >
+                    <span
+                      class="MuiSlider-rail css-7o8aqz-MuiSlider-rail"
+                    />
+                    <span
+                      class="MuiSlider-track css-nl6333-MuiSlider-track"
+                      style="left: 0%; width: 23.333333333333332%;"
+                    />
+                    <span
+                      class="MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary css-1k6vk9i-MuiSlider-thumb"
+                      data-index="0"
+                      style="left: 23.333333333333332%;"
+                    >
+                      <input
+                        aria-label="timeline"
+                        aria-orientation="horizontal"
+                        aria-valuemax="180"
+                        aria-valuemin="0"
+                        aria-valuenow="42"
+                        data-index="0"
+                        max="180"
+                        min="0"
+                        step="0.1"
+                        style="border: 0px; height: 100%; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 100%; direction: ltr;"
+                        type="range"
+                        value="42"
+                      />
+                    </span>
+                  </span>
+                  <div
+                    class="MuiStack-root css-1qgb5gw-MuiStack-root"
+                  >
+                    <button
+                      aria-label="pause"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="PauseIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M6 19h4V5H6zm8-14v14h4V5z"
+                        />
+                      </svg>
+                    </button>
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+                    >
+                      0:42 / 3:00
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="MuiStack-root css-z1apy6-MuiStack-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-7v4xv4-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    setStart
+                  </button>
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-7v4xv4-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    setEnd
+                  </button>
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-g55t1d-MuiButtonBase-root-MuiButton-root"
+                    disabled=""
+                    tabindex="-1"
+                    type="button"
+                  >
+                    createSegment
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div
-          class="MuiStack-root css-pocecv-MuiStack-root"
-        >
-          <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-7v4xv4-MuiButtonBase-root-MuiButton-root"
-            tabindex="0"
-            type="button"
-          >
-            setStart
-          </button>
-          <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-7v4xv4-MuiButtonBase-root-MuiButton-root"
-            tabindex="0"
-            type="button"
-          >
-            setEnd
-          </button>
-          <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-g55t1d-MuiButtonBase-root-MuiButton-root"
-            disabled=""
-            tabindex="-1"
-            type="button"
-          >
-            createSegment
-          </button>
         </div>
       </div>
-      <hr
-        class="MuiDivider-root MuiDivider-fullWidth css-1lg1g87-MuiDivider-root"
-      />
       <div
-        class="MuiStack-root css-8r4r5m-MuiStack-root"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-5 css-14tayut-MuiGrid-root"
       >
         <div
-          class="MuiStack-root css-1k7xyq1-MuiStack-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1ljvscb-MuiPaper-root-MuiCard-root"
         >
-          <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1pmqa2u-MuiButtonBase-root-MuiButton-root"
-            disabled=""
-            tabindex="-1"
-            type="button"
-          >
-            exportCsv
-          </button>
-          <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1pmqa2u-MuiButtonBase-root-MuiButton-root"
-            disabled=""
-            tabindex="-1"
-            type="button"
-          >
-            exportJson
-          </button>
-          <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-uqkrmy-MuiButtonBase-root-MuiButton-root"
-            disabled=""
-            tabindex="-1"
-            type="button"
-          >
-            exportZip
-          </button>
-        </div>
-        <div
-          class="MuiStack-root css-8r4r5m-MuiStack-root"
-        >
-          <h2
-            class="MuiTypography-root MuiTypography-h3 css-unuo6d-MuiTypography-root"
-          >
-            segments
-          </h2>
           <div
-            class="MuiTableContainer-root css-rorn0c-MuiTableContainer-root"
+            class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
           >
-            <table
-              aria-label="segments"
-              class="MuiTable-root css-1h2c9v3-MuiTable-root"
+            <div
+              class="MuiStack-root css-8r4r5m-MuiStack-root"
             >
-              <thead
-                class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+              <div
+                class="MuiStack-root css-u904fn-MuiStack-root"
               >
-                <tr
-                  class="MuiTableRow-root MuiTableRow-head css-1q64kqv-MuiTableRow-root"
+                <h2
+                  class="MuiTypography-root MuiTypography-h6 css-okrrt8-MuiTypography-root"
                 >
-                  <th
-                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-uf3zkd-MuiTableCell-root"
-                    scope="col"
+                  segments
+                </h2>
+                <div
+                  class="MuiStack-root css-tkss0t-MuiStack-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1pmqa2u-MuiButtonBase-root-MuiButton-root"
+                    disabled=""
+                    tabindex="-1"
+                    type="button"
                   >
-                    colNumber
-                  </th>
-                  <th
-                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-co8880-MuiTableCell-root"
-                    scope="col"
+                    exportCsv
+                  </button>
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1pmqa2u-MuiButtonBase-root-MuiButton-root"
+                    disabled=""
+                    tabindex="-1"
+                    type="button"
                   >
-                    colTimeRange
-                  </th>
-                  <th
-                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-co8880-MuiTableCell-root"
-                    scope="col"
+                    exportJson
+                  </button>
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-uqkrmy-MuiButtonBase-root-MuiButton-root"
+                    disabled=""
+                    tabindex="-1"
+                    type="button"
                   >
-                    colDuration
-                  </th>
-                  <th
-                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-co8880-MuiTableCell-root"
-                    scope="col"
-                  >
-                    colPlayType
-                  </th>
-                  <th
-                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-co8880-MuiTableCell-root"
-                    scope="col"
-                  >
-                    colTags
-                  </th>
-                  <th
-                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-6zuvc7-MuiTableCell-root"
-                    scope="col"
-                  />
-                </tr>
-              </thead>
-              <tbody
-                class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+                    exportZip
+                  </button>
+                </div>
+              </div>
+              <div
+                class="MuiStack-root css-8r4r5m-MuiStack-root"
               >
-                <tr
-                  class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+                <h2
+                  class="MuiTypography-root MuiTypography-h3 css-unuo6d-MuiTypography-root"
                 >
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  >
-                    1
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 7rem;"
-                    />
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 3rem;"
-                    />
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 6rem;"
-                    />
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 8rem;"
-                    />
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  />
-                </tr>
-                <tr
-                  class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+                  segments
+                </h2>
+                <div
+                  class="MuiTableContainer-root css-rorn0c-MuiTableContainer-root"
                 >
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                  <table
+                    aria-label="segments"
+                    class="MuiTable-root css-1h2c9v3-MuiTable-root"
                   >
-                    2
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 7rem;"
-                    />
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 3rem;"
-                    />
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 6rem;"
-                    />
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 8rem;"
-                    />
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  />
-                </tr>
-                <tr
-                  class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+                    <thead
+                      class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+                    >
+                      <tr
+                        class="MuiTableRow-root MuiTableRow-head css-1q64kqv-MuiTableRow-root"
+                      >
+                        <th
+                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-uf3zkd-MuiTableCell-root"
+                          scope="col"
+                        >
+                          colNumber
+                        </th>
+                        <th
+                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-co8880-MuiTableCell-root"
+                          scope="col"
+                        >
+                          colTimeRange
+                        </th>
+                        <th
+                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-co8880-MuiTableCell-root"
+                          scope="col"
+                        >
+                          colDuration
+                        </th>
+                        <th
+                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-co8880-MuiTableCell-root"
+                          scope="col"
+                        >
+                          colPlayType
+                        </th>
+                        <th
+                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-co8880-MuiTableCell-root"
+                          scope="col"
+                        >
+                          colTags
+                        </th>
+                        <th
+                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-6zuvc7-MuiTableCell-root"
+                          scope="col"
+                        />
+                      </tr>
+                    </thead>
+                    <tbody
+                      class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+                    >
+                      <tr
+                        class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          1
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 7rem;"
+                          />
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 3rem;"
+                          />
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 6rem;"
+                          />
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 8rem;"
+                          />
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        />
+                      </tr>
+                      <tr
+                        class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          2
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 7rem;"
+                          />
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 3rem;"
+                          />
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 6rem;"
+                          />
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 8rem;"
+                          />
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        />
+                      </tr>
+                      <tr
+                        class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+                      >
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          3
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 7rem;"
+                          />
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 3rem;"
+                          />
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 6rem;"
+                          />
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 8rem;"
+                          />
+                        </td>
+                        <td
+                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
+                        />
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-xyxpsn-MuiTypography-root"
                 >
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  >
-                    3
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 7rem;"
-                    />
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 3rem;"
-                    />
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 6rem;"
-                    />
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 8rem;"
-                    />
-                  </td>
-                  <td
-                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-afua3r-MuiTableCell-root"
-                  />
-                </tr>
-              </tbody>
-            </table>
+                  noSegments
+                </p>
+              </div>
+            </div>
           </div>
-          <p
-            class="MuiTypography-root MuiTypography-body2 css-xyxpsn-MuiTypography-root"
-          >
-            noSegments
-          </p>
         </div>
       </div>
     </div>

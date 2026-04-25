@@ -1,8 +1,9 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import useDocumentTitle from '../../../hooks/useDocumentTitle';
 import { useVideoExport } from '../../../hooks/useVideoExport';
+import { setBreadcrumbs } from '../../../redux/BreadcrumbSlice';
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
 import {
   clearSegments,
@@ -29,6 +30,8 @@ import GameFootageTemplate from '../templates/GameFootageTemplate';
 
 export default function GameFootagePage() {
   const { t } = useTranslation('pageTitles');
+  const { t: tCommon } = useTranslation('common');
+  const { t: tGameFootage } = useTranslation('gameFootage');
   const dispatch = useAppDispatch();
   const videoState = useAppSelector(selectVideoState);
   const segmentState = useAppSelector(selectSegmentState);
@@ -36,6 +39,13 @@ export default function GameFootagePage() {
   const { exportZip, isExporting, exportProgress } = useVideoExport();
 
   useDocumentTitle(t('gameFootage'));
+
+  useEffect(() => {
+    dispatch(setBreadcrumbs([
+      { label: tCommon('header.goHome'), to: '/' },
+      { label: tGameFootage('title') },
+    ]));
+  }, [dispatch, tCommon, tGameFootage]);
 
   const handleFileSelect = (file: File) => {
     if (videoState.videoType === 'file' && videoState.videoUrl) {

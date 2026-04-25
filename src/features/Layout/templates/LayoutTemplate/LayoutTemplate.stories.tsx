@@ -59,6 +59,20 @@ export const WithNavEntries: Story = {
   },
 };
 
+export const WithBreadcrumbs: Story = {
+  render: (args) => (
+    <LayoutTemplate {...args}>
+      <Typography>Page content goes here.</Typography>
+    </LayoutTemplate>
+  ),
+  args: {
+    breadcrumbsItems: [
+      { label: 'Home', to: '/' },
+      { label: 'Game Footage' },
+    ],
+  },
+};
+
 export const Loading: Story = {
   render: (args) => (
     <LayoutTemplate {...args}>

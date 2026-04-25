@@ -1,10 +1,12 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 
+import breadcrumbReducer from './BreadcrumbSlice';
 import segmentReducer from './SegmentSlice';
 import videoReducer from './VideoSlice';
 
 export const store = configureStore({
   reducer: {
+    breadcrumbs: breadcrumbReducer,
     video: videoReducer,
     segments: segmentReducer,
   },

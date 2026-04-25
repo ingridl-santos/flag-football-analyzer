@@ -10,6 +10,7 @@ const AppBar: Components['MuiAppBar'] = {
     root: {
       justifyContent: 'center',
       height: 'auto',
+      borderRadius: 0,
     },
   },
 };

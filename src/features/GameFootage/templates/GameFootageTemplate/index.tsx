@@ -1,11 +1,8 @@
 import { ChangeEvent } from 'react';
 
-import HomeIcon from '@mui/icons-material/Home';
 import UploadFileIcon from '@mui/icons-material/UploadFile';
-import { Breadcrumbs, Button, CircularProgress, Divider, Skeleton, Stack, Typography } from '@mui/material';
+import { Button, Card, CardContent, CircularProgress, Divider, Grid, Skeleton, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-
-import Breadcrumb from '../../../../components/Breadcrumb';
 import VideoPlayer from '../../../../components/VideoPlayer';
 import YouTubePlayer from '../../../../components/YouTubePlayer';
 import { type Segment } from '../../../../redux/SegmentSlice';
@@ -83,7 +80,6 @@ export default function GameFootageTemplate({
   exportZipProgress,
 }: GameFootageTemplateProps) {
   const { t } = useTranslation('gameFootage');
-  const { t: tCommon } = useTranslation('common');
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -94,44 +90,46 @@ export default function GameFootageTemplate({
   const uploadArea = (
     <Stack
       sx={{
-        border: '2px dashed',
-        borderColor: (theme) => theme.palette.divider,
-        borderRadius: '0.5rem',
-        padding: '3rem',
+        justifyContent: 'center',
         alignItems: 'center',
-        gap: '1rem',
+        minHeight: '50vh',
       }}
     >
-      <UploadFileIcon
-        aria-hidden="true"
-        sx={{ fontSize: '3rem', color: (theme) => theme.palette.text.secondary }}
-      />
+      <Card sx={{ width: '100%', maxWidth: '32rem' }}>
+        <CardContent>
+          <Stack sx={{ alignItems: 'center', gap: '1.5rem', paddingY: '1rem' }}>
+            <UploadFileIcon
+              aria-hidden="true"
+              sx={{ fontSize: '3.5rem', color: (theme) => theme.palette.primary.main }}
+            />
 
-      <Typography variant="body1" color="text.secondary" sx={{ textAlign: 'center' }}>
-        {t('uploadPrompt') ?? <Skeleton sx={{ maxWidth: '18rem' }} />}
-      </Typography>
+            <Stack sx={{ alignItems: 'center', gap: '0.5rem' }}>
+              <Typography variant="h6" component="p" sx={{ textAlign: 'center' }}>
+                {t('uploadPrompt') ?? <Skeleton sx={{ maxWidth: '18rem' }} />}
+              </Typography>
 
-      <Typography variant="caption" color="text.secondary">
-        {t('uploadAccepted') ?? <Skeleton sx={{ maxWidth: '10rem' }} />}
-      </Typography>
+              <Typography variant="caption" color="text.secondary">
+                {t('uploadAccepted') ?? <Skeleton sx={{ maxWidth: '10rem' }} />}
+              </Typography>
+            </Stack>
 
-      <Button
-        component="label"
-        variant="contained"
-      >
-        {t('uploadButton') ?? <Skeleton width="6rem" />}
+            <Button component="label" variant="contained" size="large">
+              {t('uploadButton') ?? <Skeleton width="6rem" />}
 
-        <input
-          type="file"
-          accept="video/mp4"
-          hidden
-          onChange={handleFileChange}
-        />
-      </Button>
+              <input
+                type="file"
+                accept="video/mp4"
+                hidden
+                onChange={handleFileChange}
+              />
+            </Button>
 
-      <Divider>{t('orSeparator') ?? <Skeleton width="1.5rem" />}</Divider>
+            <Divider sx={{ width: '100%' }}>{t('orSeparator') ?? <Skeleton width="1.5rem" />}</Divider>
 
-      <YouTubeUrlInput onSubmit={onYouTubeUrl} />
+            <YouTubeUrlInput onSubmit={onYouTubeUrl} />
+          </Stack>
+        </CardContent>
+      </Card>
     </Stack>
   );
 
@@ -163,150 +161,166 @@ export default function GameFootageTemplate({
       );
 
   const playerArea = (
-    <Stack sx={{ gap: '2rem' }}>
-      <Stack sx={{ gap: '1rem' }}>
-        {videoFileName && (
-          <Typography variant="subtitle2">
-            {videoFileName}
-          </Typography>
-        )}
+    <Grid container spacing="1.5rem" sx={{ alignItems: 'flex-start' }}>
+      {/* Left column — video + controls */}
+      <Grid item xs={12} lg={7}>
+        <Stack sx={{ gap: '1rem' }}>
+          <Card>
+            <CardContent>
+              <Stack sx={{ gap: '1rem' }}>
+                {videoFileName && (
+                  <Typography variant="subtitle2" color="text.secondary">
+                    {videoFileName}
+                  </Typography>
+                )}
 
-        {videoPlayer}
+                {videoPlayer}
 
-        <Stack sx={{ flexDirection: 'row', gap: '1rem', flexWrap: 'wrap' }}>
-          <Button variant="outlined" onClick={onSetStart}>
-            {t('setStart') ?? <Skeleton width="5rem" />}
+                <Stack sx={{ flexDirection: 'row', gap: '0.75rem', flexWrap: 'wrap' }}>
+                  <Button variant="outlined" onClick={onSetStart}>
+                    {t('setStart') ?? <Skeleton width="5rem" />}
 
-            {pendingStart !== null && (
-              <Typography variant="caption" sx={{ marginLeft: '0.5rem' }}>
-                {formatTime(pendingStart)}
-              </Typography>
-            )}
-          </Button>
+                    {pendingStart !== null && (
+                      <Typography variant="caption" sx={{ marginLeft: '0.5rem' }}>
+                        {formatTime(pendingStart)}
+                      </Typography>
+                    )}
+                  </Button>
 
-          <Button variant="outlined" onClick={onSetEnd}>
-            {t('setEnd') ?? <Skeleton width="4.5rem" />}
+                  <Button variant="outlined" onClick={onSetEnd}>
+                    {t('setEnd') ?? <Skeleton width="4.5rem" />}
 
-            {pendingEnd !== null && (
-              <Typography variant="caption" sx={{ marginLeft: '0.5rem' }}>
-                {formatTime(pendingEnd)}
-              </Typography>
-            )}
-          </Button>
+                    {pendingEnd !== null && (
+                      <Typography variant="caption" sx={{ marginLeft: '0.5rem' }}>
+                        {formatTime(pendingEnd)}
+                      </Typography>
+                    )}
+                  </Button>
 
-          <Button
-            variant="contained"
-            onClick={onCreateSegment}
-            disabled={!canCreateSegment}
-          >
-            {t('createSegment') ?? <Skeleton width="8rem" />}
-          </Button>
-        </Stack>
+                  <Button
+                    variant="contained"
+                    onClick={onCreateSegment}
+                    disabled={!canCreateSegment}
+                  >
+                    {t('createSegment') ?? <Skeleton width="8rem" />}
+                  </Button>
+                </Stack>
+              </Stack>
+            </CardContent>
+          </Card>
 
-        {canCreateSegment && (
-          <Stack
-            sx={{
-              borderRadius: '0.5rem',
-              border: '1px solid',
-              borderColor: (theme) => theme.palette.divider,
-              padding: '1rem',
-              gap: '0.75rem',
-            }}
-          >
-            <Typography variant="caption" color="text.secondary">
-              {t('pendingSegmentSetup') ?? <Skeleton width="10rem" />}
-            </Typography>
+          {canCreateSegment && (
+            <Card>
+              <CardContent>
+                <Stack sx={{ gap: '0.75rem' }}>
+                  <Typography variant="caption" color="text.secondary">
+                    {t('pendingSegmentSetup') ?? <Skeleton width="10rem" />}
+                  </Typography>
 
-            <PlayTypeSelector
-              segmentId="pending"
-              value={pendingPlayType}
-              onChange={(_, playType) => onSetPendingPlayType(playType)}
-            />
+                  <PlayTypeSelector
+                    segmentId="pending"
+                    value={pendingPlayType}
+                    onChange={(_, playType) => onSetPendingPlayType(playType)}
+                  />
 
-            <TagSuggestions
-              playType={pendingPlayType}
-              duration={pendingEnd - pendingStart}
-              existingTags={pendingTags}
-              onAddTag={(tag) => onSetPendingTags([...pendingTags, tag])}
-            />
-          </Stack>
-        )}
-      </Stack>
-
-      <Divider />
-
-      <Stack sx={{ gap: '1rem' }}>
-        <Stack sx={{ flexDirection: 'row', gap: '0.75rem', justifyContent: 'flex-end', flexWrap: 'wrap' }}>
-          <Button
-            variant="outlined"
-            size="small"
-            disabled={segments.length === 0}
-            onClick={onExportCsv}
-          >
-            {t('exportCsv') ?? <Skeleton width="6rem" />}
-          </Button>
-
-          <Button
-            variant="outlined"
-            size="small"
-            disabled={segments.length === 0}
-            onClick={onExportJson}
-          >
-            {t('exportJson') ?? <Skeleton width="7rem" />}
-          </Button>
-
-          {videoType === 'file' && (
-            <Button
-              variant="contained"
-              size="small"
-              disabled={segments.length === 0 || isExportingZip}
-              onClick={onExportZip}
-              startIcon={isExportingZip
-                ? (
-                    <CircularProgress
-                      size="1rem"
-                      aria-hidden="true"
-                      sx={{ color: (theme) => theme.palette.primary.contrastText }}
-                    />
-                  )
-                : undefined}
-            >
-              {isExportingZip
-                ? (t('exportZipProgress', { progress: Math.round(exportZipProgress * 100) }) ?? <Skeleton width="9rem" />)
-                : (t('exportZip') ?? <Skeleton width="7rem" />)}
-            </Button>
+                  <TagSuggestions
+                    playType={pendingPlayType}
+                    duration={pendingEnd - pendingStart}
+                    existingTags={pendingTags}
+                    onAddTag={(tag) => onSetPendingTags([...pendingTags, tag])}
+                  />
+                </Stack>
+              </CardContent>
+            </Card>
           )}
         </Stack>
+      </Grid>
 
-        {videoType === 'youtube' && (
-          <Typography variant="caption" color="text.secondary">
-            {t('exportZipUnavailableYoutube') ?? <Skeleton sx={{ maxWidth: '28rem' }} />}
-          </Typography>
-        )}
+      {/* Right column — segments */}
+      <Grid item xs={12} lg={5}>
+        <Card>
+          <CardContent>
+            <Stack sx={{ gap: '1rem' }}>
+              <Stack
+                sx={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  flexWrap: 'wrap',
+                  gap: '0.5rem',
+                }}
+              >
+                <Typography variant="h6" component="h2">
+                  {t('segments') ?? <Skeleton width="6rem" />}
+                </Typography>
 
-        <SegmentTable segments={segments} onDelete={onDeleteSegment} onSetPlayType={onSetPlayType} onSetTags={onSetTags} />
-      </Stack>
-    </Stack>
+                <Stack sx={{ flexDirection: 'row', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <Button
+                    variant="outlined"
+                    size="small"
+                    disabled={segments.length === 0}
+                    onClick={onExportCsv}
+                  >
+                    {t('exportCsv') ?? <Skeleton width="6rem" />}
+                  </Button>
+
+                  <Button
+                    variant="outlined"
+                    size="small"
+                    disabled={segments.length === 0}
+                    onClick={onExportJson}
+                  >
+                    {t('exportJson') ?? <Skeleton width="7rem" />}
+                  </Button>
+
+                  {videoType === 'file' && (
+                    <Button
+                      variant="contained"
+                      size="small"
+                      disabled={segments.length === 0 || isExportingZip}
+                      onClick={onExportZip}
+                      startIcon={isExportingZip
+                        ? (
+                            <CircularProgress
+                              size="1rem"
+                              aria-hidden="true"
+                              sx={{ color: (theme) => theme.palette.primary.contrastText }}
+                            />
+                          )
+                        : undefined}
+                    >
+                      {isExportingZip
+                        ? (
+                            t('exportZipProgress', { progress: Math.round(exportZipProgress * 100) })
+                            ?? <Skeleton width="9rem" />
+                          )
+                        : (t('exportZip') ?? <Skeleton width="7rem" />)}
+                    </Button>
+                  )}
+                </Stack>
+              </Stack>
+
+              {videoType === 'youtube' && (
+                <Typography variant="caption" color="text.secondary">
+                  {t('exportZipUnavailableYoutube') ?? <Skeleton sx={{ maxWidth: '28rem' }} />}
+                </Typography>
+              )}
+
+              <SegmentTable
+                segments={segments}
+                onDelete={onDeleteSegment}
+                onSetPlayType={onSetPlayType}
+                onSetTags={onSetTags}
+              />
+            </Stack>
+          </CardContent>
+        </Card>
+      </Grid>
+    </Grid>
   );
 
   return (
     <Stack sx={{ gap: '2rem' }}>
-      <nav aria-label="breadcrumb">
-        <Breadcrumbs>
-          <Breadcrumb to="/" icon={<HomeIcon aria-hidden="true" />}>
-            {tCommon('header.goHome') ?? <Skeleton width="3rem" />}
-          </Breadcrumb>
-
-          <Breadcrumb active>
-            {t('title') ?? <Skeleton width="7rem" />}
-          </Breadcrumb>
-        </Breadcrumbs>
-      </nav>
-
-      <Typography variant="h2" component="h1">
-        {t('title') ?? <Skeleton sx={{ maxWidth: '9rem' }} />}
-      </Typography>
-
       {videoType === null ? uploadArea : playerArea}
     </Stack>
   );
