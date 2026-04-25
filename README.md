@@ -60,6 +60,28 @@ Upload a game video, mark segments, classify plays, and export your analysis —
 
 ---
 
+## 🚀 Deployment
+
+### Vercel (recommended)
+
+1. Push to GitHub and import the repo on [vercel.com](https://vercel.com)
+2. Vercel reads `vercel.json` automatically — no manual config needed
+3. Add any `PUBLIC_*` environment variables in **Vercel Settings → Environment Variables**
+4. Deploy — every push to `main` redeploys automatically
+
+The `vercel-build` script generates `public/environment.js` from Vercel environment variables before building, so `window.env` is populated correctly at runtime.
+
+### Docker
+
+```bash
+docker build -t flag-football-analyzer .
+docker run -p 80:80 -e PUBLIC_NODE_ENV=production flag-football-analyzer
+```
+
+See [docs/ENVIRONMENT_AND_DEPLOYMENT.md](docs/ENVIRONMENT_AND_DEPLOYMENT.md) for full deployment details and how to add new environment variables.
+
+---
+
 ## 🚀 Getting Started
 
 ```bash

@@ -1,0 +1,34 @@
+{
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "dist/app",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/index.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "private, no-cache, no-store, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/environment.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "private, no-cache, no-store, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/locales/(.*)\\.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "max-age=300, public" }
+      ]
+    },
+    {
+      "source": "/vendor/(.*)\\.wasm",
+      "headers": [
+        { "key": "Cache-Control", "value": "max-age=86400, public" },
+        { "key": "Content-Type", "value": "application/wasm" }
+      ]
+    }
+  ]
+}

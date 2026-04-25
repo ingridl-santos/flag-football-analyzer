@@ -19,7 +19,8 @@
     "test:update-snapshots": "rm -rf src/**/__snapshots__ && vitest run -u",
     "storybook": "storybook dev -p 6006 --no-open",
     "storybook:build": "storybook build -o dist/storybook",
-    "prepare": "husky"
+    "prepare": "husky",
+    "vercel-build": "node scripts/generate-env.mjs && npm run build"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
