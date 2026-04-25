@@ -32,7 +32,7 @@
           <div
             class="MuiBox-root css-i9gxme"
           >
-            No actions
+            Export complete
           </div>
           <button
             aria-label="Close"
@@ -56,7 +56,7 @@
         <div
           class="MuiDialogContent-root css-ypiqx9-MuiDialogContent-root"
         >
-          This dialog has no action buttons.
+          Your ZIP file has been downloaded successfully.
         </div>
         <div
           class="MuiDialogActions-root MuiDialogActions-spacing css-knqc4i-MuiDialogActions-root"

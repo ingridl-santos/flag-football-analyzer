@@ -2,8 +2,10 @@
   <svg
     aria-label="Flag Football Analyzer Logo"
     fill="none"
+    height="2.5rem"
     role="img"
     viewBox="0 0 64 64"
+    width="2.5rem"
     xmlns="http://www.w3.org/2000/svg"
   >
     <rect

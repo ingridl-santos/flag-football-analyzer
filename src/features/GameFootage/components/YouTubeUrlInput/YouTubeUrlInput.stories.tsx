@@ -4,7 +4,7 @@ import { action } from 'storybook/actions';
 import YouTubeUrlInput from '.';
 
 const meta: Meta<typeof YouTubeUrlInput> = {
-  title: 'Features / Game Footage / Components / You Tube Url Input',
+  title: 'Features / Game Footage / Components / YouTube URL Input',
   component: YouTubeUrlInput,
   parameters: {
     layout: 'padded',

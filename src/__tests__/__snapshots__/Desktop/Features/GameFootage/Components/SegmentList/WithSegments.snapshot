@@ -223,7 +223,7 @@
             >
               <div
                 aria-expanded="false"
-                class="MuiButtonBase-root MuiAccordionSummary-root css-t3amwv-MuiButtonBase-root-MuiAccordionSummary-root"
+                class="MuiButtonBase-root MuiAccordionSummary-root css-ele8g-MuiButtonBase-root-MuiAccordionSummary-root"
                 role="button"
                 tabindex="0"
               >
@@ -723,7 +723,7 @@
             >
               <div
                 aria-expanded="false"
-                class="MuiButtonBase-root MuiAccordionSummary-root css-t3amwv-MuiButtonBase-root-MuiAccordionSummary-root"
+                class="MuiButtonBase-root MuiAccordionSummary-root css-ele8g-MuiButtonBase-root-MuiAccordionSummary-root"
                 role="button"
                 tabindex="0"
               >
@@ -1163,7 +1163,7 @@
             >
               <div
                 aria-expanded="false"
-                class="MuiButtonBase-root MuiAccordionSummary-root css-t3amwv-MuiButtonBase-root-MuiAccordionSummary-root"
+                class="MuiButtonBase-root MuiAccordionSummary-root css-ele8g-MuiButtonBase-root-MuiAccordionSummary-root"
                 role="button"
                 tabindex="0"
               >

@@ -21,13 +21,13 @@ type Story = StoryObj<typeof Dialog>;
 
 export const Default: Story = {
   args: {
-    title: 'Dialog title',
-    content: 'This is the dialog content. It can be any ReactNode.',
+    title: 'Delete segment?',
+    content: 'This action cannot be undone.',
     actions: (
       <>
         <Button variant="outlined">Cancel</Button>
 
-        <Button variant="contained">Confirm</Button>
+        <Button variant="contained" color="error">Delete</Button>
       </>
     ),
   },
@@ -41,15 +41,15 @@ export const WithoutTitle: Story = {
 
 export const WithoutActions: Story = {
   args: {
-    title: 'No actions',
-    content: 'This dialog has no action buttons.',
+    title: 'Export complete',
+    content: 'Your ZIP file has been downloaded successfully.',
   },
 };
 
 export const Loading: Story = {
   args: {
-    title: 'Dialog title',
-    content: 'Dialog content.',
+    title: 'Delete segment?',
+    content: 'This action cannot be undone.',
   },
   parameters: {
     noTranslations: true,

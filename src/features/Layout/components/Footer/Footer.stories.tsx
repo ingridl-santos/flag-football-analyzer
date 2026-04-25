@@ -14,12 +14,14 @@ export default meta;
 
 type Story = StoryObj<typeof Footer>;
 
-export const Default: Story = {};
-
-export const WithGitHub: Story = {
+export const Default: Story = {
   args: {
     githubUrl: 'https://github.com/ingridl-santos/flag-football-analyzer',
   },
+};
+
+export const WithoutGitHub: Story = {
+  args: {},
 };
 
 export const Loading: Story = {

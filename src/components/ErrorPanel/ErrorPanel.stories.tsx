@@ -25,12 +25,6 @@ export const Loading: Story = {
   },
 };
 
-export const Custom: Story = {
-  args: {
-    image: 'https://placepengu.in/300x300',
-  },
-};
-
 export const WithAction: Story = {
   args: {
     actionText: 'Try Again',

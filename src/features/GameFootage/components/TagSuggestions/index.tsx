@@ -18,17 +18,34 @@ export interface TagSuggestionsProps {
   duration: number;
   existingTags: string[];
   onAddTag: (tag: string) => void;
+  loading?: boolean;
 }
 
 const VISIBLE_MORE = 4;
+const SKELETON_WIDTHS = ['3.5rem', '5rem', '4.25rem', '3rem', '5.5rem'];
 
 export default function TagSuggestions({
   playType,
   duration,
   existingTags,
   onAddTag,
+  loading,
 }: TagSuggestionsProps) {
   const { t } = useTranslation('gameFootage');
+
+  if (loading) {
+    return (
+      <Stack sx={{ gap: '0.25rem', paddingTop: '0.5rem' }}>
+        <Skeleton width="4rem" />
+
+        <Stack sx={{ flexDirection: 'row', flexWrap: 'wrap', gap: '0.25rem' }}>
+          {SKELETON_WIDTHS.map((width) => (
+            <Skeleton key={width} variant="rounded" width={width} height="1.5rem" />
+          ))}
+        </Stack>
+      </Stack>
+    );
+  }
 
   if (!playType) return null;
 

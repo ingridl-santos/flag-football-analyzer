@@ -19,7 +19,7 @@ export default meta;
 
 type Story = StoryObj<typeof TagSuggestions>;
 
-export const PassDeepPlay: Story = {
+export const Pass: Story = {
   args: {
     playType: 'Pass',
     duration: 9,
@@ -27,23 +27,7 @@ export const PassDeepPlay: Story = {
   },
 };
 
-export const PassQuickPlay: Story = {
-  args: {
-    playType: 'Pass',
-    duration: 2,
-    existingTags: [],
-  },
-};
-
-export const PassMidRange: Story = {
-  args: {
-    playType: 'Pass',
-    duration: 5,
-    existingTags: [],
-  },
-};
-
-export const RunExplosive: Story = {
+export const Run: Story = {
   args: {
     playType: 'Run',
     duration: 8,
@@ -51,26 +35,10 @@ export const RunExplosive: Story = {
   },
 };
 
-export const RunQuick: Story = {
-  args: {
-    playType: 'Run',
-    duration: 2,
-    existingTags: [],
-  },
-};
-
-export const DefensePlay: Story = {
+export const Defense: Story = {
   args: {
     playType: 'Defense',
     duration: 5,
-    existingTags: [],
-  },
-};
-
-export const DefenseQuickStop: Story = {
-  args: {
-    playType: 'Defense',
-    duration: 1,
     existingTags: [],
   },
 };
@@ -83,34 +51,12 @@ export const WithExistingTags: Story = {
   },
 };
 
-export const AllTagged: Story = {
-  name: 'All Suggested (renders nothing)',
-  args: {
-    playType: 'Pass',
-    duration: 5,
-    existingTags: [
-      'Touchdown', 'Completion', 'Incompletion', 'Interception', 'Sack', 'Flag Pull',
-      'Screen Pass', 'Slant', 'Out Route', 'Post Route', 'Go Route', 'Crossing Route', 'Rollout Pass', 'QB Scramble',
-      'Shotgun', 'Spread', 'Trips Formation', 'Empty Backfield', 'I-Formation',
-      'Red Zone', 'Two-Minute Drill', 'Two-Point Attempt', 'Opening Drive',
-    ],
-  },
-};
-
-export const NoPlayType: Story = {
-  name: 'No Play Type (renders nothing)',
-  args: {
-    playType: '',
-    duration: 5,
-    existingTags: [],
-  },
-};
-
 export const Loading: Story = {
   args: {
     playType: 'Pass',
     duration: 9,
     existingTags: [],
+    loading: true,
   },
   parameters: {
     noTranslations: true,

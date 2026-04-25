@@ -40,25 +40,6 @@ export const Default: Story = {
   ),
 };
 
-export const WithNavEntries: Story = {
-  render: (args) => (
-    <LayoutTemplate {...args}>
-      <Typography>Page content goes here.</Typography>
-    </LayoutTemplate>
-  ),
-  args: {
-    slotProps: {
-      header: {
-        ...HEADER_PROPS,
-        menuEntries: [
-          { id: 'game-footage', label: 'Game Footage', to: '/', active: true },
-        ],
-      },
-      footer: FOOTER_PROPS,
-    },
-  },
-};
-
 export const WithBreadcrumbs: Story = {
   render: (args) => (
     <LayoutTemplate {...args}>

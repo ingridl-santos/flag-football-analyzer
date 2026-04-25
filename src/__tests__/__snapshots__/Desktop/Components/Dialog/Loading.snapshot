@@ -32,7 +32,7 @@
           <div
             class="MuiBox-root css-i9gxme"
           >
-            Dialog title
+            Delete segment?
           </div>
           <button
             aria-label="Close"
@@ -56,7 +56,7 @@
         <div
           class="MuiDialogContent-root css-ypiqx9-MuiDialogContent-root"
         >
-          Dialog content.
+          This action cannot be undone.
         </div>
         <div
           class="MuiDialogActions-root MuiDialogActions-spacing css-knqc4i-MuiDialogActions-root"

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import Breadcrumb from '.';
 
 const meta: Meta<typeof Breadcrumb> = {
-  title: 'Components /  Breadcrumb',
+  title: 'Components / Breadcrumb',
   component: Breadcrumb,
 };
 
@@ -13,13 +13,13 @@ type Story = StoryObj<typeof Breadcrumb>;
 
 export const Default: Story = {
   args: {
-    children: 'Breadcrumb',
+    children: 'Home',
   },
 };
 
 export const WithHref: Story = {
   args: {
-    ...Default.args,
+    children: 'Home',
     LinkProps: {
       href: '#',
     },
@@ -28,35 +28,38 @@ export const WithHref: Story = {
 
 export const Active: Story = {
   args: {
-    ...WithHref.args,
+    children: 'Game Footage',
     active: true,
   },
 };
 
 export const WithRouterLink: Story = {
   args: {
-    ...Default.args,
+    children: 'Home',
     to: '#',
   },
 };
 
 export const ActiveWithRouterLink: Story = {
   args: {
-    ...WithRouterLink.args,
+    children: 'Game Footage',
+    to: '#',
     active: true,
   },
 };
 
 export const WithIcon: Story = {
   args: {
-    ...WithHref.args,
+    children: 'Home',
+    to: '#',
     icon: <StarIcon />,
   },
 };
 
 export const ActiveWithIcon: Story = {
   args: {
-    ...WithIcon.args,
+    children: 'Game Footage',
     active: true,
+    icon: <StarIcon />,
   },
 };

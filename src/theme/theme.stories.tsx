@@ -33,6 +33,7 @@ import {
   Typography,
 } from '@mui/material';
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { action } from 'storybook/actions';
 
 import { theme } from '.';
 
@@ -460,7 +461,7 @@ export const ChipStory: Story = {
 
           <Chip label="Air" color={color ?? 'primary'} variant="outlined" />
 
-          <Chip label="Quick" color={color ?? 'primary'} onDelete={() => {}} />
+          <Chip label="Quick" color={color ?? 'primary'} onDelete={action('onDelete')} />
         </Stack>
       </Section>
 
@@ -472,7 +473,7 @@ export const ChipStory: Story = {
 
           <Chip label="Air" size="small" color={color ?? 'primary'} variant="outlined" />
 
-          <Chip label="Quick" size="small" color={color ?? 'primary'} onDelete={() => {}} />
+          <Chip label="Quick" size="small" color={color ?? 'primary'} onDelete={action('onDelete')} />
         </Stack>
       </Section>
     </Stack>

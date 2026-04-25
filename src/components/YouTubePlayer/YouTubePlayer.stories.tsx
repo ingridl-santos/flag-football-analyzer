@@ -4,7 +4,7 @@ import { action } from 'storybook/actions';
 import YouTubePlayer from '.';
 
 const meta: Meta<typeof YouTubePlayer> = {
-  title: 'Components / You Tube Player',
+  title: 'Components / YouTube Player',
   component: YouTubePlayer,
   parameters: {
     layout: 'padded',
