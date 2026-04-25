@@ -1,10 +1,6 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SportsFootballIcon from '@mui/icons-material/SportsFootball';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import IconButton from '@mui/material/IconButton';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import { Box, Container, IconButton, Stack, Typography } from '@mui/material';
 
 export interface FooterProps {
   appTitle: string;

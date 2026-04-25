@@ -1,8 +1,5 @@
 import SportsFootballIcon from '@mui/icons-material/SportsFootball';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import { Box, Container, Stack, Typography } from '@mui/material';
 
 export interface HeaderProps {
   title: string;

@@ -1,8 +1,4 @@
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Skeleton from '@mui/material/Skeleton';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import { Box, Button, Skeleton, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import MultilineSkelly from '../MultilineSkelly';
