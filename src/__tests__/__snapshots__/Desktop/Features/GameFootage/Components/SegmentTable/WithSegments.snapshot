@@ -156,7 +156,6 @@
                 class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1x6bjyf-MuiAutocomplete-root"
               >
                 <div
-                  aria-label="colTags"
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                 >
                   <div
@@ -212,6 +211,7 @@
                       aria-autocomplete="list"
                       aria-expanded="false"
                       aria-invalid="false"
+                      aria-label="colTags"
                       autocapitalize="none"
                       autocomplete="off"
                       class="MuiInputBase-input MuiInput-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-nz481w-MuiInputBase-input-MuiInput-input"
@@ -368,7 +368,6 @@
                 class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1x6bjyf-MuiAutocomplete-root"
               >
                 <div
-                  aria-label="colTags"
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                 >
                   <div
@@ -424,6 +423,7 @@
                       aria-autocomplete="list"
                       aria-expanded="false"
                       aria-invalid="false"
+                      aria-label="colTags"
                       autocapitalize="none"
                       autocomplete="off"
                       class="MuiInputBase-input MuiInput-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-nz481w-MuiInputBase-input-MuiInput-input"
@@ -580,7 +580,6 @@
                 class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1x6bjyf-MuiAutocomplete-root"
               >
                 <div
-                  aria-label="colTags"
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                 >
                   <div
@@ -636,6 +635,7 @@
                       aria-autocomplete="list"
                       aria-expanded="false"
                       aria-invalid="false"
+                      aria-label="colTags"
                       autocapitalize="none"
                       autocomplete="off"
                       class="MuiInputBase-input MuiInput-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-nz481w-MuiInputBase-input-MuiInput-input"

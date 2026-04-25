@@ -51,8 +51,8 @@ export default function Header({
     >
       <Container maxWidth="xl">
         <Toolbar>
-          <Stack direction="row" alignItems="inherit" gap="1rem">
-            <Stack direction="row" gap="0.5rem" sx={{ alignItems: 'center' }}>
+          <Stack sx={{ flexDirection: 'row', alignItems: 'inherit', gap: '1rem' }}>
+            <Stack sx={{ flexDirection: 'row', alignItems: 'center', gap: '0.5rem' }}>
               {(isMobile || isTablet) && Boolean(menuEntries.length) && (
                 <IconButton
                   aria-label={t('header.openMenu')}
@@ -68,18 +68,18 @@ export default function Header({
                 color="inherit"
                 to={toNamedRoute(ROUTES.gameFootage)}
                 sx={{ minWidth: 'unset', paddingX: 0, gap: '0.5rem' }}
-                aria-label={title ?? undefined}
+                aria-label={t('header.goHome') ?? 'Home'}
               >
                 <AppLogo width="1.5rem" height="1.5rem" />
 
-                <Typography variant="h5" component="span" fontWeight="bold">
+                <Typography variant="h5" component="span" sx={{ fontWeight: 700 }}>
                   {title ?? <Skeleton width="12rem" />}
                 </Typography>
               </Button>
             </Stack>
 
             {isDesktop && Boolean(menuEntries.length) && (
-              <Stack direction="row" gap="0.5rem">
+              <Stack sx={{ flexDirection: 'row', gap: '0.5rem' }}>
                 {menuEntries.map((entry) => (
                   <Button
                     key={entry.id}

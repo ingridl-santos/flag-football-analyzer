@@ -1,7 +1,7 @@
 import { ChangeEvent } from 'react';
 
 import UploadFileIcon from '@mui/icons-material/UploadFile';
-import { Box, Button, Divider, Skeleton, Stack, Typography } from '@mui/material';
+import { Button, Divider, Skeleton, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import VideoPlayer from '../../../../components/VideoPlayer';
@@ -88,7 +88,7 @@ export default function GameFootageTemplate({
         sx={{ fontSize: '3rem', color: (theme) => theme.palette.text.secondary }}
       />
 
-      <Typography variant="body1" color="text.secondary" textAlign="center">
+      <Typography variant="body1" color="text.secondary" sx={{ textAlign: 'center' }}>
         {t('uploadPrompt') ?? <Skeleton sx={{ maxWidth: '18rem' }} />}
       </Typography>
 
@@ -96,19 +96,9 @@ export default function GameFootageTemplate({
         {t('uploadAccepted') ?? <Skeleton sx={{ maxWidth: '10rem' }} />}
       </Typography>
 
-      <Box
+      <Button
         component="label"
-        sx={{
-          cursor: 'pointer',
-          display: 'inline-flex',
-          alignItems: 'center',
-          backgroundColor: 'primary.main',
-          color: (theme) => theme.palette.primary.contrastText,
-          borderRadius: '0.25rem',
-          padding: '0.375rem 1rem',
-          typography: 'button',
-          '&:hover': { backgroundColor: 'primary.dark' },
-        }}
+        variant="contained"
       >
         {t('uploadButton') ?? <Skeleton width="6rem" />}
 
@@ -118,7 +108,7 @@ export default function GameFootageTemplate({
           hidden
           onChange={handleFileChange}
         />
-      </Box>
+      </Button>
 
       <Divider>{t('orSeparator') ?? <Skeleton width="1.5rem" />}</Divider>
 

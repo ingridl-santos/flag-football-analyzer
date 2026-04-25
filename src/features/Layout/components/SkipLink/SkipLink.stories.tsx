@@ -22,3 +22,13 @@ export const Focused: Story = {
     pseudo: { focus: true },
   },
 };
+
+export const Loading: Story = {
+  parameters: {
+    noTranslations: true,
+    pseudo: { focus: true },
+  },
+  args: {
+    children: undefined,
+  },
+};

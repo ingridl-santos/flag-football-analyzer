@@ -3,7 +3,8 @@
   "close": "Close",
   "skipToMainContent": "Skip to main content",
   "header": {
-    "openMenu": "Open menu"
+    "openMenu": "Open menu",
+    "goHome": "Home"
   },
   "footer": {
     "copyright": "© {{year}} Flag Football Analyzer",

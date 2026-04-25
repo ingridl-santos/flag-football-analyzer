@@ -122,7 +122,7 @@
               <span
                 class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
               >
-                tags.offense
+                offense
               </span>
             </div>
             <div
@@ -131,7 +131,7 @@
               <span
                 class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
               >
-                tags.air
+                air
               </span>
             </div>
           </div>
@@ -249,7 +249,7 @@
               <span
                 class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
               >
-                tags.offense
+                offense
               </span>
             </div>
             <div
@@ -258,7 +258,7 @@
               <span
                 class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
               >
-                tags.rush
+                rush
               </span>
             </div>
           </div>
@@ -376,7 +376,7 @@
               <span
                 class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
               >
-                tags.defense
+                defense
               </span>
             </div>
             <div
@@ -385,7 +385,7 @@
               <span
                 class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
               >
-                tags.quick
+                quick
               </span>
             </div>
           </div>

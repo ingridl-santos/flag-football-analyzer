@@ -32,7 +32,9 @@
         uploadAccepted
       </span>
       <label
-        class="MuiBox-root css-1na59wy"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-13fqfg1-MuiButtonBase-root-MuiButton-root"
+        role="button"
+        tabindex="0"
       >
         uploadButton
         <input
@@ -69,6 +71,7 @@
             class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-15vllxx-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
+              aria-describedby=":stable-mocked-react-id-1:-helper-text"
               aria-invalid="false"
               aria-label="youtubeUrlLabel"
               class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input"
@@ -90,9 +93,19 @@
               </legend>
             </fieldset>
           </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeSmall MuiFormHelperText-contained css-136uarm-MuiFormHelperText-root"
+            id=":stable-mocked-react-id-1:-helper-text"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </p>
         </div>
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-1u3d028-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-13fqfg1-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >

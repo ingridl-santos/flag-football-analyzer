@@ -159,7 +159,10 @@ export default function SegmentTable({ segments, onDelete, onSetPlayType, onSetT
                             variant="standard"
                             size="small"
                             placeholder={segment.tags?.length ? undefined : (t('tagsInputPlaceholder') ?? 'Add tag…')}
-                            aria-label={t('colTags') ?? 'Tags'}
+                            inputProps={{
+                              ...params.inputProps,
+                              'aria-label': t('colTags') ?? 'Tags',
+                            }}
                           />
                         )}
                       />

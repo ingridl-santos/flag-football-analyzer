@@ -69,7 +69,7 @@ function SegmentRow({
           {(segment.tags ?? []).map((tag) => (
             <Chip
               key={tag}
-              label={t(`tags.${tag}`) ?? <Skeleton width="3.5rem" />}
+              label={tag}
               size="small"
             />
           ))}

@@ -47,7 +47,7 @@ export default function YouTubeUrlInput({ onSubmit }: YouTubeUrlInputProps) {
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         error={error}
-        helperText={error ? (t('youtubeUrlInvalid') ?? 'Please enter a valid YouTube URL') : undefined}
+        helperText={error ? (t('youtubeUrlInvalid') ?? 'Please enter a valid YouTube URL') : ' '}
         size="small"
         sx={{ flexGrow: 1 }}
         inputProps={{ 'aria-label': t('youtubeUrlLabel') ?? 'YouTube URL' }}
@@ -56,7 +56,6 @@ export default function YouTubeUrlInput({ onSubmit }: YouTubeUrlInputProps) {
       <Button
         variant="contained"
         onClick={handleSubmit}
-        sx={{ marginTop: '0.5rem' }}
       >
         {t('youtubeUrlLoad') ?? 'Load'}
       </Button>

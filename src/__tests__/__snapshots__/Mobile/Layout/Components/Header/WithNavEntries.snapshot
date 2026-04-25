@@ -9,13 +9,13 @@
         class="MuiToolbar-root MuiToolbar-regular css-9lfp86-MuiToolbar-root"
       >
         <div
-          class="MuiStack-root css-gww8y4-MuiStack-root"
+          class="MuiStack-root css-17z255u-MuiStack-root"
         >
           <div
-            class="MuiStack-root css-1lxe5uy-MuiStack-root"
+            class="MuiStack-root css-bgbf6p-MuiStack-root"
           >
             <a
-              aria-label="Flag Football Analyzer"
+              aria-label="header.goHome"
               class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit css-hqgnpk-MuiButtonBase-root-MuiButton-root"
               href="/"
               tabindex="0"

@@ -1,15 +1,15 @@
 import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
 import {
+  Box,
+  DialogActions,
+  DialogActionsProps,
+  DialogContent,
+  DialogContentProps,
+  DialogTitle,
+  IconButton,
   Dialog as MuiDialog,
   DialogProps as MuiDialogProps,
-  IconButton,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  DialogContentProps,
-  DialogActionsProps,
   SxProps,
-  Box,
 } from '@mui/material';
 import { ReactNode, SyntheticEvent } from 'react';
 
@@ -47,12 +47,12 @@ export default function Dialog({
       {...rest}
     >
       <DialogTitle
-        component="div"
         sx={{
           display: 'flex',
+          alignItems: 'center',
         }}
       >
-        <Box {...titleSlotProps}>
+        <Box sx={{ flexGrow: 1 }} {...titleSlotProps}>
           {title}
         </Box>
 

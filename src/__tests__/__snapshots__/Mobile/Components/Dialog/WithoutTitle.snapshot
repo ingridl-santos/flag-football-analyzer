@@ -25,12 +25,12 @@
         class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm css-a47vnu-MuiPaper-root-MuiDialog-paper"
         role="dialog"
       >
-        <div
-          class="MuiTypography-root MuiTypography-h2 MuiDialogTitle-root css-1xkenev-MuiTypography-root-MuiDialogTitle-root"
+        <h2
+          class="MuiTypography-root MuiTypography-h2 MuiDialogTitle-root css-5lzv51-MuiTypography-root-MuiDialogTitle-root"
           id=":stable-mocked-react-id-1:"
         >
           <div
-            class="MuiBox-root css-0"
+            class="MuiBox-root css-i9gxme"
           />
           <button
             aria-label="Close"
@@ -50,7 +50,7 @@
               />
             </svg>
           </button>
-        </div>
+        </h2>
         <div
           class="MuiDialogContent-root css-ypiqx9-MuiDialogContent-root"
         >

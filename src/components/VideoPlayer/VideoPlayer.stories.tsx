@@ -45,3 +45,15 @@ export const Playing: Story = {
     isPlaying: true,
   },
 };
+
+export const Loading: Story = {
+  args: {
+    src: 'mock://game-footage.mp4',
+    currentTime: 0,
+    duration: 0,
+    isPlaying: false,
+  },
+  parameters: {
+    noTranslations: true,
+  },
+};

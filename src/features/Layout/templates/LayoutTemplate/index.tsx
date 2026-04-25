@@ -25,9 +25,9 @@ export default function LayoutTemplate({
 
   return (
     <Stack
-      direction="column"
       {...rest}
       sx={{
+        flexDirection: 'column',
         minHeight: '100vh',
         ...rest.sx,
       }}
@@ -41,8 +41,7 @@ export default function LayoutTemplate({
       <Stack
         id="main"
         component="main"
-        direction="column"
-        sx={{ flexGrow: 1 }}
+        sx={{ flexDirection: 'column', flexGrow: 1 }}
       >
         <Container maxWidth="xl" sx={{ paddingY: '2rem' }}>
           {children}

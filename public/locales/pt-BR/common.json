@@ -2,7 +2,8 @@
   "appTitle": "Analisador de Flag Football",
   "skipToMainContent": "Pular para o conteúdo principal",
   "header": {
-    "openMenu": "Abrir menu"
+    "openMenu": "Abrir menu",
+    "goHome": "Início"
   },
   "footer": {
     "copyright": "© {{year}} Flag Football Analyzer",
