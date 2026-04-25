@@ -1,20 +1,23 @@
-import { Stack, Typography } from '@mui/material';
+import VideoFileIcon from '@mui/icons-material/VideoFile';
 import { useTranslation } from 'react-i18next';
 
-const Home = () => {
-  const { t } = useTranslation('home');
+import useDocumentTitle from '../../hooks/useDocumentTitle';
+import HomeTemplate from './templates/HomeTemplate';
 
-  return (
-    <Stack sx={{ alignItems: 'center' }}>
-      <Typography variant="h1">
-        { t('header') }
-      </Typography>
+const FEATURES = [
+  {
+    key: 'gameFootage',
+    href: '/game-footage',
+    icon: <VideoFileIcon fontSize="inherit" />,
+  },
+];
 
-      <Typography variant="h5" sx={{ mt: 4 }}>
-        { t('description') }
-      </Typography>
-    </Stack>
-  );
+const HomePage = () => {
+  const { t } = useTranslation('pageTitles');
+
+  useDocumentTitle(t('home'));
+
+  return <HomeTemplate features={FEATURES} />;
 };
 
-export default Home;
+export default HomePage;
