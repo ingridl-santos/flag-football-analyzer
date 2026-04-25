@@ -1,6 +1,22 @@
 {
   "header": "Flag Football Analyzer",
-  "description": "Uma ferramenta gratuita, estática e focada em treinadores para análise de vídeo de flag football.",
+  "description": "Uma ferramenta gratuita, focada em treinadores, para análise de vídeo de flag football. Todo o processamento ocorre no seu navegador — sem conta, sem nuvem, sem assinatura.",
+  "ctaButton": "Analisar Filmagem",
+  "highlightsTitle": "Tudo que você precisa",
+  "highlights": {
+    "upload": {
+      "title": "Carregar & Assistir",
+      "description": "Carregue um MP4 local ou cole uma URL do YouTube e comece a revisar sua filmagem imediatamente."
+    },
+    "classify": {
+      "title": "Segmentar & Classificar",
+      "description": "Marque timestamps, atribua tipos de jogada e adicione tags a cada segmento com um clique."
+    },
+    "export": {
+      "title": "Exportar & Compartilhar",
+      "description": "Baixe sua análise como CSV, JSON ou um ZIP com segmentos de vídeo cortados."
+    }
+  },
   "featuresTitle": "Funcionalidades",
   "getStarted": "Começar",
   "features": {
@@ -10,3 +26,4 @@
     }
   }
 }
+

@@ -1,6 +1,22 @@
 {
   "header": "Flag Football Analyzer",
-  "description": "A free, static, coach-focused video analysis tool for flag football teams.",
+  "description": "A free, coach-focused video analysis tool for flag football teams. All processing happens in your browser — no account, no cloud, no subscription.",
+  "ctaButton": "Analyze Footage",
+  "highlightsTitle": "Everything you need",
+  "highlights": {
+    "upload": {
+      "title": "Upload & Watch",
+      "description": "Load a local MP4 or paste a YouTube URL and start reviewing your footage immediately."
+    },
+    "classify": {
+      "title": "Segment & Classify",
+      "description": "Mark timestamps, assign play types, and tag every segment with one click."
+    },
+    "export": {
+      "title": "Export & Share",
+      "description": "Download your analysis as CSV, JSON, or a ZIP with clipped video segments."
+    }
+  },
   "featuresTitle": "Features",
   "getStarted": "Get Started",
   "features": {
@@ -10,4 +26,5 @@
     }
   }
 }
+
 
