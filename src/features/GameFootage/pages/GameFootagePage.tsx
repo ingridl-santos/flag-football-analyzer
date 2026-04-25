@@ -1,6 +1,8 @@
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import useDocumentTitle from '../../../hooks/useDocumentTitle';
+import { useVideoExport } from '../../../hooks/useVideoExport';
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
 import {
   clearSegments,
@@ -28,6 +30,8 @@ export default function GameFootagePage() {
   const dispatch = useAppDispatch();
   const videoState = useAppSelector(selectVideoState);
   const segmentState = useAppSelector(selectSegmentState);
+  const videoFileRef = useRef<File | null>(null);
+  const { exportZip, isExporting, exportProgress } = useVideoExport();
 
   useDocumentTitle(t('gameFootage'));
 
@@ -36,6 +40,7 @@ export default function GameFootagePage() {
       URL.revokeObjectURL(videoState.videoUrl);
     }
 
+    videoFileRef.current = file;
     dispatch(clearSegments());
     dispatch(setVideo({ url: URL.createObjectURL(file), fileName: file.name }));
   };
@@ -45,6 +50,7 @@ export default function GameFootagePage() {
       URL.revokeObjectURL(videoState.videoUrl);
     }
 
+    videoFileRef.current = null;
     dispatch(clearSegments());
     dispatch(setYouTubeVideo({ videoId }));
   };
@@ -75,6 +81,13 @@ export default function GameFootagePage() {
       onSetTags={(id, tags) => dispatch(setTags({ id, tags }))}
       onExportCsv={() => downloadFile(segmentsToCsv(segmentState.segments), 'segments.csv', 'text/csv')}
       onExportJson={() => downloadFile(segmentsToJson(segmentState.segments), 'segments.json', 'application/json')}
+      onExportZip={() => {
+        if (videoFileRef.current) {
+          exportZip(videoFileRef.current, segmentState.segments);
+        }
+      }}
+      isExportingZip={isExporting}
+      exportZipProgress={exportProgress}
     />
   );
 }

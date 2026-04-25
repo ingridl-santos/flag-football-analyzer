@@ -1,7 +1,7 @@
 import { ChangeEvent } from 'react';
 
 import UploadFileIcon from '@mui/icons-material/UploadFile';
-import { Button, Divider, Skeleton, Stack, Typography } from '@mui/material';
+import { Button, CircularProgress, Divider, Skeleton, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import VideoPlayer from '../../../../components/VideoPlayer';
@@ -36,6 +36,9 @@ export interface GameFootageTemplateProps {
   onSetTags: (id: string, tags: string[]) => void;
   onExportCsv: () => void;
   onExportJson: () => void;
+  onExportZip: () => void;
+  isExportingZip: boolean;
+  exportZipProgress: number;
 }
 
 export default function GameFootageTemplate({
@@ -63,6 +66,9 @@ export default function GameFootageTemplate({
   onSetTags,
   onExportCsv,
   onExportJson,
+  onExportZip,
+  isExportingZip,
+  exportZipProgress,
 }: GameFootageTemplateProps) {
   const { t } = useTranslation('gameFootage');
 
@@ -188,7 +194,7 @@ export default function GameFootageTemplate({
       <Divider />
 
       <Stack sx={{ gap: '1rem' }}>
-        <Stack sx={{ flexDirection: 'row', gap: '0.75rem', justifyContent: 'flex-end' }}>
+        <Stack sx={{ flexDirection: 'row', gap: '0.75rem', justifyContent: 'flex-end', flexWrap: 'wrap' }}>
           <Button
             variant="outlined"
             size="small"
@@ -206,6 +212,28 @@ export default function GameFootageTemplate({
           >
             {t('exportJson') ?? <Skeleton width="7rem" />}
           </Button>
+
+          {videoType === 'file' && (
+            <Button
+              variant="contained"
+              size="small"
+              disabled={segments.length === 0 || isExportingZip}
+              onClick={onExportZip}
+              startIcon={isExportingZip
+                ? (
+                    <CircularProgress
+                      size="1rem"
+                      aria-hidden="true"
+                      sx={{ color: (theme) => theme.palette.primary.contrastText }}
+                    />
+                  )
+                : undefined}
+            >
+              {isExportingZip
+                ? (t('exportZipProgress', { progress: Math.round(exportZipProgress * 100) }) ?? <Skeleton width="9rem" />)
+                : (t('exportZip') ?? <Skeleton width="7rem" />)}
+            </Button>
+          )}
         </Stack>
 
         <SegmentTable segments={segments} onDelete={onDeleteSegment} onSetPlayType={onSetPlayType} onSetTags={onSetTags} />

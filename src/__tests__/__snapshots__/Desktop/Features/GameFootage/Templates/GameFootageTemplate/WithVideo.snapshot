@@ -126,7 +126,7 @@
         class="MuiStack-root css-8r4r5m-MuiStack-root"
       >
         <div
-          class="MuiStack-root css-p8eop9-MuiStack-root"
+          class="MuiStack-root css-1k7xyq1-MuiStack-root"
         >
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-19boef7-MuiButtonBase-root-MuiButton-root"
@@ -143,6 +143,14 @@
             type="button"
           >
             exportJson
+          </button>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-vgy9b3-MuiButtonBase-root-MuiButton-root"
+            disabled=""
+            tabindex="-1"
+            type="button"
+          >
+            exportZip
           </button>
         </div>
         <div

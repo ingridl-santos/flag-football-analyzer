@@ -24,6 +24,9 @@ const meta: Meta<typeof GameFootageTemplate> = {
     onSetTags: action('onSetTags'),
     onExportCsv: action('onExportCsv'),
     onExportJson: action('onExportJson'),
+    onExportZip: action('onExportZip'),
+    isExportingZip: false,
+    exportZipProgress: 0,
     segments: [],
   },
 };
@@ -88,6 +91,8 @@ export const WithPendingSegment: Story = {
 export const WithSegments: Story = {
   args: {
     ...WithVideo.args,
+    isExportingZip: false,
+    exportZipProgress: 0,
     segments: [
       { id: '1', start: 10, end: 25, duration: 15, playType: 'Pass', tags: ['offense', 'air'] },
       { id: '2', start: 42, end: 83, duration: 41, playType: 'Run', tags: ['offense', 'rush'] },
@@ -99,6 +104,14 @@ export const Playing: Story = {
   args: {
     ...WithVideo.args,
     isPlaying: true,
+  },
+};
+
+export const ExportingZip: Story = {
+  args: {
+    ...WithSegments.args,
+    isExportingZip: true,
+    exportZipProgress: 0.4,
   },
 };
 

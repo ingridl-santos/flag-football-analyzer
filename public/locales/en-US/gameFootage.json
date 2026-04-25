@@ -31,6 +31,8 @@
   "colPlayType": "Play Type",
   "colTags": "Tags",
   "tagsInputPlaceholder": "Add tag…",
+  "exportZip": "Export ZIP",
+  "exportZipProgress": "Exporting… {{progress}}%",
   "playType": "Play Type",
   "playTypeNone": "None",
   "playTypes": {
