@@ -5,6 +5,9 @@
     "openMenu": "Abrir menu",
     "goHome": "Início"
   },
+  "nav": {
+    "gameFootage": "Filmagem do Jogo"
+  },
   "footer": {
     "copyright": "© {{year}} Flag Football Analyzer",
     "viewOnGitHub": "Ver no GitHub"

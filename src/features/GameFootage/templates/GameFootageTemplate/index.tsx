@@ -1,9 +1,11 @@
 import { ChangeEvent } from 'react';
 
+import HomeIcon from '@mui/icons-material/Home';
 import UploadFileIcon from '@mui/icons-material/UploadFile';
-import { Button, CircularProgress, Divider, Skeleton, Stack, Typography } from '@mui/material';
+import { Breadcrumbs, Button, CircularProgress, Divider, Skeleton, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
+import Breadcrumb from '../../../../components/Breadcrumb';
 import VideoPlayer from '../../../../components/VideoPlayer';
 import YouTubePlayer from '../../../../components/YouTubePlayer';
 import { type Segment } from '../../../../redux/SegmentSlice';
@@ -81,6 +83,7 @@ export default function GameFootageTemplate({
   exportZipProgress,
 }: GameFootageTemplateProps) {
   const { t } = useTranslation('gameFootage');
+  const { t: tCommon } = useTranslation('common');
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -288,6 +291,18 @@ export default function GameFootageTemplate({
 
   return (
     <Stack sx={{ gap: '2rem' }}>
+      <nav aria-label="breadcrumb">
+        <Breadcrumbs>
+          <Breadcrumb to="/" icon={<HomeIcon aria-hidden="true" />}>
+            {tCommon('header.goHome') ?? <Skeleton width="3rem" />}
+          </Breadcrumb>
+
+          <Breadcrumb active>
+            {t('title') ?? <Skeleton width="7rem" />}
+          </Breadcrumb>
+        </Breadcrumbs>
+      </nav>
+
       <Typography variant="h2" component="h1">
         {t('title') ?? <Skeleton sx={{ maxWidth: '9rem' }} />}
       </Typography>

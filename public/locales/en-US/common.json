@@ -6,6 +6,9 @@
     "openMenu": "Open menu",
     "goHome": "Home"
   },
+  "nav": {
+    "gameFootage": "Game Footage"
+  },
   "footer": {
     "copyright": "© {{year}} Flag Football Analyzer",
     "viewOnGitHub": "View on GitHub"

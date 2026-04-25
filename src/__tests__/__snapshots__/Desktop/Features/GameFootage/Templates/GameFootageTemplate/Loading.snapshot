@@ -2,6 +2,68 @@
   <div
     class="MuiStack-root css-wcshwo-MuiStack-root"
   >
+    <nav
+      aria-label="breadcrumb"
+    >
+      <nav
+        class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-1anxhkh-MuiTypography-root-MuiBreadcrumbs-root"
+      >
+        <ol
+          class="MuiBreadcrumbs-ol css-4pdmu4-MuiBreadcrumbs-ol"
+        >
+          <li
+            class="MuiBreadcrumbs-li"
+          >
+            <div
+              class="MuiBox-root css-0"
+            >
+              <a
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-15qar8w-MuiTypography-root-MuiLink-root"
+                href="/"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="HomeIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+                  />
+                </svg>
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                  style="width: 3rem;"
+                />
+              </a>
+            </div>
+          </li>
+          <li
+            aria-hidden="true"
+            class="MuiBreadcrumbs-separator css-1wuw8dw-MuiBreadcrumbs-separator"
+          >
+            /
+          </li>
+          <li
+            class="MuiBreadcrumbs-li"
+          >
+            <div
+              class="MuiBox-root css-0"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-5v30sd-MuiTypography-root"
+              >
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                  style="width: 7rem;"
+                />
+              </p>
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </nav>
     <h1
       class="MuiTypography-root MuiTypography-h2 css-nehsvu-MuiTypography-root"
     >
