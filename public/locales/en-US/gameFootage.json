@@ -10,6 +10,8 @@
   "setStart": "Set Start",
   "setEnd": "Set End",
   "createSegment": "Create Segment",
+  "exportCsv": "Export CSV",
+  "exportJson": "Export JSON",
   "segments": "Segments",
   "noSegments": "No segments yet",
   "deleteSegment": "Delete segment",

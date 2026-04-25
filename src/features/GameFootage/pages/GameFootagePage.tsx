@@ -12,6 +12,7 @@ import {
   setPlayType,
 } from '../../../redux/SegmentSlice';
 import { selectVideoState, setCurrentTime, setDuration, setIsPlaying, setVideo } from '../../../redux/VideoSlice';
+import { downloadFile, segmentsToCsv, segmentsToJson } from '../../../utils/exportSegments';
 import GameFootageTemplate from '../templates/GameFootageTemplate';
 
 export default function GameFootagePage() {
@@ -51,6 +52,8 @@ export default function GameFootagePage() {
       onCreateSegment={() => dispatch(createSegment())}
       onDeleteSegment={(id) => dispatch(deleteSegment(id))}
       onSetPlayType={(id, pt) => dispatch(setPlayType({ id, playType: pt }))}
+      onExportCsv={() => downloadFile(segmentsToCsv(segmentState.segments), 'segments.csv', 'text/csv')}
+      onExportJson={() => downloadFile(segmentsToJson(segmentState.segments), 'segments.json', 'application/json')}
     />
   );
 }

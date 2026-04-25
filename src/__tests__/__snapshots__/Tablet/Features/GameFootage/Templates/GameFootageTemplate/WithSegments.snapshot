@@ -125,343 +125,365 @@
       <div
         class="MuiStack-root css-8r4r5m-MuiStack-root"
       >
-        <h2
-          class="MuiTypography-root MuiTypography-h3 css-4imhqc-MuiTypography-root"
-        >
-          segments
-        </h2>
         <div
-          class="MuiTableContainer-root css-rorn0c-MuiTableContainer-root"
+          class="MuiStack-root css-p8eop9-MuiStack-root"
         >
-          <table
-            aria-label="segments"
-            class="MuiTable-root css-1f3tcj6-MuiTable-root"
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-19boef7-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
           >
-            <thead
-              class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+            exportCsv
+          </button>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-19boef7-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            exportJson
+          </button>
+        </div>
+        <div
+          class="MuiStack-root css-8r4r5m-MuiStack-root"
+        >
+          <h2
+            class="MuiTypography-root MuiTypography-h3 css-4imhqc-MuiTypography-root"
+          >
+            segments
+          </h2>
+          <div
+            class="MuiTableContainer-root css-rorn0c-MuiTableContainer-root"
+          >
+            <table
+              aria-label="segments"
+              class="MuiTable-root css-1f3tcj6-MuiTable-root"
             >
-              <tr
-                class="MuiTableRow-root MuiTableRow-head css-uuuc7l-MuiTableRow-root"
+              <thead
+                class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
               >
-                <th
-                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-13ug1lj-MuiTableCell-root"
-                  scope="col"
+                <tr
+                  class="MuiTableRow-root MuiTableRow-head css-uuuc7l-MuiTableRow-root"
                 >
-                  colNumber
-                </th>
-                <th
-                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
-                  scope="col"
-                >
-                  colTimeRange
-                </th>
-                <th
-                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
-                  scope="col"
-                >
-                  colDuration
-                </th>
-                <th
-                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
-                  scope="col"
-                >
-                  colPlayType
-                </th>
-                <th
-                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
-                  scope="col"
-                >
-                  colTags
-                </th>
-                <th
-                  class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1qwwvbt-MuiTableCell-root"
-                  scope="col"
-                />
-              </tr>
-            </thead>
-            <tbody
-              class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
-            >
-              <tr
-                class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-13ug1lj-MuiTableCell-root"
+                    scope="col"
+                  >
+                    colNumber
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
+                    scope="col"
+                  >
+                    colTimeRange
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
+                    scope="col"
+                  >
+                    colDuration
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
+                    scope="col"
+                  >
+                    colPlayType
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
+                    scope="col"
+                  >
+                    colTags
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1qwwvbt-MuiTableCell-root"
+                    scope="col"
+                  />
+                </tr>
+              </thead>
+              <tbody
+                class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
               >
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+                <tr
+                  class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
                 >
-                  <p
-                    class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
                   >
-                    1
-                  </p>
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
-                >
-                  <p
-                    class="MuiTypography-root MuiTypography-body2 css-1m39si7-MuiTypography-root"
-                  >
-                    0:10 → 0:25
-                  </p>
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
-                >
-                  <p
-                    class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
-                  >
-                    0:15
-                  </p>
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
-                >
-                  <div
-                    class="MuiFormControl-root css-wbib2n-MuiFormControl-root"
-                  >
-                    <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1tlaov5-MuiFormLabel-root-MuiInputLabel-root"
-                      data-shrink="true"
-                      id="play-type-label-1"
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
                     >
-                      playType
-                    </label>
+                      1
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-1m39si7-MuiTypography-root"
+                    >
+                      0:10 → 0:25
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                    >
+                      0:15
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+                  >
                     <div
-                      class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-1cmeqoh-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                      class="MuiFormControl-root css-wbib2n-MuiFormControl-root"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1tlaov5-MuiFormLabel-root-MuiInputLabel-root"
+                        data-shrink="true"
+                        id="play-type-label-1"
+                      >
+                        playType
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-1cmeqoh-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                      >
+                        <div
+                          aria-controls=":stable-mocked-react-id-1:"
+                          aria-expanded="false"
+                          aria-haspopup="listbox"
+                          aria-labelledby="play-type-label-1"
+                          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1woa182-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                          role="combobox"
+                          tabindex="0"
+                        >
+                          playTypes.Pass
+                        </div>
+                        <input
+                          aria-hidden="true"
+                          aria-invalid="false"
+                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                          tabindex="-1"
+                          value="Pass"
+                        />
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+                          data-testid="ArrowDropDownIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                        <fieldset
+                          aria-hidden="true"
+                          class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="css-sl37lx-MuiNotchedOutlined-root"
+                          >
+                            <span>
+                              playType
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+                  >
+                    <div
+                      class="MuiStack-root css-16fjidw-MuiStack-root"
                     >
                       <div
-                        aria-controls=":stable-mocked-react-id-1:"
-                        aria-expanded="false"
-                        aria-haspopup="listbox"
-                        aria-labelledby="play-type-label-1"
-                        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1woa182-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
-                        role="combobox"
-                        tabindex="0"
+                        class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-filledPrimary css-7cbns1-MuiChip-root"
                       >
-                        playTypes.Pass
+                        <span
+                          class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                        >
+                          tags.offense
+                        </span>
                       </div>
-                      <input
-                        aria-hidden="true"
-                        aria-invalid="false"
-                        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                        tabindex="-1"
-                        value="Pass"
-                      />
+                      <div
+                        class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-filledPrimary css-7cbns1-MuiChip-root"
+                      >
+                        <span
+                          class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                        >
+                          tags.air
+                        </span>
+                      </div>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+                  >
+                    <button
+                      aria-label="deleteSegment"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
-                        data-testid="ArrowDropDownIcon"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="DeleteIcon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M7 10l5 5 5-5z"
+                          d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                         />
                       </svg>
-                      <fieldset
-                        aria-hidden="true"
-                        class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+                    </button>
+                  </td>
+                </tr>
+                <tr
+                  class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                    >
+                      2
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-1m39si7-MuiTypography-root"
+                    >
+                      0:42 → 1:23
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                    >
+                      0:41
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+                  >
+                    <div
+                      class="MuiFormControl-root css-wbib2n-MuiFormControl-root"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1tlaov5-MuiFormLabel-root-MuiInputLabel-root"
+                        data-shrink="true"
+                        id="play-type-label-2"
                       >
-                        <legend
-                          class="css-sl37lx-MuiNotchedOutlined-root"
+                        playType
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-1cmeqoh-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                      >
+                        <div
+                          aria-controls=":stable-mocked-react-id-2:"
+                          aria-expanded="false"
+                          aria-haspopup="listbox"
+                          aria-labelledby="play-type-label-2"
+                          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1woa182-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                          role="combobox"
+                          tabindex="0"
                         >
-                          <span>
-                            playType
-                          </span>
-                        </legend>
-                      </fieldset>
+                          playTypes.Run
+                        </div>
+                        <input
+                          aria-hidden="true"
+                          aria-invalid="false"
+                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                          tabindex="-1"
+                          value="Run"
+                        />
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+                          data-testid="ArrowDropDownIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                        <fieldset
+                          aria-hidden="true"
+                          class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="css-sl37lx-MuiNotchedOutlined-root"
+                          >
+                            <span>
+                              playType
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
                     </div>
-                  </div>
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
-                >
-                  <div
-                    class="MuiStack-root css-16fjidw-MuiStack-root"
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
                   >
                     <div
-                      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-filledPrimary css-7cbns1-MuiChip-root"
-                    >
-                      <span
-                        class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
-                      >
-                        tags.offense
-                      </span>
-                    </div>
-                    <div
-                      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-filledPrimary css-7cbns1-MuiChip-root"
-                    >
-                      <span
-                        class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
-                      >
-                        tags.air
-                      </span>
-                    </div>
-                  </div>
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
-                >
-                  <button
-                    aria-label="deleteSegment"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
-                      data-testid="DeleteIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                      />
-                    </svg>
-                  </button>
-                </td>
-              </tr>
-              <tr
-                class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
-              >
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
-                >
-                  <p
-                    class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
-                  >
-                    2
-                  </p>
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
-                >
-                  <p
-                    class="MuiTypography-root MuiTypography-body2 css-1m39si7-MuiTypography-root"
-                  >
-                    0:42 → 1:23
-                  </p>
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
-                >
-                  <p
-                    class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
-                  >
-                    0:41
-                  </p>
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
-                >
-                  <div
-                    class="MuiFormControl-root css-wbib2n-MuiFormControl-root"
-                  >
-                    <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1tlaov5-MuiFormLabel-root-MuiInputLabel-root"
-                      data-shrink="true"
-                      id="play-type-label-2"
-                    >
-                      playType
-                    </label>
-                    <div
-                      class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-1cmeqoh-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                      class="MuiStack-root css-16fjidw-MuiStack-root"
                     >
                       <div
-                        aria-controls=":stable-mocked-react-id-2:"
-                        aria-expanded="false"
-                        aria-haspopup="listbox"
-                        aria-labelledby="play-type-label-2"
-                        class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1woa182-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
-                        role="combobox"
-                        tabindex="0"
+                        class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-filledPrimary css-7cbns1-MuiChip-root"
                       >
-                        playTypes.Run
+                        <span
+                          class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                        >
+                          tags.offense
+                        </span>
                       </div>
-                      <input
-                        aria-hidden="true"
-                        aria-invalid="false"
-                        class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                        tabindex="-1"
-                        value="Run"
-                      />
+                      <div
+                        class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-filledPrimary css-7cbns1-MuiChip-root"
+                      >
+                        <span
+                          class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                        >
+                          tags.rush
+                        </span>
+                      </div>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+                  >
+                    <button
+                      aria-label="deleteSegment"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
-                        data-testid="ArrowDropDownIcon"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="DeleteIcon"
                         focusable="false"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M7 10l5 5 5-5z"
+                          d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
                         />
                       </svg>
-                      <fieldset
-                        aria-hidden="true"
-                        class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
-                      >
-                        <legend
-                          class="css-sl37lx-MuiNotchedOutlined-root"
-                        >
-                          <span>
-                            playType
-                          </span>
-                        </legend>
-                      </fieldset>
-                    </div>
-                  </div>
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
-                >
-                  <div
-                    class="MuiStack-root css-16fjidw-MuiStack-root"
-                  >
-                    <div
-                      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-filledPrimary css-7cbns1-MuiChip-root"
-                    >
-                      <span
-                        class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
-                      >
-                        tags.offense
-                      </span>
-                    </div>
-                    <div
-                      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-filledPrimary css-7cbns1-MuiChip-root"
-                    >
-                      <span
-                        class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
-                      >
-                        tags.rush
-                      </span>
-                    </div>
-                  </div>
-                </td>
-                <td
-                  class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
-                >
-                  <button
-                    aria-label="deleteSegment"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
-                      data-testid="DeleteIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
-                      />
-                    </svg>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

@@ -28,6 +28,8 @@ export interface GameFootageTemplateProps {
   onCreateSegment: () => void;
   onDeleteSegment: (id: string) => void;
   onSetPlayType: (id: string, playType: string) => void;
+  onExportCsv: () => void;
+  onExportJson: () => void;
 }
 
 export default function GameFootageTemplate({
@@ -49,6 +51,8 @@ export default function GameFootageTemplate({
   onCreateSegment,
   onDeleteSegment,
   onSetPlayType,
+  onExportCsv,
+  onExportJson,
 }: GameFootageTemplateProps) {
   const { t } = useTranslation('gameFootage');
 
@@ -161,7 +165,29 @@ export default function GameFootageTemplate({
 
       <Divider />
 
-      <SegmentTable segments={segments} onDelete={onDeleteSegment} onSetPlayType={onSetPlayType} />
+      <Stack sx={{ gap: '1rem' }}>
+        <Stack sx={{ flexDirection: 'row', gap: '0.75rem', justifyContent: 'flex-end' }}>
+          <Button
+            variant="outlined"
+            size="small"
+            disabled={segments.length === 0}
+            onClick={onExportCsv}
+          >
+            {t('exportCsv') ?? <Skeleton width="6rem" />}
+          </Button>
+
+          <Button
+            variant="outlined"
+            size="small"
+            disabled={segments.length === 0}
+            onClick={onExportJson}
+          >
+            {t('exportJson') ?? <Skeleton width="7rem" />}
+          </Button>
+        </Stack>
+
+        <SegmentTable segments={segments} onDelete={onDeleteSegment} onSetPlayType={onSetPlayType} />
+      </Stack>
     </Stack>
   );
 
