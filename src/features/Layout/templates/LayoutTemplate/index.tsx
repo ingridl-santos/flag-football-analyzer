@@ -1,32 +1,55 @@
 import { ReactNode } from 'react';
 
-import Box from '@mui/material/Box';
+import { Stack, StackProps } from '@mui/material';
 import Container from '@mui/material/Container';
+import { useTranslation } from 'react-i18next';
 
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
+import Footer, { FooterProps } from '../../components/Footer';
+import Header, { HeaderProps } from '../../components/Header';
 import SkipLink from '../../components/SkipLink';
 
-export interface LayoutTemplateProps {
-  title: string;
-  githubUrl?: string;
+export interface LayoutTemplateProps extends StackProps {
+  slotProps: {
+    header: HeaderProps;
+    footer?: FooterProps;
+  };
   children: ReactNode;
 }
 
-const LayoutTemplate = ({ title, githubUrl, children }: LayoutTemplateProps) => (
-  <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-    <SkipLink />
+export default function LayoutTemplate({
+  slotProps,
+  children,
+  ...rest
+}: LayoutTemplateProps) {
+  const { t } = useTranslation('common');
 
-    <Header title={title} />
+  return (
+    <Stack
+      direction="column"
+      {...rest}
+      sx={{
+        minHeight: '100vh',
+        ...rest.sx,
+      }}
+    >
+      <SkipLink href="#main">
+        {t('skipToMainContent')}
+      </SkipLink>
 
-    <Box id="main-content" component="main" sx={{ flexGrow: 1 }}>
-      <Container maxWidth="xl" sx={{ paddingY: '2rem' }}>
-        {children}
-      </Container>
-    </Box>
+      <Header {...slotProps.header} />
 
-    <Footer appTitle={title} githubUrl={githubUrl} />
-  </Box>
-);
+      <Stack
+        id="main"
+        component="main"
+        direction="column"
+        sx={{ flexGrow: 1 }}
+      >
+        <Container maxWidth="xl" sx={{ paddingY: '2rem' }}>
+          {children}
+        </Container>
+      </Stack>
 
-export default LayoutTemplate;
+      <Footer {...slotProps.footer} />
+    </Stack>
+  );
+}

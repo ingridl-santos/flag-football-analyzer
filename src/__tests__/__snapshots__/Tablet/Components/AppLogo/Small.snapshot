@@ -1,0 +1,68 @@
+<div>
+  <div
+    class="MuiBox-root css-1033rfx"
+  >
+    <svg
+      aria-hidden="true"
+      fill="none"
+      height="1.5rem"
+      viewBox="0 0 32 32"
+      width="1.5rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <line
+        stroke="#7A5C00"
+        stroke-linecap="round"
+        stroke-width="2"
+        x1="16"
+        x2="16"
+        y1="2"
+        y2="11"
+      />
+      <path
+        d="M16 2 L27 6 L16 10 Z"
+        fill="#C9A227"
+      />
+      <path
+        d="M3 19 C5 13 10 11 16 11 C22 11 27 13 29 19 C27 25 22 27 16 27 C10 27 5 25 3 19 Z"
+        fill="#C9A227"
+      />
+      <line
+        stroke="#121212"
+        stroke-linecap="round"
+        stroke-width="1.5"
+        x1="16"
+        x2="16"
+        y1="12"
+        y2="26"
+      />
+      <line
+        stroke="#121212"
+        stroke-linecap="round"
+        stroke-width="1"
+        x1="13"
+        x2="19"
+        y1="16"
+        y2="16"
+      />
+      <line
+        stroke="#121212"
+        stroke-linecap="round"
+        stroke-width="1"
+        x1="12"
+        x2="20"
+        y1="19"
+        y2="19"
+      />
+      <line
+        stroke="#121212"
+        stroke-linecap="round"
+        stroke-width="1"
+        x1="13"
+        x2="19"
+        y1="22"
+        y2="22"
+      />
+    </svg>
+  </div>
+</div>

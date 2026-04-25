@@ -9,7 +9,18 @@ const LayoutPage = () => {
   const { t } = useTranslation('common');
 
   return (
-    <LayoutTemplate title={t('appTitle')} githubUrl={GITHUB_URL}>
+    <LayoutTemplate
+      slotProps={{
+        header: {
+          title: t('appTitle'),
+          menuEntries: [],
+          onMenuButtonClick: () => {},
+        },
+        footer: {
+          githubUrl: GITHUB_URL,
+        },
+      }}
+    >
       <Outlet />
     </LayoutTemplate>
   );

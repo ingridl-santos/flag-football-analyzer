@@ -1,15 +1,21 @@
 import Link from '@mui/material/Link';
+import { ReactNode } from 'react';
 
-const SkipLink = () => (
+export interface SkipLinkProps {
+  href: string;
+  children: ReactNode;
+}
+
+const SkipLink = ({ href, children }: SkipLinkProps) => (
   <Link
-    href="#main-content"
+    href={href}
     sx={{
       position: 'absolute',
       top: '-100%',
       left: 0,
       zIndex: 'tooltip',
-      px: 3,
-      py: 1,
+      paddingX: 3,
+      paddingY: 1,
       bgcolor: 'primary.main',
       color: 'primary.contrastText',
       fontWeight: 'bold',
@@ -19,7 +25,7 @@ const SkipLink = () => (
       },
     }}
   >
-    Skip to main content
+    {children}
   </Link>
 );
 

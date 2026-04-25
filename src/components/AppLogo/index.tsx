@@ -1,0 +1,39 @@
+export interface AppLogoProps {
+  width?: string | number;
+  height?: string | number;
+}
+
+export default function AppLogo({ width = '2rem', height = '2rem' }: AppLogoProps) {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      {/* Flag pole — rooted at the top of the football */}
+      <line x1="16" y1="2" x2="16" y2="11" stroke="#7A5C00" strokeWidth="2" strokeLinecap="round" />
+
+      {/* Flag — triangle pointing right */}
+      <path d="M16 2 L27 6 L16 10 Z" fill="#C9A227" />
+
+      {/* Football body — pointed horizontal oval */}
+      <path
+        d="M3 19 C5 13 10 11 16 11 C22 11 27 13 29 19 C27 25 22 27 16 27 C10 27 5 25 3 19 Z"
+        fill="#C9A227"
+      />
+
+      {/* Lace seam — vertical center line */}
+      <line x1="16" y1="12" x2="16" y2="26" stroke="#121212" strokeWidth="1.5" strokeLinecap="round" />
+
+      {/* Lace crossbars */}
+      <line x1="13" y1="16" x2="19" y2="16" stroke="#121212" strokeWidth="1" strokeLinecap="round" />
+
+      <line x1="12" y1="19" x2="20" y2="19" stroke="#121212" strokeWidth="1" strokeLinecap="round" />
+
+      <line x1="13" y1="22" x2="19" y2="22" stroke="#121212" strokeWidth="1" strokeLinecap="round" />
+    </svg>
+  );
+}

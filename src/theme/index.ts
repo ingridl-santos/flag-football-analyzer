@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
+import AppBar from './components/AppBar';
 import Button from './components/Button';
 import ButtonBase from './components/ButtonBase';
 import ButtonGroup from './components/ButtonGroup';
@@ -10,6 +11,7 @@ import Dialog from './components/Dialog';
 import DialogTitle from './components/DialogTitle';
 import Paper from './components/Paper';
 import Skeleton from './components/Skeleton';
+import Toolbar from './components/Toolbar';
 import UseMediaQuery from './components/UseMediaQuery';
 import breakpoints from './constants/breakpoints';
 import palette from './constants/palette';
@@ -22,6 +24,7 @@ export const theme = createTheme({
   },
   palette,
   components: {
+    MuiAppBar: AppBar,
     MuiButton: Button,
     MuiButtonBase: ButtonBase,
     MuiButtonGroup: ButtonGroup,
@@ -32,6 +35,7 @@ export const theme = createTheme({
     MuiDialogTitle: DialogTitle,
     MuiPaper: Paper,
     MuiSkeleton: Skeleton,
+    MuiToolbar: Toolbar,
     MuiUseMediaQuery: UseMediaQuery,
   },
 });

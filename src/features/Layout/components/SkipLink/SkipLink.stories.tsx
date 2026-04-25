@@ -5,6 +5,10 @@ import SkipLink from '.';
 const meta: Meta<typeof SkipLink> = {
   title: 'Layout / Components / SkipLink',
   component: SkipLink,
+  args: {
+    href: '#main',
+    children: 'Skip to main content',
+  },
 };
 
 export default meta;

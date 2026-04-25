@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import {
   alpha,
+  AppBar,
   Box,
   Button,
   ButtonGroup,
@@ -26,6 +27,7 @@ import {
   TableHead,
   TableRow,
   TableRowProps,
+  Toolbar,
   TypeAction,
   TypeText,
   Typography,
@@ -472,6 +474,33 @@ export const ChipStory: Story = {
 
           <Chip label="Quick" size="small" color={color ?? 'primary'} onDelete={() => {}} />
         </Stack>
+      </Section>
+    </Stack>
+  ),
+};
+
+// ---------------------------------------------------------------------------
+// AppBar + Toolbar — elevation 0, static, inherit color; toolbar gutters off
+// ---------------------------------------------------------------------------
+
+export const AppBarStory: Story = {
+  name: 'AppBar',
+  render: () => (
+    <Stack sx={{ padding: '2rem', gap: '2rem', width: '50rem' }}>
+      <Section>
+        <Typography variant="h5">Default (elevation 0, static, inherit)</Typography>
+
+        <AppBar>
+          <Toolbar>
+            <Typography variant="h6" fontWeight="bold">
+              Flag Football Analyzer
+            </Typography>
+
+            <Stack sx={{ flexDirection: 'row', gap: '1rem' }}>
+              <Button variant="underlined" aria-current="page">Game Footage</Button>
+            </Stack>
+          </Toolbar>
+        </AppBar>
       </Section>
     </Stack>
   ),

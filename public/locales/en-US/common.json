@@ -1,4 +1,12 @@
 {
   "appTitle": "Flag Football Analyzer",
-  "close": "Close"
+  "close": "Close",
+  "skipToMainContent": "Skip to main content",
+  "header": {
+    "openMenu": "Open menu"
+  },
+  "footer": {
+    "copyright": "© {{year}} Flag Football Analyzer",
+    "viewOnGitHub": "View on GitHub"
+  }
 }

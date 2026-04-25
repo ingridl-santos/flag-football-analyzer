@@ -1,3 +1,11 @@
 {
-  "appTitle": "Analisador de Flag Football"
+  "appTitle": "Analisador de Flag Football",
+  "skipToMainContent": "Pular para o conteúdo principal",
+  "header": {
+    "openMenu": "Abrir menu"
+  },
+  "footer": {
+    "copyright": "© {{year}} Flag Football Analyzer",
+    "viewOnGitHub": "Ver no GitHub"
+  }
 }

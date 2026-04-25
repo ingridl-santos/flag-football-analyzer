@@ -1,29 +1,95 @@
 <div>
   <header
-    class="MuiBox-root css-s0t6ml"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorInherit MuiAppBar-positionStatic css-817acg-MuiPaper-root-MuiAppBar-root"
   >
     <div
       class="MuiContainer-root MuiContainer-maxWidthXl css-19r6kue-MuiContainer-root"
     >
       <div
-        class="MuiStack-root css-bgbf6p-MuiStack-root"
+        class="MuiToolbar-root MuiToolbar-regular css-9lfp86-MuiToolbar-root"
       >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-dlr803-MuiSvgIcon-root"
-          data-testid="SportsFootballIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
+        <div
+          class="MuiStack-root css-gww8y4-MuiStack-root"
         >
-          <path
-            d="M3.02 15.62c-.08 2.42.32 4.34.67 4.69s2.28.76 4.69.67zM13.08 3.28c-2.33.42-4.79 1.34-6.62 3.18s-2.76 4.29-3.18 6.62l7.63 7.63c2.34-.41 4.79-1.34 6.62-3.18s2.76-4.29 3.18-6.62zM9.9 15.5l-1.4-1.4 5.6-5.6 1.4 1.4zm11.08-7.12c.08-2.42-.32-4.34-.67-4.69s-2.28-.76-4.69-.67z"
-          />
-        </svg>
-        <h1
-          class="MuiTypography-root MuiTypography-h5 css-y524kq-MuiTypography-root"
-        >
-          Flag Football Analyzer
-        </h1>
+          <div
+            class="MuiStack-root css-1lxe5uy-MuiStack-root"
+          >
+            <a
+              aria-label="Flag Football Analyzer"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit css-hqgnpk-MuiButtonBase-root-MuiButton-root"
+              href="/"
+              tabindex="0"
+            >
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="1.5rem"
+                viewBox="0 0 32 32"
+                width="1.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line
+                  stroke="#7A5C00"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  x1="16"
+                  x2="16"
+                  y1="2"
+                  y2="11"
+                />
+                <path
+                  d="M16 2 L27 6 L16 10 Z"
+                  fill="#C9A227"
+                />
+                <path
+                  d="M3 19 C5 13 10 11 16 11 C22 11 27 13 29 19 C27 25 22 27 16 27 C10 27 5 25 3 19 Z"
+                  fill="#C9A227"
+                />
+                <line
+                  stroke="#121212"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                  x1="16"
+                  x2="16"
+                  y1="12"
+                  y2="26"
+                />
+                <line
+                  stroke="#121212"
+                  stroke-linecap="round"
+                  stroke-width="1"
+                  x1="13"
+                  x2="19"
+                  y1="16"
+                  y2="16"
+                />
+                <line
+                  stroke="#121212"
+                  stroke-linecap="round"
+                  stroke-width="1"
+                  x1="12"
+                  x2="20"
+                  y1="19"
+                  y2="19"
+                />
+                <line
+                  stroke="#121212"
+                  stroke-linecap="round"
+                  stroke-width="1"
+                  x1="13"
+                  x2="19"
+                  y1="22"
+                  y2="22"
+                />
+              </svg>
+              <span
+                class="MuiTypography-root MuiTypography-h5 css-y524kq-MuiTypography-root"
+              >
+                Flag Football Analyzer
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </header>
