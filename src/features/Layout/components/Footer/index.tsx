@@ -25,8 +25,8 @@ const Footer = ({ appTitle, githubUrl }: FooterProps) => {
       }}
     >
       <Container maxWidth="xl">
-        <Stack direction="row" alignItems="center" justifyContent="space-between">
-          <Stack direction="row" alignItems="center" gap="0.5rem">
+        <Stack sx={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+          <Stack sx={{ flexDirection: 'row', alignItems: 'center', gap: '0.5rem' }}>
             <SportsFootballIcon color="primary" fontSize="small" />
 
             <Typography variant="body2" color="text.secondary">

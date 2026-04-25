@@ -317,7 +317,7 @@ export const ButtonStory: Story = {
       <Section>
         <Typography variant="h5">Contained · Outlined · Text</Typography>
 
-        <Stack direction="row" gap="1rem" alignItems="center" flexWrap="wrap">
+        <Stack sx={{ flexDirection: 'row', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
           <Button variant="contained" color={color as ButtonProps['color']} disabled={disabled} endIcon={<ChevronRightIcon />}>
             Contained
           </Button>
@@ -340,7 +340,7 @@ export const ButtonStory: Story = {
           when aria-current=&quot;page&quot; is set.
         </Typography>
 
-        <Stack direction="row" gap="1rem" alignItems="center">
+        <Stack sx={{ flexDirection: 'row', gap: '1rem', alignItems: 'center' }}>
           <Button variant="underlined" color={color as ButtonProps['color']} disabled={disabled}>
             Inactive
           </Button>
@@ -370,7 +370,7 @@ export const ButtonGroupStory: Story = {
       <Section>
         <Typography variant="h5">Contained · Outlined · Text</Typography>
 
-        <Stack gap="1rem">
+        <Stack sx={{ gap: '1rem' }}>
           {(['contained', 'outlined', 'text'] as const).map((variant) => (
             <ButtonGroup key={variant} variant={variant} color={color as ButtonGroupProps['color']} disabled={disabled}>
               <Button>Offense</Button>
@@ -420,10 +420,10 @@ export const SkeletonStory: Story = {
       <Section>
         <Typography variant="h5">Wave animation (default)</Typography>
 
-        <Stack direction="row" gap="1rem" alignItems="center">
+        <Stack sx={{ flexDirection: 'row', gap: '1rem', alignItems: 'center' }}>
           <Skeleton variant="circular" width="3rem" height="3rem" />
 
-          <Stack gap="0.5rem" flex={1}>
+          <Stack sx={{ gap: '0.5rem', flex: 1 }}>
             <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
 
             <Skeleton variant="text" sx={{ fontSize: '0.75rem', width: '60%' }} />

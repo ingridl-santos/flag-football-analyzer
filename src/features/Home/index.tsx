@@ -5,7 +5,7 @@ const Home = () => {
   const { t } = useTranslation('home');
 
   return (
-    <Stack alignItems="center">
+    <Stack sx={{ alignItems: 'center' }}>
       <Typography variant="h1">
         { t('header') }
       </Typography>

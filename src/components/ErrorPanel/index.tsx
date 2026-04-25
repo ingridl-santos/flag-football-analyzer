@@ -22,12 +22,12 @@ export default function ErrorPanel({
 
   return (
     <Stack
-      justifyContent="center"
-      alignItems="center"
-      spacing="1.5rem"
       sx={{
         maxWidth: '22.5rem',
         textAlign: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: '1.5rem',
       }}
     >
       <Box

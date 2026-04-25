@@ -11,7 +11,7 @@
         Contained · Outlined · Text
       </h5>
       <div
-        class="MuiStack-root css-mua9th-MuiStack-root"
+        class="MuiStack-root css-1lh17mi-MuiStack-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-13fqfg1-MuiButtonBase-root-MuiButton-root"
@@ -65,7 +65,7 @@
         Used for navigation items. Shows an animated underline when when aria-current="page" is set.
       </p>
       <div
-        class="MuiStack-root css-10phrut-MuiStack-root"
+        class="MuiStack-root css-ucy4gg-MuiStack-root"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-underlined MuiButton-underlinedPrimary MuiButton-sizeMedium MuiButton-underlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-underlined MuiButton-underlinedPrimary MuiButton-sizeMedium MuiButton-underlinedSizeMedium MuiButton-colorPrimary css-q5hlgp-MuiButtonBase-root-MuiButton-root"

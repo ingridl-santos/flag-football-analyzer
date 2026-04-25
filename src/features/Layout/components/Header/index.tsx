@@ -19,7 +19,7 @@ const Header = ({ title }: HeaderProps) => (
     }}
   >
     <Container maxWidth="xl">
-      <Stack direction="row" alignItems="center" gap="0.5rem">
+      <Stack sx={{ flexDirection: 'row', alignItems: 'center', gap: '0.5rem' }}>
         <SportsFootballIcon color="primary" />
 
         <Typography variant="h5" component="h1" fontWeight="bold">
