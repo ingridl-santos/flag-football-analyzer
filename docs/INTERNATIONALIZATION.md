@@ -21,19 +21,26 @@ Translation files are organized by namespace in `public/locales/`:
 ```
 public/locales/
 ├── en-US/
-│   ├── common.json          # Shared strings (app title, labels)
-│   └── home.json            # Home feature strings
+│   ├── common.json          # Shared strings (app title, nav, header/footer)
+│   ├── errors.json          # Error page strings
+│   ├── pageTitles.json      # Browser tab title strings
+│   ├── home.json            # Home feature strings
+│   └── gameFootage.json     # Game Footage feature strings
 └── pt-BR/
     ├── common.json
-    └── home.json
+    ├── errors.json
+    └── pageTitles.json
 ```
 
 ### Existing Namespaces
 
 | Namespace | File | Content |
 |---|---|---|
-| `common` | `common.json` | Shared UI strings: app title |
-| `home` | `home.json` | Home page headline and description |
+| `common` | `common.json` | Shared UI strings: app title, nav labels, header/footer copy, skip link |
+| `errors` | `errors.json` | Error page titles and messages |
+| `pageTitles` | `pageTitles.json` | Browser tab titles (`appName`, `documentTitle`, per-page keys) |
+| `home` | `home.json` | Home page headline, description, highlights copy |
+| `gameFootage` | `gameFootage.json` | Game footage page: upload, playback, segments, export, tag suggestions |
 ## Using Translations in Components
 
 ### Basic Usage

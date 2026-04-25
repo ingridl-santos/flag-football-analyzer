@@ -20,12 +20,13 @@ Upload a game video, mark segments, classify plays, and export your analysis —
 
 | Category | Libraries |
 |---|---|
-| Core | React, TypeScript, Vite |
-| UI | Material UI v7 (MUI) |
-| State | Redux Toolkit + redux-persist |
-| Routing | React Router DOM |
+| Core | React 18, TypeScript 5, Vite 7 |
+| UI | Material UI v5 (MUI) |
+| State | Redux Toolkit |
+| Routing | React Router v6 |
 | i18n | i18next (en-US, pt-BR) |
-| Tooling | ESLint, Stylelint, Vitest, Storybook |
+| Video | FFmpeg.wasm (in-browser clip export) |
+| Tooling | ESLint v9, Stylelint, Vitest, Storybook 10 |
 
 ---
 

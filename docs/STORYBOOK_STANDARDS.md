@@ -59,7 +59,7 @@ export const Default: Story = {
 - **Import the component from `.`** (the index barrel export), not the full path
 - **Types come from `@storybook/react-vite`** — use `Meta<typeof Comp>` and `StoryObj<typeof Comp>`
 - **`meta` is the default export** — it defines `title` and `component`
-- **Each story is a named export** using PascalCase: `Default`, `WithAction`, `LoadingUser`
+- **Each story is a named export** using PascalCase: `Default`, `WithAction`, `Loading`
 
 ## Story Titles
 
@@ -74,18 +74,34 @@ Titles use `/` separators with spaces around them for grouping in the Storybook 
 
 ## Using Actions for Callbacks
 
-Import `action` from `storybook/actions` (not `@storybook/addon-actions`):
+Import `action` from `storybook/actions` (not `@storybook/addon-actions`). **Always define `action()` calls on the `meta` object's `args`**, so they apply as defaults to every story without repetition:
 
 ```typescript
 import { action } from 'storybook/actions';
 
-export const Default: Story = {
+const meta: Meta<typeof MyComponent> = {
+  title: 'Components / My Component',
+  component: MyComponent,
   args: {
     onUserButtonClick: action('onUserButtonClick'),
     onActionClick: action('onActionClick'),
   },
 };
 ```
+
+Individual stories only need to override args that differ from the meta defaults. **Never define `action()` calls inside individual story `args`** unless they vary per story.
+
+## No Logic in Stories
+
+Story files must not contain logic — no `useState`, `useEffect`, `useRef`, `useCallback`, conditional rendering logic, or empty `() => {}` lambda callbacks. Stories are declarative snapshots of component states:
+
+- All interactions must emit an `action()` — never use `() => {}` or no-op functions
+- Use `args` to represent different states; use `render` only for layout wrappers (e.g., `<Stack>` to show size variants side by side)
+- No hooks of any kind inside story `render` functions
+
+## Story Count
+
+Keep story counts focused. Each story should demonstrate a meaningfully different state or use case, **not** minor variations of the same content (e.g., multiple stories differing only by a number). Prefer one representative story per major state.
 
 ## Composing Stories
 
@@ -94,7 +110,7 @@ Reuse args from other stories using spread:
 ```typescript
 export const Default: Story = {
   args: {
-    user: { name: 'Gordie', avatarUrl: 'https://placepengu.in/250' },
+    user: { name: 'Gordie' },
     menuEntries: [
       { id: 'me', label: 'Me' },
       { id: 'teams', label: 'Teams' },
@@ -102,24 +118,17 @@ export const Default: Story = {
   },
 };
 
-export const NoMenuEntries: Story = {
+export const Empty: Story = {
   args: {
     ...Default.args,
     menuEntries: [],
-  },
-};
-
-export const LoadingUser: Story = {
-  args: {
-    ...Default.args,
-    user: { name: undefined, avatarUrl: undefined },
   },
 };
 ```
 
 ## Stories with Shared Args on Meta
 
-For stories within a feature that share common callback handlers, define them on the meta:
+For stories within a component that share common callback handlers or default props, define them on the meta. Stories only need to specify what changes:
 
 ```typescript
 const meta: Meta = {
@@ -156,7 +165,7 @@ The Storybook configuration lives in `.storybook/`:
 | `.storybook/main.ts` | Stories glob pattern (`src/**/*.stories.@(js|jsx|mjs|ts|tsx)`), addons list, framework config, static dirs (`public/`) |
 | `.storybook/preview.tsx` | Global decorators, theme/i18n/router wrapping, viewport presets, a11y config |
 | `.storybook/i18n.ts` | i18next instance for Storybook (uses same `initOptions` as the app) |
-| `.storybook/i18nEmpty.ts` | Empty i18n instance (returns `undefined` for all keys, used for skeleton testing) |
+| `.storybook/i18nEmpty.ts` | Empty i18n instance (returns `undefined` for all keys, used for `Loading` stories) |
 | `.storybook/storyUtils.ts` | Shared story utilities |
 
 ### Global Decorators (preview.tsx)

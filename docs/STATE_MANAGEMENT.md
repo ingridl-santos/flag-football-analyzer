@@ -6,15 +6,14 @@ The application uses **Redux Toolkit v1** for client-side state management. The 
 
 ## Store Configuration
 
-The store is in `src/redux/store.ts`:
-
-- Configures the store with `configureStore` from Redux Toolkit
-- The `reducer` object is extended as slices are added
+`src/redux/store.ts` configures three slices:
 
 ```typescript
 export const store = configureStore({
   reducer: {
-    analysis: AnalysisSlice,
+    breadcrumbs: breadcrumbReducer,   // BreadcrumbSlice
+    video: videoReducer,              // VideoSlice
+    segments: segmentReducer,         // SegmentSlice
   },
 });
 ```
@@ -26,36 +25,128 @@ Always use the typed hooks from `src/redux/hooks.ts` instead of plain `useDispat
 ```typescript
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 
-// In your component:
 const dispatch = useAppDispatch();
-const analysisState = useAppSelector(SelectAnalysisState);
+const videoState = useAppSelector(selectVideoState);
 ```
 
-These hooks are pre-typed with `RootState` and `AppDispatch`, eliminating the need for manual type annotations.
+These hooks are pre-typed with `RootState` and `AppDispatch`.
+
+## Existing Slices
+
+### BreadcrumbSlice (`src/redux/BreadcrumbSlice/`)
+
+Manages the breadcrumb trail shown in the sticky header bar.
+
+**State:**
+```typescript
+interface BreadcrumbState {
+  breadcrumbs: BreadcrumbItem[];    // BreadcrumbItem = { label: string; to?: string }
+}
+```
+
+**Actions:**
+- `setBreadcrumbs(items: BreadcrumbItem[])` — Set the full breadcrumb trail
+- `clearBreadcrumbs()` — Reset to empty array
+
+**Selector:** `selectBreadcrumbs(state)` → `BreadcrumbState`
+
+**Usage pattern** — Pages dispatch breadcrumbs in a `useEffect` with cleanup:
+```typescript
+useEffect(() => {
+  dispatch(setBreadcrumbs([
+    { label: t('home'), to: '/' },
+    { label: t('gameFootage') },
+  ]));
+  return () => { dispatch(clearBreadcrumbs()); };
+}, [dispatch, t]);
+```
+
+---
+
+### VideoSlice (`src/redux/VideoSlice/`)
+
+Manages the currently loaded video and its playback state.
+
+**State:**
+```typescript
+interface VideoState {
+  videoUrl: string | null;
+  videoFileName: string | null;
+  youtubeVideoId: string | null;
+  videoType: 'file' | 'youtube' | null;
+  currentTime: number;
+  duration: number;
+  isPlaying: boolean;
+}
+```
+
+**Actions:**
+- `setVideo({ url, fileName })` — Load a local file (clears YouTube state)
+- `setYouTubeVideo({ videoId })` — Load a YouTube video (clears file state)
+- `clearVideo()` — Reset all video state
+- `setCurrentTime(time)` — Update playhead position
+- `setDuration(duration)` — Update total duration
+- `setIsPlaying(isPlaying)` — Sync play/pause state
+
+**Selector:** `selectVideoState(state)` → `VideoState`
+
+---
+
+### SegmentSlice (`src/redux/SegmentSlice/`)
+
+Manages the pending in-progress segment and the list of saved segments.
+
+**State:**
+```typescript
+interface SegmentState {
+  pendingStart: number | null;
+  pendingEnd: number | null;
+  pendingPlayType: string;
+  pendingTags: string[];
+  segments: Segment[];
+}
+
+interface Segment {
+  id: string;              // nanoid-generated
+  start: number;           // seconds
+  end: number;             // seconds
+  duration: number;        // end - start
+  playType?: string;
+  tags?: string[];
+}
+```
+
+**Actions:**
+- `setPendingStart(time)`, `setPendingEnd(time)` — Set the pending segment timestamps
+- `setPendingPlayType(playType)`, `setPendingTags(tags)` — Set pending metadata
+- `createSegment()` — Commits the pending segment to `segments[]` (no-op if start ≥ end or either is null)
+- `deleteSegment(id)` — Remove a segment by ID
+- `setPlayType({ id, playType })`, `setTags({ id, tags })` — Update a saved segment's metadata
+- `clearSegments()` — Reset all pending state and empty the segments list
+
+**Selector:** `selectSegmentState(state)` → `SegmentState`
 
 ## Creating a New Slice
 
-The project has a pre-created `src/redux/AnalysisSlice/` folder ready to be populated. Follow this pattern:
+### Step 1: Create the slice folder
 
-### Step 1: Create the slice file
-
-Create a folder `src/redux/MyNewSlice/index.ts`:
+```
+src/redux/MyNewSlice/
+└── index.ts
+```
 
 ```typescript
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 
-// 1. Define the state interface
 export interface MyNewState {
-  items: Array<string>;
+  items: string[];
 }
 
-// 2. Define the initial state
 export const initialState: MyNewState = {
   items: [],
 };
 
-// 3. Create the slice
 const myNewSlice = createSlice({
   name: 'myNew',
   initialState,
@@ -69,66 +160,40 @@ const myNewSlice = createSlice({
   },
 });
 
-// 4. Export actions
 export const { addItem, removeItem } = myNewSlice.actions;
 
-// 5. Export selector(s)
-export const SelectMyNewState = (state: RootState) => state.myNew;
+export const selectMyNewState = (state: RootState) => state.myNew;
 
-// 6. Export the reducer (default export)
 export default myNewSlice.reducer;
 ```
 
 ### Step 2: Register in the store
 
-In `src/redux/store.ts`, import and add the new reducer:
-
 ```typescript
-import AnalysisSlice from './AnalysisSlice';
+import myNewReducer from './MyNewSlice';
 
 export const store = configureStore({
   reducer: {
-    analysis: AnalysisSlice,
+    breadcrumbs: breadcrumbReducer,
+    video: videoReducer,
+    segments: segmentReducer,
+    myNew: myNewReducer,
   },
 });
 ```
 
-## Using State in Components
-
-```typescript
-import { useAppDispatch, useAppSelector } from '../../redux/hooks';
-import { addItem, SelectMyNewState } from '../../redux/MyNewSlice';
-
-export default function MyComponent() {
-  const dispatch = useAppDispatch();
-  const { items } = useAppSelector(SelectMyNewState);
-
-  const handleAdd = (item: string) => {
-    dispatch(addItem(item));
-  };
-
-  return (
-    <div>
-      {items.map((item) => <span key={item}>{item}</span>)}
-    </div>
-  );
-}
-```
-
 ## Type Exports
-
-The store exports these types (defined in `src/redux/store.ts`):
 
 | Type | Purpose |
 |---|---|
-| `RootState` | Return type of `store.getState()` |
-| `AppDispatch` | Type of `store.dispatch` |
+| `RootState` | Return type of `store.getState()` — used in selectors |
+| `AppDispatch` | Type of `store.dispatch` — used in `useAppDispatch` |
 | `AppThunk<ReturnType>` | Type for thunk actions |
 
 ## Conventions
 
-- Slice folders use PascalCase: `AnalysisSlice/`, not `analysisSlice/`
-- Selectors are prefixed with `Select`: `SelectAnalysisState`
-- Initial state is exported (useful for testing): `export const initialState`
+- Slice folders use PascalCase: `BreadcrumbSlice/`, `VideoSlice/`, `SegmentSlice/`
+- Selectors use camelCase prefixed with `select`: `selectVideoState`, `selectSegmentState`, `selectBreadcrumbs`
+- `export const initialState` — exported for use in tests
 - The reducer is the default export; actions and selectors are named exports
 - State mutations use Immer (built into Redux Toolkit) — write "mutative" code in reducers

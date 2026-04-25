@@ -125,28 +125,34 @@ If your feature needs its own translation namespace, create a JSON file in `publ
 }
 ```
 
-Then use it in your component:
+Also add a matching file at `public/locales/pt-BR/myFeature.json` (even if empty for now). Then use it in your component:
 
 ```typescript
 const { t } = useTranslation('myFeature');
 ```
 
-If your feature only needs a few strings, you may add them to the existing `common.json` namespace instead.
+Add the page title key to `public/locales/en-US/pageTitles.json` — this is read by `useDocumentTitle`.
+
+If your feature only needs a few strings, add them to `common.json` instead of creating a new namespace.
 
 See [INTERNATIONALIZATION.md](INTERNATIONALIZATION.md) for full i18n details.
 
 ## Step 4: Add Storybook Stories
 
-Create stories for your template (not the page, since pages have data dependencies):
+Create stories for your template (not the page). Put all shared callback `action()` handlers on `meta.args` so they apply to every story by default:
 
 ```typescript
 // src/features/MyFeature/templates/MyFeatureTemplate/MyFeatureTemplate.stories.tsx
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { action } from 'storybook/actions';
 import MyFeatureTemplate from '.';
 
 const meta: Meta<typeof MyFeatureTemplate> = {
-  title: 'Features / MyFeature / MyFeature Template',
+  title: 'Features / My Feature / My Feature Template',
   component: MyFeatureTemplate,
+  args: {
+    onAction: action('onAction'),
+  },
 };
 
 export default meta;
@@ -155,6 +161,11 @@ type Story = StoryObj<typeof MyFeatureTemplate>;
 
 export const Default: Story = {
   args: {},
+};
+
+// Required: shows all skeleton loading states
+export const Loading: Story = {
+  parameters: { noTranslations: true },
 };
 ```
 
@@ -175,9 +186,12 @@ The snapshot test in `src/__tests__/snapshots.test.ts` automatically discovers a
 - [ ] Feature folder created under `src/features/` with `pages/` and `templates/` subdirectories
 - [ ] Page component created (thin wrapper, delegates to template)
 - [ ] Template component created with `useTranslation` for i18n strings
+- [ ] Page calls `useDocumentTitle` with the key from the `pageTitles` namespace
+- [ ] Key added to `public/locales/en-US/pageTitles.json` for the page title
+- [ ] Page dispatches `setBreadcrumbs` in `useEffect` (with `clearBreadcrumbs` cleanup) if the page is deeper than the root
 - [ ] Lazy import added in `src/router/routeDefinitions.tsx`
 - [ ] Route name added to `ROUTES` constant
-- [ ] Route definition added to `ROUTES_DEFINITIONS` as a child of the Layout route
-- [ ] Translation JSON file created in `public/locales/en/` (if needed)
-- [ ] Storybook stories created for the template
+- [ ] Route definition added to `ROUTES_DEFINITIONS` as a child of the Layout route (with `errorElement`)
+- [ ] Translation JSON file created in `public/locales/en-US/` (and matching file in `pt-BR/`)
+- [ ] Storybook stories created for the template (callbacks on `meta.args`, `Loading` story with `noTranslations: true`)
 - [ ] Snapshot tests generated (`npm run test:update-snapshots`)

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The project enforces code quality through **ESLint v8** (legacy config), **Stylelint ^16**, **TypeScript strict mode**, and **Husky** for git hooks.
+The project enforces code quality through **ESLint v9** (flat config), **Stylelint ^16**, **TypeScript strict mode**, and **Husky** for git hooks.
 
 ## Running Linters
 
@@ -16,13 +16,16 @@ npm run lint:css:fix  # Stylelint with auto-fix
 
 ## ESLint Configuration
 
-Defined in `.eslintrc.cjs` using the **ESLint v8 legacy config** format.
+Defined in `eslint.config.js` using the **ESLint v9 flat config** format (via `defineConfig` from the `eslint/config` module).
 
 ### Config Layers (Applied in Order)
 
-1. **Global**: `plugin:react/recommended`, `airbnb`, `plugin:storybook/recommended`, `plugin:@typescript-eslint/recommended`
-2. **TypeScript file overrides** (`*.ts`, `*.tsx`, `*.stories.*`): extends `airbnb-typescript` with project-specific TypeScript parser rules
-3. **Import ordering**: enforces `builtin` → `external` → `internal` groups with newlines between, React imports sorted first
+1. **Base**: `@eslint/js` recommended rules
+2. **TypeScript**: `typescript-eslint` recommended rules
+3. **Stylistic**: `@stylistic/eslint-plugin` (formatting rules extracted from ESLint core)
+4. **React + Hooks + a11y**: `eslint-plugin-react`, `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y`
+5. **TypeScript overrides** (`*.ts`, `*.tsx`): TypeScript parser + project-specific rules
+6. **Storybook** (`*.stories.*`): `eslint-plugin-storybook` recommended rules
 
 ### Formatting Rules (@stylistic)
 

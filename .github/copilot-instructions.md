@@ -14,13 +14,12 @@ Before writing any code in this repository, read the project documentation in th
 ## Topic-Specific References
 
 - [docs/STATE_MANAGEMENT.md](../docs/STATE_MANAGEMENT.md) — Redux Toolkit slices, typed hooks, redux-persist
-- [docs/STYLING_AND_THEME.md](../docs/STYLING_AND_THEME.md) — MUI v7 theme, custom palette, component overrides
+- [docs/STYLING_AND_THEME.md](../docs/STYLING_AND_THEME.md) — MUI v5 theme, custom palette, component overrides
 - [docs/TESTING_STANDARDS.md](../docs/TESTING_STANDARDS.md) — Vitest, happy-dom, snapshot testing via Storybook, required unit tests for hooks and utils
 - [docs/STORYBOOK_STANDARDS.md](../docs/STORYBOOK_STANDARDS.md) — Story file conventions, .storybook/ config
 - [docs/INTERNATIONALIZATION.md](../docs/INTERNATIONALIZATION.md) — i18next namespaces, translations, Trans component
 - [docs/API_SERVICES.md](../docs/API_SERVICES.md) — Axios client factory, service class pattern
-- [docs/AUTHENTICATION.md](../docs/AUTHENTICATION.md) — OIDC auth flow, protected routes, token propagation
-- [docs/ENVIRONMENT_AND_DEPLOYMENT.md](../docs/ENVIRONMENT_AND_DEPLOYMENT.md) — Runtime env vars, feature flags, LogRocket
+- [docs/ENVIRONMENT_AND_DEPLOYMENT.md](../docs/ENVIRONMENT_AND_DEPLOYMENT.md) — Runtime env vars (`window.env`)
 
 ## Before Writing Code
 
@@ -36,7 +35,7 @@ Before writing any code in this repository, read the project documentation in th
 - **All routes need `errorElement`.** Point to `<Errors.ErrorPage />`.
 - **Create Storybook stories for templates and components.** Stories are automatically included in snapshot tests. Define `action()` calls for all function props in the `meta` object's `args` so they apply as defaults to every story. Use spaces in story titles instead of camelCase or PascalCase (e.g., `'Features / Learning Center / What Is Disc Template'`, not `'Features / LearningCenter / WhatIsDisc Template'`).
 - **Use typed Redux hooks.** `useAppDispatch` and `useAppSelector` from `src/redux/hooks.ts`, never plain `useDispatch`/`useSelector`.
-- **Use MUI v7 components and `sx` prop for styling.** Use `styled()` only for reusable styled variants. Always write out full property names in `sx` and `style` props — use `padding` instead of `p`, `marginLeft` instead of `ml`, `backgroundColor` instead of `bgcolor`, etc. Axis shorthands like `paddingX`, `paddingY`, `marginX`, `marginY` are allowed.
+- **Use MUI v5 components and `sx` prop for styling.** Use `styled()` only for reusable styled variants. Always write out full property names in `sx` and `style` props — use `padding` instead of `p`, `marginLeft` instead of `ml`, `backgroundColor` instead of `bgcolor`, etc. Axis shorthands like `paddingX`, `paddingY`, `marginX`, `marginY` are allowed.
 - **Use the `Dialog` component from `src/components/Dialog`** instead of MUI `Dialog` directly. It includes a required close button and a typed `onClose` reason (`'backdropClick' | 'escapeKeyDown' | 'closeButtonClick'`). Pass content via the `title`, `content`, and `actions` props.
 - **Never hard-code color values.** All colors must come from the MUI theme — including white and black. Use `theme.palette.common.white` and `theme.palette.common.black` instead of the strings `'white'` or `'black'`. Access the theme via the `sx` callback syntax: `sx={{ color: (theme) => theme.palette.common.white }}`. The only exception is SVG `fill`/`stroke` attributes for icons and logos.
 - **Use rem units for sizing**, not px or MUI numeric shortcuts. In `sx`, `style`, and component shorthand props, always use rem strings (e.g., `padding: '1.5rem'`, `gap="2rem"`). The only exception is values under 4px (e.g., border widths of `1px` or `2px`), which may use `px`. Zero values (`0`) never need a unit.

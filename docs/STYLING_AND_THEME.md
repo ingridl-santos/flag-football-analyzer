@@ -2,7 +2,7 @@
 
 ## Overview
 
-The application uses **Material UI (MUI) v7** with a custom theme defined in `src/theme/index.ts`. All styling goes through MUI's theming system — no standalone CSS files for component styling.
+The application uses **Material UI (MUI) v5** with a custom theme defined in `src/theme/index.ts`. All styling goes through MUI's theming system — no standalone CSS files for component styling.
 
 ## Theme Structure
 
@@ -145,7 +145,7 @@ Global MUI component defaults are configured in `src/theme/components/`:
 - **ButtonGroup**: Group variant configuration
 - **Card**: `border: 1px solid divider`, `boxShadow: none` — flat, border-based cards
 - **Container**: `maxWidth: 'xl'` — default container width
-- **CssBaseline**: Enforces `overflow-y: scroll`, hides `overflow-x` outside Storybook, and sets focus-visible CSS custom properties:
+- **CssBaseline**: Sets `overflow-y: scroll` on `<html>` (hides `overflow-x` outside Storybook) and sets focus-visible CSS custom properties:
   - `--focus-outline-color: currentColor`
   - `--focus-outline-offset: 0.125rem`
   - `--focus-outline-style: dashed`

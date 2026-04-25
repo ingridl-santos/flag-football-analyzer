@@ -1,3 +1,5 @@
+> **Current status:** This project has no backend API. There are no `src/services/` files and `axios` is not installed. This document describes the pattern to follow **if and when** API services are added. Do not implement this pattern until a real backend API endpoint exists.
+
 # API Services
 
 ## Overview
