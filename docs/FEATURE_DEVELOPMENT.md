@@ -2,7 +2,7 @@
 
 This guide covers how to add a new feature to the application, from folder structure to routing to translations.
 
-> **Note:** All components inside a feature — pages, templates, and any sub-components in `components/` — are React components and must follow all rules in [COMPONENT_STANDARDS.md](COMPONENT_STANDARDS.md). That document is the authoritative reference for props conventions, `data-testid`, styling, skeleton loading, dialogs, accessibility, and more. This guide covers only the feature-specific concerns (routing, folder layout, translations, Storybook) that are not already covered there.
+> **Note:** All components inside a feature — pages, templates, and any sub-components in `components/` — are React components and must follow all rules in [COMPONENT_STANDARDS.md](COMPONENT_STANDARDS.md). That document is the authoritative reference for props conventions, styling, skeleton loading, dialogs, accessibility, and more. This guide covers only the feature-specific concerns (routing, folder layout, translations, Storybook) that are not already covered there.
 
 ## Folder Structure
 

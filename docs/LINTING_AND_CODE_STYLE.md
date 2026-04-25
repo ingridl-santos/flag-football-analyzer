@@ -110,4 +110,3 @@ Husky v9 is configured for git hooks (via the `prepare` script: `"prepare": "hus
 | Function components | Named function declaration or arrow function |
 | JSX elements | Newline between elements |
 | Hard-coded text | Banned (use i18n) |
-| data-testid | Required on component roots |

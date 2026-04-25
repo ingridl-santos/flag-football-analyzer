@@ -91,7 +91,7 @@ export default defineConfig([
 
       // General rules (previously from Airbnb)
       'no-console': ['warn', { allow: ['error'] }],
-      'no-param-reassign': ['error', { ignorePropertyModificationsFor: ['self'] }],
+      'no-param-reassign': ['error', { ignorePropertyModificationsFor: ['self', 'state', 'draft'] }],
       'no-restricted-syntax': ['error', 'ForInStatement', 'LabeledStatement', 'WithStatement'],
       'object-shorthand': ['error', 'always'],
     },

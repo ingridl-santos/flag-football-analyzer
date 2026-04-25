@@ -7,7 +7,7 @@ Before writing any code in this repository, read the project documentation in th
 1. [docs/PROJECT_OVERVIEW.md](../docs/PROJECT_OVERVIEW.md) — Project summary, commands, directory layout
 2. [docs/TECHNOLOGY_STACK.md](../docs/TECHNOLOGY_STACK.md) — Exact library versions (do not upgrade or add dependencies without confirming compatibility)
 3. [docs/ARCHITECTURE.md](../docs/ARCHITECTURE.md) — Project structure, provider composition, routing, page/template pattern
-4. [docs/COMPONENT_STANDARDS.md](../docs/COMPONENT_STANDARDS.md) — Component file structure, props, data-testid, styling, accessibility
+4. [docs/COMPONENT_STANDARDS.md](../docs/COMPONENT_STANDARDS.md) — Component file structure, props, styling, accessibility
 5. [docs/FEATURE_DEVELOPMENT.md](../docs/FEATURE_DEVELOPMENT.md) — Step-by-step guide for adding a new feature
 6. [docs/LINTING_AND_CODE_STYLE.md](../docs/LINTING_AND_CODE_STYLE.md) — ESLint rules, code style conventions
 
