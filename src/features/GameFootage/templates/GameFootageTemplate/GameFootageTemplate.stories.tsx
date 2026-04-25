@@ -6,12 +6,19 @@ import GameFootageTemplate from '.';
 const meta: Meta<typeof GameFootageTemplate> = {
   title: 'Features / Game Footage / Game Footage Template',
   component: GameFootageTemplate,
+  parameters: {
+    layout: 'padded',
+  },
   args: {
     onFileSelect: action('onFileSelect'),
     onTimeUpdate: action('onTimeUpdate'),
     onDurationChange: action('onDurationChange'),
     onPlayStateChange: action('onPlayStateChange'),
     onSeek: action('onSeek'),
+    onSetStart: action('onSetStart'),
+    onSetEnd: action('onSetEnd'),
+    onCreateSegment: action('onCreateSegment'),
+    onDeleteSegment: action('onDeleteSegment'),
   },
 };
 
@@ -26,6 +33,9 @@ export const Default: Story = {
     currentTime: 0,
     duration: 0,
     isPlaying: false,
+    pendingStart: null,
+    pendingEnd: null,
+    segments: [],
   },
 };
 
@@ -36,6 +46,27 @@ export const WithVideo: Story = {
     currentTime: 42,
     duration: 180,
     isPlaying: false,
+    pendingStart: null,
+    pendingEnd: null,
+    segments: [],
+  },
+};
+
+export const WithPendingSegment: Story = {
+  args: {
+    ...WithVideo.args,
+    pendingStart: 10,
+    pendingEnd: 42,
+  },
+};
+
+export const WithSegments: Story = {
+  args: {
+    ...WithVideo.args,
+    segments: [
+      { id: '1', start: 10, end: 25, duration: 15 },
+      { id: '2', start: 42, end: 83, duration: 41 },
+    ],
   },
 };
 

@@ -101,6 +101,11 @@
             type="button"
           >
             setStart
+            <span
+              class="MuiTypography-root MuiTypography-caption css-hm272d-MuiTypography-root"
+            >
+              0:10
+            </span>
           </button>
           <button
             class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-11hdqfe-MuiButtonBase-root-MuiButton-root"
@@ -108,11 +113,15 @@
             type="button"
           >
             setEnd
+            <span
+              class="MuiTypography-root MuiTypography-caption css-hm272d-MuiTypography-root"
+            >
+              0:42
+            </span>
           </button>
           <button
-            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-13fqfg1-MuiButtonBase-root-MuiButton-root"
-            disabled=""
-            tabindex="-1"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-13fqfg1-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
             type="button"
           >
             createSegment

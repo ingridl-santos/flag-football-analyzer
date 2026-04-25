@@ -1,10 +1,6 @@
 import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
-import Slider from '@mui/material/Slider';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import { Box, IconButton, Slider, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import useVideoPlayer from '../../hooks/useVideoPlayer';

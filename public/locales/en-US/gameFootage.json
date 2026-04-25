@@ -1,10 +1,19 @@
 {
-  "title": "Video Player",
+  "title": "Game Footage",
   "uploadPrompt": "Choose an MP4 file to get started",
   "uploadButton": "Upload MP4",
   "uploadAccepted": "Accepted format: MP4",
   "play": "Play",
   "pause": "Pause",
   "timeline": "Video timeline",
-  "noVideo": "No video loaded"
+  "noVideo": "No video loaded",
+  "setStart": "Set Start",
+  "setEnd": "Set End",
+  "createSegment": "Create Segment",
+  "segments": "Segments",
+  "noSegments": "No segments yet",
+  "deleteSegment": "Delete segment",
+  "segmentStart": "Start",
+  "segmentEnd": "End",
+  "segmentDuration": "Duration"
 }

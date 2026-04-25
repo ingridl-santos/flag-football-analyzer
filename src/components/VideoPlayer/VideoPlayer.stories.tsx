@@ -6,6 +6,9 @@ import VideoPlayer from '.';
 const meta: Meta<typeof VideoPlayer> = {
   title: 'Components / Video Player',
   component: VideoPlayer,
+  parameters: {
+    layout: 'padded',
+  },
   args: {
     onTimeUpdate: action('onTimeUpdate'),
     onDurationChange: action('onDurationChange'),

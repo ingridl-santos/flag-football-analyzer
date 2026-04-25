@@ -1,0 +1,284 @@
+<div>
+  <div
+    class="MuiStack-root css-wcshwo-MuiStack-root"
+  >
+    <h1
+      class="MuiTypography-root MuiTypography-h2 css-nehsvu-MuiTypography-root"
+    >
+      title
+    </h1>
+    <div
+      class="MuiStack-root css-wcshwo-MuiStack-root"
+    >
+      <div
+        class="MuiStack-root css-8r4r5m-MuiStack-root"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle2 css-oftxad-MuiTypography-root"
+        >
+          game-footage.mp4
+        </h6>
+        <div
+          class="MuiStack-root css-8r4r5m-MuiStack-root"
+        >
+          <div
+            class="MuiBox-root css-1ljsv1a"
+          >
+            <video
+              src="mock://game-footage.mp4"
+              style="width: 100%; display: block;"
+            >
+              <track
+                kind="captions"
+              />
+            </video>
+          </div>
+          <span
+            class="MuiSlider-root MuiSlider-colorPrimary MuiSlider-sizeSmall css-14obvuc-MuiSlider-root"
+          >
+            <span
+              class="MuiSlider-rail css-7o8aqz-MuiSlider-rail"
+            />
+            <span
+              class="MuiSlider-track css-nl6333-MuiSlider-track"
+              style="left: 0%; width: 23.333333333333332%;"
+            />
+            <span
+              class="MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary css-1y4cb25-MuiSlider-thumb"
+              data-index="0"
+              style="left: 23.333333333333332%;"
+            >
+              <input
+                aria-label="timeline"
+                aria-orientation="horizontal"
+                aria-valuemax="180"
+                aria-valuemin="0"
+                aria-valuenow="42"
+                data-index="0"
+                max="180"
+                min="0"
+                step="0.1"
+                style="border: 0px; height: 100%; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 100%; direction: ltr;"
+                type="range"
+                value="42"
+              />
+            </span>
+          </span>
+          <div
+            class="MuiStack-root css-1qgb5gw-MuiStack-root"
+          >
+            <button
+              aria-label="play"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="PlayArrowIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8 5v14l11-7z"
+                />
+              </svg>
+            </button>
+            <p
+              class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+            >
+              0:42 / 3:00
+            </p>
+          </div>
+        </div>
+        <div
+          class="MuiStack-root css-pocecv-MuiStack-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-11hdqfe-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            setStart
+          </button>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-11hdqfe-MuiButtonBase-root-MuiButton-root"
+            tabindex="0"
+            type="button"
+          >
+            setEnd
+          </button>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-13fqfg1-MuiButtonBase-root-MuiButton-root"
+            disabled=""
+            tabindex="-1"
+            type="button"
+          >
+            createSegment
+          </button>
+        </div>
+      </div>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+      />
+      <div
+        class="MuiStack-root css-8r4r5m-MuiStack-root"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h3 css-4imhqc-MuiTypography-root"
+        >
+          segments
+        </h2>
+        <div
+          class="MuiStack-root css-5u2gm5-MuiStack-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded css-e04is0-MuiPaper-root"
+          >
+            <div
+              class="MuiStack-root css-1qgb5gw-MuiStack-root"
+            >
+              <div
+                class="MuiStack-root css-11y9khl-MuiStack-root"
+              >
+                <div
+                  class="MuiStack-root css-nen11g-MuiStack-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-caption css-1a7okdy-MuiTypography-root"
+                  >
+                    segmentStart
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-vkw6wh-MuiTypography-root"
+                  >
+                    0:10
+                  </p>
+                </div>
+                <div
+                  class="MuiStack-root css-nen11g-MuiStack-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-caption css-1a7okdy-MuiTypography-root"
+                  >
+                    segmentEnd
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-vkw6wh-MuiTypography-root"
+                  >
+                    0:25
+                  </p>
+                </div>
+                <div
+                  class="MuiStack-root css-nen11g-MuiStack-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-caption css-1a7okdy-MuiTypography-root"
+                  >
+                    segmentDuration
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-vkw6wh-MuiTypography-root"
+                  >
+                    0:15
+                  </p>
+                </div>
+              </div>
+              <button
+                aria-label="deleteSegment"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="MuiPaper-root MuiPaper-outlined MuiPaper-rounded css-e04is0-MuiPaper-root"
+          >
+            <div
+              class="MuiStack-root css-1qgb5gw-MuiStack-root"
+            >
+              <div
+                class="MuiStack-root css-11y9khl-MuiStack-root"
+              >
+                <div
+                  class="MuiStack-root css-nen11g-MuiStack-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-caption css-1a7okdy-MuiTypography-root"
+                  >
+                    segmentStart
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-vkw6wh-MuiTypography-root"
+                  >
+                    0:42
+                  </p>
+                </div>
+                <div
+                  class="MuiStack-root css-nen11g-MuiStack-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-caption css-1a7okdy-MuiTypography-root"
+                  >
+                    segmentEnd
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-vkw6wh-MuiTypography-root"
+                  >
+                    1:23
+                  </p>
+                </div>
+                <div
+                  class="MuiStack-root css-nen11g-MuiStack-root"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-caption css-1a7okdy-MuiTypography-root"
+                  >
+                    segmentDuration
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 css-vkw6wh-MuiTypography-root"
+                  >
+                    0:41
+                  </p>
+                </div>
+              </div>
+              <button
+                aria-label="deleteSegment"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

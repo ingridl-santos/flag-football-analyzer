@@ -1,13 +1,13 @@
 import { ChangeEvent } from 'react';
 
 import UploadFileIcon from '@mui/icons-material/UploadFile';
-import Box from '@mui/material/Box';
-import Skeleton from '@mui/material/Skeleton';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import { Box, Button, Divider, Skeleton, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import VideoPlayer from '../../../../components/VideoPlayer';
+import { type Segment } from '../../../../redux/SegmentSlice';
+import { formatTime } from '../../../../utils/formatTime';
+import SegmentList from '../../components/SegmentList';
 
 export interface GameFootageTemplateProps {
   videoUrl: string | null;
@@ -15,11 +15,18 @@ export interface GameFootageTemplateProps {
   currentTime: number;
   duration: number;
   isPlaying: boolean;
+  pendingStart: number | null;
+  pendingEnd: number | null;
+  segments: Segment[];
   onFileSelect: (file: File) => void;
   onTimeUpdate: (time: number) => void;
   onDurationChange: (duration: number) => void;
   onPlayStateChange: (isPlaying: boolean) => void;
   onSeek: (time: number) => void;
+  onSetStart: () => void;
+  onSetEnd: () => void;
+  onCreateSegment: () => void;
+  onDeleteSegment: (id: string) => void;
 }
 
 export default function GameFootageTemplate({
@@ -28,11 +35,18 @@ export default function GameFootageTemplate({
   currentTime,
   duration,
   isPlaying,
+  pendingStart,
+  pendingEnd,
+  segments,
   onFileSelect,
   onTimeUpdate,
   onDurationChange,
   onPlayStateChange,
   onSeek,
+  onSetStart,
+  onSetEnd,
+  onCreateSegment,
+  onDeleteSegment,
 }: GameFootageTemplateProps) {
   const { t } = useTranslation('gameFootage');
 
@@ -92,22 +106,60 @@ export default function GameFootageTemplate({
     </Stack>
   );
 
-  const playerArea = (
-    <Stack sx={{ gap: '1rem' }}>
-      <Typography variant="subtitle2">
-        {videoFileName}
-      </Typography>
+  const canCreateSegment = pendingStart !== null && pendingEnd !== null && pendingStart < pendingEnd;
 
-      <VideoPlayer
-        src={videoUrl as string}
-        currentTime={currentTime}
-        duration={duration}
-        isPlaying={isPlaying}
-        onTimeUpdate={onTimeUpdate}
-        onDurationChange={onDurationChange}
-        onPlayStateChange={onPlayStateChange}
-        onSeek={onSeek}
-      />
+  const playerArea = (
+    <Stack sx={{ gap: '2rem' }}>
+      <Stack sx={{ gap: '1rem' }}>
+        <Typography variant="subtitle2">
+          {videoFileName}
+        </Typography>
+
+        <VideoPlayer
+          src={videoUrl as string}
+          currentTime={currentTime}
+          duration={duration}
+          isPlaying={isPlaying}
+          onTimeUpdate={onTimeUpdate}
+          onDurationChange={onDurationChange}
+          onPlayStateChange={onPlayStateChange}
+          onSeek={onSeek}
+        />
+
+        <Stack sx={{ flexDirection: 'row', gap: '1rem', flexWrap: 'wrap' }}>
+          <Button variant="outlined" onClick={onSetStart}>
+            {t('setStart') ?? <Skeleton width="5rem" />}
+
+            {pendingStart !== null && (
+              <Typography variant="caption" sx={{ marginLeft: '0.5rem' }}>
+                {formatTime(pendingStart)}
+              </Typography>
+            )}
+          </Button>
+
+          <Button variant="outlined" onClick={onSetEnd}>
+            {t('setEnd') ?? <Skeleton width="4.5rem" />}
+
+            {pendingEnd !== null && (
+              <Typography variant="caption" sx={{ marginLeft: '0.5rem' }}>
+                {formatTime(pendingEnd)}
+              </Typography>
+            )}
+          </Button>
+
+          <Button
+            variant="contained"
+            onClick={onCreateSegment}
+            disabled={!canCreateSegment}
+          >
+            {t('createSegment') ?? <Skeleton width="8rem" />}
+          </Button>
+        </Stack>
+      </Stack>
+
+      <Divider />
+
+      <SegmentList segments={segments} onDelete={onDeleteSegment} />
     </Stack>
   );
 
