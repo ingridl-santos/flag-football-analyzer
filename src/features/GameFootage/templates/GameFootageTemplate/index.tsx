@@ -1,0 +1,123 @@
+import { ChangeEvent } from 'react';
+
+import UploadFileIcon from '@mui/icons-material/UploadFile';
+import Box from '@mui/material/Box';
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import { useTranslation } from 'react-i18next';
+
+import VideoPlayer from '../../../../components/VideoPlayer';
+
+export interface GameFootageTemplateProps {
+  videoUrl: string | null;
+  videoFileName: string | null;
+  currentTime: number;
+  duration: number;
+  isPlaying: boolean;
+  onFileSelect: (file: File) => void;
+  onTimeUpdate: (time: number) => void;
+  onDurationChange: (duration: number) => void;
+  onPlayStateChange: (isPlaying: boolean) => void;
+  onSeek: (time: number) => void;
+}
+
+export default function GameFootageTemplate({
+  videoUrl,
+  videoFileName,
+  currentTime,
+  duration,
+  isPlaying,
+  onFileSelect,
+  onTimeUpdate,
+  onDurationChange,
+  onPlayStateChange,
+  onSeek,
+}: GameFootageTemplateProps) {
+  const { t } = useTranslation('gameFootage');
+
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+
+    if (file) onFileSelect(file);
+  };
+
+  const uploadArea = (
+    <Stack
+      sx={{
+        border: '2px dashed',
+        borderColor: (theme) => theme.palette.divider,
+        borderRadius: '0.5rem',
+        padding: '3rem',
+        alignItems: 'center',
+        gap: '1rem',
+      }}
+    >
+      <UploadFileIcon
+        aria-hidden="true"
+        sx={{ fontSize: '3rem', color: (theme) => theme.palette.text.secondary }}
+      />
+
+      <Typography variant="body1" color="text.secondary" textAlign="center">
+        {t('uploadPrompt') ?? <Skeleton sx={{ maxWidth: '18rem' }} />}
+      </Typography>
+
+      <Typography variant="caption" color="text.secondary">
+        {t('uploadAccepted') ?? <Skeleton sx={{ maxWidth: '10rem' }} />}
+      </Typography>
+
+      <Box
+        component="label"
+        sx={{
+          cursor: 'pointer',
+          display: 'inline-flex',
+          alignItems: 'center',
+          backgroundColor: 'primary.main',
+          color: (theme) => theme.palette.primary.contrastText,
+          borderRadius: '0.25rem',
+          padding: '0.375rem 1rem',
+          typography: 'button',
+          '&:hover': { backgroundColor: 'primary.dark' },
+        }}
+      >
+        {t('uploadButton') ?? <Skeleton width="6rem" />}
+
+        <input
+          type="file"
+          accept="video/mp4"
+          hidden
+          onChange={handleFileChange}
+        />
+      </Box>
+    </Stack>
+  );
+
+  const playerArea = (
+    <Stack sx={{ gap: '1rem' }}>
+      <Typography variant="subtitle2">
+        {videoFileName}
+      </Typography>
+
+      <VideoPlayer
+        src={videoUrl as string}
+        currentTime={currentTime}
+        duration={duration}
+        isPlaying={isPlaying}
+        onTimeUpdate={onTimeUpdate}
+        onDurationChange={onDurationChange}
+        onPlayStateChange={onPlayStateChange}
+        onSeek={onSeek}
+      />
+    </Stack>
+  );
+
+  return (
+    <Stack sx={{ gap: '2rem' }}>
+      <Typography variant="h2" component="h1">
+        {t('title') ?? <Skeleton sx={{ maxWidth: '9rem' }} />}
+      </Typography>
+
+      {!videoUrl ? uploadArea : playerArea}
+    </Stack>
+  );
+}

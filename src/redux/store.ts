@@ -1,7 +1,11 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 
+import videoReducer from './VideoSlice';
+
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    video: videoReducer,
+  },
 });
 
 export type AppDispatch = typeof store.dispatch;

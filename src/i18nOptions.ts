@@ -20,5 +20,6 @@ export const initOptions: InitOptions = {
     'common',
     'errors',
     'pageTitles',
+    'gameFootage',
   ],
 };

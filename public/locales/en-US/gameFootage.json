@@ -1,0 +1,10 @@
+{
+  "title": "Video Player",
+  "uploadPrompt": "Choose an MP4 file to get started",
+  "uploadButton": "Upload MP4",
+  "uploadAccepted": "Accepted format: MP4",
+  "play": "Play",
+  "pause": "Pause",
+  "timeline": "Video timeline",
+  "noVideo": "No video loaded"
+}

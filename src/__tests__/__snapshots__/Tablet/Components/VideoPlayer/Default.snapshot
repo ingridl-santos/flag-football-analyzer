@@ -1,0 +1,76 @@
+<div>
+  <div
+    class="MuiStack-root css-8r4r5m-MuiStack-root"
+  >
+    <div
+      class="MuiBox-root css-1ljsv1a"
+    >
+      <video
+        src="mock://game-footage.mp4"
+        style="width: 100%; display: block;"
+      >
+        <track
+          kind="captions"
+        />
+      </video>
+    </div>
+    <span
+      class="MuiSlider-root MuiSlider-colorPrimary MuiSlider-sizeSmall css-14obvuc-MuiSlider-root"
+    >
+      <span
+        class="MuiSlider-rail css-7o8aqz-MuiSlider-rail"
+      />
+      <span
+        class="MuiSlider-track css-nl6333-MuiSlider-track"
+        style="left: 0%; width: 0%;"
+      />
+      <span
+        class="MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary css-1y4cb25-MuiSlider-thumb"
+        data-index="0"
+        style="left: 0%;"
+      >
+        <input
+          aria-label="timeline"
+          aria-orientation="horizontal"
+          aria-valuemax="180"
+          aria-valuemin="0"
+          aria-valuenow="0"
+          data-index="0"
+          max="180"
+          min="0"
+          step="0.1"
+          style="border: 0px; height: 100%; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 100%; direction: ltr;"
+          type="range"
+          value="0"
+        />
+      </span>
+    </span>
+    <div
+      class="MuiStack-root css-1qgb5gw-MuiStack-root"
+    >
+      <button
+        aria-label="play"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="PlayArrowIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M8 5v14l11-7z"
+          />
+        </svg>
+      </button>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+      >
+        0:00 / 3:00
+      </p>
+    </div>
+  </div>
+</div>

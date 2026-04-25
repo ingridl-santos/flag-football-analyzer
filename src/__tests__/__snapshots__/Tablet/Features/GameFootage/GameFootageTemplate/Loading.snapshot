@@ -1,0 +1,55 @@
+<div>
+  <div
+    class="MuiStack-root css-wcshwo-MuiStack-root"
+  >
+    <h1
+      class="MuiTypography-root MuiTypography-h2 css-nehsvu-MuiTypography-root"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-17jjel8-MuiSkeleton-root"
+      />
+    </h1>
+    <div
+      class="MuiStack-root css-6x1opn-MuiStack-root"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jepbzk-MuiSvgIcon-root"
+        data-testid="UploadFileIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11z"
+        />
+      </svg>
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-1bs4cfm-MuiTypography-root"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1s84qit-MuiSkeleton-root"
+        />
+      </p>
+      <span
+        class="MuiTypography-root MuiTypography-caption css-1a7okdy-MuiTypography-root"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1sr740r-MuiSkeleton-root"
+        />
+      </span>
+      <label
+        class="MuiBox-root css-1na59wy"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+          style="width: 6rem;"
+        />
+        <input
+          accept="video/mp4"
+          hidden=""
+          type="file"
+        />
+      </label>
+    </div>
+  </div>
+</div>
