@@ -13,7 +13,7 @@ if [ "$1" == "" ]; then
     exit
 fi
 
-cat << EOT > $2re
+cat << EOT > $2
 window.env = {
 $(
   env -0 | while IFS='=' read -r -d '' n v; do
