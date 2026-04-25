@@ -14,12 +14,16 @@ export interface Segment {
 interface SegmentState {
   pendingStart: number | null;
   pendingEnd: number | null;
+  pendingPlayType: string;
+  pendingTags: string[];
   segments: Segment[];
 }
 
 const initialState: SegmentState = {
   pendingStart: null,
   pendingEnd: null,
+  pendingPlayType: '',
+  pendingTags: [],
   segments: [],
 };
 
@@ -33,6 +37,12 @@ const segmentSlice = createSlice({
     setPendingEnd(state, action: PayloadAction<number>) {
       state.pendingEnd = action.payload;
     },
+    setPendingPlayType(state, action: PayloadAction<string>) {
+      state.pendingPlayType = action.payload;
+    },
+    setPendingTags(state, action: PayloadAction<string[]>) {
+      state.pendingTags = action.payload;
+    },
     createSegment(state) {
       const { pendingStart, pendingEnd } = state;
 
@@ -44,9 +54,13 @@ const segmentSlice = createSlice({
         start: pendingStart,
         end: pendingEnd,
         duration: pendingEnd - pendingStart,
+        playType: state.pendingPlayType || undefined,
+        tags: state.pendingTags.length ? [...state.pendingTags] : undefined,
       });
       state.pendingStart = null;
       state.pendingEnd = null;
+      state.pendingPlayType = '';
+      state.pendingTags = [];
     },
     deleteSegment(state, action: PayloadAction<string>) {
       state.segments = state.segments.filter((s) => s.id !== action.payload);
@@ -68,13 +82,24 @@ const segmentSlice = createSlice({
     clearSegments(state) {
       state.pendingStart = null;
       state.pendingEnd = null;
+      state.pendingPlayType = '';
+      state.pendingTags = [];
       state.segments = [];
     },
   },
 });
 
-export const { setPendingStart, setPendingEnd, createSegment, deleteSegment, setPlayType, setTags, clearSegments }
-  = segmentSlice.actions;
+export const {
+  setPendingStart,
+  setPendingEnd,
+  setPendingPlayType,
+  setPendingTags,
+  createSegment,
+  deleteSegment,
+  setPlayType,
+  setTags,
+  clearSegments,
+} = segmentSlice.actions;
 
 export const selectSegmentState = (state: RootState) => state.segments;
 

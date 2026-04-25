@@ -127,6 +127,75 @@
             createSegment
           </button>
         </div>
+        <div
+          class="MuiStack-root css-jmfe6a-MuiStack-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-caption css-1a7okdy-MuiTypography-root"
+          >
+            pendingSegmentSetup
+          </span>
+          <div
+            class="MuiFormControl-root css-wbib2n-MuiFormControl-root"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-uo634n-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="false"
+              id="play-type-label-pending"
+            >
+              playType
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-1cmeqoh-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+            >
+              <div
+                aria-controls=":stable-mocked-react-id-1:"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-labelledby="play-type-label-pending"
+                class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1woa182-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                role="combobox"
+                tabindex="0"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </div>
+              <input
+                aria-hidden="true"
+                aria-invalid="false"
+                class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                tabindex="-1"
+                value=""
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+                data-testid="ArrowDropDownIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7 10l5 5 5-5z"
+                />
+              </svg>
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-njhac4-MuiNotchedOutlined-root"
+                >
+                  <span>
+                    playType
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </div>
       </div>
       <hr
         class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"

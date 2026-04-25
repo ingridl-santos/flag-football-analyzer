@@ -12,6 +12,7 @@ const meta: Meta<typeof SegmentList> = {
   args: {
     onDelete: action('onDelete'),
     onSetPlayType: action('onSetPlayType'),
+    onSetTags: action('onSetTags'),
   },
 };
 

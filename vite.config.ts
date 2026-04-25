@@ -31,11 +31,6 @@ export default defineConfig({
   server: {
     allowedHosts: true,
   },
-  optimizeDeps: {
-    // @ffmpeg/ffmpeg uses import.meta.url and dynamic patterns that Vite's
-    // pre-bundler breaks; serve it as-is so the browser loads it directly.
-    exclude: ['@ffmpeg/ffmpeg'],
-  },
   build: {
     outDir: 'dist/app',
     target: 'esnext',

@@ -22,6 +22,7 @@ import Dialog from '../../../../components/Dialog';
 import { type Segment } from '../../../../redux/SegmentSlice';
 import { formatTime } from '../../../../utils/formatTime';
 import PlayTypeSelector from '../PlayTypeSelector';
+import TagSuggestions from '../TagSuggestions';
 
 export interface SegmentTableProps {
   segments: Segment[];
@@ -136,7 +137,7 @@ export default function SegmentTable({ segments, onDelete, onSetPlayType, onSetT
                       />
                     </TableCell>
 
-                    <TableCell sx={{ minWidth: '10rem' }}>
+                    <TableCell sx={{ minWidth: '14rem' }}>
                       <Autocomplete
                         multiple
                         freeSolo
@@ -165,6 +166,13 @@ export default function SegmentTable({ segments, onDelete, onSetPlayType, onSetT
                             }}
                           />
                         )}
+                      />
+
+                      <TagSuggestions
+                        playType={segment.playType ?? ''}
+                        duration={segment.duration}
+                        existingTags={segment.tags ?? []}
+                        onAddTag={(tag) => onSetTags(segment.id, [...(segment.tags ?? []), tag])}
                       />
                     </TableCell>
 

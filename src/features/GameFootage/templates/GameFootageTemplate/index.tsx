@@ -8,7 +8,9 @@ import VideoPlayer from '../../../../components/VideoPlayer';
 import YouTubePlayer from '../../../../components/YouTubePlayer';
 import { type Segment } from '../../../../redux/SegmentSlice';
 import { formatTime } from '../../../../utils/formatTime';
+import PlayTypeSelector from '../../components/PlayTypeSelector';
 import SegmentTable from '../../components/SegmentTable';
+import TagSuggestions from '../../components/TagSuggestions';
 import YouTubeUrlInput from '../../components/YouTubeUrlInput';
 
 export interface GameFootageTemplateProps {
@@ -21,6 +23,8 @@ export interface GameFootageTemplateProps {
   isPlaying: boolean;
   pendingStart: number | null;
   pendingEnd: number | null;
+  pendingPlayType: string;
+  pendingTags: string[];
   segments: Segment[];
   onFileSelect: (file: File) => void;
   onYouTubeUrl: (videoId: string) => void;
@@ -30,6 +34,8 @@ export interface GameFootageTemplateProps {
   onSeek: (time: number) => void;
   onSetStart: () => void;
   onSetEnd: () => void;
+  onSetPendingPlayType: (playType: string) => void;
+  onSetPendingTags: (tags: string[]) => void;
   onCreateSegment: () => void;
   onDeleteSegment: (id: string) => void;
   onSetPlayType: (id: string, playType: string) => void;
@@ -51,6 +57,8 @@ export default function GameFootageTemplate({
   isPlaying,
   pendingStart,
   pendingEnd,
+  pendingPlayType,
+  pendingTags,
   segments,
   onFileSelect,
   onYouTubeUrl,
@@ -60,6 +68,8 @@ export default function GameFootageTemplate({
   onSeek,
   onSetStart,
   onSetEnd,
+  onSetPendingPlayType,
+  onSetPendingTags,
   onCreateSegment,
   onDeleteSegment,
   onSetPlayType,
@@ -189,6 +199,35 @@ export default function GameFootageTemplate({
             {t('createSegment') ?? <Skeleton width="8rem" />}
           </Button>
         </Stack>
+
+        {canCreateSegment && (
+          <Stack
+            sx={{
+              borderRadius: '0.5rem',
+              border: '1px solid',
+              borderColor: (theme) => theme.palette.divider,
+              padding: '1rem',
+              gap: '0.75rem',
+            }}
+          >
+            <Typography variant="caption" color="text.secondary">
+              {t('pendingSegmentSetup') ?? <Skeleton width="10rem" />}
+            </Typography>
+
+            <PlayTypeSelector
+              segmentId="pending"
+              value={pendingPlayType}
+              onChange={(_, playType) => onSetPendingPlayType(playType)}
+            />
+
+            <TagSuggestions
+              playType={pendingPlayType}
+              duration={pendingEnd - pendingStart}
+              existingTags={pendingTags}
+              onAddTag={(tag) => onSetPendingTags([...pendingTags, tag])}
+            />
+          </Stack>
+        )}
       </Stack>
 
       <Divider />

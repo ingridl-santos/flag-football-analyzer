@@ -10,7 +10,9 @@ import {
   deleteSegment,
   selectSegmentState,
   setPendingEnd,
+  setPendingPlayType,
   setPendingStart,
+  setPendingTags,
   setPlayType,
   setTags,
 } from '../../../redux/SegmentSlice';
@@ -66,6 +68,8 @@ export default function GameFootagePage() {
       isPlaying={videoState.isPlaying}
       pendingStart={segmentState.pendingStart}
       pendingEnd={segmentState.pendingEnd}
+      pendingPlayType={segmentState.pendingPlayType}
+      pendingTags={segmentState.pendingTags}
       segments={segmentState.segments}
       onFileSelect={handleFileSelect}
       onYouTubeUrl={handleYouTubeUrl}
@@ -75,6 +79,8 @@ export default function GameFootagePage() {
       onSeek={(time) => dispatch(setCurrentTime(time))}
       onSetStart={() => dispatch(setPendingStart(videoState.currentTime))}
       onSetEnd={() => dispatch(setPendingEnd(videoState.currentTime))}
+      onSetPendingPlayType={(pt) => dispatch(setPendingPlayType(pt))}
+      onSetPendingTags={(tags) => dispatch(setPendingTags(tags))}
       onCreateSegment={() => dispatch(createSegment())}
       onDeleteSegment={(id) => dispatch(deleteSegment(id))}
       onSetPlayType={(id, pt) => dispatch(setPlayType({ id, playType: pt }))}

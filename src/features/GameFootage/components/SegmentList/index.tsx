@@ -6,11 +6,13 @@ import MultilineSkelly from '../../../../components/MultilineSkelly';
 import { type Segment } from '../../../../redux/SegmentSlice';
 import { formatTime } from '../../../../utils/formatTime';
 import PlayTypeSelector from '../PlayTypeSelector';
+import TagSuggestions from '../TagSuggestions';
 
 export interface SegmentListProps {
   segments: Segment[];
   onDelete: (id: string) => void;
   onSetPlayType: (id: string, playType: string) => void;
+  onSetTags?: (id: string, tags: string[]) => void;
 }
 
 function SegmentRow({
@@ -18,11 +20,13 @@ function SegmentRow({
   index,
   onDelete,
   onSetPlayType,
+  onSetTags,
 }: {
   segment: Segment;
   index: number;
   onDelete: (id: string) => void;
   onSetPlayType: (id: string, playType: string) => void;
+  onSetTags?: (id: string, tags: string[]) => void;
 }) {
   const { t } = useTranslation('gameFootage');
 
@@ -74,12 +78,21 @@ function SegmentRow({
             />
           ))}
         </Stack>
+
+        {onSetTags && (
+          <TagSuggestions
+            playType={segment.playType ?? ''}
+            duration={segment.duration}
+            existingTags={segment.tags ?? []}
+            onAddTag={(tag) => onSetTags(segment.id, [...(segment.tags ?? []), tag])}
+          />
+        )}
       </Stack>
     </Paper>
   );
 }
 
-export default function SegmentList({ segments, onDelete, onSetPlayType }: SegmentListProps) {
+export default function SegmentList({ segments, onDelete, onSetPlayType, onSetTags }: SegmentListProps) {
   const { t } = useTranslation('gameFootage');
 
   return (
@@ -103,6 +116,7 @@ export default function SegmentList({ segments, onDelete, onSetPlayType }: Segme
                   index={index}
                   onDelete={onDelete}
                   onSetPlayType={onSetPlayType}
+                  onSetTags={onSetTags}
                 />
               ))}
             </Stack>

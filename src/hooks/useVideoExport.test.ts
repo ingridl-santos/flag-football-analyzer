@@ -18,7 +18,6 @@ const mockFFmpegInstance = {
 
 vi.mock('@ffmpeg/ffmpeg', () => ({
   createFFmpeg: vi.fn(() => mockFFmpegInstance),
-  fetchFile: vi.fn(() => Promise.resolve(new Uint8Array([0]))),
 }));
 
 vi.mock('fflate', () => ({
@@ -71,7 +70,7 @@ describe('useVideoExport', () => {
   });
 
   it('loads FFmpeg and writes the input file', async () => {
-    const { createFFmpeg, fetchFile } = await import('@ffmpeg/ffmpeg');
+    const { createFFmpeg } = await import('@ffmpeg/ffmpeg');
     const { result } = renderHook(() => useVideoExport());
     const file = new File(['video'], 'game.mp4', { type: 'video/mp4' });
 
@@ -83,7 +82,6 @@ describe('useVideoExport', () => {
       expect.objectContaining({ corePath: '/vendor/ffmpeg/ffmpeg-core.js' }),
     );
     expect(mockFFmpegInstance.load).toHaveBeenCalled();
-    expect(fetchFile).toHaveBeenCalledWith(file);
     expect(mockFFmpegInstance.FS).toHaveBeenCalledWith(
       'writeFile',
       'input.mp4',

@@ -18,6 +18,8 @@ const meta: Meta<typeof GameFootageTemplate> = {
     onSeek: action('onSeek'),
     onSetStart: action('onSetStart'),
     onSetEnd: action('onSetEnd'),
+    onSetPendingPlayType: action('onSetPendingPlayType'),
+    onSetPendingTags: action('onSetPendingTags'),
     onCreateSegment: action('onCreateSegment'),
     onDeleteSegment: action('onDeleteSegment'),
     onSetPlayType: action('onSetPlayType'),
@@ -46,6 +48,8 @@ export const Default: Story = {
     isPlaying: false,
     pendingStart: null,
     pendingEnd: null,
+    pendingPlayType: '',
+    pendingTags: [],
     segments: [],
   },
 };
@@ -61,6 +65,8 @@ export const WithVideo: Story = {
     isPlaying: false,
     pendingStart: null,
     pendingEnd: null,
+    pendingPlayType: '',
+    pendingTags: [],
     segments: [],
   },
 };
@@ -87,6 +93,18 @@ export const WithPendingSegment: Story = {
     ...WithVideo.args,
     pendingStart: 10,
     pendingEnd: 42,
+    pendingPlayType: '',
+    pendingTags: [],
+  },
+};
+
+export const WithPendingSegmentConfigured: Story = {
+  args: {
+    ...WithVideo.args,
+    pendingStart: 10,
+    pendingEnd: 42,
+    pendingPlayType: 'Pass',
+    pendingTags: ['Deep Pass'],
   },
 };
 

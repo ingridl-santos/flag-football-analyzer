@@ -1,4 +1,4 @@
-import { createFFmpeg, fetchFile, type FFmpeg } from '@ffmpeg/ffmpeg';
+import { createFFmpeg, type FFmpeg } from '@ffmpeg/ffmpeg';
 import { zipSync } from 'fflate';
 import { useCallback, useRef, useState } from 'react';
 
@@ -49,7 +49,7 @@ export function useVideoExport(): UseVideoExportResult {
     try {
       const ffmpeg = await loadFFmpeg();
 
-      await ffmpeg.FS('writeFile', 'input.mp4', await fetchFile(file));
+      await ffmpeg.FS('writeFile', 'input.mp4', new Uint8Array(await file.arrayBuffer()));
 
       const zipFiles: Record<string, Uint8Array> = {};
 
