@@ -1,6 +1,5 @@
 import { createSlice, nanoid, PayloadAction } from '@reduxjs/toolkit';
 
-import { computeTags } from '../../utils/computeTags';
 import type { RootState } from '../store';
 
 export interface Segment {
@@ -58,7 +57,13 @@ const segmentSlice = createSlice({
       if (!segment) return;
 
       segment.playType = action.payload.playType;
-      segment.tags = computeTags(action.payload.playType, segment.duration);
+    },
+    setTags(state, action: PayloadAction<{ id: string; tags: string[] }>) {
+      const segment = state.segments.find((s) => s.id === action.payload.id);
+
+      if (!segment) return;
+
+      segment.tags = action.payload.tags;
     },
     clearSegments(state) {
       state.pendingStart = null;
@@ -68,7 +73,7 @@ const segmentSlice = createSlice({
   },
 });
 
-export const { setPendingStart, setPendingEnd, createSegment, deleteSegment, setPlayType, clearSegments }
+export const { setPendingStart, setPendingEnd, createSegment, deleteSegment, setPlayType, setTags, clearSegments }
   = segmentSlice.actions;
 
 export const selectSegmentState = (state: RootState) => state.segments;

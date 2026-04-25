@@ -21,6 +21,7 @@ const meta: Meta<typeof GameFootageTemplate> = {
     onCreateSegment: action('onCreateSegment'),
     onDeleteSegment: action('onDeleteSegment'),
     onSetPlayType: action('onSetPlayType'),
+    onSetTags: action('onSetTags'),
     onExportCsv: action('onExportCsv'),
     onExportJson: action('onExportJson'),
     segments: [],

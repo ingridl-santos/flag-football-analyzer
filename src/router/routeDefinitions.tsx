@@ -6,11 +6,9 @@ import type { NamedRouteObject } from '../types/router';
 const App = lazy(() => import('../App'));
 const Layout = lazy(() => import('../features/Layout/pages/LayoutPage'));
 
-const HomePage = lazy(() => import('../features/Home'));
 const GameFootagePage = lazy(() => import('../features/GameFootage/pages/GameFootagePage'));
 
 export const ROUTES = {
-  home: 'HomePage',
   gameFootage: 'GameFootagePage',
 } as const;
 
@@ -24,14 +22,8 @@ export const ROUTES_DEFINITIONS: NamedRouteObject[] = [
         errorElement: <Errors.ErrorPage />,
         children: [
           {
-            name: ROUTES.home,
-            path: '/',
-            element: <HomePage />,
-            errorElement: <Errors.ErrorPage />,
-          },
-          {
             name: ROUTES.gameFootage,
-            path: '/game-footage',
+            path: '/',
             element: <GameFootagePage />,
             errorElement: <Errors.ErrorPage />,
           },

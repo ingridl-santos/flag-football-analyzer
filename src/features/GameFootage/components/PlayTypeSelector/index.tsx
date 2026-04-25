@@ -1,7 +1,7 @@
 import { type SelectChangeEvent, FormControl, InputLabel, MenuItem, Select, Skeleton } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
-import { PLAY_TYPES } from '../../../../utils/computeTags';
+export const PLAY_TYPES = ['Pass', 'Run', 'Defense'] as const;
 
 export interface PlayTypeSelectorProps {
   segmentId: string;

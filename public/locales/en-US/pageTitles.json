@@ -1,6 +1,7 @@
 {
+  "appName": "Flag Football Analyzer",
+  "documentTitle": "{{pageTitle}} | {{appName}}",
   "error": "Error",
-  "home": "Home",
   "gameFootage": "Game Footage"
 }
 

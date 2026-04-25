@@ -17,7 +17,6 @@ const meta: Meta<typeof YouTubePlayer> = {
     onTimeUpdate: action('onTimeUpdate'),
     onDurationChange: action('onDurationChange'),
     onPlayStateChange: action('onPlayStateChange'),
-    onSeek: action('onSeek'),
   },
 };
 

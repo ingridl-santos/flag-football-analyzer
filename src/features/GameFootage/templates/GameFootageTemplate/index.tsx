@@ -33,6 +33,7 @@ export interface GameFootageTemplateProps {
   onCreateSegment: () => void;
   onDeleteSegment: (id: string) => void;
   onSetPlayType: (id: string, playType: string) => void;
+  onSetTags: (id: string, tags: string[]) => void;
   onExportCsv: () => void;
   onExportJson: () => void;
 }
@@ -59,6 +60,7 @@ export default function GameFootageTemplate({
   onCreateSegment,
   onDeleteSegment,
   onSetPlayType,
+  onSetTags,
   onExportCsv,
   onExportJson,
 }: GameFootageTemplateProps) {
@@ -136,7 +138,6 @@ export default function GameFootageTemplate({
           onTimeUpdate={onTimeUpdate}
           onDurationChange={onDurationChange}
           onPlayStateChange={onPlayStateChange}
-          onSeek={onSeek}
         />
       )
     : (
@@ -217,7 +218,7 @@ export default function GameFootageTemplate({
           </Button>
         </Stack>
 
-        <SegmentTable segments={segments} onDelete={onDeleteSegment} onSetPlayType={onSetPlayType} />
+        <SegmentTable segments={segments} onDelete={onDeleteSegment} onSetPlayType={onSetPlayType} onSetTags={onSetTags} />
       </Stack>
     </Stack>
   );

@@ -1,5 +1,6 @@
 import DeleteIcon from '@mui/icons-material/Delete';
 import {
+  Autocomplete,
   Button,
   Chip,
   IconButton,
@@ -11,6 +12,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  TextField,
   Typography,
 } from '@mui/material';
 import { useState } from 'react';
@@ -25,6 +27,7 @@ export interface SegmentTableProps {
   segments: Segment[];
   onDelete: (id: string) => void;
   onSetPlayType: (id: string, playType: string) => void;
+  onSetTags: (id: string, tags: string[]) => void;
 }
 
 const SKELETON_ROWS = 3;
@@ -55,7 +58,7 @@ function SkeletonRow({ index }: { index: number }) {
   );
 }
 
-export default function SegmentTable({ segments, onDelete, onSetPlayType }: SegmentTableProps) {
+export default function SegmentTable({ segments, onDelete, onSetPlayType, onSetTags }: SegmentTableProps) {
   const { t } = useTranslation('gameFootage');
   const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
 
@@ -133,16 +136,33 @@ export default function SegmentTable({ segments, onDelete, onSetPlayType }: Segm
                       />
                     </TableCell>
 
-                    <TableCell>
-                      <Stack sx={{ flexDirection: 'row', gap: '0.25rem', flexWrap: 'wrap' }}>
-                        {(segment.tags ?? []).map((tag) => (
-                          <Chip
-                            key={tag}
-                            label={t(`tags.${tag}`) ?? <Skeleton width="3.5rem" />}
+                    <TableCell sx={{ minWidth: '10rem' }}>
+                      <Autocomplete
+                        multiple
+                        freeSolo
+                        options={[]}
+                        value={segment.tags ?? []}
+                        onChange={(_, newValue) => onSetTags(segment.id, newValue as string[])}
+                        renderTags={(value, getTagProps) => (
+                          value.map((tag, index) => (
+                            <Chip
+                              label={tag}
+                              size="small"
+                              {...getTagProps({ index })}
+                              key={tag}
+                            />
+                          ))
+                        )}
+                        renderInput={(params) => (
+                          <TextField
+                            {...params}
+                            variant="standard"
                             size="small"
+                            placeholder={segment.tags?.length ? undefined : (t('tagsInputPlaceholder') ?? 'Add tag…')}
+                            aria-label={t('colTags') ?? 'Tags'}
                           />
-                        ))}
-                      </Stack>
+                        )}
+                      />
                     </TableCell>
 
                     <TableCell>

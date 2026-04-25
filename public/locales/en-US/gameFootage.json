@@ -30,18 +30,12 @@
   "colDuration": "Duration",
   "colPlayType": "Play Type",
   "colTags": "Tags",
+  "tagsInputPlaceholder": "Add tag…",
   "playType": "Play Type",
   "playTypeNone": "None",
   "playTypes": {
     "Pass": "Pass",
     "Run": "Run",
     "Defense": "Defense"
-  },
-  "tags": {
-    "offense": "Offense",
-    "air": "Air",
-    "rush": "Rush",
-    "defense": "Defense",
-    "quick": "Quick"
   }
 }

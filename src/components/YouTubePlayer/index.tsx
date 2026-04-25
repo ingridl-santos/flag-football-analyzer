@@ -1,6 +1,6 @@
 import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import { Box, IconButton, Slider, Stack, Typography } from '@mui/material';
+import { Box, IconButton, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import useYouTubePlayer from '../../hooks/useYouTubePlayer';
@@ -14,7 +14,6 @@ export interface YouTubePlayerProps {
   onTimeUpdate: (time: number) => void;
   onDurationChange: (duration: number) => void;
   onPlayStateChange: (isPlaying: boolean) => void;
-  onSeek: (time: number) => void;
 }
 
 export default function YouTubePlayer({
@@ -25,22 +24,14 @@ export default function YouTubePlayer({
   onTimeUpdate,
   onDurationChange,
   onPlayStateChange,
-  onSeek,
 }: YouTubePlayerProps) {
   const { t } = useTranslation('gameFootage');
-  const { containerRef, seek, togglePlay } = useYouTubePlayer(
+  const { containerRef, togglePlay } = useYouTubePlayer(
     videoId,
     onTimeUpdate,
     onDurationChange,
     onPlayStateChange,
   );
-
-  const handleSliderChange = (_: Event, value: number | number[]) => {
-    const time = Array.isArray(value) ? value[0] : value;
-
-    seek(time);
-    onSeek(time);
-  };
 
   const PlayPauseIcon = isPlaying ? PauseIcon : PlayArrowIcon;
   const playPauseLabel = isPlaying ? (t('pause') ?? 'Pause') : (t('play') ?? 'Play');
@@ -58,16 +49,6 @@ export default function YouTubePlayer({
           aspectRatio: '16 / 9',
           '& iframe': { width: '100% !important', height: '100% !important', display: 'block' },
         }}
-      />
-
-      <Slider
-        value={currentTime}
-        min={0}
-        max={duration || 1}
-        step={0.1}
-        onChange={handleSliderChange}
-        aria-label={t('timeline') ?? 'Video timeline'}
-        size="small"
       />
 
       <Stack sx={{ flexDirection: 'row', alignItems: 'center', gap: '1rem' }}>

@@ -10,6 +10,7 @@ import {
   setPendingEnd,
   setPendingStart,
   setPlayType,
+  setTags,
 } from '../../../redux/SegmentSlice';
 import {
   selectVideoState,
@@ -71,6 +72,7 @@ export default function GameFootagePage() {
       onCreateSegment={() => dispatch(createSegment())}
       onDeleteSegment={(id) => dispatch(deleteSegment(id))}
       onSetPlayType={(id, pt) => dispatch(setPlayType({ id, playType: pt }))}
+      onSetTags={(id, tags) => dispatch(setTags({ id, tags }))}
       onExportCsv={() => downloadFile(segmentsToCsv(segmentState.segments), 'segments.csv', 'text/csv')}
       onExportJson={() => downloadFile(segmentsToJson(segmentState.segments), 'segments.json', 'application/json')}
     />
