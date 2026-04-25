@@ -5,13 +5,17 @@ import { Box, Button, Divider, Skeleton, Stack, Typography } from '@mui/material
 import { useTranslation } from 'react-i18next';
 
 import VideoPlayer from '../../../../components/VideoPlayer';
+import YouTubePlayer from '../../../../components/YouTubePlayer';
 import { type Segment } from '../../../../redux/SegmentSlice';
 import { formatTime } from '../../../../utils/formatTime';
 import SegmentTable from '../../components/SegmentTable';
+import YouTubeUrlInput from '../../components/YouTubeUrlInput';
 
 export interface GameFootageTemplateProps {
+  videoType: 'file' | 'youtube' | null;
   videoUrl: string | null;
   videoFileName: string | null;
+  youtubeVideoId: string | null;
   currentTime: number;
   duration: number;
   isPlaying: boolean;
@@ -19,6 +23,7 @@ export interface GameFootageTemplateProps {
   pendingEnd: number | null;
   segments: Segment[];
   onFileSelect: (file: File) => void;
+  onYouTubeUrl: (videoId: string) => void;
   onTimeUpdate: (time: number) => void;
   onDurationChange: (duration: number) => void;
   onPlayStateChange: (isPlaying: boolean) => void;
@@ -33,8 +38,10 @@ export interface GameFootageTemplateProps {
 }
 
 export default function GameFootageTemplate({
+  videoType,
   videoUrl,
   videoFileName,
+  youtubeVideoId,
   currentTime,
   duration,
   isPlaying,
@@ -42,6 +49,7 @@ export default function GameFootageTemplate({
   pendingEnd,
   segments,
   onFileSelect,
+  onYouTubeUrl,
   onTimeUpdate,
   onDurationChange,
   onPlayStateChange,
@@ -109,18 +117,29 @@ export default function GameFootageTemplate({
           onChange={handleFileChange}
         />
       </Box>
+
+      <Divider>{t('orSeparator') ?? <Skeleton width="1.5rem" />}</Divider>
+
+      <YouTubeUrlInput onSubmit={onYouTubeUrl} />
     </Stack>
   );
 
   const canCreateSegment = pendingStart !== null && pendingEnd !== null && pendingStart < pendingEnd;
 
-  const playerArea = (
-    <Stack sx={{ gap: '2rem' }}>
-      <Stack sx={{ gap: '1rem' }}>
-        <Typography variant="subtitle2">
-          {videoFileName}
-        </Typography>
-
+  const videoPlayer = videoType === 'youtube' && youtubeVideoId
+    ? (
+        <YouTubePlayer
+          videoId={youtubeVideoId}
+          currentTime={currentTime}
+          duration={duration}
+          isPlaying={isPlaying}
+          onTimeUpdate={onTimeUpdate}
+          onDurationChange={onDurationChange}
+          onPlayStateChange={onPlayStateChange}
+          onSeek={onSeek}
+        />
+      )
+    : (
         <VideoPlayer
           src={videoUrl as string}
           currentTime={currentTime}
@@ -131,6 +150,18 @@ export default function GameFootageTemplate({
           onPlayStateChange={onPlayStateChange}
           onSeek={onSeek}
         />
+      );
+
+  const playerArea = (
+    <Stack sx={{ gap: '2rem' }}>
+      <Stack sx={{ gap: '1rem' }}>
+        {videoFileName && (
+          <Typography variant="subtitle2">
+            {videoFileName}
+          </Typography>
+        )}
+
+        {videoPlayer}
 
         <Stack sx={{ flexDirection: 'row', gap: '1rem', flexWrap: 'wrap' }}>
           <Button variant="outlined" onClick={onSetStart}>
@@ -197,7 +228,7 @@ export default function GameFootageTemplate({
         {t('title') ?? <Skeleton sx={{ maxWidth: '9rem' }} />}
       </Typography>
 
-      {!videoUrl ? uploadArea : playerArea}
+      {videoType === null ? uploadArea : playerArea}
     </Stack>
   );
 }

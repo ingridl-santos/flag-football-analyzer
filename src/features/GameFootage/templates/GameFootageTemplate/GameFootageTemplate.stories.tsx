@@ -11,6 +11,7 @@ const meta: Meta<typeof GameFootageTemplate> = {
   },
   args: {
     onFileSelect: action('onFileSelect'),
+    onYouTubeUrl: action('onYouTubeUrl'),
     onTimeUpdate: action('onTimeUpdate'),
     onDurationChange: action('onDurationChange'),
     onPlayStateChange: action('onPlayStateChange'),
@@ -32,8 +33,10 @@ type Story = StoryObj<typeof GameFootageTemplate>;
 
 export const Default: Story = {
   args: {
+    videoType: null,
     videoUrl: null,
     videoFileName: null,
+    youtubeVideoId: null,
     currentTime: 0,
     duration: 0,
     isPlaying: false,
@@ -45,10 +48,27 @@ export const Default: Story = {
 
 export const WithVideo: Story = {
   args: {
+    videoType: 'file',
     videoUrl: 'mock://game-footage.mp4',
     videoFileName: 'game-footage.mp4',
+    youtubeVideoId: null,
     currentTime: 42,
     duration: 180,
+    isPlaying: false,
+    pendingStart: null,
+    pendingEnd: null,
+    segments: [],
+  },
+};
+
+export const WithYouTube: Story = {
+  args: {
+    videoType: 'youtube',
+    videoUrl: null,
+    videoFileName: null,
+    youtubeVideoId: 'dQw4w9WgXcQ',
+    currentTime: 0,
+    duration: 0,
     isPlaying: false,
     pendingStart: null,
     pendingEnd: null,
@@ -84,5 +104,8 @@ export const Playing: Story = {
 export const Loading: Story = {
   parameters: {
     noTranslations: true,
+  },
+  args: {
+    segments: [],
   },
 };

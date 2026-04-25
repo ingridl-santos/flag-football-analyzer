@@ -5,6 +5,8 @@ import type { RootState } from '../store';
 interface VideoState {
   videoUrl: string | null;
   videoFileName: string | null;
+  youtubeVideoId: string | null;
+  videoType: 'file' | 'youtube' | null;
   currentTime: number;
   duration: number;
   isPlaying: boolean;
@@ -13,6 +15,8 @@ interface VideoState {
 const initialState: VideoState = {
   videoUrl: null,
   videoFileName: null,
+  youtubeVideoId: null,
+  videoType: null,
   currentTime: 0,
   duration: 0,
   isPlaying: false,
@@ -25,6 +29,17 @@ const videoSlice = createSlice({
     setVideo(state, action: PayloadAction<{ url: string; fileName: string }>) {
       state.videoUrl = action.payload.url;
       state.videoFileName = action.payload.fileName;
+      state.youtubeVideoId = null;
+      state.videoType = 'file';
+      state.currentTime = 0;
+      state.duration = 0;
+      state.isPlaying = false;
+    },
+    setYouTubeVideo(state, action: PayloadAction<{ videoId: string }>) {
+      state.videoUrl = null;
+      state.videoFileName = null;
+      state.youtubeVideoId = action.payload.videoId;
+      state.videoType = 'youtube';
       state.currentTime = 0;
       state.duration = 0;
       state.isPlaying = false;
@@ -32,6 +47,8 @@ const videoSlice = createSlice({
     clearVideo(state) {
       state.videoUrl = null;
       state.videoFileName = null;
+      state.youtubeVideoId = null;
+      state.videoType = null;
       state.currentTime = 0;
       state.duration = 0;
       state.isPlaying = false;
@@ -48,7 +65,14 @@ const videoSlice = createSlice({
   },
 });
 
-export const { setVideo, clearVideo, setCurrentTime, setDuration, setIsPlaying } = videoSlice.actions;
+export const {
+  setVideo,
+  setYouTubeVideo,
+  clearVideo,
+  setCurrentTime,
+  setDuration,
+  setIsPlaying,
+} = videoSlice.actions;
 
 export const selectVideoState = (state: RootState) => state.video;
 

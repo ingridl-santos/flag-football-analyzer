@@ -11,7 +11,14 @@ import {
   setPendingStart,
   setPlayType,
 } from '../../../redux/SegmentSlice';
-import { selectVideoState, setCurrentTime, setDuration, setIsPlaying, setVideo } from '../../../redux/VideoSlice';
+import {
+  selectVideoState,
+  setCurrentTime,
+  setDuration,
+  setIsPlaying,
+  setVideo,
+  setYouTubeVideo,
+} from '../../../redux/VideoSlice';
 import { downloadFile, segmentsToCsv, segmentsToJson } from '../../../utils/exportSegments';
 import GameFootageTemplate from '../templates/GameFootageTemplate';
 
@@ -24,7 +31,7 @@ export default function GameFootagePage() {
   useDocumentTitle(t('gameFootage'));
 
   const handleFileSelect = (file: File) => {
-    if (videoState.videoUrl) {
+    if (videoState.videoType === 'file' && videoState.videoUrl) {
       URL.revokeObjectURL(videoState.videoUrl);
     }
 
@@ -32,10 +39,21 @@ export default function GameFootagePage() {
     dispatch(setVideo({ url: URL.createObjectURL(file), fileName: file.name }));
   };
 
+  const handleYouTubeUrl = (videoId: string) => {
+    if (videoState.videoType === 'file' && videoState.videoUrl) {
+      URL.revokeObjectURL(videoState.videoUrl);
+    }
+
+    dispatch(clearSegments());
+    dispatch(setYouTubeVideo({ videoId }));
+  };
+
   return (
     <GameFootageTemplate
+      videoType={videoState.videoType}
       videoUrl={videoState.videoUrl}
       videoFileName={videoState.videoFileName}
+      youtubeVideoId={videoState.youtubeVideoId}
       currentTime={videoState.currentTime}
       duration={videoState.duration}
       isPlaying={videoState.isPlaying}
@@ -43,6 +61,7 @@ export default function GameFootagePage() {
       pendingEnd={segmentState.pendingEnd}
       segments={segmentState.segments}
       onFileSelect={handleFileSelect}
+      onYouTubeUrl={handleYouTubeUrl}
       onTimeUpdate={(time) => dispatch(setCurrentTime(time))}
       onDurationChange={(dur) => dispatch(setDuration(dur))}
       onPlayStateChange={(playing) => dispatch(setIsPlaying(playing))}

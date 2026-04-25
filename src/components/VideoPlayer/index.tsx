@@ -60,12 +60,13 @@ export default function VideoPlayer({
           backgroundColor: (theme) => theme.palette.common.black,
           borderRadius: '0.5rem',
           overflow: 'hidden',
+          aspectRatio: '16 / 9',
         }}
       >
         <video
           ref={videoRef}
           src={src}
-          style={{ width: '100%', display: 'block' }}
+          style={{ width: '100%', height: '100%', display: 'block', objectFit: 'contain' }}
           onTimeUpdate={handleTimeUpdate}
           onLoadedMetadata={handleLoadedMetadata}
           onPlay={() => onPlayStateChange(true)}
