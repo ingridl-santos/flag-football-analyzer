@@ -1,0 +1,12 @@
+{
+  "header": "Flag Football Analyzer",
+  "description": "Uma ferramenta gratuita, estática e focada em treinadores para análise de vídeo de flag football.",
+  "featuresTitle": "Funcionalidades",
+  "getStarted": "Começar",
+  "features": {
+    "gameFootage": {
+      "title": "Filmagem do Jogo",
+      "description": "Faça upload de um vídeo do jogo, marque segmentos, classifique jogadas e exporte sua análise."
+    }
+  }
+}

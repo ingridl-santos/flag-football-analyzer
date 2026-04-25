@@ -66,7 +66,7 @@ export default function Header({
               <Button
                 component={RouterLink}
                 color="inherit"
-                to={toNamedRoute(ROUTES.gameFootage)}
+                to={toNamedRoute(ROUTES.home)}
                 sx={{ minWidth: 'unset', paddingX: 0, gap: '0.5rem' }}
                 aria-label={t('header.goHome') ?? 'Home'}
               >

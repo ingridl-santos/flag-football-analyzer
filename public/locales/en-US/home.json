@@ -2,6 +2,7 @@
   "header": "Flag Football Analyzer",
   "description": "A free, static, coach-focused video analysis tool for flag football teams.",
   "featuresTitle": "Features",
+  "getStarted": "Get Started",
   "features": {
     "gameFootage": {
       "title": "Game Footage",

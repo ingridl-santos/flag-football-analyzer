@@ -1,0 +1,54 @@
+<div>
+  <div
+    class="MuiStack-root css-1bnhu5m-MuiStack-root"
+  >
+    <div
+      class="MuiStack-root css-o9f0ig-MuiStack-root"
+    >
+      <h1
+        class="MuiTypography-root MuiTypography-h3 css-4imhqc-MuiTypography-root"
+      >
+        header
+      </h1>
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-8kr7os-MuiTypography-root"
+      >
+        description
+      </p>
+    </div>
+    <div
+      class="MuiStack-root css-1ycj5ta-MuiStack-root"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h5 css-quufyz-MuiTypography-root"
+      >
+        featuresTitle
+      </h2>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-bup9pl-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          class="MuiCardContent-root css-1tr0lh4-MuiCardContent-root"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-h6 css-1bg1u8m-MuiTypography-root"
+          >
+            features.gameFootage.title
+          </h3>
+          <p
+            class="MuiTypography-root MuiTypography-body2 css-wgl6ki-MuiTypography-root"
+          >
+            features.gameFootage.description
+          </p>
+          <a
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-108eztj-MuiButtonBase-root-MuiButton-root"
+            href="/game-footage"
+            tabindex="0"
+          >
+            getStarted
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

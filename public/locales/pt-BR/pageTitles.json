@@ -2,5 +2,6 @@
   "appName": "Flag Football Analyzer",
   "documentTitle": "{{pageTitle}} | {{appName}}",
   "error": "Erro",
+  "home": "Início",
   "gameFootage": "Filmagem do Jogo"
 }
