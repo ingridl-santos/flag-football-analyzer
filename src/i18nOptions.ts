@@ -10,8 +10,8 @@ export const initOptions: InitOptions = {
     loadPath: '/locales/{{lng}}/{{ns}}.json',
   },
   defaultNS: 'common',
-  fallbackLng: 'en',
-  supportedLngs: ['en', 'pt'],
+  fallbackLng: 'en-US',
+  supportedLngs: ['en-US', 'pt-BR'],
   interpolation: {
     // Not needed for react as it escapes by default
     escapeValue: false,
