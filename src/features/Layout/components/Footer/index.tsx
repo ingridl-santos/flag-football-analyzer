@@ -17,14 +17,16 @@ const Footer = ({ appTitle, githubUrl }: FooterProps) => {
   return (
     <Box
       component="footer"
-      bgcolor="background.paper"
-      borderTop={2}
-      borderColor="primary.main"
-      py={2}
+      sx={{
+        backgroundColor: 'background.paper',
+        borderTop: '2px solid',
+        borderColor: 'primary.main',
+        paddingY: '1rem',
+      }}
     >
       <Container maxWidth="xl">
         <Stack direction="row" alignItems="center" justifyContent="space-between">
-          <Stack direction="row" alignItems="center" gap={1}>
+          <Stack direction="row" alignItems="center" gap="0.5rem">
             <SportsFootballIcon color="primary" fontSize="small" />
 
             <Typography variant="body2" color="text.secondary">

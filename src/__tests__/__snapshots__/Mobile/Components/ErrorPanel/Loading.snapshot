@@ -1,0 +1,32 @@
+<div>
+  <div
+    class="MuiStack-root css-ttdin4-MuiStack-root"
+  >
+    <img
+      alt=""
+      class="MuiBox-root css-tgvajw"
+      src="/assets/errors/generic.svg"
+    />
+    <h1
+      class="MuiTypography-root MuiTypography-h5 css-quufyz-MuiTypography-root"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-irr55v-MuiSkeleton-root"
+      />
+    </h1>
+    <div
+      class="MuiTypography-root MuiTypography-body1 css-1w9rufw-MuiTypography-root"
+    >
+      <div
+        class="MuiStack-root css-1pnsv3a-MuiStack-root"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-15r3t82-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-z9yap3-MuiSkeleton-root"
+        />
+      </div>
+    </div>
+  </div>
+</div>

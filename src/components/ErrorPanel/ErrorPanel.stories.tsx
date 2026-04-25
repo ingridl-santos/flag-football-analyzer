@@ -6,6 +6,9 @@ import ErrorPanel from '.';
 const meta: Meta<typeof ErrorPanel> = {
   title: 'Components / Error Panel',
   component: ErrorPanel,
+  args: {
+    onActionClick: action('onActionClick'),
+  },
 };
 
 export default meta;
@@ -16,17 +19,20 @@ export const Default: Story = {
   args: {},
 };
 
+export const Loading: Story = {
+  parameters: {
+    noTranslations: true,
+  },
+};
+
 export const Custom: Story = {
   args: {
     image: 'https://placepengu.in/300x300',
-    title: 'Penguin Error',
-    description: 'Well, that went well...',
   },
 };
 
 export const WithAction: Story = {
   args: {
-    onActionClick: action('onActionClick'),
     actionText: 'Try Again',
   },
 };

@@ -1,21 +1,21 @@
 <div>
   <div
-    class="MuiStack-root css-xmlbkk-MuiStack-root"
+    class="MuiStack-root css-ttdin4-MuiStack-root"
   >
     <img
       alt=""
+      class="MuiBox-root css-tgvajw"
       src="https://placepengu.in/300x300"
-      style="width: 8rem; height: 8rem;"
     />
     <h1
       class="MuiTypography-root MuiTypography-h5 css-quufyz-MuiTypography-root"
     >
-      Penguin Error
+      generic.title
     </h1>
-    <p
+    <div
       class="MuiTypography-root MuiTypography-body1 css-1w9rufw-MuiTypography-root"
     >
-      Well, that went well...
-    </p>
+      generic.description
+    </div>
   </div>
 </div>

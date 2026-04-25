@@ -1,0 +1,18 @@
+<div>
+  <div
+    class="MuiStack-root css-1pnsv3a-MuiStack-root"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-15r3t82-MuiSkeleton-root"
+    />
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-15r3t82-MuiSkeleton-root"
+    />
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-15r3t82-MuiSkeleton-root"
+    />
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-439uuh-MuiSkeleton-root"
+    />
+  </div>
+</div>

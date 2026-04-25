@@ -11,13 +11,15 @@ export interface HeaderProps {
 const Header = ({ title }: HeaderProps) => (
   <Box
     component="header"
-    bgcolor="background.paper"
-    borderBottom={2}
-    borderColor="primary.main"
-    py={2}
+    sx={{
+      backgroundColor: 'background.paper',
+      borderBottom: '2px solid',
+      borderColor: 'primary.main',
+      paddingY: '1rem',
+    }}
   >
     <Container maxWidth="xl">
-      <Stack direction="row" alignItems="center" gap={1}>
+      <Stack direction="row" alignItems="center" gap="0.5rem">
         <SportsFootballIcon color="primary" />
 
         <Typography variant="h5" component="h1" fontWeight="bold">

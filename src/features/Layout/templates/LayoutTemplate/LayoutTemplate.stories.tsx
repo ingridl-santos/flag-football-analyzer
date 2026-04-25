@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import LayoutTemplate from '.';
 
 const meta: Meta<typeof LayoutTemplate> = {
-  title: 'Layout / Templates / LayoutTemplate',
+  title: 'Layout / Templates / Layout Template',
   component: LayoutTemplate,
 };
 

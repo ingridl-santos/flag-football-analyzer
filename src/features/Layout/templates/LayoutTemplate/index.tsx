@@ -14,13 +14,13 @@ export interface LayoutTemplateProps {
 }
 
 const LayoutTemplate = ({ title, githubUrl, children }: LayoutTemplateProps) => (
-  <Box display="flex" flexDirection="column" minHeight="100vh">
+  <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
     <SkipLink />
 
     <Header title={title} />
 
-    <Box id="main-content" component="main" flexGrow={1}>
-      <Container maxWidth="xl" sx={{ py: 4 }}>
+    <Box id="main-content" component="main" sx={{ flexGrow: 1 }}>
+      <Container maxWidth="xl" sx={{ paddingY: '2rem' }}>
         {children}
       </Container>
     </Box>

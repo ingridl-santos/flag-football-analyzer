@@ -1,18 +1,20 @@
-import { Button, Stack, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 import { useTranslation } from 'react-i18next';
+
+import MultilineSkelly from '../MultilineSkelly';
 
 export interface ErrorPanelProps {
   image?: string;
-  title?: string;
-  description?: string;
   actionText?: string;
   onActionClick?: () => void;
 }
 
 export default function ErrorPanel({
   image,
-  title,
-  description,
   actionText,
   onActionClick,
 }: ErrorPanelProps) {
@@ -22,16 +24,17 @@ export default function ErrorPanel({
     <Stack
       justifyContent="center"
       alignItems="center"
-      spacing={3}
+      spacing="1.5rem"
       sx={{
         maxWidth: '22.5rem',
         textAlign: 'center',
       }}
     >
-      <img
+      <Box
+        component="img"
         src={image ?? '/assets/errors/generic.svg'}
         alt=""
-        style={{
+        sx={{
           width: '8rem',
           height: '8rem',
         }}
@@ -41,11 +44,11 @@ export default function ErrorPanel({
         component="h1"
         variant="h5"
       >
-        { title ?? t('generic.title') }
+        {t('generic.title') ?? <Skeleton sx={{ width: '11rem' }} />}
       </Typography>
 
-      <Typography>
-        { description ?? t('generic.description') }
+      <Typography component="div">
+        {t('generic.description') ?? <MultilineSkelly lines={2} lastLineWidth="17rem" centered />}
       </Typography>
 
       {
@@ -53,7 +56,7 @@ export default function ErrorPanel({
           <Button
             onClick={onActionClick}
           >
-            { actionText }
+            {actionText}
           </Button>
         )
       }

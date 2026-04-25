@@ -9,13 +9,13 @@
       Skip to main content
     </a>
     <header
-      class="MuiBox-root css-11ncdrw"
+      class="MuiBox-root css-s0t6ml"
     >
       <div
         class="MuiContainer-root MuiContainer-maxWidthXl css-19r6kue-MuiContainer-root"
       >
         <div
-          class="MuiStack-root css-1rlitzi-MuiStack-root"
+          class="MuiStack-root css-1g3pxpa-MuiStack-root"
         >
           <svg
             aria-hidden="true"
@@ -41,7 +41,7 @@
       id="main-content"
     >
       <div
-        class="MuiContainer-root MuiContainer-maxWidthXl css-4i30i7-MuiContainer-root"
+        class="MuiContainer-root MuiContainer-maxWidthXl css-1yvcwy4-MuiContainer-root"
       >
         <p
           class="MuiTypography-root MuiTypography-body1 css-1w9rufw-MuiTypography-root"
@@ -51,7 +51,7 @@
       </div>
     </main>
     <footer
-      class="MuiBox-root css-1mcdp7h"
+      class="MuiBox-root css-1ips0wf"
     >
       <div
         class="MuiContainer-root MuiContainer-maxWidthXl css-19r6kue-MuiContainer-root"
@@ -60,7 +60,7 @@
           class="MuiStack-root css-1jv2z0n-MuiStack-root"
         >
           <div
-            class="MuiStack-root css-1rlitzi-MuiStack-root"
+            class="MuiStack-root css-1g3pxpa-MuiStack-root"
           >
             <svg
               aria-hidden="true"
