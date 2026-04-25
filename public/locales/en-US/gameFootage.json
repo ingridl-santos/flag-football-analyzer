@@ -33,6 +33,7 @@
   "tagsInputPlaceholder": "Add tag…",
   "exportZip": "Export ZIP",
   "exportZipProgress": "Exporting… {{progress}}%",
+  "exportZipUnavailableYoutube": "ZIP export is not available for YouTube videos. Upload an MP4 file to cut and download segments.",
   "playType": "Play Type",
   "playTypeNone": "None",
   "playTypes": {

@@ -236,6 +236,12 @@ export default function GameFootageTemplate({
           )}
         </Stack>
 
+        {videoType === 'youtube' && (
+          <Typography variant="caption" color="text.secondary">
+            {t('exportZipUnavailableYoutube') ?? <Skeleton sx={{ maxWidth: '28rem' }} />}
+          </Typography>
+        )}
+
         <SegmentTable segments={segments} onDelete={onDeleteSegment} onSetPlayType={onSetPlayType} onSetTags={onSetTags} />
       </Stack>
     </Stack>

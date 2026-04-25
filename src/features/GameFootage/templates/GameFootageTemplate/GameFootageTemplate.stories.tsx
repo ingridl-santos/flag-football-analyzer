@@ -76,7 +76,9 @@ export const WithYouTube: Story = {
     isPlaying: false,
     pendingStart: null,
     pendingEnd: null,
-    segments: [],
+    segments: [
+      { id: '1', start: 10, end: 25, duration: 15, playType: 'Pass', tags: [] },
+    ],
   },
 };
 
