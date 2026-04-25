@@ -23,6 +23,6 @@
     /* Testing */
     "types": ["vitest/globals"]
   },
-  "include": ["src"],
+  "include": ["src", ".storybook"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
