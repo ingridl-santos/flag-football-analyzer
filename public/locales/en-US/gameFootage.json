@@ -13,7 +13,28 @@
   "segments": "Segments",
   "noSegments": "No segments yet",
   "deleteSegment": "Delete segment",
-  "segmentStart": "Start",
-  "segmentEnd": "End",
-  "segmentDuration": "Duration"
+  "deleteConfirmTitle": "Delete segment?",
+  "deleteConfirmMessage": "This action cannot be undone.",
+  "deleteConfirmCancel": "Cancel",
+  "deleteConfirmAction": "Delete",
+  "segmentLabel": "Segment {{number}}",
+  "colNumber": "#",
+  "colTimeRange": "Time Range",
+  "colDuration": "Duration",
+  "colPlayType": "Play Type",
+  "colTags": "Tags",
+  "playType": "Play Type",
+  "playTypeNone": "None",
+  "playTypes": {
+    "Pass": "Pass",
+    "Run": "Run",
+    "Defense": "Defense"
+  },
+  "tags": {
+    "offense": "Offense",
+    "air": "Air",
+    "rush": "Rush",
+    "defense": "Defense",
+    "quick": "Quick"
+  }
 }

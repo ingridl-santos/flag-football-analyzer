@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { action } from 'storybook/actions';
 
-import SegmentList from '.';
+import SegmentTable from '.';
 
-const meta: Meta<typeof SegmentList> = {
-  title: 'Features / Game Footage / Components / Segment List',
-  component: SegmentList,
+const meta: Meta<typeof SegmentTable> = {
+  title: 'Features / Game Footage / Components / Segment Table',
+  component: SegmentTable,
   parameters: {
     layout: 'padded',
   },
@@ -17,7 +17,7 @@ const meta: Meta<typeof SegmentList> = {
 
 export default meta;
 
-type Story = StoryObj<typeof SegmentList>;
+type Story = StoryObj<typeof SegmentTable>;
 
 export const Empty: Story = {
   args: {
@@ -36,10 +36,10 @@ export const WithSegments: Story = {
 };
 
 export const Loading: Story = {
-  parameters: {
-    noTranslations: true,
-  },
   args: {
     segments: [],
+  },
+  parameters: {
+    noTranslations: true,
   },
 };

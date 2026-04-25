@@ -1,70 +1,85 @@
 import DeleteIcon from '@mui/icons-material/Delete';
-import { IconButton, Paper, Skeleton, Stack, Typography } from '@mui/material';
+import { Chip, IconButton, Paper, Skeleton, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import MultilineSkelly from '../../../../components/MultilineSkelly';
 import { type Segment } from '../../../../redux/SegmentSlice';
 import { formatTime } from '../../../../utils/formatTime';
+import PlayTypeSelector from '../PlayTypeSelector';
 
 export interface SegmentListProps {
   segments: Segment[];
   onDelete: (id: string) => void;
+  onSetPlayType: (id: string, playType: string) => void;
 }
 
-function SegmentRow({ segment, onDelete }: { segment: Segment; onDelete: (id: string) => void }) {
+function SegmentRow({
+  segment,
+  index,
+  onDelete,
+  onSetPlayType,
+}: {
+  segment: Segment;
+  index: number;
+  onDelete: (id: string) => void;
+  onSetPlayType: (id: string, playType: string) => void;
+}) {
   const { t } = useTranslation('gameFootage');
+
+  const timeRange = `${formatTime(segment.start)} → ${formatTime(segment.end)}`;
+  const duration = `(${formatTime(segment.duration)})`;
 
   return (
     <Paper
       variant="outlined"
       sx={{ padding: '0.75rem 1rem' }}
     >
-      <Stack sx={{ flexDirection: 'row', alignItems: 'center', gap: '1rem' }}>
-        <Stack sx={{ flexDirection: 'row', gap: '1.5rem', flexGrow: 1 }}>
-          <Stack>
-            <Typography variant="caption" color="text.secondary">
-              {t('segmentStart') ?? <Skeleton width="2.5rem" />}
-            </Typography>
+      <Stack sx={{ gap: '0.5rem' }}>
+        <Stack sx={{ flexDirection: 'row', alignItems: 'center' }}>
+          <Typography variant="subtitle2" sx={{ flexGrow: 1 }}>
+            {t('segmentLabel', { number: index + 1 }) ?? <Skeleton width="5rem" />}
+          </Typography>
 
-            <Typography variant="body2" fontWeight="medium">
-              {formatTime(segment.start)}
-            </Typography>
-          </Stack>
-
-          <Stack>
-            <Typography variant="caption" color="text.secondary">
-              {t('segmentEnd') ?? <Skeleton width="2rem" />}
-            </Typography>
-
-            <Typography variant="body2" fontWeight="medium">
-              {formatTime(segment.end)}
-            </Typography>
-          </Stack>
-
-          <Stack>
-            <Typography variant="caption" color="text.secondary">
-              {t('segmentDuration') ?? <Skeleton width="3.5rem" />}
-            </Typography>
-
-            <Typography variant="body2" fontWeight="medium">
-              {formatTime(segment.duration)}
-            </Typography>
-          </Stack>
+          <IconButton
+            size="small"
+            aria-label={t('deleteSegment') ?? 'Delete segment'}
+            onClick={() => onDelete(segment.id)}
+          >
+            <DeleteIcon fontSize="small" />
+          </IconButton>
         </Stack>
 
-        <IconButton
-          size="small"
-          aria-label={t('deleteSegment') ?? 'Delete segment'}
-          onClick={() => onDelete(segment.id)}
-        >
-          <DeleteIcon fontSize="small" />
-        </IconButton>
+        <Stack sx={{ flexDirection: 'row', alignItems: 'baseline', gap: '0.5rem' }}>
+          <Typography variant="body2">
+            {timeRange}
+          </Typography>
+
+          <Typography variant="caption" color="text.secondary">
+            {duration}
+          </Typography>
+        </Stack>
+
+        <Stack sx={{ flexDirection: 'row', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+          <PlayTypeSelector
+            segmentId={segment.id}
+            value={segment.playType ?? ''}
+            onChange={onSetPlayType}
+          />
+
+          {(segment.tags ?? []).map((tag) => (
+            <Chip
+              key={tag}
+              label={t(`tags.${tag}`) ?? <Skeleton width="3.5rem" />}
+              size="small"
+            />
+          ))}
+        </Stack>
       </Stack>
     </Paper>
   );
 }
 
-export default function SegmentList({ segments, onDelete }: SegmentListProps) {
+export default function SegmentList({ segments, onDelete, onSetPlayType }: SegmentListProps) {
   const { t } = useTranslation('gameFootage');
 
   return (
@@ -81,8 +96,14 @@ export default function SegmentList({ segments, onDelete }: SegmentListProps) {
           )
         : (
             <Stack sx={{ gap: '0.5rem' }}>
-              {segments.map((segment) => (
-                <SegmentRow key={segment.id} segment={segment} onDelete={onDelete} />
+              {segments.map((segment, index) => (
+                <SegmentRow
+                  key={segment.id}
+                  segment={segment}
+                  index={index}
+                  onDelete={onDelete}
+                  onSetPlayType={onSetPlayType}
+                />
               ))}
             </Stack>
           )}

@@ -4,7 +4,7 @@ import { action } from 'storybook/actions';
 import GameFootageTemplate from '.';
 
 const meta: Meta<typeof GameFootageTemplate> = {
-  title: 'Features / Game Footage / Game Footage Template',
+  title: 'Features / Game Footage / Templates / Game Footage Template',
   component: GameFootageTemplate,
   parameters: {
     layout: 'padded',
@@ -19,6 +19,7 @@ const meta: Meta<typeof GameFootageTemplate> = {
     onSetEnd: action('onSetEnd'),
     onCreateSegment: action('onCreateSegment'),
     onDeleteSegment: action('onDeleteSegment'),
+    onSetPlayType: action('onSetPlayType'),
   },
 };
 
@@ -64,8 +65,8 @@ export const WithSegments: Story = {
   args: {
     ...WithVideo.args,
     segments: [
-      { id: '1', start: 10, end: 25, duration: 15 },
-      { id: '2', start: 42, end: 83, duration: 41 },
+      { id: '1', start: 10, end: 25, duration: 15, playType: 'Pass', tags: ['offense', 'air'] },
+      { id: '2', start: 42, end: 83, duration: 41, playType: 'Run', tags: ['offense', 'rush'] },
     ],
   },
 };

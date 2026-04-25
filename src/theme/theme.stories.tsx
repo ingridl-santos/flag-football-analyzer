@@ -8,7 +8,12 @@ import {
   ButtonGroup,
   ButtonGroupProps,
   ButtonProps,
+  Chip,
   CommonColors,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
   Palette,
   Paper,
   Skeleton,
@@ -431,6 +436,82 @@ export const SkeletonStory: Story = {
         </Stack>
 
         <Skeleton variant="rounded" width="100%" height="8rem" />
+      </Section>
+    </Stack>
+  ),
+};
+
+// ---------------------------------------------------------------------------
+// Chip — default color: primary
+// ---------------------------------------------------------------------------
+
+export const ChipStory: Story = {
+  name: 'Chip',
+  argTypes: { color: colorArgType },
+  render: ({ color }) => (
+    <Stack sx={{ padding: '2rem', gap: '2rem', width: '40rem' }}>
+      <Section>
+        <Typography variant="h5">Filled · Outlined</Typography>
+
+        <Stack sx={{ flexDirection: 'row', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
+          <Chip label="Offense" color={color ?? 'primary'} />
+
+          <Chip label="Air" color={color ?? 'primary'} variant="outlined" />
+
+          <Chip label="Quick" color={color ?? 'primary'} onDelete={() => {}} />
+        </Stack>
+      </Section>
+
+      <Section>
+        <Typography variant="h5">Size: small</Typography>
+
+        <Stack sx={{ flexDirection: 'row', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
+          <Chip label="Offense" size="small" color={color ?? 'primary'} />
+
+          <Chip label="Air" size="small" color={color ?? 'primary'} variant="outlined" />
+
+          <Chip label="Quick" size="small" color={color ?? 'primary'} onDelete={() => {}} />
+        </Stack>
+      </Section>
+    </Stack>
+  ),
+};
+
+// ---------------------------------------------------------------------------
+// Dialog — rounded corners (0.5rem), DialogTitle defaults to h2 variant
+// ---------------------------------------------------------------------------
+
+export const DialogStory: Story = {
+  name: 'Dialog',
+  render: () => (
+    <Stack sx={{ padding: '2rem', gap: '2rem', width: '40rem' }}>
+      <Section>
+        <Typography variant="h5">Dialog (static, open)</Typography>
+
+        <Dialog
+          open
+          hideBackdrop
+          disablePortal
+          disableScrollLock
+          disableEnforceFocus
+          PaperProps={{ sx: { position: 'relative' } }}
+        >
+          <DialogTitle>
+            Delete segment?
+          </DialogTitle>
+
+          <DialogContent>
+            <Typography variant="body2">
+              This action cannot be undone.
+            </Typography>
+          </DialogContent>
+
+          <DialogActions>
+            <Button variant="outlined">Cancel</Button>
+
+            <Button variant="contained" color="error">Delete</Button>
+          </DialogActions>
+        </Dialog>
       </Section>
     </Stack>
   ),

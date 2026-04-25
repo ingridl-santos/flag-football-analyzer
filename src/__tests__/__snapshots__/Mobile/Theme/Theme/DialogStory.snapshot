@@ -1,0 +1,76 @@
+<div
+  aria-hidden="true"
+>
+  <div
+    class="MuiStack-root css-ralwq-MuiStack-root"
+  >
+    <div
+      class="MuiStack-root css-g79vgv-MuiStack-root"
+    >
+      <h5
+        class="MuiTypography-root MuiTypography-h5 css-quufyz-MuiTypography-root"
+      >
+        Dialog (static, open)
+      </h5>
+      <div
+        class="MuiDialog-root MuiModal-root css-zw3mfo-MuiModal-root-MuiDialog-root"
+        role="presentation"
+      >
+        <div
+          data-testid="sentinelStart"
+          tabindex="0"
+        />
+        <div
+          class="MuiDialog-container MuiDialog-scrollPaper css-1sep8xo-MuiDialog-container"
+          role="presentation"
+          style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+          tabindex="-1"
+        >
+          <div
+            aria-labelledby=":stable-mocked-react-id-1:"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm css-1xismcv-MuiPaper-root-MuiDialog-paper"
+            role="dialog"
+          >
+            <h2
+              class="MuiTypography-root MuiTypography-h2 MuiDialogTitle-root css-n9fnqe-MuiTypography-root-MuiDialogTitle-root"
+              id=":stable-mocked-react-id-1:"
+            >
+              Delete segment?
+            </h2>
+            <div
+              class="MuiDialogContent-root css-ypiqx9-MuiDialogContent-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+              >
+                This action cannot be undone.
+              </p>
+            </div>
+            <div
+              class="MuiDialogActions-root MuiDialogActions-spacing css-knqc4i-MuiDialogActions-root"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-11hdqfe-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Cancel
+              </button>
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorError MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorError css-nzfju1-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          data-testid="sentinelEnd"
+          tabindex="0"
+        />
+      </div>
+    </div>
+  </div>
+</div>

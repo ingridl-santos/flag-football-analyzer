@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import VideoPlayer from '../../../../components/VideoPlayer';
 import { type Segment } from '../../../../redux/SegmentSlice';
 import { formatTime } from '../../../../utils/formatTime';
-import SegmentList from '../../components/SegmentList';
+import SegmentTable from '../../components/SegmentTable';
 
 export interface GameFootageTemplateProps {
   videoUrl: string | null;
@@ -27,6 +27,7 @@ export interface GameFootageTemplateProps {
   onSetEnd: () => void;
   onCreateSegment: () => void;
   onDeleteSegment: (id: string) => void;
+  onSetPlayType: (id: string, playType: string) => void;
 }
 
 export default function GameFootageTemplate({
@@ -47,6 +48,7 @@ export default function GameFootageTemplate({
   onSetEnd,
   onCreateSegment,
   onDeleteSegment,
+  onSetPlayType,
 }: GameFootageTemplateProps) {
   const { t } = useTranslation('gameFootage');
 
@@ -159,7 +161,7 @@ export default function GameFootageTemplate({
 
       <Divider />
 
-      <SegmentList segments={segments} onDelete={onDeleteSegment} />
+      <SegmentTable segments={segments} onDelete={onDeleteSegment} onSetPlayType={onSetPlayType} />
     </Stack>
   );
 

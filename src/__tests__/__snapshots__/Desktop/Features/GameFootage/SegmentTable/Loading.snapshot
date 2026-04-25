@@ -1,0 +1,222 @@
+<div>
+  <div
+    class="MuiStack-root css-8r4r5m-MuiStack-root"
+  >
+    <h2
+      class="MuiTypography-root MuiTypography-h3 css-4imhqc-MuiTypography-root"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1jua98c-MuiSkeleton-root"
+      />
+    </h2>
+    <div
+      class="MuiTableContainer-root css-rorn0c-MuiTableContainer-root"
+    >
+      <table
+        aria-label="Segments"
+        class="MuiTable-root css-1f3tcj6-MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head css-uuuc7l-MuiTableRow-root"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-13ug1lj-MuiTableCell-root"
+              scope="col"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 1rem;"
+              />
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
+              scope="col"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 5rem;"
+              />
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
+              scope="col"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 4.5rem;"
+              />
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
+              scope="col"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 5rem;"
+              />
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1f7xjuh-MuiTableCell-root"
+              scope="col"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 3rem;"
+              />
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeSmall css-1qwwvbt-MuiTableCell-root"
+              scope="col"
+            />
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              1
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 7rem;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 3rem;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 6rem;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 8rem;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            />
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              2
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 7rem;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 3rem;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 6rem;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 8rem;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            />
+          </tr>
+          <tr
+            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              3
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 7rem;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 3rem;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 6rem;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+                style="width: 8rem;"
+              />
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeSmall css-10se6dx-MuiTableCell-root"
+            />
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p
+      class="MuiTypography-root MuiTypography-body2 css-y7453g-MuiTypography-root"
+    >
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1sr740r-MuiSkeleton-root"
+      />
+    </p>
+  </div>
+</div>

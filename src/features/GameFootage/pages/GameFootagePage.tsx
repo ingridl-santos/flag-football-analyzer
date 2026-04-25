@@ -9,6 +9,7 @@ import {
   selectSegmentState,
   setPendingEnd,
   setPendingStart,
+  setPlayType,
 } from '../../../redux/SegmentSlice';
 import { selectVideoState, setCurrentTime, setDuration, setIsPlaying, setVideo } from '../../../redux/VideoSlice';
 import GameFootageTemplate from '../templates/GameFootageTemplate';
@@ -49,6 +50,7 @@ export default function GameFootagePage() {
       onSetEnd={() => dispatch(setPendingEnd(videoState.currentTime))}
       onCreateSegment={() => dispatch(createSegment())}
       onDeleteSegment={(id) => dispatch(deleteSegment(id))}
+      onSetPlayType={(id, pt) => dispatch(setPlayType({ id, playType: pt }))}
     />
   );
 }
