@@ -1,0 +1,21 @@
+<div>
+  <div
+    class="MuiStack-root css-xmlbkk-MuiStack-root"
+  >
+    <img
+      alt=""
+      src="https://placepengu.in/300x300"
+      style="width: 8rem; height: 8rem;"
+    />
+    <h1
+      class="MuiTypography-root MuiTypography-h5 css-quufyz-MuiTypography-root"
+    >
+      Penguin Error
+    </h1>
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-1w9rufw-MuiTypography-root"
+    >
+      Well, that went well...
+    </p>
+  </div>
+</div>

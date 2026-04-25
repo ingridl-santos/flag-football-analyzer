@@ -18,5 +18,7 @@ export const initOptions: InitOptions = {
   },
   ns: [
     'common',
+    'errors',
+    'pageTitles',
   ],
 };
