@@ -8,12 +8,12 @@
       src="/assets/errors/generic.svg"
     />
     <h1
-      class="MuiTypography-root MuiTypography-h5 css-quufyz-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h5 css-1kqow15-MuiTypography-root"
     >
       generic.title
     </h1>
     <div
-      class="MuiTypography-root MuiTypography-body1 css-1w9rufw-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 css-1r2j2ky-MuiTypography-root"
     >
       generic.description
     </div>

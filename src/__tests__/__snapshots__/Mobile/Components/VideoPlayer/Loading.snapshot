@@ -15,7 +15,7 @@
       </video>
     </div>
     <span
-      class="MuiSlider-root MuiSlider-colorPrimary MuiSlider-sizeSmall css-14obvuc-MuiSlider-root"
+      class="MuiSlider-root MuiSlider-colorPrimary MuiSlider-sizeSmall css-1lbe5cq-MuiSlider-root"
     >
       <span
         class="MuiSlider-rail css-7o8aqz-MuiSlider-rail"
@@ -25,7 +25,7 @@
         style="left: 0%; width: 0%;"
       />
       <span
-        class="MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary css-1y4cb25-MuiSlider-thumb"
+        class="MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary css-1k6vk9i-MuiSlider-thumb"
         data-index="0"
         style="left: 0%;"
       >
@@ -67,7 +67,7 @@
         </svg>
       </button>
       <p
-        class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
       >
         0:00 / 0:00
       </p>

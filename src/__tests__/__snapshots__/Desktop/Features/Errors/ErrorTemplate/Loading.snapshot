@@ -11,23 +11,23 @@
         src="/assets/errors/generic.svg"
       />
       <h1
-        class="MuiTypography-root MuiTypography-h5 css-quufyz-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h5 css-1kqow15-MuiTypography-root"
       >
         <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-irr55v-MuiSkeleton-root"
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-wst2mj-MuiSkeleton-root"
         />
       </h1>
       <div
-        class="MuiTypography-root MuiTypography-body1 css-1w9rufw-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1r2j2ky-MuiTypography-root"
       >
         <div
           class="MuiStack-root css-1pnsv3a-MuiStack-root"
         >
           <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-15r3t82-MuiSkeleton-root"
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-q3run7-MuiSkeleton-root"
           />
           <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-z9yap3-MuiSkeleton-root"
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-14332pd-MuiSkeleton-root"
           />
         </div>
       </div>

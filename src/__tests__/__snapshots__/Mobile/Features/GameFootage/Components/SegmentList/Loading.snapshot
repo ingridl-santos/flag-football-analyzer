@@ -3,17 +3,17 @@
     class="MuiStack-root css-8r4r5m-MuiStack-root"
   >
     <h2
-      class="MuiTypography-root MuiTypography-h3 css-4imhqc-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h3 css-unuo6d-MuiTypography-root"
     >
       <span
-        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1jua98c-MuiSkeleton-root"
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1k5uevm-MuiSkeleton-root"
       />
     </h2>
     <p
-      class="MuiTypography-root MuiTypography-body2 css-wgl6ki-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body2 css-7x1md9-MuiTypography-root"
     >
       <span
-        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-60tv9o-MuiSkeleton-root"
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-19lj9pz-MuiSkeleton-root"
       />
     </p>
   </div>

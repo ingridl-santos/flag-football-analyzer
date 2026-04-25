@@ -2,11 +2,7 @@
 
 A free, static, coach-focused video analysis tool for flag football teams.
 
-This application allows coaches to:
-- Upload and analyze game/practice footage
-- Manually segment plays using timestamps
-- Classify plays (assisted + automated in future versions)
-- Export structured data for Excel, Hudl, and further analysis
+Upload a game video, mark segments, classify plays, and export your analysis — all in the browser, with no backend required.
 
 ---
 
@@ -25,12 +21,11 @@ This application allows coaches to:
 | Category | Libraries |
 |---|---|
 | Core | React, TypeScript, Vite |
-| UI | Material UI (MUI) |
-| State | Redux Toolkit |
+| UI | Material UI v7 (MUI) |
+| State | Redux Toolkit + redux-persist |
 | Routing | React Router DOM |
-| i18n | i18next |
+| i18n | i18next (en-US, pt-BR) |
 | Tooling | ESLint, Stylelint, Vitest, Storybook |
-| Future (V2+) | ffmpeg.wasm, onnxruntime-web |
 
 ---
 
@@ -38,39 +33,28 @@ This application allows coaches to:
 
 ```
 ├── public/
-│   ├── environment.jsre
+│   ├── environment.js          # Runtime env vars (injected at deploy)
 │   └── locales/
-│       ├── en/
-│       │   ├── common.json
-│       │   └── home.json
-│       └── pt/
-│           └── common.json
+│       ├── en-US/              # English translations
+│       └── pt-BR/              # Brazilian Portuguese translations
 └── src/
     ├── App.tsx
     ├── i18n.ts
     ├── i18nOptions.ts
     ├── index.tsx
     ├── runtime-env.ts
-    ├── __mocks__/
-    │   └── i18n.ts
-    ├── __tests__/
-    │   └── snapshots.test.ts
-    ├── components/       # Shared UI components
-    ├── config/           # Test and story setup
-    │   ├── setupPortableStories.ts
-    │   └── setupTests.ts
-    ├── features/         # Domain features
-    │   └── Home/
-    ├── redux/            # Redux store and slices
-    │   ├── hooks.ts
-    │   └── store.ts
-    ├── router/           # Route definitions
-    │   ├── routeDefinitions.tsx
-    │   └── router.tsx
-    ├── theme/            # MUI theme
-    │   └── base.ts
-    └── types/            # Shared TypeScript types
-        └── router/
+    ├── components/             # Shared UI components (Breadcrumb, Dialog, …)
+    ├── config/                 # Test and Storybook setup
+    ├── features/
+    │   ├── Errors/             # Error pages
+    │   ├── GameFootage/        # Game footage analysis feature
+    │   ├── Home/               # Landing / home page
+    │   └── Layout/             # App shell (header, footer, nav)
+    ├── hooks/                  # Custom React hooks
+    ├── redux/                  # Store, slices, typed hooks
+    ├── router/                 # Route definitions
+    ├── theme/                  # MUI theme customisation
+    └── types/                  # Shared TypeScript types
 ```
 
 ---
@@ -88,56 +72,39 @@ npm run dev
 |---|---|
 | `npm run dev` | Start development server |
 | `npm run build` | Production build |
-| `npm run test` | Run unit tests |
-| `npm run lint` | Run ESLint + Stylelint |
-| `npm run storybook` | Launch Storybook |
+| `npm run preview` | Preview production build locally |
+| `npm run test` | Run unit and snapshot tests |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run test:coverage` | Run tests with coverage report |
+| `npm run test:update-snapshots` | Regenerate Storybook snapshots |
+| `npm run lint` | Run TypeScript + ESLint + Stylelint |
+| `npm run lint:js:fix` | Auto-fix ESLint issues |
+| `npm run lint:css:fix` | Auto-fix Stylelint issues |
+| `npm run storybook` | Launch Storybook on port 6006 |
+| `npm run storybook:build` | Build Storybook to `dist/storybook` |
 
 ---
 
-## 🧩 Core Features
+## 🧩 Features
 
-### 1. Video Analysis
-- Upload local MP4 video
-- Play / pause / seek
-- Display current timestamp
+### Home Page
+The landing page describes the application and lists available features with a **Get Started** button that navigates directly to the Game Footage tool.
 
-### 2. Segmentation
-- Set start / end timestamps
-- Create and manage segments
-- Stored in Redux
+### Game Footage Analysis
+- Upload a local **MP4** video or load a **YouTube** video by URL
+- Play / pause / seek with a visual timeline
+- Set start and end timestamps to define a **segment**
+- Optionally assign a **play type** and **tags** before saving
+- Rule-based tag suggestions based on play type and segment duration
+- Manage and review all segments in a sortable table
+- **Export** your analysis:
+  - **CSV** — flat table compatible with Excel / Sheets
+  - **JSON** — structured data for programmatic use
+  - **ZIP** — segments bundled with clipped video (local files only)
 
-```ts
-type Segment = {
-  id: string
-  start: number
-  end: number
-  duration: number
-  playType?: string
-  tags?: string[]
-}
-```
-
-### 3. Classification (V1 — Rule-Based)
-
-| Play Type | Tags |
-|---|---|
-| Pass | `["offense", "air"]` |
-| Run | `["offense", "ground"]` |
-| Duration < 3s | adds `"quick"` |
-
-### 4. Export
-
-**CSV**
-```
-id,start,end,duration,playType,tags
-```
-
-**JSON**
-```json
-{
-  "segments": []
-}
-```
+### Navigation
+- Persistent header with app logo (links home) and a **Game Footage** nav entry
+- Breadcrumb trail on inner pages (Home → current page)
 
 ---
 
@@ -145,21 +112,22 @@ id,start,end,duration,playType,tags
 
 | Token | Value |
 |---|---|
-| Mode | Dark (default) |
-| Primary | Gold `#C9A227` |
-| Secondary | Silver `#C0C0C0` |
-| Background | Black `#121212` |
-
-**UX Principles:** desktop-first, minimal clicks, clear data visibility, built for film sessions.
+| Mode | Light |
+| Primary | Blue `#2563EB` |
+| Secondary | Mid-grey `#6B7280` |
+| Background | Off-white `#F9FAFB` |
+| Paper | White `#FFFFFF` |
+| Divider | `#E5E7EB` |
+| Font | Inter + Roboto fallback |
 
 ---
 
 ## 🧠 Architecture Principles
 
 1. **Fully Client-Side** — no backend, no database, no cloud processing
-2. **Export-First** — all data is downloadable (CSV, JSON, ZIP in future)
-3. **Coach-Controlled** — no automatic segmentation; AI assists, never replaces
-4. **Progressive Enhancement** — V1 manual → V2 clips + embeddings → V3 analytics
+2. **Pages delegate to templates** — pages wire data; templates own all UI and are independently renderable in Storybook
+3. **Export-First** — all data is downloadable (CSV, JSON, ZIP)
+4. **Coach-Controlled** — no automatic segmentation; classification assists, never replaces
 
 ---
 
@@ -167,51 +135,21 @@ id,start,end,duration,playType,tags
 
 | Version | Focus |
 |---|---|
-| **V1** (current) | Segmentation, manual classification, CSV/JSON export |
-| **V2** | Clip generation (ffmpeg.wasm), embedding-based classification (CLIP) |
-| **V3** | Analytics dashboard, player tagging, multi-game insights |
-
-### Current Scope (V1)
-
-**Included:**
-- Local video upload (MP4), playback, timestamp-based segmentation
-- Manual play type selection, rule-based tag generation
-- CSV and JSON export
-
-**Not included yet:**
-- Clip generation, AI classification, YouTube support, cloud sync
-
----
-
-## ⚠️ Constraints & Decisions
-
-- **Static hosting only** — must work on GitHub Pages / Vercel; no server dependencies
-- **Local video only** — only local files supported in V1; files >2GB may cause issues
-- **No YouTube** — not supported in V1 (metadata-only planned for V2)
-
----
-
-## 🧠 Engineering Guidelines
-
-- Prefer simple solutions first; avoid premature optimization
-- Keep components small and reusable
-- Separate UI from logic
-- Use Redux for all shared state
-- Add tests for logic; use Storybook for UI components
+| **V1** (current) | Segmentation, manual classification, CSV / JSON export, YouTube support, clip generation (ffmpeg.wasm) |
+| **V2** | Embedding-based classification, analytics dashboard |
+| **V3** | Player tagging, multi-game insights |
 
 ---
 
 ## 🤝 Contributing
 
 - Keep PRs small and focused
-- Follow linting rules
-- Add tests for logic when possible
-- Use Storybook for UI components
+- Follow the conventions in `docs/` before writing any code
+- Run `npm run lint` and `npm run test` before opening a PR
+- Add Storybook stories for all new templates and components
 
 ---
 
 ## 💡 Vision
-
-This is not just a tool — it's a foundation for a lightweight, private, coach-controlled analytics platform.
 
 No subscriptions. No lock-in. Just usable football intelligence.

@@ -6,7 +6,7 @@
       aria-label="breadcrumb"
     >
       <nav
-        class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-1anxhkh-MuiTypography-root-MuiBreadcrumbs-root"
+        class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root css-rh2u9u-MuiTypography-root-MuiBreadcrumbs-root"
       >
         <ol
           class="MuiBreadcrumbs-ol css-4pdmu4-MuiBreadcrumbs-ol"
@@ -18,7 +18,7 @@
               class="MuiBox-root css-0"
             >
               <a
-                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-15qar8w-MuiTypography-root-MuiLink-root"
+                class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-oxnzzu-MuiTypography-root-MuiLink-root"
                 href="/"
               >
                 <svg
@@ -49,7 +49,7 @@
               class="MuiBox-root css-0"
             >
               <p
-                class="MuiTypography-root MuiTypography-body1 css-5v30sd-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 css-nkp87h-MuiTypography-root"
               >
                 title
               </p>
@@ -59,16 +59,16 @@
       </nav>
     </nav>
     <h1
-      class="MuiTypography-root MuiTypography-h2 css-nehsvu-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h2 css-1xo9vd1-MuiTypography-root"
     >
       title
     </h1>
     <div
-      class="MuiStack-root css-6x1opn-MuiStack-root"
+      class="MuiStack-root css-al64ug-MuiStack-root"
     >
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jepbzk-MuiSvgIcon-root"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-14qnisd-MuiSvgIcon-root"
         data-testid="UploadFileIcon"
         focusable="false"
         viewBox="0 0 24 24"
@@ -78,17 +78,17 @@
         />
       </svg>
       <p
-        class="MuiTypography-root MuiTypography-body1 css-1bs4cfm-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-3zxga7-MuiTypography-root"
       >
         uploadPrompt
       </p>
       <span
-        class="MuiTypography-root MuiTypography-caption css-1a7okdy-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
       >
         uploadAccepted
       </span>
       <label
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-13fqfg1-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-g55t1d-MuiButtonBase-root-MuiButton-root"
         role="button"
         tabindex="0"
       >
@@ -100,7 +100,7 @@
         />
       </label>
       <div
-        class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-1h4w97w-MuiDivider-root"
+        class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-11hm10h-MuiDivider-root"
         role="separator"
       >
         <span
@@ -116,7 +116,7 @@
           class="MuiFormControl-root MuiTextField-root css-te7hn0-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-uo634n-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1uy7lca-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             for=":stable-mocked-react-id-1:"
             id=":stable-mocked-react-id-1:-label"
@@ -124,13 +124,13 @@
             youtubeUrlLabel
           </label>
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-15vllxx-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-1s7eke9-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-describedby=":stable-mocked-react-id-1:-helper-text"
               aria-invalid="false"
               aria-label="youtubeUrlLabel"
-              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-5lgxi2-MuiInputBase-input-MuiOutlinedInput-input"
               id=":stable-mocked-react-id-1:"
               placeholder="youtubeUrlPlaceholder"
               type="text"
@@ -150,7 +150,7 @@
             </fieldset>
           </div>
           <p
-            class="MuiFormHelperText-root MuiFormHelperText-sizeSmall MuiFormHelperText-contained css-136uarm-MuiFormHelperText-root"
+            class="MuiFormHelperText-root MuiFormHelperText-sizeSmall MuiFormHelperText-contained css-9w8k7l-MuiFormHelperText-root"
             id=":stable-mocked-react-id-1:-helper-text"
           >
             <span
@@ -161,7 +161,7 @@
           </p>
         </div>
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-13fqfg1-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-g55t1d-MuiButtonBase-root-MuiButton-root"
           tabindex="0"
           type="button"
         >

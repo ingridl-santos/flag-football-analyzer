@@ -3,10 +3,10 @@
     class="MuiStack-root css-mx70a6-MuiStack-root"
   >
     <span
-      class="MuiTypography-root MuiTypography-caption css-1a7okdy-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
     >
       <span
-        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-l7k87v-MuiSkeleton-root"
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
         style="width: 4rem;"
       />
     </span>
@@ -15,7 +15,7 @@
     >
       <div
         aria-label="Add Deep Pass"
-        class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-filledPrimary css-1eobmpi-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-filledPrimary css-16u61rh-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -38,7 +38,7 @@
       </div>
       <div
         aria-label="Add Touchdown"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -50,7 +50,7 @@
       </div>
       <div
         aria-label="Add Completion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -62,7 +62,7 @@
       </div>
       <div
         aria-label="Add Incompletion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -74,7 +74,7 @@
       </div>
       <div
         aria-label="Add Interception"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -86,7 +86,7 @@
       </div>
       <div
         aria-label="Add Sack"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -98,7 +98,7 @@
       </div>
       <div
         aria-label="Add Flag Pull"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -110,7 +110,7 @@
       </div>
       <div
         aria-label="Add Screen Pass"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -122,7 +122,7 @@
       </div>
       <div
         aria-label="Add Slant"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -134,7 +134,7 @@
       </div>
       <div
         aria-label="Add Out Route"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -146,7 +146,7 @@
       </div>
       <div
         aria-label="Add Post Route"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -158,7 +158,7 @@
       </div>
       <div
         aria-label="Add Go Route"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -170,7 +170,7 @@
       </div>
       <div
         aria-label="Add Crossing Route"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -182,7 +182,7 @@
       </div>
       <div
         aria-label="Add Rollout Pass"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -194,7 +194,7 @@
       </div>
       <div
         aria-label="Add QB Scramble"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -206,7 +206,7 @@
       </div>
       <div
         aria-label="Add Shotgun"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -218,7 +218,7 @@
       </div>
       <div
         aria-label="Add Spread"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -230,7 +230,7 @@
       </div>
       <div
         aria-label="Add Trips Formation"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -242,7 +242,7 @@
       </div>
       <div
         aria-label="Add Empty Backfield"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -254,7 +254,7 @@
       </div>
       <div
         aria-label="Add I-Formation"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -266,7 +266,7 @@
       </div>
       <div
         aria-label="Add Red Zone"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -278,7 +278,7 @@
       </div>
       <div
         aria-label="Add Two-Minute Drill"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -290,7 +290,7 @@
       </div>
       <div
         aria-label="Add Two-Point Attempt"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -302,7 +302,7 @@
       </div>
       <div
         aria-label="Add Opening Drive"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >

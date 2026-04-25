@@ -3,7 +3,7 @@
     class="MuiStack-root css-mx70a6-MuiStack-root"
   >
     <span
-      class="MuiTypography-root MuiTypography-caption css-1a7okdy-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
     >
       tagSuggestions
     </span>
@@ -12,7 +12,7 @@
     >
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-filledPrimary css-1eobmpi-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-filledPrimary css-16u61rh-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -35,7 +35,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -47,7 +47,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -59,7 +59,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -71,7 +71,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -83,7 +83,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -95,7 +95,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -107,7 +107,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -119,7 +119,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -131,7 +131,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -143,7 +143,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -155,7 +155,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -167,7 +167,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -179,7 +179,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -191,7 +191,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -203,7 +203,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -215,7 +215,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -227,7 +227,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -239,7 +239,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -251,7 +251,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -263,7 +263,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -275,7 +275,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -287,7 +287,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >
@@ -299,7 +299,7 @@
       </div>
       <div
         aria-label="addTagSuggestion"
-        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1084j4p-MuiButtonBase-root-MuiChip-root"
+        class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
         role="button"
         tabindex="0"
       >

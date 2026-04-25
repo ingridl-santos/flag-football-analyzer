@@ -3,12 +3,12 @@
     class="MuiStack-root css-8r4r5m-MuiStack-root"
   >
     <h2
-      class="MuiTypography-root MuiTypography-h3 css-4imhqc-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-h3 css-unuo6d-MuiTypography-root"
     >
       segments
     </h2>
     <p
-      class="MuiTypography-root MuiTypography-body2 css-wgl6ki-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body2 css-7x1md9-MuiTypography-root"
     >
       noSegments
     </p>

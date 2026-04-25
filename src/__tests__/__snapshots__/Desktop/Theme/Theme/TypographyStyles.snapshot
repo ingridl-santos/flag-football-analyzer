@@ -6,7 +6,7 @@
       class="MuiStack-root css-g79vgv-MuiStack-root"
     >
       <h5
-        class="MuiTypography-root MuiTypography-h5 css-quufyz-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h5 css-1kqow15-MuiTypography-root"
       >
         Preview
       </h5>
@@ -14,17 +14,17 @@
         class="MuiStack-root css-u66dgh-MuiStack-root"
       >
         <h1
-          class="MuiTypography-root MuiTypography-h1 css-y1h1qa-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h1 css-1a7k06y-MuiTypography-root"
         >
           Aa
         </h1>
         <h3
-          class="MuiTypography-root MuiTypography-h3 css-4imhqc-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h3 css-unuo6d-MuiTypography-root"
         >
           Aa
         </h3>
         <p
-          class="MuiTypography-root MuiTypography-body1 css-1w9rufw-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-1r2j2ky-MuiTypography-root"
         >
           No subscriptions. No lock-in. Just usable football intelligence.
         </p>
@@ -34,33 +34,33 @@
       class="MuiStack-root css-g79vgv-MuiStack-root"
     >
       <h5
-        class="MuiTypography-root MuiTypography-h5 css-quufyz-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h5 css-1kqow15-MuiTypography-root"
       >
         All Variants
       </h5>
       <table
-        class="MuiTable-root css-1f3tcj6-MuiTable-root"
+        class="MuiTable-root css-1h2c9v3-MuiTable-root"
       >
         <thead
           class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
         >
           <tr
-            class="MuiTableRow-root MuiTableRow-head css-uuuc7l-MuiTableRow-root"
+            class="MuiTableRow-root MuiTableRow-head css-1q64kqv-MuiTableRow-root"
           >
             <th
-              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-u2674w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-a6e2e1-MuiTableCell-root"
               scope="col"
             >
               Variant
             </th>
             <th
-              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-u2674w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-a6e2e1-MuiTableCell-root"
               scope="col"
             >
               Font size
             </th>
             <th
-              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-lgnun1-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-rf7kbk-MuiTableCell-root"
               scope="col"
             >
               Sample
@@ -71,372 +71,372 @@
           class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
         >
           <tr
-            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
           >
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
                 h1
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
-                52 / 36 (responsive)
+                32 / 24 (responsive)
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <h1
-                class="MuiTypography-root MuiTypography-h1 css-y1h1qa-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h1 css-1a7k06y-MuiTypography-root"
               >
                 Flag Football Analyzer
               </h1>
             </td>
           </tr>
           <tr
-            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
           >
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
                 h2
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
-                32px
+                24px
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <h2
-                class="MuiTypography-root MuiTypography-h2 css-nehsvu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h2 css-1xo9vd1-MuiTypography-root"
               >
                 Flag Football Analyzer
               </h2>
             </td>
           </tr>
           <tr
-            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
           >
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
                 h3
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
-                24px
+                20px
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <h3
-                class="MuiTypography-root MuiTypography-h3 css-4imhqc-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h3 css-unuo6d-MuiTypography-root"
               >
                 Flag Football Analyzer
               </h3>
             </td>
           </tr>
           <tr
-            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
           >
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
                 h4
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
-                20px
+                18px
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <h4
-                class="MuiTypography-root MuiTypography-h4 css-1lzufvz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h4 css-1g0vyb1-MuiTypography-root"
               >
                 Flag Football Analyzer
               </h4>
             </td>
           </tr>
           <tr
-            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
           >
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
                 h5
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
                 16px
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 css-quufyz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-1kqow15-MuiTypography-root"
               >
                 Flag Football Analyzer
               </h5>
             </td>
           </tr>
           <tr
-            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
           >
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
                 h6
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
-              >
-                12px
-              </p>
-            </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
-            >
-              <h6
-                class="MuiTypography-root MuiTypography-h6 css-1bg1u8m-MuiTypography-root"
-              >
-                Flag Football Analyzer
-              </h6>
-            </td>
-          </tr>
-          <tr
-            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
-          >
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
-              >
-                subtitle1
-              </p>
-            </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
-              >
-                22px
-              </p>
-            </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
-            >
-              <h6
-                class="MuiTypography-root MuiTypography-subtitle1 css-n2z9uk-MuiTypography-root"
-              >
-                Flag Football Analyzer
-              </h6>
-            </td>
-          </tr>
-          <tr
-            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
-          >
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
-              >
-                subtitle2
-              </p>
-            </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
-              >
-                18px
-              </p>
-            </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
-            >
-              <h6
-                class="MuiTypography-root MuiTypography-subtitle2 css-oftxad-MuiTypography-root"
-              >
-                Flag Football Analyzer
-              </h6>
-            </td>
-          </tr>
-          <tr
-            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
-          >
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
-              >
-                body1
-              </p>
-            </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
-              >
-                16px
-              </p>
-            </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-1w9rufw-MuiTypography-root"
-              >
-                Flag Football Analyzer
-              </p>
-            </td>
-          </tr>
-          <tr
-            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
-          >
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
-              >
-                body2
-              </p>
-            </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
-            >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
                 14px
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-h6 css-okrrt8-MuiTypography-root"
+              >
+                Flag Football Analyzer
+              </h6>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+              >
+                subtitle1
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+              >
+                16px
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle1 css-gvyyuu-MuiTypography-root"
+              >
+                Flag Football Analyzer
+              </h6>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+              >
+                subtitle2
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+              >
+                14px
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle2 css-1ix5vma-MuiTypography-root"
+              >
+                Flag Football Analyzer
+              </h6>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+              >
+                body1
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+              >
+                14px
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-1r2j2ky-MuiTypography-root"
               >
                 Flag Football Analyzer
               </p>
             </td>
           </tr>
           <tr
-            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
           >
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
-                caption
+                body2
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
                 12px
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+              >
+                Flag Football Analyzer
+              </p>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+              >
+                caption
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+              >
+                12px
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-caption css-p38kd2-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-caption css-1143x1-MuiTypography-root"
               >
                 Flag Football Analyzer
               </span>
             </td>
           </tr>
           <tr
-            class="MuiTableRow-root css-uuuc7l-MuiTableRow-root"
+            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
           >
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
                 overline
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
               >
                 12px
               </p>
             </td>
             <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-p55r3w-MuiTableCell-root"
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-overline css-1i4u48b-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-overline css-1raogcr-MuiTypography-root"
               >
                 Flag Football Analyzer
               </span>

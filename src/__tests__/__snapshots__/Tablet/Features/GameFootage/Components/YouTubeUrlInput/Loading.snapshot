@@ -6,7 +6,7 @@
       class="MuiFormControl-root MuiTextField-root css-te7hn0-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-uo634n-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1uy7lca-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
         for=":stable-mocked-react-id-1:"
         id=":stable-mocked-react-id-1:-label"
@@ -14,13 +14,13 @@
         YouTube URL
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-15vllxx-MuiInputBase-root-MuiOutlinedInput-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-1s7eke9-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-describedby=":stable-mocked-react-id-1:-helper-text"
           aria-invalid="false"
           aria-label="YouTube URL"
-          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-5lgxi2-MuiInputBase-input-MuiOutlinedInput-input"
           id=":stable-mocked-react-id-1:"
           placeholder="https://youtube.com/watch?v=..."
           type="text"
@@ -40,7 +40,7 @@
         </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root MuiFormHelperText-sizeSmall MuiFormHelperText-contained css-136uarm-MuiFormHelperText-root"
+        class="MuiFormHelperText-root MuiFormHelperText-sizeSmall MuiFormHelperText-contained css-9w8k7l-MuiFormHelperText-root"
         id=":stable-mocked-react-id-1:-helper-text"
       >
         <span
@@ -51,7 +51,7 @@
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-13fqfg1-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-g55t1d-MuiButtonBase-root-MuiButton-root"
       tabindex="0"
       type="button"
     >

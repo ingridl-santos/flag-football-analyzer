@@ -1,6 +1,6 @@
 <div>
   <footer
-    class="MuiContainer-root MuiContainer-maxWidthXl css-wffvkp-MuiContainer-root"
+    class="MuiContainer-root MuiContainer-maxWidthXl css-15mj2wx-MuiContainer-root"
   >
     <div
       class="MuiStack-root css-1uuvoll-MuiStack-root"
@@ -10,7 +10,7 @@
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeSmall css-5pfk3d-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeSmall css-9re9ho-MuiSvgIcon-root"
           data-testid="SportsFootballIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -20,18 +20,18 @@
           />
         </svg>
         <p
-          class="MuiTypography-root MuiTypography-body2 css-wgl6ki-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 css-7x1md9-MuiTypography-root"
         >
           appTitle
         </p>
       </div>
       <p
-        class="MuiTypography-root MuiTypography-body2 css-wgl6ki-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-7x1md9-MuiTypography-root"
       >
         footer.copyright
       </p>
       <a
-        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-r4kpzu-MuiTypography-root-MuiLink-root"
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-17e9vfg-MuiTypography-root-MuiLink-root"
         href="https://github.com/ingridl-santos/flag-football-analyzer"
         rel="noopener noreferrer"
         target="_blank"
@@ -55,7 +55,7 @@
           </svg>
         </span>
         <p
-          class="MuiTypography-root MuiTypography-body2 css-199gdj3-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
         >
           footer.viewOnGitHub
         </p>

@@ -96,7 +96,7 @@ const typographyVariants = [
 
 const TypographyStory = ({ color }: ThemeStoryArgs) => {
   const getFontSizeLabel = (tv: typeof typographyVariants[number]) => {
-    if (tv === 'h1') return '52 / 36 (responsive)';
+    if (tv === 'h1') return '32 / 24 (responsive)';
     const raw = theme.typography[tv].fontSize?.toString();
     if (!raw) return '-';
     if (raw.includes('rem')) return `${Number(raw.replace('rem', '')) * 16}px`;
@@ -210,10 +210,10 @@ const ColorTableRow = (
 const colorShades = ['main', 'dark', 'light', 'contrastText'] as const;
 
 const secondaryDescriptions: Record<typeof colorShades[number], string> = {
-  main: 'Mid-grey #616161 — AA on white (6.19:1) ✓',
-  dark: 'Dark grey #373737 — AAA on all backgrounds ✓',
-  light: 'Silver #C0C0C0 — decorative only',
-  contrastText: 'White on #616161 = 6.19:1 AA ✓',
+  main: 'Mid-grey #6B7280 — secondary UI',
+  dark: 'Dark grey #4B5563 — emphasis variant',
+  light: 'Light grey #9CA3AF — decorative only',
+  contrastText: 'White on #6B7280 — AA ✓',
 };
 
 const secondaryShadeDescription = (shade: typeof colorShades[number]) => secondaryDescriptions[shade];
@@ -223,24 +223,24 @@ export const Colors: Story = {
   render: () => (
     <Stack sx={{ padding: '2rem', width: '60rem', gap: '1.5rem' }}>
       <ColorSection variant="primary">
-        <ColorTableRow name="main" color={theme.palette.primary.main} description="Gold #C9A227 — brand accent" />
+        <ColorTableRow name="main" color={theme.palette.primary.main} description="Blue #2563EB — brand accent, buttons, links" />
 
         <ColorTableRow
           name="dark"
           color={theme.palette.primary.dark}
-          description="Dark Gold #7A5C00 — AA text on white (6.25:1) ✓"
+          description="Dark Blue #1D4ED8 — hover / emphasis variant"
         />
 
         <ColorTableRow
           name="light"
           color={theme.palette.primary.light}
-          description="Light Gold #DDB94E — decorative only, do not use as text"
+          description="Light Blue #3B82F6 — decorative / tints"
         />
 
         <ColorTableRow
           name="contrastText"
           color={theme.palette.primary.contrastText}
-          description="Near-black #121212 on Gold = 8.68:1 AAA ✓"
+          description="White #FFFFFF on Blue = 4.6:1 AA ✓"
         />
 
         <ColorTableRow
@@ -268,7 +268,7 @@ export const Colors: Story = {
       </ColorSection>
 
       <ColorSection variant="background">
-        <ColorTableRow name="default" color={theme.palette.background.default} description="#F5F5F5 — page background" />
+        <ColorTableRow name="default" color={theme.palette.background.default} description="#F9FAFB — page background (subtle grey)" />
 
         <ColorTableRow name="paper" color={theme.palette.background.paper} description="#FFFFFF — card / surface background" />
       </ColorSection>

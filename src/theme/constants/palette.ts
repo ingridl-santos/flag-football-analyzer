@@ -1,4 +1,4 @@
-import { SimplePaletteColorOptions, PaletteOptions } from '@mui/material';
+import { PaletteOptions, SimplePaletteColorOptions } from '@mui/material';
 import { Palette } from '@mui/material/styles';
 
 export type ThemeColor = {
@@ -7,25 +7,70 @@ export type ThemeColor = {
 
 const palette: PaletteOptions = {
   mode: 'light',
+  // PRIMARY BRAND
   primary: {
-    main: '#C9A227', // Gold — brand accent, used as button/component background
-    dark: '#7A5C00', // Dark Gold — AA-compliant text on white (6.25:1) and #F5F5F5 (5.73:1)
-    light: '#DDB94E', // Light Gold — decorative only; never use as text color
-    contrastText: '#121212', // Near-black on Gold = 8.68:1 — AAA ✓ (replaces white which was 2.42:1 ✗)
+    main: '#2563EB',
+    light: '#3B82F6',
+    dark: '#1D4ED8',
+    contrastText: '#FFFFFF',
   },
+  // SECONDARY
   secondary: {
-    main: '#616161', // Mid-grey — AA on white (6.19:1) and #F5F5F5 (5.68:1) ✓
-    dark: '#373737', // Dark grey — AAA on all backgrounds
-    light: '#C0C0C0', // Silver — decorative only; never use as text color
-    contrastText: '#FFFFFF', // White on #616161 = 6.19:1 — AA ✓
+    main: '#6B7280',
+    light: '#9CA3AF',
+    dark: '#4B5563',
+    contrastText: '#FFFFFF',
   },
+  // NEUTRALS
+  grey: {
+    50: '#F9FAFB',
+    100: '#F3F4F6',
+    200: '#E5E7EB',
+    300: '#D1D5DB',
+    400: '#9CA3AF',
+    500: '#6B7280',
+    600: '#4B5563',
+    700: '#374151',
+    800: '#1F2937',
+    900: '#111827',
+  },
+  // BACKGROUNDS
   background: {
-    default: '#F5F5F5',
+    default: '#F9FAFB',
     paper: '#FFFFFF',
   },
+  // TEXT
   text: {
-    primary: '#121212', // Near-black on #F5F5F5 = 17.94:1 — AAA ✓
-    secondary: '#4A4A4A', // Dark grey on #F5F5F5 = 8.14:1 — AAA ✓
+    primary: '#111827',
+    secondary: '#6B7280',
+    disabled: '#9CA3AF',
+  },
+  // BORDERS / DIVIDERS
+  divider: '#E5E7EB',
+  // SEMANTIC
+  success: {
+    main: '#16A34A',
+    light: '#22C55E',
+    dark: '#15803D',
+    contrastText: '#FFFFFF',
+  },
+  warning: {
+    main: '#D97706',
+    light: '#F59E0B',
+    dark: '#B45309',
+    contrastText: '#FFFFFF',
+  },
+  error: {
+    main: '#DC2626',
+    light: '#EF4444',
+    dark: '#B91C1C',
+    contrastText: '#FFFFFF',
+  },
+  info: {
+    main: '#2563EB',
+    light: '#3B82F6',
+    dark: '#1D4ED8',
+    contrastText: '#FFFFFF',
   },
 };
 

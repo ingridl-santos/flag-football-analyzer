@@ -6,7 +6,7 @@
       class="MuiStack-root css-g79vgv-MuiStack-root"
     >
       <h5
-        class="MuiTypography-root MuiTypography-h5 css-quufyz-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-h5 css-1kqow15-MuiTypography-root"
       >
         Wave animation (default)
       </h5>
@@ -14,22 +14,22 @@
         class="MuiStack-root css-ucy4gg-MuiStack-root"
       >
         <span
-          class="MuiSkeleton-root MuiSkeleton-circular MuiSkeleton-wave css-cstn6z-MuiSkeleton-root"
+          class="MuiSkeleton-root MuiSkeleton-circular MuiSkeleton-wave css-10hwsnu-MuiSkeleton-root"
           style="width: 3rem; height: 3rem;"
         />
         <div
           class="MuiStack-root css-3m5r2w-MuiStack-root"
         >
           <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-flecig-MuiSkeleton-root"
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-b4a3is-MuiSkeleton-root"
           />
           <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1sczdnj-MuiSkeleton-root"
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-s2pn23-MuiSkeleton-root"
           />
         </div>
       </div>
       <span
-        class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-1phdgz1-MuiSkeleton-root"
+        class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-1e0hs4h-MuiSkeleton-root"
         style="width: 100%; height: 8rem;"
       />
     </div>

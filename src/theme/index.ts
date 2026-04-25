@@ -4,6 +4,7 @@ import AppBar from './components/AppBar';
 import Button from './components/Button';
 import ButtonBase from './components/ButtonBase';
 import ButtonGroup from './components/ButtonGroup';
+import Card from './components/Card';
 import Chip from './components/Chip';
 import Container from './components/Container';
 import CssBaseline from './components/CssBaseline';
@@ -23,11 +24,15 @@ export const theme = createTheme({
     values: breakpoints.values,
   },
   palette,
+  shape: {
+    borderRadius: 8,
+  },
   components: {
     MuiAppBar: AppBar,
     MuiButton: Button,
     MuiButtonBase: ButtonBase,
     MuiButtonGroup: ButtonGroup,
+    MuiCard: Card,
     MuiChip: Chip,
     MuiContainer: Container,
     MuiCssBaseline: CssBaseline,

@@ -1,6 +1,6 @@
 <div>
   <header
-    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorInherit MuiAppBar-positionStatic css-817acg-MuiPaper-root-MuiAppBar-root"
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorInherit MuiAppBar-positionStatic css-ljy1k6-MuiPaper-root-MuiAppBar-root"
   >
     <div
       class="MuiContainer-root MuiContainer-maxWidthXl css-19r6kue-MuiContainer-root"
@@ -16,7 +16,7 @@
           >
             <a
               aria-label="Home"
-              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit css-hqgnpk-MuiButtonBase-root-MuiButton-root"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorInherit css-1ry7d23-MuiButtonBase-root-MuiButton-root"
               href="/"
               tabindex="0"
             >
@@ -83,7 +83,7 @@
                 />
               </svg>
               <span
-                class="MuiTypography-root MuiTypography-h5 css-y524kq-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h5 css-gttso6-MuiTypography-root"
               />
             </a>
           </div>
