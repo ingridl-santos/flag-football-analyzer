@@ -26,6 +26,7 @@ import TagSuggestions from '../TagSuggestions';
 
 export interface SegmentTableProps {
   segments: Segment[];
+  hideTitle?: boolean;
   onDelete: (id: string) => void;
   onSetPlayType: (id: string, playType: string) => void;
   onSetTags: (id: string, tags: string[]) => void;
@@ -39,11 +40,11 @@ function SkeletonRow({ index }: { index: number }) {
       <TableCell>{index + 1}</TableCell>
 
       <TableCell>
-        <Skeleton width="7rem" />
-      </TableCell>
+        <Stack>
+          <Skeleton width="7rem" />
 
-      <TableCell>
-        <Skeleton width="3rem" />
+          <Skeleton width="3rem" />
+        </Stack>
       </TableCell>
 
       <TableCell>
@@ -59,7 +60,13 @@ function SkeletonRow({ index }: { index: number }) {
   );
 }
 
-export default function SegmentTable({ segments, onDelete, onSetPlayType, onSetTags }: SegmentTableProps) {
+export default function SegmentTable({
+  segments,
+  hideTitle,
+  onDelete,
+  onSetPlayType,
+  onSetTags,
+}: SegmentTableProps) {
   const { t } = useTranslation('gameFootage');
   const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
 
@@ -74,27 +81,25 @@ export default function SegmentTable({ segments, onDelete, onSetPlayType, onSetT
 
   return (
     <Stack sx={{ gap: '1rem' }}>
-      <Typography variant="h3" component="h2">
-        {t('segments') ?? <Skeleton sx={{ maxWidth: '6rem' }} />}
-      </Typography>
+      {!hideTitle && (
+        <Typography variant="h3" component="h2">
+          {t('segments') ?? <Skeleton sx={{ maxWidth: '6rem' }} />}
+        </Typography>
+      )}
 
       <TableContainer>
-        <Table size="small" aria-label={t('segments') ?? 'Segments'}>
+        <Table aria-label={t('segments') ?? 'Segments'}>
           <TableHead>
             <TableRow>
               <TableCell sx={{ width: '2.5rem' }}>
                 {t('colNumber') ?? <Skeleton width="1rem" />}
               </TableCell>
 
-              <TableCell>
+              <TableCell sx={{ width: '9rem' }}>
                 {t('colTimeRange') ?? <Skeleton width="5rem" />}
               </TableCell>
 
-              <TableCell>
-                {t('colDuration') ?? <Skeleton width="4.5rem" />}
-              </TableCell>
-
-              <TableCell>
+              <TableCell sx={{ width: '10rem' }}>
                 {t('colPlayType') ?? <Skeleton width="5rem" />}
               </TableCell>
 
@@ -121,10 +126,8 @@ export default function SegmentTable({ segments, onDelete, onSetPlayType, onSetT
                       <Typography variant="body2" sx={{ whiteSpace: 'nowrap' }}>
                         {`${formatTime(segment.start)} → ${formatTime(segment.end)}`}
                       </Typography>
-                    </TableCell>
 
-                    <TableCell>
-                      <Typography variant="body2">
+                      <Typography variant="caption" color="text.secondary">
                         {formatTime(segment.duration)}
                       </Typography>
                     </TableCell>
@@ -137,29 +140,30 @@ export default function SegmentTable({ segments, onDelete, onSetPlayType, onSetT
                       />
                     </TableCell>
 
-                    <TableCell sx={{ minWidth: '14rem' }}>
+                    <TableCell>
                       <Autocomplete
                         multiple
                         freeSolo
                         options={[]}
                         value={segment.tags ?? []}
                         onChange={(_, newValue) => onSetTags(segment.id, newValue as string[])}
-                        renderTags={(value, getTagProps) => (
-                          value.map((tag, index) => (
+                        renderTags={(value, getTagProps) =>
+                          value.map((tag, i) => (
                             <Chip
                               label={tag}
                               size="small"
-                              {...getTagProps({ index })}
+                              {...getTagProps({ index: i })}
                               key={tag}
                             />
-                          ))
-                        )}
+                          ))}
                         renderInput={(params) => (
                           <TextField
                             {...params}
                             variant="standard"
                             size="small"
-                            placeholder={segment.tags?.length ? undefined : (t('tagsInputPlaceholder') ?? 'Add tag…')}
+                            placeholder={segment.tags?.length
+                              ? undefined
+                              : (t('tagsInputPlaceholder') ?? 'Add tag…')}
                             inputProps={{
                               ...params.inputProps,
                               'aria-label': t('colTags') ?? 'Tags',
@@ -201,26 +205,22 @@ export default function SegmentTable({ segments, onDelete, onSetPlayType, onSetT
         open={pendingDeleteId !== null}
         title={t('deleteConfirmTitle') ?? <Skeleton width="9rem" />}
         closeButtonTextLabel={t('close', { ns: 'common' }) ?? 'Close'}
-        content={
-          (
-            <Typography variant="body2">
-              {t('deleteConfirmMessage') ?? <Skeleton width="13rem" />}
-            </Typography>
-          )
-        }
-        actions={
-          (
-            <>
-              <Button variant="outlined" onClick={handleCancelDelete}>
-                {t('deleteConfirmCancel') ?? <Skeleton width="4rem" />}
-              </Button>
+        content={(
+          <Typography variant="body2">
+            {t('deleteConfirmMessage') ?? <Skeleton width="13rem" />}
+          </Typography>
+        )}
+        actions={(
+          <>
+            <Button variant="outlined" onClick={handleCancelDelete}>
+              {t('deleteConfirmCancel') ?? <Skeleton width="4rem" />}
+            </Button>
 
-              <Button variant="contained" color="error" onClick={handleConfirmDelete}>
-                {t('deleteConfirmAction') ?? <Skeleton width="4rem" />}
-              </Button>
-            </>
-          )
-        }
+            <Button variant="contained" color="error" onClick={handleConfirmDelete}>
+              {t('deleteConfirmAction') ?? <Skeleton width="4rem" />}
+            </Button>
+          </>
+        )}
         onClose={handleCancelDelete}
       />
     </Stack>

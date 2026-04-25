@@ -59,7 +59,7 @@ export default function LayoutTemplate({
         sx={{
           flexDirection: 'column',
           flexGrow: 1,
-          overflowY: 'scroll',
+          overflowY: 'auto',
           overflowX: 'hidden',
         }}
       >

@@ -161,9 +161,9 @@ export default function GameFootageTemplate({
       );
 
   const playerArea = (
-    <Grid container spacing="1.5rem" sx={{ alignItems: 'flex-start' }}>
+    <Grid container spacing="0.5rem" sx={{ alignItems: 'flex-start' }}>
       {/* Left column — video + controls */}
-      <Grid item xs={12} lg={7}>
+      <Grid item xs={12} lg={6}>
         <Stack sx={{ gap: '1rem' }}>
           <Card>
             <CardContent>
@@ -237,7 +237,7 @@ export default function GameFootageTemplate({
       </Grid>
 
       {/* Right column — segments */}
-      <Grid item xs={12} lg={5}>
+      <Grid item xs={12} lg={6}>
         <Card>
           <CardContent>
             <Stack sx={{ gap: '1rem' }}>
@@ -308,6 +308,7 @@ export default function GameFootageTemplate({
 
               <SegmentTable
                 segments={segments}
+                hideTitle
                 onDelete={onDeleteSegment}
                 onSetPlayType={onSetPlayType}
                 onSetTags={onSetTags}
