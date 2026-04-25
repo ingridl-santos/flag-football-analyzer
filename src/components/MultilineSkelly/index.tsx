@@ -32,7 +32,7 @@ export default function MultilineSkelly({
 
   const skeletons = Array.from({ length: linesToShow }).map((_, index) => (
     <Skeleton
-      // eslint-disable-next-line react/no-array-index-key
+
       key={index}
       sx={{
         width: '100%',
@@ -51,6 +51,5 @@ export default function MultilineSkelly({
     );
   }
 
-  // eslint-disable-next-line react/jsx-no-useless-fragment
   return <>{skeletons}</>;
 }
