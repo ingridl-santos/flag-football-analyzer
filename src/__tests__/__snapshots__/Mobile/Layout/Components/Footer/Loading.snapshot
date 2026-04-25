@@ -10,13 +10,36 @@
       >
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeSmall css-9re9ho-MuiSvgIcon-root"
-          data-testid="SportsFootballIcon"
-          focusable="false"
-          viewBox="0 0 24 24"
+          aria-label="Flag Football Analyzer Logo"
+          fill="none"
+          height="1.5rem"
+          role="img"
+          viewBox="0 0 64 64"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <path
-            d="M3.02 15.62c-.08 2.42.32 4.34.67 4.69s2.28.76 4.69.67zM13.08 3.28c-2.33.42-4.79 1.34-6.62 3.18s-2.76 4.29-3.18 6.62l7.63 7.63c2.34-.41 4.79-1.34 6.62-3.18s2.76-4.29 3.18-6.62zM9.9 15.5l-1.4-1.4 5.6-5.6 1.4 1.4zm11.08-7.12c.08-2.42-.32-4.34-.67-4.69s-2.28-.76-4.69-.67z"
+          <rect
+            fill="#2563EB"
+            height="64"
+            rx="14"
+            width="64"
+          />
+          <rect
+            fill="none"
+            height="18"
+            rx="3"
+            stroke="white"
+            stroke-width="2"
+            width="28"
+            x="18"
+            y="20"
+          />
+          <ellipse
+            cx="32"
+            cy="29"
+            fill="white"
+            rx="7"
+            ry="4"
           />
         </svg>
         <p

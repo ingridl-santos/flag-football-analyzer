@@ -1,5 +1,4 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
-import SportsFootballIcon from '@mui/icons-material/SportsFootball';
 import {
   Container,
   ContainerProps,
@@ -11,6 +10,8 @@ import {
   Typography,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+
+import AppLogo from '../../../../components/AppLogo';
 
 const FooterLink = styled(Link)(({ theme }) => ({
   color: theme.palette.text.primary,
@@ -50,7 +51,7 @@ export default function Footer({ githubUrl, ...rest }: FooterProps) {
         }}
       >
         <Stack sx={{ flexDirection: 'row', alignItems: 'center', gap: '0.5rem' }}>
-          <SportsFootballIcon color="primary" fontSize="small" aria-hidden="true" />
+          <AppLogo width="1.5rem" height="1.5rem" aria-hidden="true" />
 
           <Typography variant="body2" color="text.secondary">
             {t('appTitle') ?? <Skeleton width="10rem" />}

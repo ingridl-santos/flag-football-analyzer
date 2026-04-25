@@ -1,0 +1,33 @@
+<div>
+  <svg
+    aria-label="Flag Football Analyzer Logo"
+    fill="none"
+    role="img"
+    viewBox="0 0 64 64"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      fill="#2563EB"
+      height="64"
+      rx="14"
+      width="64"
+    />
+    <rect
+      fill="none"
+      height="18"
+      rx="3"
+      stroke="white"
+      stroke-width="2"
+      width="28"
+      x="18"
+      y="20"
+    />
+    <ellipse
+      cx="32"
+      cy="29"
+      fill="white"
+      rx="7"
+      ry="4"
+    />
+  </svg>
+</div>

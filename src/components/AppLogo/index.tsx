@@ -1,39 +1,20 @@
-export interface AppLogoProps {
-  width?: string | number;
-  height?: string | number;
-}
+import { SVGProps } from 'react';
 
-export default function AppLogo({ width = '2rem', height = '2rem' }: AppLogoProps) {
+export default function AppLogo(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width={width}
-      height={height}
-      viewBox="0 0 32 32"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
+      viewBox="0 0 64 64"
+      fill="none"
+      role="img"
+      aria-label="Flag Football Analyzer Logo"
+      {...props}
     >
-      {/* Flag pole — rooted at the top of the football */}
-      <line x1="16" y1="2" x2="16" y2="11" stroke="#7A5C00" strokeWidth="2" strokeLinecap="round" />
+      <rect width="64" height="64" rx="14" fill="#2563EB" />
 
-      {/* Flag — triangle pointing right */}
-      <path d="M16 2 L27 6 L16 10 Z" fill="#C9A227" />
+      <rect x="18" y="20" width="28" height="18" rx="3" fill="none" stroke="white" strokeWidth="2" />
 
-      {/* Football body — pointed horizontal oval */}
-      <path
-        d="M3 19 C5 13 10 11 16 11 C22 11 27 13 29 19 C27 25 22 27 16 27 C10 27 5 25 3 19 Z"
-        fill="#C9A227"
-      />
-
-      {/* Lace seam — vertical center line */}
-      <line x1="16" y1="12" x2="16" y2="26" stroke="#121212" strokeWidth="1.5" strokeLinecap="round" />
-
-      {/* Lace crossbars */}
-      <line x1="13" y1="16" x2="19" y2="16" stroke="#121212" strokeWidth="1" strokeLinecap="round" />
-
-      <line x1="12" y1="19" x2="20" y2="19" stroke="#121212" strokeWidth="1" strokeLinecap="round" />
-
-      <line x1="13" y1="22" x2="19" y2="22" stroke="#121212" strokeWidth="1" strokeLinecap="round" />
+      <ellipse cx="32" cy="29" rx="7" ry="4" fill="white" />
     </svg>
   );
 }
