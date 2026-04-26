@@ -9,7 +9,7 @@
 | `react` | `^18.2.0` | UI framework |
 | `react-dom` | `^18.2.0` | DOM renderer |
 | `typescript` | `^5.9.3` | Static typing (strict mode) |
-| `vite` | `^7.2.2` | Build tool and dev server |
+| `vite` | `^7.3.2` | Build tool and dev server |
 | `@vitejs/plugin-react` | `^5.0.0` | Vite React plugin (SWC transform) |
 
 ## Styling
@@ -50,7 +50,7 @@
 |---|---|---|
 | `i18next` | `^25.6.2` | i18n core |
 | `react-i18next` | `^16.3.3` | React bindings |
-| `i18next-http-backend` | `^3.0.2` | Runtime JSON file loading |
+| `i18next-http-backend` | `^3.0.5` | Runtime JSON file loading |
 | `i18next-browser-languagedetector` | `^8.2.0` | Browser language detection (installed, not yet active) |
 
 ## Video Processing
@@ -68,7 +68,7 @@
 | `vitest` | `^4.0.10` | Test runner |
 | `@vitest/coverage-v8` | `^4.0.10` | V8 coverage provider |
 | `@vitest/ui` | `^4.0.10` | Browser-based test UI |
-| `happy-dom` | `^20.0.10` | DOM implementation for tests |
+| `happy-dom` | `^20.9.0` | DOM implementation for tests |
 | `@testing-library/react` | `^16.3.0` | Component testing utilities |
 | `@testing-library/jest-dom` | `^6.9.1` | Custom DOM matchers |
 | `@testing-library/user-event` | `^14.4.3` | User interaction simulation |
