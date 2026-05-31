@@ -12,131 +12,133 @@
           class="MuiStack-root css-8r4r5m-MuiStack-root"
         >
           <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1ljvscb-MuiPaper-root-MuiCard-root"
+            class="MuiStack-root css-14s4awb-MuiStack-root"
           >
             <div
-              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1wff653-MuiPaper-root-MuiCard-root"
             >
               <div
-                class="MuiStack-root css-8r4r5m-MuiStack-root"
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
               >
                 <div
-                  class="MuiStack-root css-8r4r5m-MuiStack-root"
+                  class="MuiStack-root css-jn463n-MuiStack-root"
                 >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1lg7bqt-MuiSvgIcon-root"
+                    data-testid="UploadFileIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11z"
+                    />
+                  </svg>
                   <div
-                    class="MuiBox-root css-1443bnk"
+                    class="MuiStack-root css-1jttxn5-MuiStack-root"
                   >
-                    <video
-                      style="width: 100%; height: 100%; display: block; object-fit: contain;"
+                    <p
+                      class="MuiTypography-root MuiTypography-h6 css-1mdq9uc-MuiTypography-root"
                     >
-                      <track
-                        kind="captions"
+                      <span
+                        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-9wd69f-MuiSkeleton-root"
                       />
-                    </video>
-                  </div>
-                  <span
-                    class="MuiSlider-root MuiSlider-colorPrimary MuiSlider-sizeSmall css-1lbe5cq-MuiSlider-root"
-                  >
+                    </p>
                     <span
-                      class="MuiSlider-rail css-7o8aqz-MuiSlider-rail"
-                    />
-                    <span
-                      class="MuiSlider-track css-nl6333-MuiSlider-track"
-                      style="left: 0%; width: 0%;"
-                    />
-                    <span
-                      class="MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary css-1k6vk9i-MuiSlider-thumb"
-                      data-index="0"
-                      style="left: 0%;"
+                      class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
                     >
-                      <input
-                        aria-label="Video timeline"
-                        aria-orientation="horizontal"
-                        aria-valuemax="1"
-                        aria-valuemin="0"
-                        aria-valuenow="0"
-                        data-index="0"
-                        max="1"
-                        min="0"
-                        step="0.1"
-                        style="border: 0px; height: 100%; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 100%; direction: ltr;"
-                        type="range"
-                        value="0"
+                      <span
+                        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-g925dr-MuiSkeleton-root"
                       />
                     </span>
-                  </span>
-                  <div
-                    class="MuiStack-root css-1qgb5gw-MuiStack-root"
+                  </div>
+                  <label
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary css-uyi4rb-MuiButtonBase-root-MuiButton-root"
+                    role="button"
+                    tabindex="0"
                   >
+                    <span
+                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                      style="width: 6rem;"
+                    />
+                    <input
+                      accept="video/mp4"
+                      hidden=""
+                      type="file"
+                    />
+                  </label>
+                  <div
+                    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-1ypcg5c-MuiDivider-root"
+                    role="separator"
+                  >
+                    <span
+                      class="MuiDivider-wrapper css-qywfm8-MuiDivider-wrapper"
+                    >
+                      <span
+                        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                        style="width: 1.5rem;"
+                      />
+                    </span>
+                  </div>
+                  <div
+                    class="MuiStack-root css-usgczu-MuiStack-root"
+                  >
+                    <div
+                      class="MuiFormControl-root MuiTextField-root css-te7hn0-MuiFormControl-root-MuiTextField-root"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1uy7lca-MuiFormLabel-root-MuiInputLabel-root"
+                        data-shrink="false"
+                        for=":stable-mocked-react-id-1:"
+                        id=":stable-mocked-react-id-1:-label"
+                      >
+                        YouTube URL
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-1s7eke9-MuiInputBase-root-MuiOutlinedInput-root"
+                      >
+                        <input
+                          aria-describedby=":stable-mocked-react-id-1:-helper-text"
+                          aria-invalid="false"
+                          aria-label="YouTube URL"
+                          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-5lgxi2-MuiInputBase-input-MuiOutlinedInput-input"
+                          id=":stable-mocked-react-id-1:"
+                          placeholder="https://youtube.com/watch?v=..."
+                          type="text"
+                          value=""
+                        />
+                        <fieldset
+                          aria-hidden="true"
+                          class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="css-njhac4-MuiNotchedOutlined-root"
+                          >
+                            <span>
+                              YouTube URL
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                      <p
+                        class="MuiFormHelperText-root MuiFormHelperText-sizeSmall MuiFormHelperText-contained css-9w8k7l-MuiFormHelperText-root"
+                        id=":stable-mocked-react-id-1:-helper-text"
+                      >
+                        <span
+                          class="notranslate"
+                        >
+                          ​
+                        </span>
+                      </p>
+                    </div>
                     <button
-                      aria-label="Play"
-                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-g55t1d-MuiButtonBase-root-MuiButton-root"
                       tabindex="0"
                       type="button"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                        data-testid="PlayArrowIcon"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M8 5v14l11-7z"
-                        />
-                      </svg>
+                      Load
                     </button>
-                    <p
-                      class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
-                    >
-                      NaN:NaN / NaN:NaN
-                    </p>
                   </div>
-                </div>
-                <div
-                  class="MuiStack-root css-z1apy6-MuiStack-root"
-                >
-                  <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-7v4xv4-MuiButtonBase-root-MuiButton-root"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 5rem;"
-                    />
-                    <span
-                      class="MuiTypography-root MuiTypography-caption css-ww44z7-MuiTypography-root"
-                    >
-                      NaN:NaN
-                    </span>
-                  </button>
-                  <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-7v4xv4-MuiButtonBase-root-MuiButton-root"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 4.5rem;"
-                    />
-                    <span
-                      class="MuiTypography-root MuiTypography-caption css-ww44z7-MuiTypography-root"
-                    >
-                      NaN:NaN
-                    </span>
-                  </button>
-                  <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-g55t1d-MuiButtonBase-root-MuiButton-root"
-                    disabled=""
-                    tabindex="-1"
-                    type="button"
-                  >
-                    <span
-                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                      style="width: 8rem;"
-                    />
-                  </button>
                 </div>
               </div>
             </div>
@@ -200,7 +202,6 @@
                   class="MuiTableContainer-root css-rorn0c-MuiTableContainer-root"
                 >
                   <table
-                    aria-label="Segments"
                     class="MuiTable-root css-1h2c9v3-MuiTable-root"
                   >
                     <thead

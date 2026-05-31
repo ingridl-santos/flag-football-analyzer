@@ -1,0 +1,124 @@
+<div>
+  <div
+    class="MuiStack-root css-14s4awb-MuiStack-root"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1wff653-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      >
+        <div
+          class="MuiStack-root css-jn463n-MuiStack-root"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1lg7bqt-MuiSvgIcon-root"
+            data-testid="UploadFileIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11z"
+            />
+          </svg>
+          <div
+            class="MuiStack-root css-1jttxn5-MuiStack-root"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-h6 css-1mdq9uc-MuiTypography-root"
+            >
+              uploadPrompt
+            </p>
+            <span
+              class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+            >
+              uploadAccepted
+            </span>
+          </div>
+          <label
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary css-uyi4rb-MuiButtonBase-root-MuiButton-root"
+            role="button"
+            tabindex="0"
+          >
+            uploadButton
+            <input
+              accept="video/mp4"
+              hidden=""
+              type="file"
+            />
+          </label>
+          <div
+            class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-1ypcg5c-MuiDivider-root"
+            role="separator"
+          >
+            <span
+              class="MuiDivider-wrapper css-qywfm8-MuiDivider-wrapper"
+            >
+              orSeparator
+            </span>
+          </div>
+          <div
+            class="MuiStack-root css-usgczu-MuiStack-root"
+          >
+            <div
+              class="MuiFormControl-root MuiTextField-root css-te7hn0-MuiFormControl-root-MuiTextField-root"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1uy7lca-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="false"
+                for=":stable-mocked-react-id-1:"
+                id=":stable-mocked-react-id-1:-label"
+              >
+                youtubeUrlLabel
+              </label>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-1s7eke9-MuiInputBase-root-MuiOutlinedInput-root"
+              >
+                <input
+                  aria-describedby=":stable-mocked-react-id-1:-helper-text"
+                  aria-invalid="false"
+                  aria-label="youtubeUrlLabel"
+                  class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-5lgxi2-MuiInputBase-input-MuiOutlinedInput-input"
+                  id=":stable-mocked-react-id-1:"
+                  placeholder="youtubeUrlPlaceholder"
+                  type="text"
+                  value=""
+                />
+                <fieldset
+                  aria-hidden="true"
+                  class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+                >
+                  <legend
+                    class="css-njhac4-MuiNotchedOutlined-root"
+                  >
+                    <span>
+                      youtubeUrlLabel
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+              <p
+                class="MuiFormHelperText-root MuiFormHelperText-sizeSmall MuiFormHelperText-contained css-9w8k7l-MuiFormHelperText-root"
+                id=":stable-mocked-react-id-1:-helper-text"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </p>
+            </div>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-g55t1d-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              youtubeUrlLoad
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

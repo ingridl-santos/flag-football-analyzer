@@ -2,6 +2,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import {
   Autocomplete,
   Button,
+  ButtonBase,
   Chip,
   IconButton,
   Skeleton,
@@ -15,7 +16,8 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { useState } from 'react';
+import { alpha } from '@mui/material/styles';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Dialog from '../../../../components/Dialog';
@@ -27,9 +29,11 @@ import TagSuggestions from '../TagSuggestions';
 export interface SegmentTableProps {
   segments: Segment[];
   hideTitle?: boolean;
-  onDelete: (id: string) => void;
-  onSetPlayType: (id: string, playType: string) => void;
-  onSetTags: (id: string, tags: string[]) => void;
+  activeSegmentId?: string | null;
+  onDelete?: (id: string) => void;
+  onSetPlayType?: (id: string, playType: string) => void;
+  onSetTags?: (id: string, tags: string[]) => void;
+  onSegmentClick?: (id: string) => void;
 }
 
 const SKELETON_ROWS = 3;
@@ -63,17 +67,26 @@ function SkeletonRow({ index }: { index: number }) {
 export default function SegmentTable({
   segments,
   hideTitle,
+  activeSegmentId,
   onDelete,
   onSetPlayType,
   onSetTags,
+  onSegmentClick,
 }: SegmentTableProps) {
   const { t } = useTranslation('gameFootage');
   const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
+  const rowRefs = useRef<Record<string, HTMLTableRowElement | null>>({});
+
+  useEffect(() => {
+    if (activeSegmentId) {
+      rowRefs.current[activeSegmentId]?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+  }, [activeSegmentId]);
 
   const handleDeleteClick = (id: string) => setPendingDeleteId(id);
 
   const handleConfirmDelete = () => {
-    if (pendingDeleteId) onDelete(pendingDeleteId);
+    if (pendingDeleteId) onDelete?.(pendingDeleteId);
     setPendingDeleteId(null);
   };
 
@@ -88,7 +101,7 @@ export default function SegmentTable({
       )}
 
       <TableContainer>
-        <Table aria-label={t('segments') ?? 'Segments'}>
+        <Table aria-label={t('segments')}>
           <TableHead>
             <TableRow>
               <TableCell sx={{ width: '2.5rem' }}>
@@ -116,81 +129,129 @@ export default function SegmentTable({
               ? Array.from({ length: SKELETON_ROWS }, (_, i) => (
                   <SkeletonRow key={i} index={i} />
                 ))
-              : segments.map((segment, index) => (
-                  <TableRow key={segment.id}>
-                    <TableCell>
-                      <Typography variant="body2">{index + 1}</Typography>
-                    </TableCell>
+              : segments.map((segment, index) => {
+                  const segLabel = t('segmentLabel', { number: index + 1 });
+                  const timeRange = `${formatTime(segment.start)} → ${formatTime(segment.end)}`;
+                  const seekHint = t('timelineSeekTo');
+                  const seekAriaLabel = `${segLabel}: ${timeRange}. ${seekHint}`;
 
-                    <TableCell>
-                      <Typography variant="body2" sx={{ whiteSpace: 'nowrap' }}>
-                        {`${formatTime(segment.start)} → ${formatTime(segment.end)}`}
-                      </Typography>
+                  return (
+                    <TableRow
+                      key={segment.id}
+                      ref={(el) => { rowRefs.current[segment.id] = el; }}
+                      sx={{
+                        backgroundColor: segment.id === activeSegmentId
+                          ? (theme) => alpha(theme.palette.primary.main, 0.1)
+                          : undefined,
+                        transition: 'background-color 200ms ease',
+                      }}
+                    >
+                      <TableCell>
+                        <Typography variant="body2">{index + 1}</Typography>
+                      </TableCell>
 
-                      <Typography variant="caption" color="text.secondary">
-                        {formatTime(segment.duration)}
-                      </Typography>
-                    </TableCell>
+                      <TableCell>
+                        {onSegmentClick
+                          ? (
+                              <ButtonBase
+                                onClick={() => onSegmentClick(segment.id)}
+                                aria-label={seekAriaLabel}
+                                sx={{
+                                  display: 'flex',
+                                  flexDirection: 'column',
+                                  alignItems: 'flex-start',
+                                  borderRadius: '0.25rem',
+                                  padding: '0.25rem',
+                                  marginLeft: '-0.25rem',
+                                  '&:focus-visible': {
+                                    outline: (theme) =>
+                                      `2px solid ${theme.palette.primary.main}`,
+                                    outlineOffset: '2px',
+                                  },
+                                }}
+                              >
+                                <Typography variant="body2" sx={{ whiteSpace: 'nowrap' }}>
+                                  {timeRange}
+                                </Typography>
 
-                    <TableCell>
-                      <PlayTypeSelector
-                        segmentId={segment.id}
-                        value={segment.playType ?? ''}
-                        onChange={onSetPlayType}
-                      />
-                    </TableCell>
+                                <Typography variant="caption" color="text.secondary">
+                                  {formatTime(segment.duration)}
+                                </Typography>
+                              </ButtonBase>
+                            )
+                          : (
+                              <>
+                                <Typography variant="body2" sx={{ whiteSpace: 'nowrap' }}>
+                                  {timeRange}
+                                </Typography>
 
-                    <TableCell>
-                      <Autocomplete
-                        multiple
-                        freeSolo
-                        options={[]}
-                        value={segment.tags ?? []}
-                        onChange={(_, newValue) => onSetTags(segment.id, newValue as string[])}
-                        renderTags={(value, getTagProps) =>
-                          value.map((tag, i) => (
-                            <Chip
-                              label={tag}
+                                <Typography variant="caption" color="text.secondary">
+                                  {formatTime(segment.duration)}
+                                </Typography>
+                              </>
+                            )}
+                      </TableCell>
+
+                      <TableCell>
+                        <PlayTypeSelector
+                          segmentId={segment.id}
+                          value={segment.playType ?? ''}
+                          onChange={onSetPlayType ?? (() => {})}
+                        />
+                      </TableCell>
+
+                      <TableCell>
+                        <Autocomplete
+                          multiple
+                          freeSolo
+                          options={[]}
+                          value={segment.tags ?? []}
+                          onChange={(_, newValue) => onSetTags?.(segment.id, newValue as string[])}
+                          renderTags={(value, getTagProps) =>
+                            value.map((tag, i) => (
+                              <Chip
+                                label={tag}
+                                size="small"
+                                {...getTagProps({ index: i })}
+                                key={tag}
+                              />
+                            ))}
+                          renderInput={(params) => (
+                            <TextField
+                              {...params}
+                              variant="standard"
                               size="small"
-                              {...getTagProps({ index: i })}
-                              key={tag}
+                              placeholder={segment.tags?.length
+                                ? undefined
+                                : t('tagsInputPlaceholder')}
+                              inputProps={{
+                                ...params.inputProps,
+                                'aria-label': t('colTags'),
+                              }}
                             />
-                          ))}
-                        renderInput={(params) => (
-                          <TextField
-                            {...params}
-                            variant="standard"
-                            size="small"
-                            placeholder={segment.tags?.length
-                              ? undefined
-                              : (t('tagsInputPlaceholder') ?? 'Add tag…')}
-                            inputProps={{
-                              ...params.inputProps,
-                              'aria-label': t('colTags') ?? 'Tags',
-                            }}
-                          />
-                        )}
-                      />
+                          )}
+                        />
 
-                      <TagSuggestions
-                        playType={segment.playType ?? ''}
-                        duration={segment.duration}
-                        existingTags={segment.tags ?? []}
-                        onAddTag={(tag) => onSetTags(segment.id, [...(segment.tags ?? []), tag])}
-                      />
-                    </TableCell>
+                        <TagSuggestions
+                          playType={segment.playType ?? ''}
+                          duration={segment.duration}
+                          existingTags={segment.tags ?? []}
+                          onAddTag={(tag) => onSetTags?.(segment.id, [...(segment.tags ?? []), tag])}
+                        />
+                      </TableCell>
 
-                    <TableCell>
-                      <IconButton
-                        size="small"
-                        aria-label={t('deleteSegment') ?? 'Delete segment'}
-                        onClick={() => handleDeleteClick(segment.id)}
-                      >
-                        <DeleteIcon fontSize="small" />
-                      </IconButton>
-                    </TableCell>
-                  </TableRow>
-                ))}
+                      <TableCell>
+                        <IconButton
+                          size="small"
+                          aria-label={t('deleteSegment')}
+                          onClick={() => handleDeleteClick(segment.id)}
+                        >
+                          <DeleteIcon fontSize="small" />
+                        </IconButton>
+                      </TableCell>
+                    </TableRow>
+                  );
+                })}
           </TableBody>
         </Table>
       </TableContainer>

@@ -1,0 +1,1217 @@
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1ljvscb-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+    >
+      <div
+        class="MuiStack-root css-8r4r5m-MuiStack-root"
+      >
+        <div
+          class="MuiStack-root css-u904fn-MuiStack-root"
+        >
+          <h2
+            class="MuiTypography-root MuiTypography-h6 css-okrrt8-MuiTypography-root"
+          >
+            segments
+          </h2>
+          <div
+            class="MuiStack-root css-tkss0t-MuiStack-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1pmqa2u-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              exportCsv
+            </button>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1pmqa2u-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              exportJson
+            </button>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-colorPrimary css-uqkrmy-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              exportZip
+            </button>
+          </div>
+        </div>
+        <div
+          class="MuiStack-root css-8r4r5m-MuiStack-root"
+        >
+          <div
+            class="MuiTableContainer-root css-rorn0c-MuiTableContainer-root"
+          >
+            <table
+              aria-label="segments"
+              class="MuiTable-root css-1h2c9v3-MuiTable-root"
+            >
+              <thead
+                class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+              >
+                <tr
+                  class="MuiTableRow-root MuiTableRow-head css-1q64kqv-MuiTableRow-root"
+                >
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-lruxsp-MuiTableCell-root"
+                    scope="col"
+                  >
+                    colNumber
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-xpfpah-MuiTableCell-root"
+                    scope="col"
+                  >
+                    colTimeRange
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-5rc4df-MuiTableCell-root"
+                    scope="col"
+                  >
+                    colPlayType
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-rf7kbk-MuiTableCell-root"
+                    scope="col"
+                  >
+                    colTags
+                  </th>
+                  <th
+                    class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-lcwcvw-MuiTableCell-root"
+                    scope="col"
+                  />
+                </tr>
+              </thead>
+              <tbody
+                class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+              >
+                <tr
+                  class="MuiTableRow-root css-198kp9q-MuiTableRow-root"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+                    >
+                      1
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                  >
+                    <button
+                      aria-label="segmentLabel: 0:10 → 0:25. timelineSeekTo"
+                      class="MuiButtonBase-root css-2kae15-MuiButtonBase-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 css-14xs56e-MuiTypography-root"
+                      >
+                        0:10 → 0:25
+                      </p>
+                      <span
+                        class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+                      >
+                        0:15
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                  >
+                    <div
+                      class="MuiFormControl-root css-wbib2n-MuiFormControl-root"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined css-gddze7-MuiFormLabel-root-MuiInputLabel-root"
+                        data-shrink="true"
+                        id="play-type-label-1"
+                      >
+                        playType
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-h78t85-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                      >
+                        <div
+                          aria-controls=":stable-mocked-react-id-1:"
+                          aria-expanded="false"
+                          aria-haspopup="listbox"
+                          aria-labelledby="play-type-label-1"
+                          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1iistcb-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                          role="combobox"
+                          tabindex="0"
+                        >
+                          playTypes.Pass
+                        </div>
+                        <input
+                          aria-hidden="true"
+                          aria-invalid="false"
+                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                          tabindex="-1"
+                          value="Pass"
+                        />
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+                          data-testid="ArrowDropDownIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                        <fieldset
+                          aria-hidden="true"
+                          class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="css-sl37lx-MuiNotchedOutlined-root"
+                          >
+                            <span>
+                              playType
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                  >
+                    <div
+                      class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1x6bjyf-MuiAutocomplete-root"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                      >
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-sizeSmall MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1bb3c57-MuiInputBase-root-MuiInput-root"
+                        >
+                          <div
+                            class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-deletable MuiChip-deletableColorPrimary MuiChip-filledPrimary MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1rmiydm-MuiButtonBase-root-MuiChip-root"
+                            data-tag-index="0"
+                            role="button"
+                            tabindex="-1"
+                          >
+                            <span
+                              class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                            >
+                              offense
+                            </span>
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-deleteIcon MuiChip-deleteIconSmall MuiChip-deleteIconColorPrimary MuiChip-deleteIconFilledColorPrimary css-i4bv87-MuiSvgIcon-root"
+                              data-testid="CancelIcon"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                              />
+                            </svg>
+                          </div>
+                          <div
+                            class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-deletable MuiChip-deletableColorPrimary MuiChip-filledPrimary MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1rmiydm-MuiButtonBase-root-MuiChip-root"
+                            data-tag-index="1"
+                            role="button"
+                            tabindex="-1"
+                          >
+                            <span
+                              class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                            >
+                              air
+                            </span>
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-deleteIcon MuiChip-deleteIconSmall MuiChip-deleteIconColorPrimary MuiChip-deleteIconFilledColorPrimary css-i4bv87-MuiSvgIcon-root"
+                              data-testid="CancelIcon"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                              />
+                            </svg>
+                          </div>
+                          <input
+                            aria-autocomplete="list"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            aria-label="colTags"
+                            autocapitalize="none"
+                            autocomplete="off"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1czozwz-MuiInputBase-input-MuiInput-input"
+                            id=":stable-mocked-react-id-2:"
+                            role="combobox"
+                            spellcheck="false"
+                            type="text"
+                            value=""
+                          />
+                          <div
+                            class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
+                          >
+                            <button
+                              aria-label="Clear"
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
+                              tabindex="-1"
+                              title="Clear"
+                              type="button"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                                data-testid="CloseIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="MuiStack-root css-mx70a6-MuiStack-root"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+                      >
+                        tagSuggestions
+                      </span>
+                      <div
+                        class="MuiStack-root css-199haam-MuiStack-root"
+                      >
+                        <div
+                          aria-label="addTagSuggestion"
+                          class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-filledPrimary css-16u61rh-MuiButtonBase-root-MuiChip-root"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-icon MuiChip-iconSmall MuiChip-iconColorPrimary css-i4bv87-MuiSvgIcon-root"
+                            data-testid="AutoAwesomeIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="m19 9 1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25z"
+                            />
+                          </svg>
+                          <span
+                            class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                          >
+                            Deep Pass
+                          </span>
+                        </div>
+                        <div
+                          aria-label="addTagSuggestion"
+                          class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <span
+                            class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                          >
+                            Touchdown
+                          </span>
+                        </div>
+                        <div
+                          aria-label="addTagSuggestion"
+                          class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <span
+                            class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                          >
+                            Completion
+                          </span>
+                        </div>
+                        <div
+                          aria-label="addTagSuggestion"
+                          class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <span
+                            class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                          >
+                            Incompletion
+                          </span>
+                        </div>
+                        <div
+                          aria-label="addTagSuggestion"
+                          class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <span
+                            class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                          >
+                            Interception
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAccordion-root MuiAccordion-rounded css-1w286g2-MuiPaper-root-MuiAccordion-root"
+                      >
+                        <div
+                          aria-expanded="false"
+                          class="MuiButtonBase-root MuiAccordionSummary-root css-ele8g-MuiButtonBase-root-MuiAccordionSummary-root"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <div
+                            class="MuiAccordionSummary-content css-1betqn-MuiAccordionSummary-content"
+                          >
+                            <span
+                              class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+                            >
+                              tagSuggestionsShowMore
+                            </span>
+                          </div>
+                          <div
+                            class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                              data-testid="ExpandMoreIcon"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <div
+                          class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+                          style="min-height: 0px;"
+                        >
+                          <div
+                            class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                          >
+                            <div
+                              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                            >
+                              <div
+                                class="MuiAccordion-region"
+                                role="region"
+                              >
+                                <div
+                                  class="MuiAccordionDetails-root css-114q875-MuiAccordionDetails-root"
+                                >
+                                  <div
+                                    class="MuiStack-root css-199haam-MuiStack-root"
+                                  >
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Sack
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Flag Pull
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Screen Pass
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Slant
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Out Route
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Post Route
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Go Route
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Crossing Route
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Rollout Pass
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        QB Scramble
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Shotgun
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Spread
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Trips Formation
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Empty Backfield
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        I-Formation
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Red Zone
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Two-Minute Drill
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Two-Point Attempt
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Opening Drive
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                  >
+                    <button
+                      aria-label="deleteSegment"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="DeleteIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                        />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr
+                  class="MuiTableRow-root css-be4obv-MuiTableRow-root"
+                >
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+                    >
+                      2
+                    </p>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                  >
+                    <button
+                      aria-label="segmentLabel: 0:42 → 1:23. timelineSeekTo"
+                      class="MuiButtonBase-root css-2kae15-MuiButtonBase-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <p
+                        class="MuiTypography-root MuiTypography-body2 css-14xs56e-MuiTypography-root"
+                      >
+                        0:42 → 1:23
+                      </p>
+                      <span
+                        class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+                      >
+                        0:41
+                      </span>
+                    </button>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                  >
+                    <div
+                      class="MuiFormControl-root css-wbib2n-MuiFormControl-root"
+                    >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeSmall MuiInputLabel-outlined css-gddze7-MuiFormLabel-root-MuiInputLabel-root"
+                        data-shrink="true"
+                        id="play-type-label-2"
+                      >
+                        playType
+                      </label>
+                      <div
+                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-h78t85-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                      >
+                        <div
+                          aria-controls=":stable-mocked-react-id-3:"
+                          aria-expanded="false"
+                          aria-haspopup="listbox"
+                          aria-labelledby="play-type-label-2"
+                          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-1iistcb-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                          role="combobox"
+                          tabindex="0"
+                        >
+                          playTypes.Run
+                        </div>
+                        <input
+                          aria-hidden="true"
+                          aria-invalid="false"
+                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                          tabindex="-1"
+                          value="Run"
+                        />
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+                          data-testid="ArrowDropDownIcon"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                        <fieldset
+                          aria-hidden="true"
+                          class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+                        >
+                          <legend
+                            class="css-sl37lx-MuiNotchedOutlined-root"
+                          >
+                            <span>
+                              playType
+                            </span>
+                          </legend>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                  >
+                    <div
+                      class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1x6bjyf-MuiAutocomplete-root"
+                    >
+                      <div
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+                      >
+                        <div
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-sizeSmall MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1bb3c57-MuiInputBase-root-MuiInput-root"
+                        >
+                          <div
+                            class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-deletable MuiChip-deletableColorPrimary MuiChip-filledPrimary MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1rmiydm-MuiButtonBase-root-MuiChip-root"
+                            data-tag-index="0"
+                            role="button"
+                            tabindex="-1"
+                          >
+                            <span
+                              class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                            >
+                              offense
+                            </span>
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-deleteIcon MuiChip-deleteIconSmall MuiChip-deleteIconColorPrimary MuiChip-deleteIconFilledColorPrimary css-i4bv87-MuiSvgIcon-root"
+                              data-testid="CancelIcon"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                              />
+                            </svg>
+                          </div>
+                          <div
+                            class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-deletable MuiChip-deletableColorPrimary MuiChip-filledPrimary MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1rmiydm-MuiButtonBase-root-MuiChip-root"
+                            data-tag-index="1"
+                            role="button"
+                            tabindex="-1"
+                          >
+                            <span
+                              class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                            >
+                              rush
+                            </span>
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-deleteIcon MuiChip-deleteIconSmall MuiChip-deleteIconColorPrimary MuiChip-deleteIconFilledColorPrimary css-i4bv87-MuiSvgIcon-root"
+                              data-testid="CancelIcon"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                              />
+                            </svg>
+                          </div>
+                          <input
+                            aria-autocomplete="list"
+                            aria-expanded="false"
+                            aria-invalid="false"
+                            aria-label="colTags"
+                            autocapitalize="none"
+                            autocomplete="off"
+                            class="MuiInputBase-input MuiInput-input MuiInputBase-inputSizeSmall MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1czozwz-MuiInputBase-input-MuiInput-input"
+                            id=":stable-mocked-react-id-4:"
+                            role="combobox"
+                            spellcheck="false"
+                            type="text"
+                            value=""
+                          />
+                          <div
+                            class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
+                          >
+                            <button
+                              aria-label="Clear"
+                              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
+                              tabindex="-1"
+                              title="Clear"
+                              type="button"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                                data-testid="CloseIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="MuiStack-root css-mx70a6-MuiStack-root"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+                      >
+                        tagSuggestions
+                      </span>
+                      <div
+                        class="MuiStack-root css-199haam-MuiStack-root"
+                      >
+                        <div
+                          aria-label="addTagSuggestion"
+                          class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-filledPrimary css-16u61rh-MuiButtonBase-root-MuiChip-root"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-icon MuiChip-iconSmall MuiChip-iconColorPrimary css-i4bv87-MuiSvgIcon-root"
+                            data-testid="AutoAwesomeIcon"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="m19 9 1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25z"
+                            />
+                          </svg>
+                          <span
+                            class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+                          >
+                            Explosive Run
+                          </span>
+                        </div>
+                        <div
+                          aria-label="addTagSuggestion"
+                          class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <span
+                            class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                          >
+                            Touchdown
+                          </span>
+                        </div>
+                        <div
+                          aria-label="addTagSuggestion"
+                          class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <span
+                            class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                          >
+                            Big Gain
+                          </span>
+                        </div>
+                        <div
+                          aria-label="addTagSuggestion"
+                          class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <span
+                            class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                          >
+                            Loss of Yards
+                          </span>
+                        </div>
+                        <div
+                          aria-label="addTagSuggestion"
+                          class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <span
+                            class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                          >
+                            Flag Pull
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAccordion-root MuiAccordion-rounded css-1w286g2-MuiPaper-root-MuiAccordion-root"
+                      >
+                        <div
+                          aria-expanded="false"
+                          class="MuiButtonBase-root MuiAccordionSummary-root css-ele8g-MuiButtonBase-root-MuiAccordionSummary-root"
+                          role="button"
+                          tabindex="0"
+                        >
+                          <div
+                            class="MuiAccordionSummary-content css-1betqn-MuiAccordionSummary-content"
+                          >
+                            <span
+                              class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+                            >
+                              tagSuggestionsShowMore
+                            </span>
+                          </div>
+                          <div
+                            class="MuiAccordionSummary-expandIconWrapper css-yw020d-MuiAccordionSummary-expandIconWrapper"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                              data-testid="ExpandMoreIcon"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                        <div
+                          class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-bz4dnt-MuiCollapse-root"
+                          style="min-height: 0px;"
+                        >
+                          <div
+                            class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+                          >
+                            <div
+                              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                            >
+                              <div
+                                class="MuiAccordion-region"
+                                role="region"
+                              >
+                                <div
+                                  class="MuiAccordionDetails-root css-114q875-MuiAccordionDetails-root"
+                                >
+                                  <div
+                                    class="MuiStack-root css-199haam-MuiStack-root"
+                                  >
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Inside Run
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Outside Run
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Sweep
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Reverse
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        QB Run
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Option Run
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Shotgun
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        I-Formation
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Single Back
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Wildcat
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Red Zone
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Goal Line
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Two-Minute Drill
+                                      </span>
+                                    </div>
+                                    <div
+                                      aria-label="addTagSuggestion"
+                                      class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorPrimary MuiChip-clickable MuiChip-clickableColorPrimary MuiChip-outlinedPrimary css-1t6h3za-MuiButtonBase-root-MuiChip-root"
+                                      role="button"
+                                      tabindex="0"
+                                    >
+                                      <span
+                                        class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+                                      >
+                                        Two-Point Attempt
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td
+                    class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                  >
+                    <button
+                      aria-label="deleteSegment"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                        data-testid="DeleteIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                        />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

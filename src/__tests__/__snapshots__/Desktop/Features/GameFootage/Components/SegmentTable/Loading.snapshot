@@ -13,7 +13,6 @@
       class="MuiTableContainer-root css-rorn0c-MuiTableContainer-root"
     >
       <table
-        aria-label="Segments"
         class="MuiTable-root css-1h2c9v3-MuiTable-root"
       >
         <thead

@@ -54,7 +54,7 @@
           class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
         >
           <tr
-            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+            class="MuiTableRow-root css-198kp9q-MuiTableRow-root"
           >
             <td
               class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
@@ -68,16 +68,23 @@
             <td
               class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-14xs56e-MuiTypography-root"
+              <button
+                aria-label="segmentLabel: 0:10 → 0:25. timelineSeekTo"
+                class="MuiButtonBase-root css-2kae15-MuiButtonBase-root"
+                tabindex="0"
+                type="button"
               >
-                0:10 → 0:25
-              </p>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
-              >
-                0:15
-              </span>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-14xs56e-MuiTypography-root"
+                >
+                  0:10 → 0:25
+                </p>
+                <span
+                  class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+                >
+                  0:15
+                </span>
+              </button>
             </td>
             <td
               class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
@@ -635,7 +642,7 @@
             </td>
           </tr>
           <tr
-            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+            class="MuiTableRow-root css-198kp9q-MuiTableRow-root"
           >
             <td
               class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
@@ -649,16 +656,23 @@
             <td
               class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-14xs56e-MuiTypography-root"
+              <button
+                aria-label="segmentLabel: 0:42 → 1:23. timelineSeekTo"
+                class="MuiButtonBase-root css-2kae15-MuiButtonBase-root"
+                tabindex="0"
+                type="button"
               >
-                0:42 → 1:23
-              </p>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
-              >
-                0:41
-              </span>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-14xs56e-MuiTypography-root"
+                >
+                  0:42 → 1:23
+                </p>
+                <span
+                  class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+                >
+                  0:41
+                </span>
+              </button>
             </td>
             <td
               class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
@@ -1156,7 +1170,7 @@
             </td>
           </tr>
           <tr
-            class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+            class="MuiTableRow-root css-198kp9q-MuiTableRow-root"
           >
             <td
               class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
@@ -1170,16 +1184,23 @@
             <td
               class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
             >
-              <p
-                class="MuiTypography-root MuiTypography-body2 css-14xs56e-MuiTypography-root"
+              <button
+                aria-label="segmentLabel: 2:00 → 2:02. timelineSeekTo"
+                class="MuiButtonBase-root css-2kae15-MuiButtonBase-root"
+                tabindex="0"
+                type="button"
               >
-                2:00 → 2:02
-              </p>
-              <span
-                class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
-              >
-                0:02
-              </span>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-14xs56e-MuiTypography-root"
+                >
+                  2:00 → 2:02
+                </p>
+                <span
+                  class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+                >
+                  0:02
+                </span>
+              </button>
             </td>
             <td
               class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"

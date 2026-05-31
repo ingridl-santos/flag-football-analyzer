@@ -13,6 +13,8 @@ const meta: Meta<typeof SegmentTable> = {
     onDelete: action('onDelete'),
     onSetPlayType: action('onSetPlayType'),
     onSetTags: action('onSetTags'),
+    onSegmentClick: action('onSegmentClick'),
+    activeSegmentId: null,
   },
 };
 
@@ -33,6 +35,13 @@ export const WithSegments: Story = {
       { id: '2', start: 42, end: 83, duration: 41, playType: 'Run', tags: ['offense', 'rush'] },
       { id: '3', start: 120, end: 122, duration: 2, playType: 'Defense', tags: ['defense', 'quick'] },
     ],
+  },
+};
+
+export const WithActiveSegment: Story = {
+  args: {
+    ...WithSegments.args,
+    activeSegmentId: '2',
   },
 };
 
