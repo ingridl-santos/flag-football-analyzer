@@ -1,0 +1,45 @@
+<div>
+  <div
+    class="MuiStack-root css-nvcagx-MuiStack-root"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+    >
+      timelineSegmentsLabel
+    </span>
+    <div
+      aria-label="timelineSegmentsLabel"
+      class="MuiBox-root css-sl815t"
+      role="list"
+    >
+      <button
+        aria-label="segmentLabel: 0:10 → 0:25. timelineSeekTo"
+        class="MuiButtonBase-root css-1yr2ea6-MuiButtonBase-root"
+        data-mui-internal-clone-element="true"
+        role="listitem"
+        tabindex="0"
+        type="button"
+      />
+      <button
+        aria-label="segmentLabel: 0:42 → 1:23. timelineSeekTo"
+        class="MuiButtonBase-root css-cwkl3l-MuiButtonBase-root"
+        data-mui-internal-clone-element="true"
+        role="listitem"
+        tabindex="0"
+        type="button"
+      />
+      <button
+        aria-label="segmentLabel: 2:00 → 2:20. timelineSeekTo"
+        class="MuiButtonBase-root css-skeajh-MuiButtonBase-root"
+        data-mui-internal-clone-element="true"
+        role="listitem"
+        tabindex="0"
+        type="button"
+      />
+      <div
+        aria-hidden="true"
+        class="MuiBox-root css-1f566vl"
+      />
+    </div>
+  </div>
+</div>

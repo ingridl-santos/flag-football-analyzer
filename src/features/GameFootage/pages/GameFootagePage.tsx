@@ -1,31 +1,12 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import useDocumentTitle from '../../../hooks/useDocumentTitle';
-import { useVideoExport } from '../../../hooks/useVideoExport';
 import { clearBreadcrumbs, setBreadcrumbs } from '../../../redux/BreadcrumbSlice';
-import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
-import {
-  clearSegments,
-  createSegment,
-  deleteSegment,
-  selectSegmentState,
-  setPendingEnd,
-  setPendingPlayType,
-  setPendingStart,
-  setPendingTags,
-  setPlayType,
-  setTags,
-} from '../../../redux/SegmentSlice';
-import {
-  selectVideoState,
-  setCurrentTime,
-  setDuration,
-  setIsPlaying,
-  setVideo,
-  setYouTubeVideo,
-} from '../../../redux/VideoSlice';
-import { downloadFile, segmentsToCsv, segmentsToJson } from '../../../utils/exportSegments';
+import { useAppDispatch } from '../../../redux/hooks';
+import SegmentControlsHoc from '../hocs/SegmentControlsHoc';
+import SegmentPanelHoc from '../hocs/SegmentPanelHoc';
+import VideoPlayerHoc from '../hocs/VideoPlayerHoc';
 import GameFootageTemplate from '../templates/GameFootageTemplate';
 
 export default function GameFootagePage() {
@@ -33,10 +14,8 @@ export default function GameFootagePage() {
   const { t: tCommon } = useTranslation('common');
   const { t: tGameFootage } = useTranslation('gameFootage');
   const dispatch = useAppDispatch();
-  const videoState = useAppSelector(selectVideoState);
-  const segmentState = useAppSelector(selectSegmentState);
   const videoFileRef = useRef<File | null>(null);
-  const { exportZip, isExporting, exportProgress } = useVideoExport();
+  const [showSegmentCreatedToast, setShowSegmentCreatedToast] = useState(false);
 
   useDocumentTitle(t('gameFootage'));
 
@@ -51,63 +30,19 @@ export default function GameFootagePage() {
     };
   }, [dispatch, tCommon, tGameFootage]);
 
-  const handleFileSelect = (file: File) => {
-    if (videoState.videoType === 'file' && videoState.videoUrl) {
-      URL.revokeObjectURL(videoState.videoUrl);
-    }
+  const handleCloseToast = useCallback(() => setShowSegmentCreatedToast(false), []);
 
-    videoFileRef.current = file;
-    dispatch(clearSegments());
-    dispatch(setVideo({ url: URL.createObjectURL(file), fileName: file.name }));
-  };
-
-  const handleYouTubeUrl = (videoId: string) => {
-    if (videoState.videoType === 'file' && videoState.videoUrl) {
-      URL.revokeObjectURL(videoState.videoUrl);
-    }
-
-    videoFileRef.current = null;
-    dispatch(clearSegments());
-    dispatch(setYouTubeVideo({ videoId }));
-  };
+  const handleSegmentCreated = useCallback(() => setShowSegmentCreatedToast(true), []);
 
   return (
     <GameFootageTemplate
-      videoType={videoState.videoType}
-      videoUrl={videoState.videoUrl}
-      videoFileName={videoState.videoFileName}
-      youtubeVideoId={videoState.youtubeVideoId}
-      currentTime={videoState.currentTime}
-      duration={videoState.duration}
-      isPlaying={videoState.isPlaying}
-      pendingStart={segmentState.pendingStart}
-      pendingEnd={segmentState.pendingEnd}
-      pendingPlayType={segmentState.pendingPlayType}
-      pendingTags={segmentState.pendingTags}
-      segments={segmentState.segments}
-      onFileSelect={handleFileSelect}
-      onYouTubeUrl={handleYouTubeUrl}
-      onTimeUpdate={(time) => dispatch(setCurrentTime(time))}
-      onDurationChange={(dur) => dispatch(setDuration(dur))}
-      onPlayStateChange={(playing) => dispatch(setIsPlaying(playing))}
-      onSeek={(time) => dispatch(setCurrentTime(time))}
-      onSetStart={() => dispatch(setPendingStart(videoState.currentTime))}
-      onSetEnd={() => dispatch(setPendingEnd(videoState.currentTime))}
-      onSetPendingPlayType={(pt) => dispatch(setPendingPlayType(pt))}
-      onSetPendingTags={(tags) => dispatch(setPendingTags(tags))}
-      onCreateSegment={() => dispatch(createSegment())}
-      onDeleteSegment={(id) => dispatch(deleteSegment(id))}
-      onSetPlayType={(id, pt) => dispatch(setPlayType({ id, playType: pt }))}
-      onSetTags={(id, tags) => dispatch(setTags({ id, tags }))}
-      onExportCsv={() => downloadFile(segmentsToCsv(segmentState.segments), 'segments.csv', 'text/csv')}
-      onExportJson={() => downloadFile(segmentsToJson(segmentState.segments), 'segments.json', 'application/json')}
-      onExportZip={() => {
-        if (videoFileRef.current) {
-          exportZip(videoFileRef.current, segmentState.segments);
-        }
-      }}
-      isExportingZip={isExporting}
-      exportZipProgress={exportProgress}
+      VideoPlayerHoc={<VideoPlayerHoc videoFileRef={videoFileRef} />}
+      SegmentControlsHoc={(
+        <SegmentControlsHoc onSegmentCreated={handleSegmentCreated} />
+      )}
+      SegmentPanelHoc={<SegmentPanelHoc videoFileRef={videoFileRef} />}
+      showSegmentCreatedToast={showSegmentCreatedToast}
+      onCloseToast={handleCloseToast}
     />
   );
 }

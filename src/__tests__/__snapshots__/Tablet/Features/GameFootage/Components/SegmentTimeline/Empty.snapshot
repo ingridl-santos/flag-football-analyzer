@@ -1,0 +1,21 @@
+<div>
+  <div
+    class="MuiStack-root css-nvcagx-MuiStack-root"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+    >
+      timelineSegmentsLabel
+    </span>
+    <div
+      aria-label="timelineSegmentsLabel"
+      class="MuiBox-root css-sl815t"
+      role="list"
+    >
+      <div
+        aria-hidden="true"
+        class="MuiBox-root css-1godeo2"
+      />
+    </div>
+  </div>
+</div>

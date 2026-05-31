@@ -1,0 +1,18 @@
+<div>
+  <div
+    class="MuiStack-root css-nvcagx-MuiStack-root"
+  >
+    <span
+      class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+    />
+    <div
+      class="MuiBox-root css-sl815t"
+      role="list"
+    >
+      <div
+        aria-hidden="true"
+        class="MuiBox-root css-1godeo2"
+      />
+    </div>
+  </div>
+</div>

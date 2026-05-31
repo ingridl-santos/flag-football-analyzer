@@ -67,6 +67,144 @@ Pages are never given Storybook stories — only templates are.
 1. Call `useDocumentTitle` from `src/hooks/useDocumentTitle.ts` to set the browser tab title
 2. Dispatch `setBreadcrumbs` in a `useEffect` (with cleanup `clearBreadcrumbs`) when the page has a navigation hierarchy deeper than the root
 
+## HOC Slot Pattern (Complex Features)
+
+When a feature has multiple **independent sections** that each require their own data/logic (Redux state, API calls, local state), use the **HOC slot pattern** to maintain clean separation of concerns. This pattern adds two more layers on top of the Page/Template pattern:
+
+### Architecture
+
+```
+src/features/MyFeature/
+├── components/          # Pure presentation components (no Redux, no services)
+│   ├── SectionA/
+│   │   ├── index.tsx
+│   │   └── SectionA.stories.tsx
+│   ├── SectionB/
+│   │   ├── index.tsx
+│   │   └── SectionB.stories.tsx
+│   └── SectionC/
+│       ├── index.tsx
+│       └── SectionC.stories.tsx
+├── hocs/                # Logic wrappers — connect Redux/services to components
+│   ├── SectionAHoc.tsx
+│   ├── SectionBHoc.tsx
+│   └── SectionCHoc.tsx
+├── pages/
+│   └── MyFeaturePage.tsx    # Instantiates HOCs, passes them as slots to template
+└── templates/
+    └── MyFeatureTemplate/
+        ├── index.tsx            # Layout shell — accepts HOCs as ReactNode slots
+        └── MyFeatureTemplate.stories.tsx
+```
+
+### Layer Responsibilities
+
+|Layer|Responsibility|Imports from|
+|---|---|---|
+|**Component**|Pure presentation — receives data/callbacks via props, no Redux/services|MUI, shared components|
+|**HOC**|Logic — connects Redux, manages local state, calls services, passes props to component|Redux hooks, services, its component|
+|**Template**|Layout shell — arranges ReactNode slots, handles conditional rendering (e.g., responsive breakpoints)|MUI layout primitives|
+|**Page**|Orchestration — instantiates HOCs, passes them as slot props to template|HOCs, template|
+
+### How It Works
+
+1. **The template** defines `ReactNode` slot props for each section:
+
+```tsx
+export interface MyFeatureTemplateProps {
+  SectionAHoc: ReactNode;
+  SectionBHoc: ReactNode;
+  SectionCHoc: ReactNode;
+}
+
+export default function MyFeatureTemplate({
+  SectionAHoc,
+  SectionBHoc,
+  SectionCHoc,
+}: MyFeatureTemplateProps) {
+  return (
+    <Stack>
+      {SectionAHoc}
+      {SectionBHoc}
+      {SectionCHoc}
+    </Stack>
+  );
+}
+```
+
+2. **Each HOC** connects logic to its presentation component:
+
+```tsx
+export default function SectionAHoc() {
+  const dispatch = useAppDispatch();
+  const data = useAppSelector(selectSectionAData);
+
+  const handleAction = useCallback(() => {
+    dispatch(someAction());
+  }, [dispatch]);
+
+  return (
+    <SectionA
+      data={data}
+      onAction={handleAction}
+    />
+  );
+}
+```
+
+3. **The page** instantiates HOCs and passes them as slots:
+
+```tsx
+export default function MyFeaturePage() {
+  useDocumentTitle(t('myFeature'));
+
+  return (
+    <MyFeatureTemplate
+      SectionAHoc={<SectionAHoc />}
+      SectionBHoc={<SectionBHoc />}
+      SectionCHoc={<SectionCHoc />}
+    />
+  );
+}
+```
+
+4. **Storybook stories** replace HOCs with the real presentation components fed mock data:
+
+```tsx
+export const Default: Story = {
+  args: {
+    SectionAHoc: (
+      <SectionA
+        data={mockData}
+        onAction={action('onAction')}
+      />
+    ),
+    SectionBHoc: (
+      <SectionB ... />
+    ),
+  },
+};
+```
+
+### Naming Conventions
+
+- **Component folders** use the section name without the feature prefix (e.g., `Greeting/`, not `HomeGreeting/`).
+- **HOC files** append `Hoc` to the component name (e.g., `GreetingHoc.tsx`).
+- **Slot prop names** match the HOC name (e.g., `GreetingHoc: ReactNode`).
+- **Each component** gets its own Storybook stories file in its folder.
+
+### When to Use This Pattern
+
+Use the HOC slot pattern when:
+
+- A feature page has **3+ independent sections** that each need their own state/logic.
+- Sections connect to **different Redux slices or API services**.
+- You want each section to be **testable and renderable in Storybook independently**.
+- The template layout varies by state (e.g., responsive breakpoints, conditional sections).
+
+Do **not** use it for simple features where a page has one or two props to pass to a template — the basic Page/Template pattern is sufficient.
+
+
 ## Component Structure
 
 ```
