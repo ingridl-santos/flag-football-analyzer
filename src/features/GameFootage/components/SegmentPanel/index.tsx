@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, CircularProgress, Skeleton, Stack, Typography } from '@mui/material';
+import { Button, Card, CardContent, CircularProgress, Divider, Skeleton, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import { type Segment } from '../../../../redux/SegmentSlice';
@@ -48,7 +48,7 @@ export default function SegmentPanel({
               gap: '0.5rem',
             }}
           >
-            <Typography variant="h6" component="h2">
+            <Typography variant="h5" component="h2">
               {t('segments') ?? <Skeleton width="6rem" />}
             </Typography>
 
@@ -97,6 +97,8 @@ export default function SegmentPanel({
               )}
             </Stack>
           </Stack>
+
+          <Divider />
 
           {videoType === 'youtube' && (
             <Typography variant="caption" color="text.secondary">

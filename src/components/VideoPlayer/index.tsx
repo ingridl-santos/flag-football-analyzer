@@ -1,6 +1,7 @@
 import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { Box, IconButton, Slider, Stack, Typography } from '@mui/material';
+import { SyntheticEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import useVideoPlayer from '../../hooks/useVideoPlayer';
@@ -28,18 +29,14 @@ export default function VideoPlayer({
   onSeek,
 }: VideoPlayerProps) {
   const { t } = useTranslation('gameFootage');
-  const { videoRef, seek, togglePlay } = useVideoPlayer();
+  const { videoRef, seek, togglePlay } = useVideoPlayer(isPlaying);
 
-  const handleTimeUpdate = () => {
-    if (videoRef.current) {
-      onTimeUpdate(videoRef.current.currentTime);
-    }
+  const handleTimeUpdate = (e: SyntheticEvent<HTMLVideoElement>) => {
+    onTimeUpdate(e.currentTarget.currentTime);
   };
 
-  const handleLoadedMetadata = () => {
-    if (videoRef.current) {
-      onDurationChange(videoRef.current.duration);
-    }
+  const handleLoadedMetadata = (e: SyntheticEvent<HTMLVideoElement>) => {
+    onDurationChange(e.currentTarget.duration);
   };
 
   const handleSliderChange = (_: Event, value: number | number[]) => {

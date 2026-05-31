@@ -9,7 +9,7 @@ import {
   setPendingStart,
   setPendingTags,
 } from '../../../redux/SegmentSlice';
-import { selectVideoState } from '../../../redux/VideoSlice';
+import { selectVideoState, setIsPlaying } from '../../../redux/VideoSlice';
 import SegmentControls from '../components/SegmentControls';
 
 export interface SegmentControlsHocProps {
@@ -32,6 +32,7 @@ export default function SegmentControlsHoc({ onSegmentCreated }: SegmentControls
 
   const handleSetEnd = useCallback(() => {
     dispatch(setPendingEnd(currentTime));
+    dispatch(setIsPlaying(false));
   }, [dispatch, currentTime]);
 
   const handleCreateSegment = useCallback(() => {

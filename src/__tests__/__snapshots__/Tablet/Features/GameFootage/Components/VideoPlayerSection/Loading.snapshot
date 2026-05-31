@@ -26,7 +26,7 @@
             class="MuiStack-root css-1jttxn5-MuiStack-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-h6 css-1mdq9uc-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 css-acg7zf-MuiTypography-root"
             >
               <span
                 class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-9wd69f-MuiSkeleton-root"

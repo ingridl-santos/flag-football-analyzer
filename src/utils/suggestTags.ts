@@ -1,7 +1,5 @@
 export interface TagSuggestions {
-  /** Tags inferred purely from duration + play type. Shown highlighted as auto-detected. */
   auto: string[];
-  /** Full list of contextually relevant suggestions for manual selection. */
   more: string[];
 }
 
@@ -16,13 +14,9 @@ const TAXONOMY: Record<string, {
       return [];
     },
     more: [
-      // Results
       'Touchdown', 'Completion', 'Incompletion', 'Interception', 'Sack', 'Flag Pull',
-      // Refinements
       'Screen Pass', 'Slant', 'Out Route', 'Post Route', 'Go Route', 'Crossing Route', 'Rollout Pass', 'QB Scramble',
-      // Formations
       'Shotgun', 'Spread', 'Trips Formation', 'Empty Backfield', 'I-Formation',
-      // Situational
       'Red Zone', 'Two-Minute Drill', 'Two-Point Attempt', 'Opening Drive',
     ],
   },
@@ -34,13 +28,9 @@ const TAXONOMY: Record<string, {
       return [];
     },
     more: [
-      // Results
       'Touchdown', 'Big Gain', 'Loss of Yards', 'Flag Pull',
-      // Refinements
       'Inside Run', 'Outside Run', 'Sweep', 'Reverse', 'QB Run', 'Option Run',
-      // Formations
       'Shotgun', 'I-Formation', 'Single Back', 'Wildcat',
-      // Situational
       'Red Zone', 'Goal Line', 'Two-Minute Drill', 'Two-Point Attempt',
     ],
   },
@@ -52,13 +42,9 @@ const TAXONOMY: Record<string, {
       return [];
     },
     more: [
-      // Results
       'Flag Pull', 'Interception', 'Pick Six', 'Sack', 'Forced Incompletion', 'Touchdown Allowed',
-      // Refinements
       'Blitz', 'Zone Coverage', 'Man Coverage', 'Press Coverage',
-      // Formations
       'Cover 2', 'Cover 3', 'Cover 4', 'Man to Man', 'Nickel', 'Prevent Defense',
-      // Situational
       'Red Zone Defense', 'Goal Line Stand', 'Two-Minute Defense',
     ],
   },

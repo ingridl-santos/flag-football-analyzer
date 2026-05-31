@@ -73,7 +73,7 @@ export default function VideoPlayerSection({
               />
 
               <Stack sx={{ alignItems: 'center', gap: '0.5rem' }}>
-                <Typography variant="h6" component="p" sx={{ textAlign: 'center' }}>
+                <Typography variant="h5" component="p" sx={{ textAlign: 'center' }}>
                   {t('uploadPrompt') ?? <Skeleton sx={{ maxWidth: '18rem' }} />}
                 </Typography>
 

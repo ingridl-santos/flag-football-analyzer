@@ -10,20 +10,21 @@ function makeMockPlayer() {
     seekTo: vi.fn(),
     getCurrentTime: vi.fn(() => 5),
     getDuration: vi.fn(() => 100),
-    getPlayerState: vi.fn(() => 2), // PAUSED
+    getPlayerState: vi.fn(() => 2),
     destroy: vi.fn(),
   };
 }
 
-// Test component that attaches the containerRef to the DOM
 function TestPlayer({
   videoId,
+  isPlaying = false,
   onTimeUpdate = vi.fn(),
   onDurationChange = vi.fn(),
   onPlayStateChange = vi.fn(),
   onReady,
 }: {
   videoId: string;
+  isPlaying?: boolean;
   onTimeUpdate?: (t: number) => void;
   onDurationChange?: (d: number) => void;
   onPlayStateChange?: (p: boolean) => void;
@@ -34,6 +35,7 @@ function TestPlayer({
     onTimeUpdate,
     onDurationChange,
     onPlayStateChange,
+    isPlaying,
   );
 
   onReady?.({ seek, togglePlay });
@@ -145,7 +147,7 @@ describe('useYouTubePlayer', () => {
     });
 
     it('togglePlay calls playVideo when player is paused', () => {
-      mockPlayer.getPlayerState.mockReturnValue(2); // PAUSED
+      mockPlayer.getPlayerState.mockReturnValue(2);
       const { controls } = setupPlayer();
 
       act(() => controls.togglePlay());
@@ -155,12 +157,93 @@ describe('useYouTubePlayer', () => {
     });
 
     it('togglePlay calls pauseVideo when player is playing', () => {
-      mockPlayer.getPlayerState.mockReturnValue(1); // PLAYING
+      mockPlayer.getPlayerState.mockReturnValue(1);
       const { controls } = setupPlayer();
+
+      mockPlayer.pauseVideo.mockClear();
 
       act(() => controls.togglePlay());
 
       expect(mockPlayer.pauseVideo).toHaveBeenCalledTimes(1);
+      expect(mockPlayer.playVideo).not.toHaveBeenCalled();
+    });
+
+    it('calls pauseVideo when isPlaying prop changes to false while playing', () => {
+      mockPlayer.getPlayerState.mockReturnValue(1);
+
+      const { rerender } = render(
+        <TestPlayer videoId="video123" isPlaying />,
+      );
+
+      act(() => {
+        window.YT = {
+          Player: YTPlayerConstructor as unknown as NonNullable<Window['YT']>['Player'],
+          PlayerState: { UNSTARTED: -1, ENDED: 0, PLAYING: 1, PAUSED: 2, BUFFERING: 3, CUED: 5 },
+        };
+        window.onYouTubeIframeAPIReady?.();
+      });
+
+      mockPlayer.pauseVideo.mockClear();
+
+      act(() => rerender(<TestPlayer videoId="video123" isPlaying={false} />));
+
+      expect(mockPlayer.pauseVideo).toHaveBeenCalledTimes(1);
+      expect(mockPlayer.playVideo).not.toHaveBeenCalled();
+    });
+
+    it('calls playVideo when isPlaying prop changes to true while paused', () => {
+      mockPlayer.getPlayerState.mockReturnValue(2);
+
+      const { rerender } = render(
+        <TestPlayer videoId="video123" isPlaying={false} />,
+      );
+
+      act(() => {
+        window.YT = {
+          Player: YTPlayerConstructor as unknown as NonNullable<Window['YT']>['Player'],
+          PlayerState: { UNSTARTED: -1, ENDED: 0, PLAYING: 1, PAUSED: 2, BUFFERING: 3, CUED: 5 },
+        };
+        window.onYouTubeIframeAPIReady?.();
+      });
+
+      mockPlayer.playVideo.mockClear();
+
+      act(() => rerender(<TestPlayer videoId="video123" isPlaying />));
+
+      expect(mockPlayer.playVideo).toHaveBeenCalledTimes(1);
+      expect(mockPlayer.pauseVideo).not.toHaveBeenCalled();
+    });
+
+    it('calls playVideo on ready when isPlaying is true at mount and player is paused', () => {
+      mockPlayer.getPlayerState.mockReturnValue(2);
+
+      render(<TestPlayer videoId="video123" isPlaying />);
+
+      act(() => {
+        window.YT = {
+          Player: YTPlayerConstructor as unknown as NonNullable<Window['YT']>['Player'],
+          PlayerState: { UNSTARTED: -1, ENDED: 0, PLAYING: 1, PAUSED: 2, BUFFERING: 3, CUED: 5 },
+        };
+        window.onYouTubeIframeAPIReady?.();
+      });
+
+      expect(mockPlayer.playVideo).toHaveBeenCalledTimes(1);
+      expect(mockPlayer.pauseVideo).not.toHaveBeenCalled();
+    });
+
+    it('does not call playVideo on ready when isPlaying is true but player is already playing', () => {
+      mockPlayer.getPlayerState.mockReturnValue(1);
+
+      render(<TestPlayer videoId="video123" isPlaying />);
+
+      act(() => {
+        window.YT = {
+          Player: YTPlayerConstructor as unknown as NonNullable<Window['YT']>['Player'],
+          PlayerState: { UNSTARTED: -1, ENDED: 0, PLAYING: 1, PAUSED: 2, BUFFERING: 3, CUED: 5 },
+        };
+        window.onYouTubeIframeAPIReady?.();
+      });
+
       expect(mockPlayer.playVideo).not.toHaveBeenCalled();
     });
   });

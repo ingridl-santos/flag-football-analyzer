@@ -31,6 +31,7 @@ export default function YouTubePlayer({
     onTimeUpdate,
     onDurationChange,
     onPlayStateChange,
+    isPlaying,
   );
 
   const PlayPauseIcon = isPlaying ? PauseIcon : PlayArrowIcon;
