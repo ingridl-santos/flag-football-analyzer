@@ -41,6 +41,14 @@ export default function SegmentControlsHoc({ onSegmentCreated }: SegmentControls
     onSegmentCreated();
   }, [dispatch, onSegmentCreated, pendingStart, pendingEnd]);
 
+  const handleSetPendingPlayType = useCallback((pt: string) => {
+    dispatch(setPendingPlayType(pt));
+  }, [dispatch]);
+
+  const handleSetPendingTags = useCallback((tags: string[]) => {
+    dispatch(setPendingTags(tags));
+  }, [dispatch]);
+
   return (
     <SegmentControls
       videoLoaded={videoType !== null}
@@ -50,8 +58,8 @@ export default function SegmentControlsHoc({ onSegmentCreated }: SegmentControls
       pendingTags={pendingTags}
       onSetStart={handleSetStart}
       onSetEnd={handleSetEnd}
-      onSetPendingPlayType={(pt) => dispatch(setPendingPlayType(pt))}
-      onSetPendingTags={(tags) => dispatch(setPendingTags(tags))}
+      onSetPendingPlayType={handleSetPendingPlayType}
+      onSetPendingTags={handleSetPendingTags}
       onCreateSegment={handleCreateSegment}
     />
   );

@@ -53,6 +53,22 @@ export default function VideoPlayerHoc({ videoFileRef }: VideoPlayerHocProps) {
     if (segment) dispatch(setCurrentTime(segment.start));
   }, [dispatch, segments]);
 
+  const handleTimeUpdate = useCallback((time: number) => {
+    dispatch(setCurrentTime(time));
+  }, [dispatch]);
+
+  const handleDurationChange = useCallback((dur: number) => {
+    dispatch(setDuration(dur));
+  }, [dispatch]);
+
+  const handlePlayStateChange = useCallback((playing: boolean) => {
+    dispatch(setIsPlaying(playing));
+  }, [dispatch]);
+
+  const handleSeek = useCallback((time: number) => {
+    dispatch(setCurrentTime(time));
+  }, [dispatch]);
+
   return (
     <VideoPlayerSection
       videoType={videoState.videoType}
@@ -66,10 +82,10 @@ export default function VideoPlayerHoc({ videoFileRef }: VideoPlayerHocProps) {
       activeSegmentId={activeSegmentId}
       onFileSelect={handleFileSelect}
       onYouTubeUrl={handleYouTubeUrl}
-      onTimeUpdate={(time) => dispatch(setCurrentTime(time))}
-      onDurationChange={(dur) => dispatch(setDuration(dur))}
-      onPlayStateChange={(playing) => dispatch(setIsPlaying(playing))}
-      onSeek={(time) => dispatch(setCurrentTime(time))}
+      onTimeUpdate={handleTimeUpdate}
+      onDurationChange={handleDurationChange}
+      onPlayStateChange={handlePlayStateChange}
+      onSeek={handleSeek}
       onSegmentClick={handleSegmentClick}
     />
   );

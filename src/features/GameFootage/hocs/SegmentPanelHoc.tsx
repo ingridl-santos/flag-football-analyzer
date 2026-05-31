@@ -31,6 +31,32 @@ export default function SegmentPanelHoc({ videoFileRef }: SegmentPanelHocProps) 
     if (segment) dispatch(setCurrentTime(segment.start));
   }, [dispatch, segments]);
 
+  const handleDelete = useCallback((id: string) => {
+    dispatch(deleteSegment(id));
+  }, [dispatch]);
+
+  const handleSetPlayType = useCallback((id: string, pt: string) => {
+    dispatch(setPlayType({ id, playType: pt }));
+  }, [dispatch]);
+
+  const handleSetTags = useCallback((id: string, tags: string[]) => {
+    dispatch(setTags({ id, tags }));
+  }, [dispatch]);
+
+  const handleExportCsv = useCallback(() => {
+    downloadFile(segmentsToCsv(segments), 'segments.csv', 'text/csv');
+  }, [segments]);
+
+  const handleExportJson = useCallback(() => {
+    downloadFile(segmentsToJson(segments), 'segments.json', 'application/json');
+  }, [segments]);
+
+  const handleExportZip = useCallback(() => {
+    if (videoFileRef.current) {
+      exportZip(videoFileRef.current, segments);
+    }
+  }, [exportZip, segments, videoFileRef]);
+
   return (
     <SegmentPanel
       videoType={videoType}
@@ -38,17 +64,13 @@ export default function SegmentPanelHoc({ videoFileRef }: SegmentPanelHocProps) 
       activeSegmentId={activeSegmentId}
       isExportingZip={isExporting}
       exportZipProgress={exportProgress}
-      onDelete={(id) => dispatch(deleteSegment(id))}
-      onSetPlayType={(id, pt) => dispatch(setPlayType({ id, playType: pt }))}
-      onSetTags={(id, tags) => dispatch(setTags({ id, tags }))}
+      onDelete={handleDelete}
+      onSetPlayType={handleSetPlayType}
+      onSetTags={handleSetTags}
       onSegmentClick={handleSegmentClick}
-      onExportCsv={() => downloadFile(segmentsToCsv(segments), 'segments.csv', 'text/csv')}
-      onExportJson={() => downloadFile(segmentsToJson(segments), 'segments.json', 'application/json')}
-      onExportZip={() => {
-        if (videoFileRef.current) {
-          exportZip(videoFileRef.current, segments);
-        }
-      }}
+      onExportCsv={handleExportCsv}
+      onExportJson={handleExportJson}
+      onExportZip={handleExportZip}
     />
   );
 }
