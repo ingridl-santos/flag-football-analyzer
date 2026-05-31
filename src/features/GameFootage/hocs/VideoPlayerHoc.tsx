@@ -1,5 +1,6 @@
 import { MutableRefObject, useCallback } from 'react';
 
+import { useActiveSegmentId } from '../../../hooks/useActiveSegmentId';
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
 import {
   clearSegments,
@@ -24,9 +25,7 @@ export default function VideoPlayerHoc({ videoFileRef }: VideoPlayerHocProps) {
   const videoState = useAppSelector(selectVideoState);
   const { segments } = useAppSelector(selectSegmentState);
 
-  const activeSegmentId = segments.find(
-    (s) => videoState.currentTime >= s.start && videoState.currentTime <= s.end,
-  )?.id ?? null;
+  const activeSegmentId = useActiveSegmentId(segments, videoState.currentTime);
 
   const handleFileSelect = useCallback((file: File) => {
     if (videoState.videoType === 'file' && videoState.videoUrl) {

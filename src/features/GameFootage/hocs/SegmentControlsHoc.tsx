@@ -35,9 +35,11 @@ export default function SegmentControlsHoc({ onSegmentCreated }: SegmentControls
   }, [dispatch, currentTime]);
 
   const handleCreateSegment = useCallback(() => {
+    if (pendingStart === null || pendingEnd === null || pendingStart >= pendingEnd) return;
+
     dispatch(createSegment());
     onSegmentCreated();
-  }, [dispatch, onSegmentCreated]);
+  }, [dispatch, onSegmentCreated, pendingStart, pendingEnd]);
 
   return (
     <SegmentControls

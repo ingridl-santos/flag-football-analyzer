@@ -1,5 +1,6 @@
 import { MutableRefObject, useCallback } from 'react';
 
+import { useActiveSegmentId } from '../../../hooks/useActiveSegmentId';
 import { useVideoExport } from '../../../hooks/useVideoExport';
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
 import {
@@ -18,14 +19,11 @@ export interface SegmentPanelHocProps {
 
 export default function SegmentPanelHoc({ videoFileRef }: SegmentPanelHocProps) {
   const dispatch = useAppDispatch();
-  const { videoType } = useAppSelector(selectVideoState);
+  const { videoType, currentTime } = useAppSelector(selectVideoState);
   const { segments } = useAppSelector(selectSegmentState);
-  const currentTime = useAppSelector(selectVideoState).currentTime;
   const { exportZip, isExporting, exportProgress } = useVideoExport();
 
-  const activeSegmentId = segments.find(
-    (s) => currentTime >= s.start && currentTime <= s.end,
-  )?.id ?? null;
+  const activeSegmentId = useActiveSegmentId(segments, currentTime);
 
   const handleSegmentClick = useCallback((id: string) => {
     const segment = segments.find((s) => s.id === id);
