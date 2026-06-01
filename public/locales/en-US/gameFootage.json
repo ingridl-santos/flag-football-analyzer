@@ -37,6 +37,7 @@
   "colPlayType": "Play Type",
   "colTags": "Tags",
   "tagsInputPlaceholder": "Add tag…",
+  "tagsLabel": "Tags",
   "tagSuggestions": "Suggested:",
   "tagSuggestionsShowMore": "Show {{count}} more",
   "addTagSuggestion": "Add {{tag}}",

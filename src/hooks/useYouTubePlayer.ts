@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 
-// Minimal YouTube IFrame Player API type declarations
 interface YTPlayerInstance {
   playVideo(): void;
   pauseVideo(): void;
@@ -61,15 +60,32 @@ export default function useYouTubePlayer(
   onTimeUpdate: (time: number) => void,
   onDurationChange: (duration: number) => void,
   onPlayStateChange: (isPlaying: boolean) => void,
+  isPlaying = false,
 ): UseYouTubePlayerReturn {
   const containerRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YTPlayerInstance | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // Keep callbacks stable without re-running the effect
   const callbacksRef = useRef({ onTimeUpdate, onDurationChange, onPlayStateChange });
 
   callbacksRef.current = { onTimeUpdate, onDurationChange, onPlayStateChange };
+
+  const isPlayingRef = useRef(isPlaying);
+
+  isPlayingRef.current = isPlaying;
+
+  useEffect(() => {
+    const player = playerRef.current;
+
+    if (!player) return;
+    const state = player.getPlayerState();
+
+    if (isPlaying && state !== 1) {
+      player.playVideo();
+    } else if (!isPlaying && state === 1) {
+      player.pauseVideo();
+    }
+  }, [isPlaying]);
 
   const stopPolling = (): void => {
     if (intervalRef.current !== null) {
@@ -91,9 +107,16 @@ export default function useYouTubePlayer(
         events: {
           onReady: ({ target }) => {
             callbacksRef.current.onDurationChange(target.getDuration());
+            const state = target.getPlayerState();
+
+            if (isPlayingRef.current && state !== 1) {
+              target.playVideo();
+            } else if (!isPlayingRef.current && state === 1) {
+              target.pauseVideo();
+            }
           },
           onStateChange: ({ data }) => {
-            const isPlaying = data === 1; // YT.PlayerState.PLAYING
+            const isPlaying = data === 1;
 
             callbacksRef.current.onPlayStateChange(isPlaying);
 

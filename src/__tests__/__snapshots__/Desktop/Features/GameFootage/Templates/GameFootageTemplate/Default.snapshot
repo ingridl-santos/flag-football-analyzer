@@ -3,369 +3,365 @@
     class="MuiStack-root css-wcshwo-MuiStack-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-container css-bfjp4h-MuiGrid-root"
+      class="MuiStack-root css-k9lmh7-MuiStack-root"
     >
+      <h1
+        class="MuiTypography-root MuiTypography-h2 css-1xo9vd1-MuiTypography-root"
+      >
+        title
+      </h1>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-6 css-f0xsrb-MuiGrid-root"
+        class="MuiStack-root css-14s4awb-MuiStack-root"
       >
         <div
-          class="MuiStack-root css-8r4r5m-MuiStack-root"
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1wff653-MuiPaper-root-MuiCard-root"
         >
           <div
-            class="MuiStack-root css-14s4awb-MuiStack-root"
+            class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
           >
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1wff653-MuiPaper-root-MuiCard-root"
+              class="MuiStack-root css-jn463n-MuiStack-root"
             >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1lg7bqt-MuiSvgIcon-root"
+                data-testid="UploadFileIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11z"
+                />
+              </svg>
               <div
-                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+                class="MuiStack-root css-1jttxn5-MuiStack-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-h5 css-acg7zf-MuiTypography-root"
+                >
+                  uploadPrompt
+                </p>
+                <span
+                  class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+                >
+                  uploadAccepted
+                </span>
+              </div>
+              <label
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary css-uyi4rb-MuiButtonBase-root-MuiButton-root"
+                role="button"
+                tabindex="0"
+              >
+                uploadButton
+                <input
+                  accept="video/mp4"
+                  hidden=""
+                  type="file"
+                />
+              </label>
+              <div
+                class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-1ypcg5c-MuiDivider-root"
+                role="separator"
+              >
+                <span
+                  class="MuiDivider-wrapper css-qywfm8-MuiDivider-wrapper"
+                >
+                  orSeparator
+                </span>
+              </div>
+              <div
+                class="MuiStack-root css-usgczu-MuiStack-root"
               >
                 <div
-                  class="MuiStack-root css-jn463n-MuiStack-root"
+                  class="MuiFormControl-root MuiTextField-root css-te7hn0-MuiFormControl-root-MuiTextField-root"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1lg7bqt-MuiSvgIcon-root"
-                    data-testid="UploadFileIcon"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8zm4 18H6V4h7v5h5zM8 15.01l1.41 1.41L11 14.84V19h2v-4.16l1.59 1.59L16 15.01 12.01 11z"
-                    />
-                  </svg>
-                  <div
-                    class="MuiStack-root css-1jttxn5-MuiStack-root"
-                  >
-                    <p
-                      class="MuiTypography-root MuiTypography-h6 css-1mdq9uc-MuiTypography-root"
-                    >
-                      uploadPrompt
-                    </p>
-                    <span
-                      class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
-                    >
-                      uploadAccepted
-                    </span>
-                  </div>
                   <label
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary css-uyi4rb-MuiButtonBase-root-MuiButton-root"
-                    role="button"
-                    tabindex="0"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1uy7lca-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    for=":stable-mocked-react-id-1:"
+                    id=":stable-mocked-react-id-1:-label"
                   >
-                    uploadButton
-                    <input
-                      accept="video/mp4"
-                      hidden=""
-                      type="file"
-                    />
+                    youtubeUrlLabel
                   </label>
                   <div
-                    class="MuiDivider-root MuiDivider-fullWidth MuiDivider-withChildren css-1ypcg5c-MuiDivider-root"
-                    role="separator"
+                    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-1s7eke9-MuiInputBase-root-MuiOutlinedInput-root"
+                  >
+                    <input
+                      aria-describedby=":stable-mocked-react-id-1:-helper-text"
+                      aria-invalid="false"
+                      aria-label="youtubeUrlLabel"
+                      class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-5lgxi2-MuiInputBase-input-MuiOutlinedInput-input"
+                      id=":stable-mocked-react-id-1:"
+                      placeholder="youtubeUrlPlaceholder"
+                      type="text"
+                      value=""
+                    />
+                    <fieldset
+                      aria-hidden="true"
+                      class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+                    >
+                      <legend
+                        class="css-njhac4-MuiNotchedOutlined-root"
+                      >
+                        <span>
+                          youtubeUrlLabel
+                        </span>
+                      </legend>
+                    </fieldset>
+                  </div>
+                  <p
+                    class="MuiFormHelperText-root MuiFormHelperText-sizeSmall MuiFormHelperText-contained css-9w8k7l-MuiFormHelperText-root"
+                    id=":stable-mocked-react-id-1:-helper-text"
                   >
                     <span
-                      class="MuiDivider-wrapper css-qywfm8-MuiDivider-wrapper"
+                      class="notranslate"
                     >
-                      orSeparator
+                      ​
                     </span>
-                  </div>
-                  <div
-                    class="MuiStack-root css-usgczu-MuiStack-root"
-                  >
-                    <div
-                      class="MuiFormControl-root MuiTextField-root css-te7hn0-MuiFormControl-root-MuiTextField-root"
-                    >
-                      <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeSmall MuiInputLabel-outlined css-1uy7lca-MuiFormLabel-root-MuiInputLabel-root"
-                        data-shrink="false"
-                        for=":stable-mocked-react-id-1:"
-                        id=":stable-mocked-react-id-1:-label"
-                      >
-                        youtubeUrlLabel
-                      </label>
-                      <div
-                        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-1s7eke9-MuiInputBase-root-MuiOutlinedInput-root"
-                      >
-                        <input
-                          aria-describedby=":stable-mocked-react-id-1:-helper-text"
-                          aria-invalid="false"
-                          aria-label="youtubeUrlLabel"
-                          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-5lgxi2-MuiInputBase-input-MuiOutlinedInput-input"
-                          id=":stable-mocked-react-id-1:"
-                          placeholder="youtubeUrlPlaceholder"
-                          type="text"
-                          value=""
-                        />
-                        <fieldset
-                          aria-hidden="true"
-                          class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
-                        >
-                          <legend
-                            class="css-njhac4-MuiNotchedOutlined-root"
-                          >
-                            <span>
-                              youtubeUrlLabel
-                            </span>
-                          </legend>
-                        </fieldset>
-                      </div>
-                      <p
-                        class="MuiFormHelperText-root MuiFormHelperText-sizeSmall MuiFormHelperText-contained css-9w8k7l-MuiFormHelperText-root"
-                        id=":stable-mocked-react-id-1:-helper-text"
-                      >
-                        <span
-                          class="notranslate"
-                        >
-                          ​
-                        </span>
-                      </p>
-                    </div>
-                    <button
-                      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-g55t1d-MuiButtonBase-root-MuiButton-root"
-                      tabindex="0"
-                      type="button"
-                    >
-                      youtubeUrlLoad
-                    </button>
-                  </div>
+                  </p>
                 </div>
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-g55t1d-MuiButtonBase-root-MuiButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  youtubeUrlLoad
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-6 css-f0xsrb-MuiGrid-root"
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1ljvscb-MuiPaper-root-MuiCard-root"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1ljvscb-MuiPaper-root-MuiCard-root"
+          class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
         >
           <div
-            class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            class="MuiStack-root css-8r4r5m-MuiStack-root"
           >
+            <div
+              class="MuiStack-root css-u904fn-MuiStack-root"
+            >
+              <h2
+                class="MuiTypography-root MuiTypography-h5 css-1kqow15-MuiTypography-root"
+              >
+                segments
+              </h2>
+              <div
+                class="MuiStack-root css-tkss0t-MuiStack-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1pmqa2u-MuiButtonBase-root-MuiButton-root"
+                  disabled=""
+                  tabindex="-1"
+                  type="button"
+                >
+                  exportCsv
+                </button>
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1pmqa2u-MuiButtonBase-root-MuiButton-root"
+                  disabled=""
+                  tabindex="-1"
+                  type="button"
+                >
+                  exportJson
+                </button>
+              </div>
+            </div>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth css-1lg1g87-MuiDivider-root"
+            />
             <div
               class="MuiStack-root css-8r4r5m-MuiStack-root"
             >
               <div
-                class="MuiStack-root css-u904fn-MuiStack-root"
+                class="MuiTableContainer-root css-rorn0c-MuiTableContainer-root"
               >
-                <h2
-                  class="MuiTypography-root MuiTypography-h6 css-okrrt8-MuiTypography-root"
+                <table
+                  aria-label="segments"
+                  class="MuiTable-root css-1h2c9v3-MuiTable-root"
                 >
-                  segments
-                </h2>
-                <div
-                  class="MuiStack-root css-tkss0t-MuiStack-root"
-                >
-                  <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1pmqa2u-MuiButtonBase-root-MuiButton-root"
-                    disabled=""
-                    tabindex="-1"
-                    type="button"
+                  <thead
+                    class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
                   >
-                    exportCsv
-                  </button>
-                  <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary css-1pmqa2u-MuiButtonBase-root-MuiButton-root"
-                    disabled=""
-                    tabindex="-1"
-                    type="button"
+                    <tr
+                      class="MuiTableRow-root MuiTableRow-head css-1sjjssz-MuiTableRow-root"
+                    >
+                      <th
+                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-lruxsp-MuiTableCell-root"
+                        scope="col"
+                      >
+                        colNumber
+                      </th>
+                      <th
+                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-xpfpah-MuiTableCell-root"
+                        scope="col"
+                      >
+                        colTimeRange
+                      </th>
+                      <th
+                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-5rc4df-MuiTableCell-root"
+                        scope="col"
+                      >
+                        colPlayType
+                      </th>
+                      <th
+                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-rf7kbk-MuiTableCell-root"
+                        scope="col"
+                      >
+                        colTags
+                      </th>
+                      <th
+                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-lcwcvw-MuiTableCell-root"
+                        scope="col"
+                      />
+                    </tr>
+                  </thead>
+                  <tbody
+                    class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
                   >
-                    exportJson
-                  </button>
-                </div>
+                    <tr
+                      class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+                    >
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      >
+                        1
+                      </td>
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      >
+                        <div
+                          class="MuiStack-root css-nen11g-MuiStack-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 7rem;"
+                          />
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 3rem;"
+                          />
+                        </div>
+                      </td>
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      >
+                        <span
+                          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                          style="width: 6rem;"
+                        />
+                      </td>
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      >
+                        <span
+                          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                          style="width: 8rem;"
+                        />
+                      </td>
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      />
+                    </tr>
+                    <tr
+                      class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+                    >
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      >
+                        2
+                      </td>
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      >
+                        <div
+                          class="MuiStack-root css-nen11g-MuiStack-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 7rem;"
+                          />
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 3rem;"
+                          />
+                        </div>
+                      </td>
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      >
+                        <span
+                          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                          style="width: 6rem;"
+                        />
+                      </td>
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      >
+                        <span
+                          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                          style="width: 8rem;"
+                        />
+                      </td>
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      />
+                    </tr>
+                    <tr
+                      class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
+                    >
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      >
+                        3
+                      </td>
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      >
+                        <div
+                          class="MuiStack-root css-nen11g-MuiStack-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 7rem;"
+                          />
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                            style="width: 3rem;"
+                          />
+                        </div>
+                      </td>
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      >
+                        <span
+                          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                          style="width: 6rem;"
+                        />
+                      </td>
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      >
+                        <span
+                          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                          style="width: 8rem;"
+                        />
+                      </td>
+                      <td
+                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+                      />
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div
-                class="MuiStack-root css-8r4r5m-MuiStack-root"
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-xyxpsn-MuiTypography-root"
               >
-                <div
-                  class="MuiTableContainer-root css-rorn0c-MuiTableContainer-root"
-                >
-                  <table
-                    aria-label="segments"
-                    class="MuiTable-root css-1h2c9v3-MuiTable-root"
-                  >
-                    <thead
-                      class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
-                    >
-                      <tr
-                        class="MuiTableRow-root MuiTableRow-head css-1q64kqv-MuiTableRow-root"
-                      >
-                        <th
-                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-lruxsp-MuiTableCell-root"
-                          scope="col"
-                        >
-                          colNumber
-                        </th>
-                        <th
-                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-xpfpah-MuiTableCell-root"
-                          scope="col"
-                        >
-                          colTimeRange
-                        </th>
-                        <th
-                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-5rc4df-MuiTableCell-root"
-                          scope="col"
-                        >
-                          colPlayType
-                        </th>
-                        <th
-                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-rf7kbk-MuiTableCell-root"
-                          scope="col"
-                        >
-                          colTags
-                        </th>
-                        <th
-                          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-lcwcvw-MuiTableCell-root"
-                          scope="col"
-                        />
-                      </tr>
-                    </thead>
-                    <tbody
-                      class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
-                    >
-                      <tr
-                        class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
-                      >
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        >
-                          1
-                        </td>
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        >
-                          <div
-                            class="MuiStack-root css-nen11g-MuiStack-root"
-                          >
-                            <span
-                              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                              style="width: 7rem;"
-                            />
-                            <span
-                              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                              style="width: 3rem;"
-                            />
-                          </div>
-                        </td>
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        >
-                          <span
-                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                            style="width: 6rem;"
-                          />
-                        </td>
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        >
-                          <span
-                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                            style="width: 8rem;"
-                          />
-                        </td>
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        />
-                      </tr>
-                      <tr
-                        class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
-                      >
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        >
-                          2
-                        </td>
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        >
-                          <div
-                            class="MuiStack-root css-nen11g-MuiStack-root"
-                          >
-                            <span
-                              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                              style="width: 7rem;"
-                            />
-                            <span
-                              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                              style="width: 3rem;"
-                            />
-                          </div>
-                        </td>
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        >
-                          <span
-                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                            style="width: 6rem;"
-                          />
-                        </td>
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        >
-                          <span
-                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                            style="width: 8rem;"
-                          />
-                        </td>
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        />
-                      </tr>
-                      <tr
-                        class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
-                      >
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        >
-                          3
-                        </td>
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        >
-                          <div
-                            class="MuiStack-root css-nen11g-MuiStack-root"
-                          >
-                            <span
-                              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                              style="width: 7rem;"
-                            />
-                            <span
-                              class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                              style="width: 3rem;"
-                            />
-                          </div>
-                        </td>
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        >
-                          <span
-                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                            style="width: 6rem;"
-                          />
-                        </td>
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        >
-                          <span
-                            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                            style="width: 8rem;"
-                          />
-                        </td>
-                        <td
-                          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                        />
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <p
-                  class="MuiTypography-root MuiTypography-body2 css-xyxpsn-MuiTypography-root"
-                >
-                  noSegments
-                </p>
-              </div>
+                noSegments
+              </p>
             </div>
           </div>
         </div>

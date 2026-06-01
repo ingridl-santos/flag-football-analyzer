@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { Alert, Grid, Snackbar, Stack } from '@mui/material';
+import { Alert, Skeleton, Snackbar, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 export interface GameFootageTemplateProps {
@@ -22,19 +22,17 @@ export default function GameFootageTemplate({
 
   return (
     <Stack sx={{ gap: '2rem' }}>
-      <Grid container spacing="0.5rem" sx={{ alignItems: 'flex-start' }}>
-        <Grid item xs={12} lg={6}>
-          <Stack sx={{ gap: '1rem' }}>
-            {VideoPlayerHoc}
+      <Stack sx={{ gap: '2rem', maxWidth: '56rem', marginX: 'auto', width: '100%' }}>
+        <Typography variant="h2" component="h1">
+          {t('title') ?? <Skeleton sx={{ maxWidth: '12rem' }} />}
+        </Typography>
 
-            {SegmentControlsHoc}
-          </Stack>
-        </Grid>
+        {VideoPlayerHoc}
 
-        <Grid item xs={12} lg={6}>
-          {SegmentPanelHoc}
-        </Grid>
-      </Grid>
+        {SegmentControlsHoc}
+
+        {SegmentPanelHoc}
+      </Stack>
 
       <Snackbar
         open={showSegmentCreatedToast}

@@ -1,29 +1,44 @@
-import { RefObject, useCallback, useRef } from 'react';
+import { RefCallback, useCallback, useEffect, useRef, useState } from 'react';
 
 export interface UseVideoPlayerReturn {
-  videoRef: RefObject<HTMLVideoElement>;
+  videoRef: RefCallback<HTMLVideoElement>;
   seek: (time: number) => void;
   togglePlay: () => void;
 }
 
-export default function useVideoPlayer(): UseVideoPlayerReturn {
-  const videoRef = useRef<HTMLVideoElement>(null) as RefObject<HTMLVideoElement>;
+export default function useVideoPlayer(isPlaying = false): UseVideoPlayerReturn {
+  const [video, setVideo] = useState<HTMLVideoElement | null>(null);
+  const videoEl = useRef<HTMLVideoElement | null>(null);
+
+  const videoRef = useCallback((el: HTMLVideoElement | null) => {
+    videoEl.current = el;
+    setVideo(el);
+  }, []);
+
+  useEffect(() => {
+    if (!video) return;
+    if (isPlaying && video.paused) {
+      video.play().catch(() => {});
+    } else if (!isPlaying && !video.paused) {
+      video.pause();
+    }
+  }, [isPlaying, video]);
 
   const seek = useCallback((time: number) => {
-    if (videoRef.current) {
-      videoRef.current.currentTime = time;
+    if (videoEl.current) {
+      videoEl.current.currentTime = time;
     }
   }, []);
 
   const togglePlay = useCallback(() => {
-    const video = videoRef.current;
+    const v = videoEl.current;
 
-    if (!video) return;
+    if (!v) return;
 
-    if (video.paused) {
-      video.play().catch(() => {});
+    if (v.paused) {
+      v.play().catch(() => {});
     } else {
-      video.pause();
+      v.pause();
     }
   }, []);
 

@@ -36,7 +36,7 @@ function SegmentRow({
   return (
     <Paper
       variant="outlined"
-      sx={{ padding: '0.75rem 1rem' }}
+      sx={{ padding: '1rem' }}
     >
       <Stack sx={{ gap: '0.5rem' }}>
         <Stack sx={{ flexDirection: 'row', alignItems: 'center' }}>

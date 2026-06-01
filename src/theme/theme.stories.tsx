@@ -37,7 +37,6 @@ import { action } from 'storybook/actions';
 
 import { theme } from '.';
 
-// Inline color swatch
 const Swatch = ({ color }: { color?: string }) => (
   <Box
     sx={{
@@ -51,7 +50,6 @@ const Swatch = ({ color }: { color?: string }) => (
   />
 );
 
-// Only the palette colors defined in this project
 const colorOptions = ['primary', 'secondary'] as const;
 type ThemeColor = typeof colorOptions[number];
 
@@ -72,10 +70,6 @@ const meta: Meta<ThemeStoryArgs> = {
 export default meta;
 type Story = StoryObj<ThemeStoryArgs>;
 
-// ---------------------------------------------------------------------------
-// Shared layout helpers
-// ---------------------------------------------------------------------------
-
 const Section = styled(Stack)<StackProps>(() => ({
   padding: '2rem',
   gap: '1.5rem',
@@ -83,10 +77,6 @@ const Section = styled(Stack)<StackProps>(() => ({
   border: `1px solid ${alpha(theme.palette.common.black, 0.12)}`,
   borderRadius: '0.75rem',
 }));
-
-// ---------------------------------------------------------------------------
-// Typography
-// ---------------------------------------------------------------------------
 
 const typographyVariants = [
   'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
@@ -162,10 +152,6 @@ export const TypographyStyles: Story = {
   render: (args) => <TypographyStory {...args} />,
   name: 'Typography',
 };
-
-// ---------------------------------------------------------------------------
-// Colors
-// ---------------------------------------------------------------------------
 
 const ColorTable = ({ variant, children }: { variant: keyof Palette; children: ReactNode }) => (
   <Table size="small">
@@ -309,10 +295,6 @@ export const Colors: Story = {
   ),
 };
 
-// ---------------------------------------------------------------------------
-// Button — all variants including the custom `underlined` nav variant
-// ---------------------------------------------------------------------------
-
 export const ButtonStory: Story = {
   name: 'Button',
   argTypes: {
@@ -362,10 +344,6 @@ export const ButtonStory: Story = {
   ),
 };
 
-// ---------------------------------------------------------------------------
-// ButtonGroup
-// ---------------------------------------------------------------------------
-
 export const ButtonGroupStory: Story = {
   name: 'ButtonGroup',
   argTypes: {
@@ -394,10 +372,6 @@ export const ButtonGroupStory: Story = {
   ),
 };
 
-// ---------------------------------------------------------------------------
-// Paper — custom border-radius (0.75rem)
-// ---------------------------------------------------------------------------
-
 export const PaperStory: Story = {
   name: 'Paper',
   render: () => (
@@ -416,10 +390,6 @@ export const PaperStory: Story = {
     </Stack>
   ),
 };
-
-// ---------------------------------------------------------------------------
-// Skeleton — wave animation (default override)
-// ---------------------------------------------------------------------------
 
 export const SkeletonStory: Story = {
   name: 'Skeleton',
@@ -443,10 +413,6 @@ export const SkeletonStory: Story = {
     </Stack>
   ),
 };
-
-// ---------------------------------------------------------------------------
-// Chip — default color: primary
-// ---------------------------------------------------------------------------
 
 export const ChipStory: Story = {
   name: 'Chip',
@@ -480,10 +446,6 @@ export const ChipStory: Story = {
   ),
 };
 
-// ---------------------------------------------------------------------------
-// AppBar + Toolbar — elevation 0, static, inherit color; toolbar gutters off
-// ---------------------------------------------------------------------------
-
 export const AppBarStory: Story = {
   name: 'AppBar',
   render: () => (
@@ -506,10 +468,6 @@ export const AppBarStory: Story = {
     </Stack>
   ),
 };
-
-// ---------------------------------------------------------------------------
-// Dialog — rounded corners (0.5rem), DialogTitle defaults to h2 variant
-// ---------------------------------------------------------------------------
 
 export const DialogStory: Story = {
   name: 'Dialog',

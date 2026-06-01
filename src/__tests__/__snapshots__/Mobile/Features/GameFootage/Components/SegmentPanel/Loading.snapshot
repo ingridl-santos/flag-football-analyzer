@@ -12,7 +12,7 @@
           class="MuiStack-root css-u904fn-MuiStack-root"
         >
           <h2
-            class="MuiTypography-root MuiTypography-h6 css-okrrt8-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 css-1kqow15-MuiTypography-root"
           >
             <span
               class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
@@ -57,6 +57,9 @@
             </button>
           </div>
         </div>
+        <hr
+          class="MuiDivider-root MuiDivider-fullWidth css-1lg1g87-MuiDivider-root"
+        />
         <div
           class="MuiStack-root css-8r4r5m-MuiStack-root"
         >
@@ -70,7 +73,7 @@
                 class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
               >
                 <tr
-                  class="MuiTableRow-root MuiTableRow-head css-1q64kqv-MuiTableRow-root"
+                  class="MuiTableRow-root MuiTableRow-head css-1sjjssz-MuiTableRow-root"
                 >
                   <th
                     class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-lruxsp-MuiTableCell-root"
