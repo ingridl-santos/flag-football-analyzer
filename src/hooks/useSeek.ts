@@ -1,10 +1,11 @@
 import { useEffect, useRef } from 'react';
 
 /**
- * Fires `seek(seekTo)` and `onSeekConsumed()` whenever `seekTo` transitions
- * from null/undefined to a numeric value. Both callbacks are held in refs so
- * the effect is driven solely by `seekTo` — callers do not need to memoize
- * their `seek` or `onSeekConsumed` functions.
+ * Fires `seek(seekTo)` and `onSeekConsumed()` whenever `seekTo` changes to a
+ * non-null/undefined numeric value (i.e. on every `seekTo` change while it is
+ * set, including transitions between different numbers). Both callbacks are
+ * held in refs so the effect is driven solely by `seekTo` — callers do not
+ * need to memoize their `seek` or `onSeekConsumed` functions.
  */
 export function useSeek(
   seekTo: number | null | undefined,

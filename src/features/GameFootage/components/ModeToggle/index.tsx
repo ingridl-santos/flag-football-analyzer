@@ -1,6 +1,6 @@
 import ContentCutIcon from '@mui/icons-material/ContentCut';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
-import { ToggleButton, ToggleButtonGroup } from '@mui/material';
+import { Skeleton, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import type { AnalysisMode } from '../../../../redux/AnalysisSlice';
@@ -29,13 +29,13 @@ export default function ModeToggle({ videoLoaded, mode, onModeChange }: ModeTogg
       <ToggleButton value="cut">
         <ContentCutIcon sx={{ marginRight: '0.5rem', fontSize: '1rem' }} aria-hidden="true" />
 
-        {t('cutMode')}
+        {t('cutMode') ?? <Skeleton width="2rem" />}
       </ToggleButton>
 
       <ToggleButton value="tag">
         <LocalOfferIcon sx={{ marginRight: '0.5rem', fontSize: '1rem' }} aria-hidden="true" />
 
-        {t('tagMode')}
+        {t('tagMode') ?? <Skeleton width="2rem" />}
       </ToggleButton>
     </ToggleButtonGroup>
   );

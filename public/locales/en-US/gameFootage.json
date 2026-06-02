@@ -48,6 +48,7 @@
   "exportZipUnavailableYoutube": "ZIP export is not available for YouTube videos. Upload an MP4 file to cut and download segments.",
   "playType": "Play Type",
   "playTypeNone": "None",
+  "tagsNone": "None",
   "playTypes": {
     "Pass": "Pass",
     "Run": "Run",

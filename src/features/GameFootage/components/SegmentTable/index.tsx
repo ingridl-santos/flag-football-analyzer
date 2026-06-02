@@ -206,7 +206,7 @@ const SegmentRow = memo(function SegmentRow({
                     ))
                   : (
                       <Typography variant="body2" color="text.disabled">
-                        {t('playTypeNone')}
+                        {t('tagsNone')}
                       </Typography>
                     )}
               </Stack>
