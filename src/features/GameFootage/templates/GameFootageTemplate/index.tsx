@@ -1,20 +1,24 @@
-import { ReactNode } from 'react';
+import { ReactNode, RefObject } from 'react';
 
-import { Alert, Skeleton, Snackbar, Stack, Typography } from '@mui/material';
+import { Alert, Box, Skeleton, Snackbar, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 export interface GameFootageTemplateProps {
   VideoPlayerHoc: ReactNode;
+  ModeToggleHoc: ReactNode;
   SegmentControlsHoc: ReactNode;
   SegmentPanelHoc: ReactNode;
+  videoPlayerRef?: RefObject<HTMLDivElement>;
   showSegmentCreatedToast: boolean;
   onCloseToast?: () => void;
 }
 
 export default function GameFootageTemplate({
   VideoPlayerHoc,
+  ModeToggleHoc,
   SegmentControlsHoc,
   SegmentPanelHoc,
+  videoPlayerRef,
   showSegmentCreatedToast,
   onCloseToast,
 }: GameFootageTemplateProps) {
@@ -27,7 +31,11 @@ export default function GameFootageTemplate({
           {t('title') ?? <Skeleton sx={{ maxWidth: '12rem' }} />}
         </Typography>
 
-        {VideoPlayerHoc}
+        <Box ref={videoPlayerRef}>
+          {VideoPlayerHoc}
+        </Box>
+
+        {ModeToggleHoc}
 
         {SegmentControlsHoc}
 

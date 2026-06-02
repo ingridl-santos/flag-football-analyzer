@@ -52,5 +52,8 @@
     "Pass": "Pass",
     "Run": "Run",
     "Defense": "Defense"
-  }
+  },
+  "cutMode": "Cut",
+  "tagMode": "Tag",
+  "modeToggleAriaLabel": "Analysis mode"
 }

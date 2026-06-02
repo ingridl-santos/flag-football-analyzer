@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import useDocumentTitle from '../../../hooks/useDocumentTitle';
 import { clearBreadcrumbs, setBreadcrumbs } from '../../../redux/BreadcrumbSlice';
 import { useAppDispatch } from '../../../redux/hooks';
+import ModeToggleHoc from '../hocs/ModeToggleHoc';
 import SegmentControlsHoc from '../hocs/SegmentControlsHoc';
 import SegmentPanelHoc from '../hocs/SegmentPanelHoc';
 import VideoPlayerHoc from '../hocs/VideoPlayerHoc';
@@ -15,6 +16,7 @@ export default function GameFootagePage() {
   const { t: tGameFootage } = useTranslation('gameFootage');
   const dispatch = useAppDispatch();
   const videoFileRef = useRef<File | null>(null);
+  const videoPlayerRef = useRef<HTMLDivElement>(null);
   const [showSegmentCreatedToast, setShowSegmentCreatedToast] = useState(false);
 
   useDocumentTitle(t('gameFootage'));
@@ -37,10 +39,12 @@ export default function GameFootagePage() {
   return (
     <GameFootageTemplate
       VideoPlayerHoc={<VideoPlayerHoc videoFileRef={videoFileRef} />}
+      ModeToggleHoc={<ModeToggleHoc />}
       SegmentControlsHoc={(
         <SegmentControlsHoc onSegmentCreated={handleSegmentCreated} />
       )}
-      SegmentPanelHoc={<SegmentPanelHoc videoFileRef={videoFileRef} />}
+      SegmentPanelHoc={<SegmentPanelHoc videoFileRef={videoFileRef} videoPlayerRef={videoPlayerRef} />}
+      videoPlayerRef={videoPlayerRef}
       showSegmentCreatedToast={showSegmentCreatedToast}
       onCloseToast={handleCloseToast}
     />

@@ -11,99 +11,149 @@
         title
       </h1>
       <div
-        class="MuiStack-root css-8r4r5m-MuiStack-root"
+        class="MuiBox-root css-0"
       >
         <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1ljvscb-MuiPaper-root-MuiCard-root"
+          class="MuiStack-root css-8r4r5m-MuiStack-root"
         >
           <div
-            class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1ljvscb-MuiPaper-root-MuiCard-root"
           >
             <div
-              class="MuiStack-root css-8r4r5m-MuiStack-root"
+              class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
             >
-              <h6
-                class="MuiTypography-root MuiTypography-subtitle2 css-1ab93ov-MuiTypography-root"
-              >
-                game-footage.mp4
-              </h6>
               <div
                 class="MuiStack-root css-8r4r5m-MuiStack-root"
               >
+                <h6
+                  class="MuiTypography-root MuiTypography-subtitle2 css-1ab93ov-MuiTypography-root"
+                >
+                  game-footage.mp4
+                </h6>
                 <div
-                  class="MuiBox-root css-1443bnk"
+                  class="MuiStack-root css-8r4r5m-MuiStack-root"
                 >
-                  <video
-                    src="mock://game-footage.mp4"
-                    style="width: 100%; height: 100%; display: block; object-fit: contain;"
+                  <div
+                    class="MuiBox-root css-1443bnk"
                   >
-                    <track
-                      kind="captions"
-                    />
-                  </video>
-                </div>
-                <span
-                  class="MuiSlider-root MuiSlider-colorPrimary MuiSlider-sizeSmall css-1lbe5cq-MuiSlider-root"
-                >
-                  <span
-                    class="MuiSlider-rail css-7o8aqz-MuiSlider-rail"
-                  />
-                  <span
-                    class="MuiSlider-track css-nl6333-MuiSlider-track"
-                    style="left: 0%; width: 23.333333333333332%;"
-                  />
-                  <span
-                    class="MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary css-1k6vk9i-MuiSlider-thumb"
-                    data-index="0"
-                    style="left: 23.333333333333332%;"
-                  >
-                    <input
-                      aria-label="timeline"
-                      aria-orientation="horizontal"
-                      aria-valuemax="180"
-                      aria-valuemin="0"
-                      aria-valuenow="42"
-                      data-index="0"
-                      max="180"
-                      min="0"
-                      step="0.1"
-                      style="border: 0px; height: 100%; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 100%; direction: ltr;"
-                      type="range"
-                      value="42"
-                    />
-                  </span>
-                </span>
-                <div
-                  class="MuiStack-root css-1qgb5gw-MuiStack-root"
-                >
-                  <button
-                    aria-label="play"
-                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
-                    tabindex="0"
-                    type="button"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                      data-testid="PlayArrowIcon"
-                      focusable="false"
-                      viewBox="0 0 24 24"
+                    <video
+                      src="mock://game-footage.mp4"
+                      style="width: 100%; height: 100%; display: block; object-fit: contain;"
                     >
-                      <path
-                        d="M8 5v14l11-7z"
+                      <track
+                        kind="captions"
                       />
-                    </svg>
-                  </button>
-                  <p
-                    class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+                    </video>
+                  </div>
+                  <span
+                    class="MuiSlider-root MuiSlider-colorPrimary MuiSlider-sizeSmall css-1lbe5cq-MuiSlider-root"
                   >
-                    0:42 / 3:00
-                  </p>
+                    <span
+                      class="MuiSlider-rail css-7o8aqz-MuiSlider-rail"
+                    />
+                    <span
+                      class="MuiSlider-track css-nl6333-MuiSlider-track"
+                      style="left: 0%; width: 23.333333333333332%;"
+                    />
+                    <span
+                      class="MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary MuiSlider-thumb MuiSlider-thumbSizeSmall MuiSlider-thumbColorPrimary css-1k6vk9i-MuiSlider-thumb"
+                      data-index="0"
+                      style="left: 23.333333333333332%;"
+                    >
+                      <input
+                        aria-label="timeline"
+                        aria-orientation="horizontal"
+                        aria-valuemax="180"
+                        aria-valuemin="0"
+                        aria-valuenow="42"
+                        data-index="0"
+                        max="180"
+                        min="0"
+                        step="0.1"
+                        style="border: 0px; height: 100%; margin: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 100%; direction: ltr;"
+                        type="range"
+                        value="42"
+                      />
+                    </span>
+                  </span>
+                  <div
+                    class="MuiStack-root css-1qgb5gw-MuiStack-root"
+                  >
+                    <button
+                      aria-label="play"
+                      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="PlayArrowIcon"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M8 5v14l11-7z"
+                        />
+                      </svg>
+                    </button>
+                    <p
+                      class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+                    >
+                      0:42 / 3:00
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div
+        aria-label="modeToggleAriaLabel"
+        class="MuiToggleButtonGroup-root css-yhcl14-MuiToggleButtonGroup-root"
+        role="group"
+      >
+        <button
+          aria-pressed="true"
+          class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-w65of8-MuiButtonBase-root-MuiToggleButton-root"
+          tabindex="0"
+          type="button"
+          value="cut"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yhwsjn-MuiSvgIcon-root"
+            data-testid="ContentCutIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M9.64 7.64c.23-.5.36-1.05.36-1.64 0-2.21-1.79-4-4-4S2 3.79 2 6s1.79 4 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1zM6 8c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2m0 12c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2m6-7.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5M19 3l-6 6 2 2 7-7V3z"
+            />
+          </svg>
+          cutMode
+        </button>
+        <button
+          aria-pressed="false"
+          class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-w65of8-MuiButtonBase-root-MuiToggleButton-root"
+          tabindex="0"
+          type="button"
+          value="tag"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yhwsjn-MuiSvgIcon-root"
+            data-testid="LocalOfferIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m21.41 11.58-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42M5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7"
+            />
+          </svg>
+          tagMode
+        </button>
       </div>
       <div
         class="MuiStack-root css-8r4r5m-MuiStack-root"
@@ -232,10 +282,6 @@
                       >
                         colTags
                       </th>
-                      <th
-                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-lcwcvw-MuiTableCell-root"
-                        scope="col"
-                      />
                     </tr>
                   </thead>
                   <tbody

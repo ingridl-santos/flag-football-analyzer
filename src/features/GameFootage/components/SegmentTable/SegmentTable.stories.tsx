@@ -45,6 +45,13 @@ export const WithActiveSegment: Story = {
   },
 };
 
+export const ReadOnly: Story = {
+  args: {
+    ...WithSegments.args,
+    readOnly: true,
+  },
+};
+
 export const Loading: Story = {
   args: {
     segments: [],

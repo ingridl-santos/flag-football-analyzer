@@ -18,6 +18,7 @@ export interface VideoPlayerSectionProps {
   currentTime: number;
   duration: number;
   isPlaying: boolean;
+  seekTo?: number | null;
   segments: Segment[];
   activeSegmentId: string | null;
   onFileSelect?: (file: File) => void;
@@ -26,6 +27,7 @@ export interface VideoPlayerSectionProps {
   onDurationChange?: (duration: number) => void;
   onPlayStateChange?: (isPlaying: boolean) => void;
   onSeek?: (time: number) => void;
+  onSeekConsumed?: () => void;
   onSegmentClick?: (id: string) => void;
 }
 
@@ -37,6 +39,7 @@ export default function VideoPlayerSection({
   currentTime,
   duration,
   isPlaying,
+  seekTo,
   segments,
   activeSegmentId,
   onFileSelect,
@@ -45,6 +48,7 @@ export default function VideoPlayerSection({
   onDurationChange,
   onPlayStateChange,
   onSeek,
+  onSeekConsumed,
   onSegmentClick,
 }: VideoPlayerSectionProps) {
   const { t } = useTranslation('gameFootage');
@@ -112,9 +116,11 @@ export default function VideoPlayerSection({
           currentTime={currentTime}
           duration={duration}
           isPlaying={isPlaying}
+          seekTo={seekTo}
           onTimeUpdate={onTimeUpdate ?? (() => {})}
           onDurationChange={onDurationChange ?? (() => {})}
           onPlayStateChange={onPlayStateChange ?? (() => {})}
+          onSeekConsumed={onSeekConsumed}
         />
       )
     : (
@@ -123,10 +129,12 @@ export default function VideoPlayerSection({
           currentTime={currentTime}
           duration={duration}
           isPlaying={isPlaying}
+          seekTo={seekTo}
           onTimeUpdate={onTimeUpdate ?? (() => {})}
           onDurationChange={onDurationChange ?? (() => {})}
           onPlayStateChange={onPlayStateChange ?? (() => {})}
           onSeek={onSeek ?? (() => {})}
+          onSeekConsumed={onSeekConsumed}
         />
       );
 
