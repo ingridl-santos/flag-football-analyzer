@@ -1,9 +1,10 @@
 import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { Box, IconButton, Slider, Stack, Typography } from '@mui/material';
-import { SyntheticEvent, useEffect, useRef } from 'react';
+import { SyntheticEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useSeek } from '../../hooks/useSeek';
 import useVideoPlayer from '../../hooks/useVideoPlayer';
 import { formatTime } from '../../utils/formatTime';
 
@@ -35,16 +36,7 @@ export default function VideoPlayer({
   const { t } = useTranslation('gameFootage');
   const { videoRef, seek, togglePlay } = useVideoPlayer(isPlaying);
 
-  const onSeekConsumedRef = useRef(onSeekConsumed);
-
-  onSeekConsumedRef.current = onSeekConsumed;
-
-  useEffect(() => {
-    if (seekTo != null) {
-      seek(seekTo);
-      onSeekConsumedRef.current?.();
-    }
-  }, [seekTo, seek]);
+  useSeek(seekTo, seek, onSeekConsumed);
 
   const handleTimeUpdate = (e: SyntheticEvent<HTMLVideoElement>) => {
     onTimeUpdate(e.currentTarget.currentTime);

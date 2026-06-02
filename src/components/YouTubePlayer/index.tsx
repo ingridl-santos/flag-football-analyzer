@@ -1,9 +1,9 @@
 import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { Box, IconButton, Stack, Typography } from '@mui/material';
-import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useSeek } from '../../hooks/useSeek';
 import useYouTubePlayer from '../../hooks/useYouTubePlayer';
 import { formatTime } from '../../utils/formatTime';
 
@@ -39,16 +39,7 @@ export default function YouTubePlayer({
     isPlaying,
   );
 
-  const onSeekConsumedRef = useRef(onSeekConsumed);
-
-  onSeekConsumedRef.current = onSeekConsumed;
-
-  useEffect(() => {
-    if (seekTo != null) {
-      seek(seekTo);
-      onSeekConsumedRef.current?.();
-    }
-  }, [seekTo, seek]);
+  useSeek(seekTo, seek, onSeekConsumed);
 
   const PlayPauseIcon = isPlaying ? PauseIcon : PlayArrowIcon;
   const playPauseLabel = isPlaying ? (t('pause') ?? 'Pause') : (t('play') ?? 'Play');

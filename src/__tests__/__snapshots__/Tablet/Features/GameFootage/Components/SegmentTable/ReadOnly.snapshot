@@ -117,9 +117,6 @@
                 </div>
               </div>
             </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-            />
           </tr>
           <tr
             class="MuiTableRow-root css-4wyatn-MuiTableRow-root"
@@ -189,9 +186,6 @@
                 </div>
               </div>
             </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-            />
           </tr>
           <tr
             class="MuiTableRow-root css-4wyatn-MuiTableRow-root"
@@ -261,9 +255,6 @@
                 </div>
               </div>
             </td>
-            <td
-              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-            />
           </tr>
         </tbody>
       </table>

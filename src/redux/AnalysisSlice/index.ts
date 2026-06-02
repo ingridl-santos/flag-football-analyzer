@@ -2,7 +2,8 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import type { RootState } from '../store';
 
-export type AnalysisMode = 'cut' | 'tag';
+export const ANALYSIS_MODES = ['cut', 'tag'] as const;
+export type AnalysisMode = typeof ANALYSIS_MODES[number];
 
 interface AnalysisState {
   mode: AnalysisMode;

@@ -70,6 +70,10 @@ export default function VideoPlayerHoc({ videoFileRef }: VideoPlayerHocProps) {
     dispatch(setCurrentTime(time));
   }, [dispatch]);
 
+  const handleSeekConsumed = useCallback(() => {
+    dispatch(consumeSeek());
+  }, [dispatch]);
+
   return (
     <VideoPlayerSection
       videoType={videoState.videoType}
@@ -88,7 +92,7 @@ export default function VideoPlayerHoc({ videoFileRef }: VideoPlayerHocProps) {
       onDurationChange={handleDurationChange}
       onPlayStateChange={handlePlayStateChange}
       onSeek={handleSeek}
-      onSeekConsumed={() => dispatch(consumeSeek())}
+      onSeekConsumed={handleSeekConsumed}
       onSegmentClick={handleSegmentClick}
     />
   );

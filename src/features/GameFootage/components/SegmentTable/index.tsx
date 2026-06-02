@@ -18,7 +18,7 @@ import {
   Typography,
 } from '@mui/material';
 import { alpha } from '@mui/material/styles';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Dialog from '../../../../components/Dialog';
@@ -40,7 +40,7 @@ export interface SegmentTableProps {
 
 const SKELETON_ROWS = 3;
 
-function SkeletonRow({ index }: { index: number }) {
+function SkeletonRow({ index, readOnly }: { index: number; readOnly?: boolean }) {
   return (
     <TableRow>
       <TableCell>{index + 1}</TableCell>
@@ -61,7 +61,7 @@ function SkeletonRow({ index }: { index: number }) {
         <Skeleton width="8rem" />
       </TableCell>
 
-      <TableCell />
+      {!readOnly && <TableCell />}
     </TableRow>
   );
 }
@@ -70,26 +70,38 @@ interface SegmentRowProps {
   segment: Segment;
   index: number;
   readOnly?: boolean;
-  activeSegmentId?: string | null;
+  isActive: boolean;
   onSetPlayType?: (id: string, playType: string) => void;
   onSetTags?: (id: string, tags: string[]) => void;
   onSegmentClick?: (id: string) => void;
   onDeleteRequest: (id: string) => void;
-  rowRef: (el: HTMLTableRowElement | null) => void;
+  rowRefRegistry: Record<string, HTMLTableRowElement | null>;
 }
 
-function SegmentRow({
+const SegmentRow = memo(function SegmentRow({
   segment,
   index,
   readOnly,
-  activeSegmentId,
+  isActive,
   onSetPlayType,
   onSetTags,
   onSegmentClick,
   onDeleteRequest,
-  rowRef,
+  rowRefRegistry,
 }: SegmentRowProps) {
   const { t } = useTranslation('gameFootage');
+
+  const handleRef = useCallback((el: HTMLTableRowElement | null) => {
+    rowRefRegistry[segment.id] = el;
+  }, [rowRefRegistry, segment.id]);
+
+  const handleSegmentClick = useCallback(() => {
+    onSegmentClick?.(segment.id);
+  }, [onSegmentClick, segment.id]);
+
+  const handleDeleteRequest = useCallback(() => {
+    onDeleteRequest(segment.id);
+  }, [onDeleteRequest, segment.id]);
 
   const { options, autoSet } = useMemo(() => {
     const { auto, more } = suggestTags(segment.playType ?? '', segment.duration);
@@ -109,9 +121,9 @@ function SegmentRow({
 
   return (
     <TableRow
-      ref={rowRef}
+      ref={handleRef}
       sx={{
-        backgroundColor: segment.id === activeSegmentId
+        backgroundColor: isActive
           ? (theme) => alpha(theme.palette.primary.main, 0.12)
           : undefined,
         transition: 'background-color 200ms ease',
@@ -130,7 +142,7 @@ function SegmentRow({
         {onSegmentClick
           ? (
               <ButtonBase
-                onClick={() => onSegmentClick(segment.id)}
+                onClick={handleSegmentClick}
                 aria-label={seekAriaLabel}
                 sx={{
                   display: 'flex',
@@ -194,7 +206,7 @@ function SegmentRow({
                     ))
                   : (
                       <Typography variant="body2" color="text.disabled">
-                        —
+                        {t('playTypeNone')}
                       </Typography>
                     )}
               </Stack>
@@ -249,20 +261,20 @@ function SegmentRow({
             )}
       </TableCell>
 
-      <TableCell>
-        {!readOnly && (
+      {!readOnly && (
+        <TableCell>
           <IconButton
             size="small"
             aria-label={t('deleteSegment')}
-            onClick={() => onDeleteRequest(segment.id)}
+            onClick={handleDeleteRequest}
           >
             <DeleteIcon fontSize="small" />
           </IconButton>
-        )}
-      </TableCell>
+        </TableCell>
+      )}
     </TableRow>
   );
-}
+});
 
 export default function SegmentTable({
   segments,
@@ -284,14 +296,16 @@ export default function SegmentTable({
     }
   }, [activeSegmentId]);
 
-  const handleDeleteClick = (id: string) => setPendingDeleteId(id);
+  const handleDeleteClick = useCallback((id: string) => {
+    setPendingDeleteId(id);
+  }, []);
 
-  const handleConfirmDelete = () => {
+  const handleConfirmDelete = useCallback(() => {
     if (pendingDeleteId) onDelete?.(pendingDeleteId);
     setPendingDeleteId(null);
-  };
+  }, [onDelete, pendingDeleteId]);
 
-  const handleCancelDelete = () => setPendingDeleteId(null);
+  const handleCancelDelete = useCallback(() => setPendingDeleteId(null), []);
 
   return (
     <Stack sx={{ gap: '1rem' }}>
@@ -338,7 +352,7 @@ export default function SegmentTable({
           <TableBody>
             {segments.length === 0
               ? Array.from({ length: SKELETON_ROWS }, (_, i) => (
-                  <SkeletonRow key={i} index={i} />
+                  <SkeletonRow key={i} index={i} readOnly={readOnly} />
                 ))
               : segments.map((segment, index) => (
                   <SegmentRow
@@ -346,12 +360,12 @@ export default function SegmentTable({
                     segment={segment}
                     index={index}
                     readOnly={readOnly}
-                    activeSegmentId={activeSegmentId}
+                    isActive={segment.id === activeSegmentId}
                     onSetPlayType={onSetPlayType}
                     onSetTags={onSetTags}
                     onSegmentClick={onSegmentClick}
                     onDeleteRequest={handleDeleteClick}
-                    rowRef={(el) => { rowRefs.current[segment.id] = el; }}
+                    rowRefRegistry={rowRefs.current}
                   />
                 ))}
           </TableBody>

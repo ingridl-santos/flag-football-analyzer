@@ -327,9 +327,6 @@
                           style="width: 8rem;"
                         />
                       </td>
-                      <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                      />
                     </tr>
                     <tr
                       class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
@@ -371,9 +368,6 @@
                           style="width: 8rem;"
                         />
                       </td>
-                      <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                      />
                     </tr>
                     <tr
                       class="MuiTableRow-root css-1q64kqv-MuiTableRow-root"
@@ -415,9 +409,6 @@
                           style="width: 8rem;"
                         />
                       </td>
-                      <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                      />
                     </tr>
                   </tbody>
                 </table>

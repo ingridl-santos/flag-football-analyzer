@@ -1,4 +1,4 @@
-import { MutableRefObject, RefObject, useCallback } from 'react';
+import { RefObject, useCallback } from 'react';
 
 import { useActiveSegmentId } from '../../../hooks/useActiveSegmentId';
 import { useVideoExport } from '../../../hooks/useVideoExport';
@@ -10,12 +10,12 @@ import {
   setPlayType,
   setTags,
 } from '../../../redux/SegmentSlice';
-import { requestSeek, selectVideoState, setIsPlaying } from '../../../redux/VideoSlice';
+import { requestSeek, selectVideoState, setCurrentTime, setIsPlaying } from '../../../redux/VideoSlice';
 import { downloadFile, segmentsToCsv, segmentsToJson } from '../../../utils/exportSegments';
 import SegmentPanel from '../components/SegmentPanel';
 
 export interface SegmentPanelHocProps {
-  videoFileRef: MutableRefObject<File | null>;
+  videoFileRef: RefObject<File>;
   videoPlayerRef: RefObject<HTMLDivElement>;
 }
 
@@ -34,6 +34,7 @@ export default function SegmentPanelHoc({ videoFileRef, videoPlayerRef }: Segmen
     if (!segment) return;
 
     dispatch(requestSeek(segment.start));
+    dispatch(setCurrentTime(segment.start));
 
     if (mode === 'tag') dispatch(setIsPlaying(true));
 
