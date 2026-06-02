@@ -42,6 +42,8 @@
   "tagSuggestionsShowMore": "Show {{count}} more",
   "addTagSuggestion": "Add {{tag}}",
   "exportZip": "Export ZIP",
+  "exportZipError": "Export failed. Please try again. If the problem persists, try re-uploading your video.",
+  "exportZipErrorDetails": "Technical details",
   "exportZipProgress": "Exporting… {{progress}}%",
   "exportZipUnavailableYoutube": "ZIP export is not available for YouTube videos. Upload an MP4 file to cut and download segments.",
   "playType": "Play Type",

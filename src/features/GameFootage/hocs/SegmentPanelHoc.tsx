@@ -21,7 +21,7 @@ export default function SegmentPanelHoc({ videoFileRef }: SegmentPanelHocProps) 
   const dispatch = useAppDispatch();
   const { videoType, currentTime } = useAppSelector(selectVideoState);
   const { segments } = useAppSelector(selectSegmentState);
-  const { exportZip, isExporting, exportProgress } = useVideoExport();
+  const { exportZip, isExporting, exportProgress, exportError } = useVideoExport();
 
   const activeSegmentId = useActiveSegmentId(segments, currentTime);
 
@@ -64,6 +64,7 @@ export default function SegmentPanelHoc({ videoFileRef }: SegmentPanelHocProps) 
       activeSegmentId={activeSegmentId}
       isExportingZip={isExporting}
       exportZipProgress={exportProgress}
+      exportError={exportError}
       onDelete={handleDelete}
       onSetPlayType={handleSetPlayType}
       onSetTags={handleSetTags}
