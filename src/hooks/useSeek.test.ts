@@ -75,4 +75,22 @@ describe('useSeek', () => {
     expect(seek).not.toHaveBeenCalled();
     expect(onSeekConsumed).not.toHaveBeenCalled();
   });
+
+  it('does not seek again when seek identity changes but seekTo stays the same', () => {
+    const seek1 = vi.fn();
+    const seek2 = vi.fn();
+
+    const { rerender } = renderHook(
+      ({ seekFn }: { seekFn: (t: number) => void }) => useSeek(42, seekFn, undefined),
+      { initialProps: { seekFn: seek1 } },
+    );
+
+    expect(seek1).toHaveBeenCalledTimes(1);
+
+    rerender({ seekFn: seek2 });
+
+    // seekTo has not changed, so the effect must not fire again
+    expect(seek1).toHaveBeenCalledTimes(1);
+    expect(seek2).not.toHaveBeenCalled();
+  });
 });
