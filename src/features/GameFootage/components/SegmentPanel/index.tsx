@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, CircularProgress, Divider, Skeleton, Stack, Typography } from '@mui/material';
+import { Alert, Button, Card, CardContent, CircularProgress, Divider, Skeleton, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import { type Segment } from '../../../../redux/SegmentSlice';
@@ -10,6 +10,7 @@ export interface SegmentPanelProps {
   activeSegmentId: string | null;
   isExportingZip: boolean;
   exportZipProgress: number;
+  exportError?: string | null;
   onDelete?: (id: string) => void;
   onSetPlayType?: (id: string, playType: string) => void;
   onSetTags?: (id: string, tags: string[]) => void;
@@ -25,6 +26,7 @@ export default function SegmentPanel({
   activeSegmentId,
   isExportingZip,
   exportZipProgress,
+  exportError,
   onDelete,
   onSetPlayType,
   onSetTags,
@@ -99,6 +101,30 @@ export default function SegmentPanel({
           </Stack>
 
           <Divider />
+
+          {exportError && (
+            <Alert severity="error">
+              <Stack sx={{ gap: '0.25rem' }}>
+                <span>{t('exportZipError')}</span>
+
+                <details>
+                  <summary>
+                    <Typography variant="caption">
+                      {t('exportZipErrorDetails')}
+                    </Typography>
+                  </summary>
+
+                  <Typography
+                    variant="caption"
+                    component="pre"
+                    sx={{ wordBreak: 'break-word', whiteSpace: 'pre-wrap', fontFamily: 'monospace' }}
+                  >
+                    {exportError}
+                  </Typography>
+                </details>
+              </Stack>
+            </Alert>
+          )}
 
           {videoType === 'youtube' && (
             <Typography variant="caption" color="text.secondary">

@@ -66,6 +66,13 @@ export const ExportingZip: Story = {
   },
 };
 
+export const ExportError: Story = {
+  args: {
+    ...WithSegments.args,
+    exportError: 'Failed to load FFmpeg WASM: network error',
+  },
+};
+
 export const Loading: Story = {
   parameters: {
     noTranslations: true,

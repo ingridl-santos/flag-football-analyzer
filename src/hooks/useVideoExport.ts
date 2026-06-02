@@ -3,7 +3,7 @@ import { zipSync } from 'fflate';
 import { useCallback, useRef, useState } from 'react';
 
 import { type Segment } from '../redux/SegmentSlice';
-import { segmentsToCsv, segmentsToJson } from '../utils/exportSegments';
+import { formatSegmentId, segmentsToCsv, segmentsToJson } from '../utils/exportSegments';
 
 export interface UseVideoExportResult {
   exportZip: (file: File, segments: Segment[]) => Promise<void>;
@@ -33,6 +33,8 @@ export function useVideoExport(): UseVideoExportResult {
     const instance = createFFmpeg({
       // Served by Vite's copyFFmpegCore plugin from @ffmpeg/core-st/dist/
       corePath: '/vendor/ffmpeg/ffmpeg-core.js',
+      // core-st exports 'main', not 'proxy_main' (which is the multi-threaded default)
+      mainName: 'main',
       log: false,
     });
 
@@ -55,8 +57,7 @@ export function useVideoExport(): UseVideoExportResult {
 
       for (let i = 0; i < segments.length; i++) {
         const segment = segments[i];
-        const padded = String(i + 1).padStart(3, '0');
-        const outName = `segment_${padded}.mp4`;
+        const outName = `${formatSegmentId(i)}.mp4`;
 
         // -ss before -i = fast input seek to nearest keyframe
         // -t = duration to capture (segment.duration = end - start)
