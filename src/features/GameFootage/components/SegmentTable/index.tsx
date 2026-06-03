@@ -333,7 +333,7 @@ export default function SegmentTable({
       <Dialog
         open={pendingDeleteId !== null}
         title={t('deleteConfirmTitle') ?? <Skeleton width="9rem" />}
-        closeButtonTextLabel={t('close', { ns: 'common' }) ?? 'Close'}
+        closeButtonTextLabel={t('close', { ns: 'common', defaultValue: 'Close' })}
         content={(
           <Typography variant="body2">
             {t('deleteConfirmMessage') ?? <Skeleton width="13rem" />}

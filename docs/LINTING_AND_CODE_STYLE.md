@@ -43,7 +43,7 @@ Defined in `eslint.config.js` using the **ESLint v9 flat config** format (via `d
 
 | Rule | Setting | Notes |
 |---|---|---|
-| `react/react-in-jsx-scope` | Off | Not needed with React 19's JSX transform |
+| `react/react-in-jsx-scope` | Off | Not needed with React 18's JSX transform |
 | `react/require-default-props` | Off | TypeScript handles default values |
 | `react/no-unescaped-entities` | Off | Allowed |
 | `react/jsx-props-no-spreading` | Off | Spreading is common with MUI |

@@ -16,13 +16,13 @@ npm run storybook:build   # Build to dist/storybook
 Stories are **co-located** with the components or templates they document:
 
 ```
-src/features/Layout/components/Header/
+src/features/GameFootage/components/VideoPlayerSection/
 ├── index.tsx
-└── Header.stories.tsx
+└── VideoPlayerSection.stories.tsx
 
-src/features/Assessment/templates/AssessmentTemplate/
+src/features/GameFootage/templates/GameFootageTemplate/
 ├── index.tsx
-└── AssessmentTemplate.stories.tsx
+└── GameFootageTemplate.stories.tsx
 ```
 
 Naming convention: `ComponentName.stories.tsx`
@@ -67,10 +67,14 @@ Titles use `/` separators with spaces around them for grouping in the Storybook 
 
 | Location | Title Format | Example |
 |---|---|---|
-| Components | `'Components / ComponentName'` | `'Components / Header'` |
-| Features | `'Features / FeatureName / TemplateName'` | `'Features / Assessment / Assessment Template'` |
+| Shared components | `'Components / ComponentName'` | `'Components / YouTube Player'` |
+| Feature templates (simple) | `'Features / FeatureName / Template Name'` | `'Features / Home / Home Template'` |
+| Feature templates (complex) | `'Features / FeatureName / Templates / Template Name'` | `'Features / Game Footage / Templates / Game Footage Template'` |
+| Feature components (complex) | `'Features / FeatureName / Components / Component Name'` | `'Features / Layout / Components / Header'` |
 | Theme | `'Theme / ThemeName'` | `'Theme / Theme'` |
-| Logos | `'Components / Logos / LogoName'` | `'Components / Logos / Catalyst Logo'` |
+| Logos | `'Components / Logos / LogoName'` | `'Components / Logos / App Logo'` |
+
+> Simple features (only a template, no separately-documented components) use a flat title with no intermediate `/Templates/` subgroup. Complex features that have both components and a template use `/Components/` and `/Templates/` subgroups to keep the sidebar organized.
 
 ## Using Actions for Callbacks
 
@@ -210,8 +214,6 @@ The project includes these Storybook addons:
 | `@storybook/addon-a11y` | Accessibility panel in Storybook UI |
 | `@storybook/addon-links` | Story linking between stories |
 | `@storybook/addon-vitest` | Runs Vitest unit tests inside Storybook |
-| `@storybook/addon-links` | Link between stories |
-| `@storybook/addon-vitest` | Vitest integration |
 
 ## Canonical Story Examples
 

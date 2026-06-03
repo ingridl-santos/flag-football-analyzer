@@ -28,7 +28,7 @@
           >
             <span
               class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-              style="width: 4.5rem;"
+              style="width: 5rem;"
             />
           </button>
           <button

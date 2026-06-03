@@ -44,14 +44,15 @@ export default function MyFeaturePage() {
 **Example page with data wiring**:
 
 ```typescript
+import { useTranslation } from 'react-i18next';
+import { selectAnalysisState } from '../../../redux/AnalysisSlice';
 import { useAppSelector } from '../../../redux/hooks';
-import { SelectAnalysisState } from '../../../redux/AnalysisSlice';
 import MyFeatureTemplate from '../templates/MyFeatureTemplate';
 
 export default function MyFeaturePage() {
-  const { items } = useAppSelector(SelectAnalysisState);
+  const { mode } = useAppSelector(selectAnalysisState);
 
-  return <MyFeatureTemplate items={items} />;
+  return <MyFeatureTemplate mode={mode} />;
 }
 ```
 
@@ -110,6 +111,7 @@ Place the new route as a child of the Layout route:
   name: ROUTES.MyFeature,
   path: '/my-feature',
   element: <MyFeaturePage />,
+  errorElement: <Errors.ErrorPage />,
 },
 ```
 

@@ -29,6 +29,7 @@ public/locales/
 └── pt-BR/
     ├── common.json
     ├── errors.json
+    ├── gameFootage.json
     └── pageTitles.json
 ```
 

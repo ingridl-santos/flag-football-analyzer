@@ -6,8 +6,6 @@ export default function AppLogo(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 64 64"
       fill="none"
-      role="img"
-      aria-label="Flag Football Analyzer Logo"
       {...props}
     >
       <rect width="64" height="64" rx="14" fill="#2563EB" />

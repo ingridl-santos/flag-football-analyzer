@@ -1,15 +1,17 @@
 import { Breakpoint, useMediaQuery, useTheme } from '@mui/material';
 
-export default function useWidth() {
-  type BreakpointOrNull = Breakpoint | null;
-
+export default function useWidth(): Breakpoint {
   const theme = useTheme();
-  const keys: readonly Breakpoint[] = [...theme.breakpoints.keys].reverse();
-  return (
-    keys.reduce((output: BreakpointOrNull, key: Breakpoint) => {
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      const matches = useMediaQuery(theme.breakpoints.only(key));
-      return !output && matches ? key : output;
-    }, null) || 'xs'
-  );
+  const xlMatches = useMediaQuery(theme.breakpoints.only('xl'));
+  const lgMatches = useMediaQuery(theme.breakpoints.only('lg'));
+  const mdMatches = useMediaQuery(theme.breakpoints.only('md'));
+  const smMatches = useMediaQuery(theme.breakpoints.only('sm'));
+  const xsMatches = useMediaQuery(theme.breakpoints.only('xs'));
+
+  if (xlMatches) return 'xl';
+  if (lgMatches) return 'lg';
+  if (mdMatches) return 'md';
+  if (smMatches) return 'sm';
+  if (xsMatches) return 'xs';
+  return 'xs';
 }

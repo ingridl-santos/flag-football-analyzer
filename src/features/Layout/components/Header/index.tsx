@@ -24,7 +24,7 @@ import type { MenuEntry } from '../../types/MenuEntry';
 export interface HeaderProps extends AppBarProps {
   title: string;
   menuEntries: Array<MenuEntry>;
-  onMenuButtonClick: () => void;
+  onMenuButtonClick?: () => void;
 }
 
 export default function Header({
@@ -43,9 +43,9 @@ export default function Header({
     <AppBar
       {...rest}
       sx={{
-        backgroundColor: 'background.paper',
+        backgroundColor: (theme) => theme.palette.background.paper,
         borderBottom: '2px solid',
-        borderColor: 'primary.main',
+        borderColor: (theme) => theme.palette.primary.main,
         ...rest.sx,
       }}
     >
@@ -68,9 +68,9 @@ export default function Header({
                 color="inherit"
                 to={toNamedRoute(ROUTES.home)}
                 sx={{ minWidth: 'unset', paddingX: 0, gap: '0.5rem' }}
-                aria-label={t('header.goHome') ?? 'Home'}
+                aria-label={t('header.goHome', { defaultValue: 'Home' })}
               >
-                <AppLogo width="2.5rem" height="2.5rem" />
+                <AppLogo width="2.5rem" height="2.5rem" aria-hidden="true" />
 
                 <Typography variant="h5" component="span" sx={{ fontWeight: 700 }}>
                   {title ?? <Skeleton width="12rem" />}

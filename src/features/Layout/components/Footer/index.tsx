@@ -35,9 +35,9 @@ export default function Footer({ githubUrl, ...rest }: FooterProps) {
       maxWidth="xl"
       {...rest}
       sx={{
-        backgroundColor: 'background.paper',
+        backgroundColor: (theme) => theme.palette.background.paper,
         borderTop: '2px solid',
-        borderColor: 'primary.main',
+        borderColor: (theme) => theme.palette.primary.main,
         paddingY: '1.5rem',
         ...rest.sx,
       }}
@@ -72,7 +72,7 @@ export default function Footer({ githubUrl, ...rest }: FooterProps) {
           >
             <IconButton
               component="span"
-              aria-label={t('footer.viewOnGitHub') ?? 'View on GitHub'}
+              aria-label={t('footer.viewOnGitHub', { defaultValue: 'View on GitHub' })}
               size="small"
             >
               <GitHubIcon fontSize="small" />

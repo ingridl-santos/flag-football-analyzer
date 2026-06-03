@@ -77,7 +77,7 @@ The core feature. Handles:
 - Video playback via `VideoPlayer` (HTML5) or `YouTubePlayer` (iframe API)
 - Segment creation: set start/end timestamps at the current playhead position
 - Segment metadata: play type selector, tag autocomplete with AI-suggested tags
-- Segment table and list views
+- Segment table view
 - Export: CSV, JSON, and ZIP (FFmpeg.wasm clips each segment from the local file)
 
 ### Layout (`src/features/Layout/`)

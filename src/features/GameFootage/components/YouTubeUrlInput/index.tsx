@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Button, Stack, TextField } from '@mui/material';
+import { Button, Skeleton, Stack, TextField } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import { parseYoutubeUrl } from '../../../../utils/parseYoutubeUrl';
@@ -41,23 +41,23 @@ export default function YouTubeUrlInput({ onSubmit }: YouTubeUrlInputProps) {
   return (
     <Stack sx={{ flexDirection: 'row', gap: '0.75rem', alignItems: 'flex-start' }}>
       <TextField
-        label={t('youtubeUrlLabel') ?? 'YouTube URL'}
-        placeholder={t('youtubeUrlPlaceholder') ?? 'https://youtube.com/watch?v=...'}
+        label={t('youtubeUrlLabel') ?? <Skeleton width="6rem" />}
+        placeholder={t('youtubeUrlPlaceholder', { defaultValue: 'https://youtube.com/watch?v=...' })}
         value={url}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
         error={error}
-        helperText={error ? (t('youtubeUrlInvalid') ?? 'Please enter a valid YouTube URL') : ' '}
+        helperText={error ? (t('youtubeUrlInvalid') ?? <Skeleton width="15rem" />) : ' '}
         size="small"
         sx={{ flexGrow: 1 }}
-        inputProps={{ 'aria-label': t('youtubeUrlLabel') ?? 'YouTube URL' }}
+        inputProps={{ 'aria-label': t('youtubeUrlLabel', { defaultValue: 'YouTube URL' }) }}
       />
 
       <Button
         variant="contained"
         onClick={handleSubmit}
       >
-        {t('youtubeUrlLoad') ?? 'Load'}
+        {t('youtubeUrlLoad') ?? <Skeleton width="2.5rem" />}
       </Button>
     </Stack>
   );

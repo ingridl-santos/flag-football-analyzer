@@ -20,51 +20,62 @@ import { type PlayDown, type PlaySide, type Segment } from '../../../../redux/Se
 import PlayClassifier from '../PlayClassifier';
 import SegmentTable from '../SegmentTable';
 
-export interface SegmentPanelProps {
+interface SegmentPanelBaseProps {
   videoType: 'file' | 'youtube' | null;
   segments: Segment[];
   readOnly?: boolean;
-  classifierMode?: boolean;
-  activeSegment?: Segment | null;
   activeSegmentId: string | null;
   isExportingZip: boolean;
   exportZipProgress: number;
   exportError?: string | null;
   onDelete?: (id: string) => void;
-  onSetSide?: (id: string, side: PlaySide | undefined) => void;
-  onSetDown?: (id: string, down: PlayDown | undefined) => void;
-  onSetPlayType?: (id: string, playType: string | undefined) => void;
-  onSetResult?: (id: string, result: string | undefined) => void;
-  onSetPlayer?: (id: string, player: string | undefined) => void;
-  onSetTags?: (id: string, tags: string[]) => void;
   onSegmentClick?: (id: string) => void;
   onExportCsv?: () => void;
   onExportJson?: () => void;
   onExportZip?: () => void;
 }
 
-export default function SegmentPanel({
-  videoType,
-  segments,
-  readOnly,
-  classifierMode,
-  activeSegment,
-  activeSegmentId,
-  isExportingZip,
-  exportZipProgress,
-  exportError,
-  onDelete,
-  onSetSide,
-  onSetDown,
-  onSetPlayType,
-  onSetResult,
-  onSetPlayer,
-  onSetTags,
-  onSegmentClick,
-  onExportCsv,
-  onExportJson,
-  onExportZip,
-}: SegmentPanelProps) {
+interface SegmentPanelClassifierProps extends SegmentPanelBaseProps {
+  classifierMode: true;
+  activeSegment: Segment | null;
+  onSetSide: (id: string, side: PlaySide | undefined) => void;
+  onSetDown: (id: string, down: PlayDown | undefined) => void;
+  onSetPlayType: (id: string, playType: string | undefined) => void;
+  onSetResult: (id: string, result: string | undefined) => void;
+  onSetPlayer: (id: string, player: string | undefined) => void;
+  onSetTags: (id: string, tags: string[]) => void;
+}
+
+interface SegmentPanelDefaultProps extends SegmentPanelBaseProps {
+  classifierMode?: false;
+  activeSegment?: Segment | null;
+  onSetSide?: (id: string, side: PlaySide | undefined) => void;
+  onSetDown?: (id: string, down: PlayDown | undefined) => void;
+  onSetPlayType?: (id: string, playType: string | undefined) => void;
+  onSetResult?: (id: string, result: string | undefined) => void;
+  onSetPlayer?: (id: string, player: string | undefined) => void;
+  onSetTags?: (id: string, tags: string[]) => void;
+}
+
+export type SegmentPanelProps = SegmentPanelClassifierProps | SegmentPanelDefaultProps;
+
+export default function SegmentPanel(props: SegmentPanelProps) {
+  const {
+    videoType,
+    segments,
+    readOnly,
+    classifierMode,
+    activeSegment,
+    activeSegmentId,
+    isExportingZip,
+    exportZipProgress,
+    exportError,
+    onDelete,
+    onSegmentClick,
+    onExportCsv,
+    onExportJson,
+    onExportZip,
+  } = props;
   const { t } = useTranslation('gameFootage');
 
   const activeSegmentNumber = useMemo(() => {
@@ -178,12 +189,12 @@ export default function SegmentPanel({
                       key={activeSegment.id}
                       segment={activeSegment}
                       segmentNumber={activeSegmentNumber}
-                      onSetSide={onSetSide ?? (() => {})}
-                      onSetDown={onSetDown ?? (() => {})}
-                      onSetPlayType={onSetPlayType ?? (() => {})}
-                      onSetResult={onSetResult ?? (() => {})}
-                      onSetPlayer={onSetPlayer ?? (() => {})}
-                      onSetTags={onSetTags ?? (() => {})}
+                      onSetSide={props.onSetSide}
+                      onSetDown={props.onSetDown}
+                      onSetPlayType={props.onSetPlayType}
+                      onSetResult={props.onSetResult}
+                      onSetPlayer={props.onSetPlayer}
+                      onSetTags={props.onSetTags}
                     />
                   )
                 : (

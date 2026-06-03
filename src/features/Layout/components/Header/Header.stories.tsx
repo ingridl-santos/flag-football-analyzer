@@ -4,7 +4,7 @@ import { action } from 'storybook/actions';
 import Header from '.';
 
 const meta: Meta<typeof Header> = {
-  title: 'Layout / Components / Header',
+  title: 'Features / Layout / Components / Header',
   component: Header,
   parameters: {
     layout: 'fullscreen',

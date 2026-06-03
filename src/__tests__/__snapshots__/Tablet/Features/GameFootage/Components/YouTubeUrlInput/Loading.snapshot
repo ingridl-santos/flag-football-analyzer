@@ -11,7 +11,10 @@
         for=":stable-mocked-react-id-1:"
         id=":stable-mocked-react-id-1:-label"
       >
-        YouTube URL
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+          style="width: 6rem;"
+        />
       </label>
       <div
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-1s7eke9-MuiInputBase-root-MuiOutlinedInput-root"
@@ -34,7 +37,10 @@
             class="css-njhac4-MuiNotchedOutlined-root"
           >
             <span>
-              YouTube URL
+              <span
+                class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+                style="width: 6rem;"
+              />
             </span>
           </legend>
         </fieldset>
@@ -55,7 +61,10 @@
       tabindex="0"
       type="button"
     >
-      Load
+      <span
+        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
+        style="width: 2.5rem;"
+      />
     </button>
   </div>
 </div>
