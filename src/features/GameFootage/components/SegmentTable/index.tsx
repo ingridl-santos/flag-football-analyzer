@@ -104,6 +104,7 @@ const SegmentRow = memo(function SegmentRow({
   }, [onDeleteRequest, segment.id]);
 
   const { options, autoSet } = useMemo(() => {
+    if (readOnly) return { options: [] as string[], autoSet: new Set<string>() };
     const { auto, more } = suggestTags(segment.playType ?? '', segment.duration);
     const set = new Set(auto);
     const opts = [
@@ -111,7 +112,7 @@ const SegmentRow = memo(function SegmentRow({
       ...more.filter((tag) => !auto.includes(tag)),
     ].filter((opt) => !(segment.tags ?? []).includes(opt));
     return { options: opts, autoSet: set };
-  }, [segment.playType, segment.duration, segment.tags]);
+  }, [readOnly, segment.playType, segment.duration, segment.tags]);
 
   const tags = segment.tags ?? [];
   const segLabel = t('segmentLabel', { number: index + 1 });

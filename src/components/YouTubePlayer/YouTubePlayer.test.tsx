@@ -3,7 +3,7 @@ import { vi } from 'vitest';
 
 import YouTubePlayer from '.';
 
-const mockSeek = vi.fn();
+const mockSeek = vi.fn<(time: number) => boolean>().mockReturnValue(true);
 
 vi.mock('../../hooks/useYouTubePlayer', () => ({
   default: () => ({

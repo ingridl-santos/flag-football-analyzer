@@ -4,7 +4,7 @@ import { vi } from 'vitest';
 import VideoPlayer from '.';
 
 // Mock the hook so we can control `seek` and avoid real DOM video APIs
-const mockSeek = vi.fn();
+const mockSeek = vi.fn<(time: number) => boolean>().mockReturnValue(true);
 
 vi.mock('../../hooks/useVideoPlayer', () => ({
   default: () => ({

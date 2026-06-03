@@ -23,7 +23,7 @@ export default function ModeToggle({ videoLoaded, mode, onModeChange }: ModeTogg
       onChange={(_, newMode: AnalysisMode | null) => {
         if (newMode !== null) onModeChange?.(newMode);
       }}
-      aria-label={t('modeToggleAriaLabel') ?? 'Analysis mode'}
+      aria-label={t('modeToggleAriaLabel', { defaultValue: 'Analysis mode' })}
       size="small"
     >
       <ToggleButton value="cut">

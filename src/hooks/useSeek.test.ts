@@ -4,7 +4,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { useSeek } from './useSeek';
 
 describe('useSeek', () => {
-  const seek = vi.fn();
+  const seek = vi.fn<(time: number) => boolean>().mockReturnValue(true);
   const onSeekConsumed = vi.fn();
 
   beforeEach(() => {
@@ -76,12 +76,21 @@ describe('useSeek', () => {
     expect(onSeekConsumed).not.toHaveBeenCalled();
   });
 
+  it('does not call onSeekConsumed when seek returns false', () => {
+    const failSeek = vi.fn<(time: number) => boolean>().mockReturnValue(false);
+
+    renderHook(() => useSeek(42, failSeek, onSeekConsumed));
+
+    expect(failSeek).toHaveBeenCalledOnce();
+    expect(onSeekConsumed).not.toHaveBeenCalled();
+  });
+
   it('does not seek again when seek identity changes but seekTo stays the same', () => {
-    const seek1 = vi.fn();
-    const seek2 = vi.fn();
+    const seek1 = vi.fn<(t: number) => boolean>().mockReturnValue(true);
+    const seek2 = vi.fn<(t: number) => boolean>().mockReturnValue(true);
 
     const { rerender } = renderHook(
-      ({ seekFn }: { seekFn: (t: number) => void }) => useSeek(42, seekFn, undefined),
+      ({ seekFn }: { seekFn: (t: number) => boolean }) => useSeek(42, seekFn, undefined),
       { initialProps: { seekFn: seek1 } },
     );
 
