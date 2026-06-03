@@ -2,7 +2,7 @@ import { RefCallback, useCallback, useEffect, useRef, useState } from 'react';
 
 export interface UseVideoPlayerReturn {
   videoRef: RefCallback<HTMLVideoElement>;
-  seek: (time: number) => void;
+  seek: (time: number) => boolean;
   togglePlay: () => void;
 }
 
@@ -24,10 +24,12 @@ export default function useVideoPlayer(isPlaying = false): UseVideoPlayerReturn 
     }
   }, [isPlaying, video]);
 
-  const seek = useCallback((time: number) => {
+  const seek = useCallback((time: number): boolean => {
     if (videoEl.current) {
       videoEl.current.currentTime = time;
+      return true;
     }
+    return false;
   }, []);
 
   const togglePlay = useCallback(() => {

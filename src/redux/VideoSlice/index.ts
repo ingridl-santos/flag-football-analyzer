@@ -10,6 +10,7 @@ interface VideoState {
   currentTime: number;
   duration: number;
   isPlaying: boolean;
+  seekTo: number | null;
 }
 
 const initialState: VideoState = {
@@ -20,6 +21,7 @@ const initialState: VideoState = {
   currentTime: 0,
   duration: 0,
   isPlaying: false,
+  seekTo: null,
 };
 
 const videoSlice = createSlice({
@@ -34,6 +36,7 @@ const videoSlice = createSlice({
       state.currentTime = 0;
       state.duration = 0;
       state.isPlaying = false;
+      state.seekTo = null;
     },
     setYouTubeVideo(state, action: PayloadAction<{ videoId: string }>) {
       state.videoUrl = null;
@@ -43,6 +46,7 @@ const videoSlice = createSlice({
       state.currentTime = 0;
       state.duration = 0;
       state.isPlaying = false;
+      state.seekTo = null;
     },
     clearVideo(state) {
       state.videoUrl = null;
@@ -52,6 +56,7 @@ const videoSlice = createSlice({
       state.currentTime = 0;
       state.duration = 0;
       state.isPlaying = false;
+      state.seekTo = null;
     },
     setCurrentTime(state, action: PayloadAction<number>) {
       state.currentTime = action.payload;
@@ -61,6 +66,12 @@ const videoSlice = createSlice({
     },
     setIsPlaying(state, action: PayloadAction<boolean>) {
       state.isPlaying = action.payload;
+    },
+    requestSeek(state, action: PayloadAction<number>) {
+      state.seekTo = action.payload;
+    },
+    consumeSeek(state) {
+      state.seekTo = null;
     },
   },
 });
@@ -72,6 +83,8 @@ export const {
   setCurrentTime,
   setDuration,
   setIsPlaying,
+  requestSeek,
+  consumeSeek,
 } = videoSlice.actions;
 
 export const selectVideoState = (state: RootState) => state.video;

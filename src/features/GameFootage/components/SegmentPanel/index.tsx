@@ -7,6 +7,7 @@ import SegmentTable from '../SegmentTable';
 export interface SegmentPanelProps {
   videoType: 'file' | 'youtube' | null;
   segments: Segment[];
+  readOnly?: boolean;
   activeSegmentId: string | null;
   isExportingZip: boolean;
   exportZipProgress: number;
@@ -23,6 +24,7 @@ export interface SegmentPanelProps {
 export default function SegmentPanel({
   videoType,
   segments,
+  readOnly,
   activeSegmentId,
   isExportingZip,
   exportZipProgress,
@@ -135,6 +137,7 @@ export default function SegmentPanel({
           <SegmentTable
             segments={segments}
             hideTitle
+            readOnly={readOnly}
             activeSegmentId={activeSegmentId}
             onDelete={onDelete}
             onSetPlayType={onSetPlayType}

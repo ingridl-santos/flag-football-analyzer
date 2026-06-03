@@ -1,13 +1,12 @@
 import { useCallback } from 'react';
 
+import { selectAnalysisState } from '../../../redux/AnalysisSlice';
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
 import {
   createSegment,
   selectSegmentState,
   setPendingEnd,
-  setPendingPlayType,
   setPendingStart,
-  setPendingTags,
 } from '../../../redux/SegmentSlice';
 import { selectVideoState, setIsPlaying } from '../../../redux/VideoSlice';
 import SegmentControls from '../components/SegmentControls';
@@ -19,11 +18,10 @@ export interface SegmentControlsHocProps {
 export default function SegmentControlsHoc({ onSegmentCreated }: SegmentControlsHocProps) {
   const dispatch = useAppDispatch();
   const { currentTime, videoType } = useAppSelector(selectVideoState);
+  const { mode } = useAppSelector(selectAnalysisState);
   const {
     pendingStart,
     pendingEnd,
-    pendingPlayType,
-    pendingTags,
   } = useAppSelector(selectSegmentState);
 
   const handleSetStart = useCallback(() => {
@@ -42,25 +40,14 @@ export default function SegmentControlsHoc({ onSegmentCreated }: SegmentControls
     onSegmentCreated();
   }, [dispatch, onSegmentCreated, pendingStart, pendingEnd]);
 
-  const handleSetPendingPlayType = useCallback((pt: string) => {
-    dispatch(setPendingPlayType(pt));
-  }, [dispatch]);
-
-  const handleSetPendingTags = useCallback((tags: string[]) => {
-    dispatch(setPendingTags(tags));
-  }, [dispatch]);
-
   return (
     <SegmentControls
       videoLoaded={videoType !== null}
+      mode={mode}
       pendingStart={pendingStart}
       pendingEnd={pendingEnd}
-      pendingPlayType={pendingPlayType}
-      pendingTags={pendingTags}
       onSetStart={handleSetStart}
       onSetEnd={handleSetEnd}
-      onSetPendingPlayType={handleSetPendingPlayType}
-      onSetPendingTags={handleSetPendingTags}
       onCreateSegment={handleCreateSegment}
     />
   );

@@ -3,6 +3,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { Box, IconButton, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
+import { useSeek } from '../../hooks/useSeek';
 import useYouTubePlayer from '../../hooks/useYouTubePlayer';
 import { formatTime } from '../../utils/formatTime';
 
@@ -11,9 +12,11 @@ export interface YouTubePlayerProps {
   currentTime: number;
   duration: number;
   isPlaying: boolean;
+  seekTo?: number | null;
   onTimeUpdate: (time: number) => void;
   onDurationChange: (duration: number) => void;
   onPlayStateChange: (isPlaying: boolean) => void;
+  onSeekConsumed?: () => void;
 }
 
 export default function YouTubePlayer({
@@ -21,18 +24,22 @@ export default function YouTubePlayer({
   currentTime,
   duration,
   isPlaying,
+  seekTo,
   onTimeUpdate,
   onDurationChange,
   onPlayStateChange,
+  onSeekConsumed,
 }: YouTubePlayerProps) {
   const { t } = useTranslation('gameFootage');
-  const { containerRef, togglePlay } = useYouTubePlayer(
+  const { containerRef, togglePlay, seek } = useYouTubePlayer(
     videoId,
     onTimeUpdate,
     onDurationChange,
     onPlayStateChange,
     isPlaying,
   );
+
+  useSeek(seekTo, seek, onSeekConsumed);
 
   const PlayPauseIcon = isPlaying ? PauseIcon : PlayArrowIcon;
   const playPauseLabel = isPlaying ? (t('pause') ?? 'Pause') : (t('play') ?? 'Play');

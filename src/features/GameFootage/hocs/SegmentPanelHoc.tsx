@@ -1,7 +1,8 @@
-import { MutableRefObject, useCallback } from 'react';
+import { RefObject, useCallback } from 'react';
 
 import { useActiveSegmentId } from '../../../hooks/useActiveSegmentId';
 import { useVideoExport } from '../../../hooks/useVideoExport';
+import { selectAnalysisState } from '../../../redux/AnalysisSlice';
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
 import {
   deleteSegment,
@@ -9,18 +10,20 @@ import {
   setPlayType,
   setTags,
 } from '../../../redux/SegmentSlice';
-import { selectVideoState, setCurrentTime } from '../../../redux/VideoSlice';
+import { requestSeek, selectVideoState, setCurrentTime, setIsPlaying } from '../../../redux/VideoSlice';
 import { downloadFile, segmentsToCsv, segmentsToJson } from '../../../utils/exportSegments';
 import SegmentPanel from '../components/SegmentPanel';
 
 export interface SegmentPanelHocProps {
-  videoFileRef: MutableRefObject<File | null>;
+  videoFileRef: RefObject<File>;
+  videoPlayerRef: RefObject<HTMLDivElement>;
 }
 
-export default function SegmentPanelHoc({ videoFileRef }: SegmentPanelHocProps) {
+export default function SegmentPanelHoc({ videoFileRef, videoPlayerRef }: SegmentPanelHocProps) {
   const dispatch = useAppDispatch();
   const { videoType, currentTime } = useAppSelector(selectVideoState);
   const { segments } = useAppSelector(selectSegmentState);
+  const { mode } = useAppSelector(selectAnalysisState);
   const { exportZip, isExporting, exportProgress, exportError } = useVideoExport();
 
   const activeSegmentId = useActiveSegmentId(segments, currentTime);
@@ -28,8 +31,15 @@ export default function SegmentPanelHoc({ videoFileRef }: SegmentPanelHocProps) 
   const handleSegmentClick = useCallback((id: string) => {
     const segment = segments.find((s) => s.id === id);
 
-    if (segment) dispatch(setCurrentTime(segment.start));
-  }, [dispatch, segments]);
+    if (!segment) return;
+
+    dispatch(requestSeek(segment.start));
+    dispatch(setCurrentTime(segment.start));
+
+    if (mode === 'tag') dispatch(setIsPlaying(true));
+
+    videoPlayerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [dispatch, segments, mode, videoPlayerRef]);
 
   const handleDelete = useCallback((id: string) => {
     dispatch(deleteSegment(id));
@@ -61,6 +71,7 @@ export default function SegmentPanelHoc({ videoFileRef }: SegmentPanelHocProps) 
     <SegmentPanel
       videoType={videoType}
       segments={segments}
+      readOnly={mode === 'cut'}
       activeSegmentId={activeSegmentId}
       isExportingZip={isExporting}
       exportZipProgress={exportProgress}

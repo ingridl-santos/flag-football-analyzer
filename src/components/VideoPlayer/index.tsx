@@ -4,6 +4,7 @@ import { Box, IconButton, Slider, Stack, Typography } from '@mui/material';
 import { SyntheticEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useSeek } from '../../hooks/useSeek';
 import useVideoPlayer from '../../hooks/useVideoPlayer';
 import { formatTime } from '../../utils/formatTime';
 
@@ -12,10 +13,12 @@ export interface VideoPlayerProps {
   currentTime: number;
   duration: number;
   isPlaying: boolean;
+  seekTo?: number | null;
   onTimeUpdate: (time: number) => void;
   onDurationChange: (duration: number) => void;
   onPlayStateChange: (isPlaying: boolean) => void;
   onSeek: (time: number) => void;
+  onSeekConsumed?: () => void;
 }
 
 export default function VideoPlayer({
@@ -23,13 +26,17 @@ export default function VideoPlayer({
   currentTime,
   duration,
   isPlaying,
+  seekTo,
   onTimeUpdate,
   onDurationChange,
   onPlayStateChange,
   onSeek,
+  onSeekConsumed,
 }: VideoPlayerProps) {
   const { t } = useTranslation('gameFootage');
   const { videoRef, seek, togglePlay } = useVideoPlayer(isPlaying);
+
+  useSeek(seekTo, seek, onSeekConsumed);
 
   const handleTimeUpdate = (e: SyntheticEvent<HTMLVideoElement>) => {
     onTimeUpdate(e.currentTarget.currentTime);

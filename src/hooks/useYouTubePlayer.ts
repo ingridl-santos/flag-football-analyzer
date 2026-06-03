@@ -51,7 +51,7 @@ function appendYTScript(): void {
 
 export interface UseYouTubePlayerReturn {
   containerRef: React.RefObject<HTMLDivElement>;
-  seek: (time: number) => void;
+  seek: (time: number) => boolean;
   togglePlay: () => void;
 }
 
@@ -153,8 +153,12 @@ export default function useYouTubePlayer(
     };
   }, [videoId]);
 
-  const seek = (time: number): void => {
-    playerRef.current?.seekTo(time, true);
+  const seek = (time: number): boolean => {
+    if (playerRef.current) {
+      playerRef.current.seekTo(time, true);
+      return true;
+    }
+    return false;
   };
 
   const togglePlay = (): void => {

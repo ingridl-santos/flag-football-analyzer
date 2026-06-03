@@ -58,6 +58,13 @@ export const YouTube: Story = {
   },
 };
 
+export const ReadOnly: Story = {
+  args: {
+    ...WithSegments.args,
+    readOnly: true,
+  },
+};
+
 export const ExportingZip: Story = {
   args: {
     ...WithSegments.args,

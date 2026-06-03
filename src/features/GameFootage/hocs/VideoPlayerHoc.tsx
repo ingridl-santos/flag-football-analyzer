@@ -7,6 +7,7 @@ import {
   selectSegmentState,
 } from '../../../redux/SegmentSlice';
 import {
+  consumeSeek,
   selectVideoState,
   setCurrentTime,
   setDuration,
@@ -69,6 +70,10 @@ export default function VideoPlayerHoc({ videoFileRef }: VideoPlayerHocProps) {
     dispatch(setCurrentTime(time));
   }, [dispatch]);
 
+  const handleSeekConsumed = useCallback(() => {
+    dispatch(consumeSeek());
+  }, [dispatch]);
+
   return (
     <VideoPlayerSection
       videoType={videoState.videoType}
@@ -78,6 +83,7 @@ export default function VideoPlayerHoc({ videoFileRef }: VideoPlayerHocProps) {
       currentTime={videoState.currentTime}
       duration={videoState.duration}
       isPlaying={videoState.isPlaying}
+      seekTo={videoState.seekTo}
       segments={segments}
       activeSegmentId={activeSegmentId}
       onFileSelect={handleFileSelect}
@@ -86,6 +92,7 @@ export default function VideoPlayerHoc({ videoFileRef }: VideoPlayerHocProps) {
       onDurationChange={handleDurationChange}
       onPlayStateChange={handlePlayStateChange}
       onSeek={handleSeek}
+      onSeekConsumed={handleSeekConsumed}
       onSegmentClick={handleSegmentClick}
     />
   );

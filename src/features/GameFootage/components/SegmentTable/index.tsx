@@ -18,7 +18,7 @@ import {
   Typography,
 } from '@mui/material';
 import { alpha } from '@mui/material/styles';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Dialog from '../../../../components/Dialog';
@@ -30,6 +30,7 @@ import PlayTypeSelector from '../PlayTypeSelector';
 export interface SegmentTableProps {
   segments: Segment[];
   hideTitle?: boolean;
+  readOnly?: boolean;
   activeSegmentId?: string | null;
   onDelete?: (id: string) => void;
   onSetPlayType?: (id: string, playType: string) => void;
@@ -39,7 +40,7 @@ export interface SegmentTableProps {
 
 const SKELETON_ROWS = 3;
 
-function SkeletonRow({ index }: { index: number }) {
+function SkeletonRow({ index, readOnly }: { index: number; readOnly?: boolean }) {
   return (
     <TableRow>
       <TableCell>{index + 1}</TableCell>
@@ -60,7 +61,7 @@ function SkeletonRow({ index }: { index: number }) {
         <Skeleton width="8rem" />
       </TableCell>
 
-      <TableCell />
+      {!readOnly && <TableCell />}
     </TableRow>
   );
 }
@@ -68,27 +69,42 @@ function SkeletonRow({ index }: { index: number }) {
 interface SegmentRowProps {
   segment: Segment;
   index: number;
-  activeSegmentId?: string | null;
+  readOnly?: boolean;
+  isActive: boolean;
   onSetPlayType?: (id: string, playType: string) => void;
   onSetTags?: (id: string, tags: string[]) => void;
   onSegmentClick?: (id: string) => void;
   onDeleteRequest: (id: string) => void;
-  rowRef: (el: HTMLTableRowElement | null) => void;
+  rowRefRegistry: Record<string, HTMLTableRowElement | null>;
 }
 
-function SegmentRow({
+const SegmentRow = memo(function SegmentRow({
   segment,
   index,
-  activeSegmentId,
+  readOnly,
+  isActive,
   onSetPlayType,
   onSetTags,
   onSegmentClick,
   onDeleteRequest,
-  rowRef,
+  rowRefRegistry,
 }: SegmentRowProps) {
   const { t } = useTranslation('gameFootage');
 
+  const handleRef = useCallback((el: HTMLTableRowElement | null) => {
+    rowRefRegistry[segment.id] = el;
+  }, [rowRefRegistry, segment.id]);
+
+  const handleSegmentClick = useCallback(() => {
+    onSegmentClick?.(segment.id);
+  }, [onSegmentClick, segment.id]);
+
+  const handleDeleteRequest = useCallback(() => {
+    onDeleteRequest(segment.id);
+  }, [onDeleteRequest, segment.id]);
+
   const { options, autoSet } = useMemo(() => {
+    if (readOnly) return { options: [] as string[], autoSet: new Set<string>() };
     const { auto, more } = suggestTags(segment.playType ?? '', segment.duration);
     const set = new Set(auto);
     const opts = [
@@ -96,8 +112,9 @@ function SegmentRow({
       ...more.filter((tag) => !auto.includes(tag)),
     ].filter((opt) => !(segment.tags ?? []).includes(opt));
     return { options: opts, autoSet: set };
-  }, [segment.playType, segment.duration, segment.tags]);
+  }, [readOnly, segment.playType, segment.duration, segment.tags]);
 
+  const tags = segment.tags ?? [];
   const segLabel = t('segmentLabel', { number: index + 1 });
   const timeRange = `${formatTime(segment.start)} \u2192 ${formatTime(segment.end)}`;
   const seekHint = t('timelineSeekTo');
@@ -105,9 +122,9 @@ function SegmentRow({
 
   return (
     <TableRow
-      ref={rowRef}
+      ref={handleRef}
       sx={{
-        backgroundColor: segment.id === activeSegmentId
+        backgroundColor: isActive
           ? (theme) => alpha(theme.palette.primary.main, 0.12)
           : undefined,
         transition: 'background-color 200ms ease',
@@ -126,7 +143,7 @@ function SegmentRow({
         {onSegmentClick
           ? (
               <ButtonBase
-                onClick={() => onSegmentClick(segment.id)}
+                onClick={handleSegmentClick}
                 aria-label={seekAriaLabel}
                 sx={{
                   display: 'flex',
@@ -165,78 +182,105 @@ function SegmentRow({
       </TableCell>
 
       <TableCell>
-        <PlayTypeSelector
-          segmentId={segment.id}
-          value={segment.playType ?? ''}
-          onChange={onSetPlayType ?? (() => {})}
-        />
+        {readOnly
+          ? (
+              <Typography variant="body2" color={segment.playType ? 'text.primary' : 'text.disabled'}>
+                {segment.playType || t('playTypeNone')}
+              </Typography>
+            )
+          : (
+              <PlayTypeSelector
+                segmentId={segment.id}
+                value={segment.playType ?? ''}
+                onChange={onSetPlayType ?? (() => {})}
+              />
+            )}
       </TableCell>
 
       <TableCell>
-        <Autocomplete
-          multiple
-          freeSolo
-          options={options}
-          value={segment.tags ?? []}
-          onChange={(_, newValue) => onSetTags?.(segment.id, newValue as string[])}
-          getOptionLabel={(opt) => opt}
-          renderOption={(props, opt) => (
-            <li {...props} key={opt}>
-              <Stack sx={{ flexDirection: 'row', alignItems: 'center', gap: '0.5rem' }}>
-                {autoSet.has(opt) && (
-                  <AutoAwesomeIcon
-                    fontSize="small"
-                    aria-hidden="true"
-                    sx={{ color: (theme) => theme.palette.primary.main, fontSize: '0.875rem' }}
+        {readOnly
+          ? (
+              <Stack sx={{ flexDirection: 'row', flexWrap: 'wrap', gap: '0.25rem' }}>
+                {tags.length > 0
+                  ? tags.map((tag) => (
+                      <Chip key={tag} label={tag} size="small" />
+                    ))
+                  : (
+                      <Typography variant="body2" color="text.disabled">
+                        {t('tagsNone')}
+                      </Typography>
+                    )}
+              </Stack>
+            )
+          : (
+              <Autocomplete
+                multiple
+                freeSolo
+                options={options}
+                value={segment.tags ?? []}
+                onChange={(_, newValue) => onSetTags?.(segment.id, newValue as string[])}
+                getOptionLabel={(opt) => opt}
+                renderOption={(props, opt) => (
+                  <li {...props} key={opt}>
+                    <Stack sx={{ flexDirection: 'row', alignItems: 'center', gap: '0.5rem' }}>
+                      {autoSet.has(opt) && (
+                        <AutoAwesomeIcon
+                          fontSize="small"
+                          aria-hidden="true"
+                          sx={{ color: (theme) => theme.palette.primary.main, fontSize: '0.875rem' }}
+                        />
+                      )}
+
+                      <span>{opt}</span>
+                    </Stack>
+                  </li>
+                )}
+                renderTags={(value, getTagProps) =>
+                  value.map((tag, i) => (
+                    <Chip
+                      label={tag}
+                      size="small"
+                      {...getTagProps({ index: i })}
+                      key={tag}
+                    />
+                  ))}
+                renderInput={(params) => (
+                  <TextField
+                    {...params}
+                    variant="standard"
+                    size="small"
+                    placeholder={segment.tags?.length
+                      ? undefined
+                      : t('tagsInputPlaceholder')}
+                    inputProps={{
+                      ...params.inputProps,
+                      'aria-label': t('tagsLabel'),
+                    }}
                   />
                 )}
-
-                <span>{opt}</span>
-              </Stack>
-            </li>
-          )}
-          renderTags={(value, getTagProps) =>
-            value.map((tag, i) => (
-              <Chip
-                label={tag}
-                size="small"
-                {...getTagProps({ index: i })}
-                key={tag}
               />
-            ))}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              variant="standard"
-              size="small"
-              placeholder={segment.tags?.length
-                ? undefined
-                : t('tagsInputPlaceholder')}
-              inputProps={{
-                ...params.inputProps,
-                'aria-label': t('tagsLabel'),
-              }}
-            />
-          )}
-        />
+            )}
       </TableCell>
 
-      <TableCell>
-        <IconButton
-          size="small"
-          aria-label={t('deleteSegment')}
-          onClick={() => onDeleteRequest(segment.id)}
-        >
-          <DeleteIcon fontSize="small" />
-        </IconButton>
-      </TableCell>
+      {!readOnly && (
+        <TableCell>
+          <IconButton
+            size="small"
+            aria-label={t('deleteSegment')}
+            onClick={handleDeleteRequest}
+          >
+            <DeleteIcon fontSize="small" />
+          </IconButton>
+        </TableCell>
+      )}
     </TableRow>
   );
-}
+});
 
 export default function SegmentTable({
   segments,
   hideTitle,
+  readOnly,
   activeSegmentId,
   onDelete,
   onSetPlayType,
@@ -253,14 +297,16 @@ export default function SegmentTable({
     }
   }, [activeSegmentId]);
 
-  const handleDeleteClick = (id: string) => setPendingDeleteId(id);
+  const handleDeleteClick = useCallback((id: string) => {
+    setPendingDeleteId(id);
+  }, []);
 
-  const handleConfirmDelete = () => {
+  const handleConfirmDelete = useCallback(() => {
     if (pendingDeleteId) onDelete?.(pendingDeleteId);
     setPendingDeleteId(null);
-  };
+  }, [onDelete, pendingDeleteId]);
 
-  const handleCancelDelete = () => setPendingDeleteId(null);
+  const handleCancelDelete = useCallback(() => setPendingDeleteId(null), []);
 
   return (
     <Stack sx={{ gap: '1rem' }}>
@@ -300,26 +346,27 @@ export default function SegmentTable({
                 {t('colTags') ?? <Skeleton width="3rem" />}
               </TableCell>
 
-              <TableCell sx={{ width: '3rem' }} />
+              {!readOnly && <TableCell sx={{ width: '3rem' }} />}
             </TableRow>
           </TableHead>
 
           <TableBody>
             {segments.length === 0
               ? Array.from({ length: SKELETON_ROWS }, (_, i) => (
-                  <SkeletonRow key={i} index={i} />
+                  <SkeletonRow key={i} index={i} readOnly={readOnly} />
                 ))
               : segments.map((segment, index) => (
                   <SegmentRow
                     key={segment.id}
                     segment={segment}
                     index={index}
-                    activeSegmentId={activeSegmentId}
+                    readOnly={readOnly}
+                    isActive={segment.id === activeSegmentId}
                     onSetPlayType={onSetPlayType}
                     onSetTags={onSetTags}
                     onSegmentClick={onSegmentClick}
                     onDeleteRequest={handleDeleteClick}
-                    rowRef={(el) => { rowRefs.current[segment.id] = el; }}
+                    rowRefRegistry={rowRefs.current}
                   />
                 ))}
           </TableBody>

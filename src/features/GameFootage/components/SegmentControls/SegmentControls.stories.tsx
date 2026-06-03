@@ -12,14 +12,11 @@ const meta: Meta<typeof SegmentControls> = {
   args: {
     onSetStart: action('onSetStart'),
     onSetEnd: action('onSetEnd'),
-    onSetPendingPlayType: action('onSetPendingPlayType'),
-    onSetPendingTags: action('onSetPendingTags'),
     onCreateSegment: action('onCreateSegment'),
     videoLoaded: true,
+    mode: 'cut',
     pendingStart: null,
     pendingEnd: null,
-    pendingPlayType: '',
-    pendingTags: [],
   },
 };
 
@@ -53,12 +50,9 @@ export const WithPendingSegment: Story = {
   },
 };
 
-export const WithPendingSegmentConfigured: Story = {
+export const TagMode: Story = {
   args: {
-    pendingStart: 10,
-    pendingEnd: 42,
-    pendingPlayType: 'Pass',
-    pendingTags: ['Deep Pass'],
+    mode: 'tag',
   },
 };
 
