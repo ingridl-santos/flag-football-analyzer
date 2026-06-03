@@ -5,6 +5,10 @@ import AppLogo from '.';
 const meta: Meta<typeof AppLogo> = {
   title: 'Components / Logos / App Logo',
   component: AppLogo,
+  args: {
+    role: 'img',
+    'aria-label': 'Flag Football Analyzer Logo',
+  },
 };
 
 export default meta;

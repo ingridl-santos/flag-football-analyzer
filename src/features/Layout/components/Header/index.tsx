@@ -70,7 +70,7 @@ export default function Header({
                 sx={{ minWidth: 'unset', paddingX: 0, gap: '0.5rem' }}
                 aria-label={t('header.goHome') ?? 'Home'}
               >
-                <AppLogo width="2.5rem" height="2.5rem" />
+                <AppLogo width="2.5rem" height="2.5rem" aria-hidden="true" />
 
                 <Typography variant="h5" component="span" sx={{ fontWeight: 700 }}>
                   {title ?? <Skeleton width="12rem" />}
