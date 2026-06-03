@@ -206,16 +206,10 @@
                         colTimeRange
                       </th>
                       <th
-                        class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-5rc4df-MuiTableCell-root"
-                        scope="col"
-                      >
-                        colPlayType
-                      </th>
-                      <th
                         class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-rf7kbk-MuiTableCell-root"
                         scope="col"
                       >
-                        colTags
+                        colClassification
                       </th>
                     </tr>
                   </thead>
@@ -249,18 +243,18 @@
                       <td
                         class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
                       >
-                        <span
-                          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                          style="width: 6rem;"
-                        />
-                      </td>
-                      <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                      >
-                        <span
-                          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                          style="width: 8rem;"
-                        />
+                        <div
+                          class="MuiStack-root css-7r4cw1-MuiStack-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-1e0hs4h-MuiSkeleton-root"
+                            style="width: 5rem; height: 1.5rem;"
+                          />
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-1e0hs4h-MuiSkeleton-root"
+                            style="width: 3rem; height: 1.5rem;"
+                          />
+                        </div>
                       </td>
                     </tr>
                     <tr
@@ -290,18 +284,18 @@
                       <td
                         class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
                       >
-                        <span
-                          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                          style="width: 6rem;"
-                        />
-                      </td>
-                      <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                      >
-                        <span
-                          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                          style="width: 8rem;"
-                        />
+                        <div
+                          class="MuiStack-root css-7r4cw1-MuiStack-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-1e0hs4h-MuiSkeleton-root"
+                            style="width: 5rem; height: 1.5rem;"
+                          />
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-1e0hs4h-MuiSkeleton-root"
+                            style="width: 3rem; height: 1.5rem;"
+                          />
+                        </div>
                       </td>
                     </tr>
                     <tr
@@ -331,18 +325,18 @@
                       <td
                         class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
                       >
-                        <span
-                          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                          style="width: 6rem;"
-                        />
-                      </td>
-                      <td
-                        class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
-                      >
-                        <span
-                          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-tosq2z-MuiSkeleton-root"
-                          style="width: 8rem;"
-                        />
+                        <div
+                          class="MuiStack-root css-7r4cw1-MuiStack-root"
+                        >
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-1e0hs4h-MuiSkeleton-root"
+                            style="width: 5rem; height: 1.5rem;"
+                          />
+                          <span
+                            class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-1e0hs4h-MuiSkeleton-root"
+                            style="width: 3rem; height: 1.5rem;"
+                          />
+                        </div>
                       </td>
                     </tr>
                   </tbody>

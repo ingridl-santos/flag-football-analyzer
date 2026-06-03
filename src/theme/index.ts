@@ -1,5 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
+import Accordion from './components/Accordion';
+import AccordionSummary from './components/AccordionSummary';
 import AppBar from './components/AppBar';
 import Button from './components/Button';
 import ButtonBase from './components/ButtonBase';
@@ -28,6 +30,8 @@ export const theme = createTheme({
     borderRadius: 8,
   },
   components: {
+    MuiAccordion: Accordion,
+    MuiAccordionSummary: AccordionSummary,
     MuiAppBar: AppBar,
     MuiButton: Button,
     MuiButtonBase: ButtonBase,

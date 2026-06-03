@@ -1,7 +1,5 @@
-import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import DeleteIcon from '@mui/icons-material/Delete';
 import {
-  Autocomplete,
   Button,
   ButtonBase,
   Chip,
@@ -14,18 +12,15 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  TextField,
   Typography,
 } from '@mui/material';
 import { alpha } from '@mui/material/styles';
-import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Dialog from '../../../../components/Dialog';
 import { type Segment } from '../../../../redux/SegmentSlice';
 import { formatTime } from '../../../../utils/formatTime';
-import { suggestTags } from '../../../../utils/suggestTags';
-import PlayTypeSelector from '../PlayTypeSelector';
 
 export interface SegmentTableProps {
   segments: Segment[];
@@ -33,8 +28,6 @@ export interface SegmentTableProps {
   readOnly?: boolean;
   activeSegmentId?: string | null;
   onDelete?: (id: string) => void;
-  onSetPlayType?: (id: string, playType: string) => void;
-  onSetTags?: (id: string, tags: string[]) => void;
   onSegmentClick?: (id: string) => void;
 }
 
@@ -54,11 +47,11 @@ function SkeletonRow({ index, readOnly }: { index: number; readOnly?: boolean })
       </TableCell>
 
       <TableCell>
-        <Skeleton width="6rem" />
-      </TableCell>
+        <Stack sx={{ flexDirection: 'row', gap: '0.5rem' }}>
+          <Skeleton variant="rounded" width="5rem" height="1.5rem" />
 
-      <TableCell>
-        <Skeleton width="8rem" />
+          <Skeleton variant="rounded" width="3rem" height="1.5rem" />
+        </Stack>
       </TableCell>
 
       {!readOnly && <TableCell />}
@@ -71,8 +64,6 @@ interface SegmentRowProps {
   index: number;
   readOnly?: boolean;
   isActive: boolean;
-  onSetPlayType?: (id: string, playType: string) => void;
-  onSetTags?: (id: string, tags: string[]) => void;
   onSegmentClick?: (id: string) => void;
   onDeleteRequest: (id: string) => void;
   rowRefRegistry: Record<string, HTMLTableRowElement | null>;
@@ -83,8 +74,6 @@ const SegmentRow = memo(function SegmentRow({
   index,
   readOnly,
   isActive,
-  onSetPlayType,
-  onSetTags,
   onSegmentClick,
   onDeleteRequest,
   rowRefRegistry,
@@ -103,22 +92,32 @@ const SegmentRow = memo(function SegmentRow({
     onDeleteRequest(segment.id);
   }, [onDeleteRequest, segment.id]);
 
-  const { options, autoSet } = useMemo(() => {
-    if (readOnly) return { options: [] as string[], autoSet: new Set<string>() };
-    const { auto, more } = suggestTags(segment.playType ?? '', segment.duration);
-    const set = new Set(auto);
-    const opts = [
-      ...auto,
-      ...more.filter((tag) => !auto.includes(tag)),
-    ].filter((opt) => !(segment.tags ?? []).includes(opt));
-    return { options: opts, autoSet: set };
-  }, [readOnly, segment.playType, segment.duration, segment.tags]);
-
-  const tags = segment.tags ?? [];
   const segLabel = t('segmentLabel', { number: index + 1 });
   const timeRange = `${formatTime(segment.start)} \u2192 ${formatTime(segment.end)}`;
   const seekHint = t('timelineSeekTo');
   const seekAriaLabel = `${segLabel}: ${timeRange}. ${seekHint}`;
+
+  // Compute human-readable labels from structured fields
+  const sideLabel
+    = segment.side === 'offense'
+      ? t('classifier.offense')
+      : segment.side === 'defense'
+        ? t('classifier.defense')
+        : null;
+
+  const downLabel = (segment.side === 'offense' && segment.down)
+    ? t(`classifier.down${segment.down}`)
+    : null;
+
+  const playTypeLabel
+    = segment.side === 'offense' && segment.playType === 'Run'
+      ? t('classifier.run')
+      : segment.side === 'offense' && segment.playType === 'Pass'
+        ? t('classifier.pass')
+        : null;
+
+  const tags = segment.tags ?? [];
+  const hasAnyClassification = sideLabel || segment.result || segment.player || tags.length > 0;
 
   return (
     <TableRow
@@ -181,84 +180,44 @@ const SegmentRow = memo(function SegmentRow({
             )}
       </TableCell>
 
+      {/* Classification summary */}
       <TableCell>
-        {readOnly
+        {hasAnyClassification
           ? (
-              <Typography variant="body2" color={segment.playType ? 'text.primary' : 'text.disabled'}>
-                {segment.playType || t('playTypeNone')}
-              </Typography>
-            )
-          : (
-              <PlayTypeSelector
-                segmentId={segment.id}
-                value={segment.playType ?? ''}
-                onChange={onSetPlayType ?? (() => {})}
-              />
-            )}
-      </TableCell>
+              <Stack sx={{ flexDirection: 'row', flexWrap: 'wrap', gap: '0.25rem', alignItems: 'center' }}>
+                {sideLabel && (
+                  <Chip
+                    label={sideLabel}
+                    size="small"
+                    color={segment.side === 'offense' ? 'primary' : 'secondary'}
+                  />
+                )}
 
-      <TableCell>
-        {readOnly
-          ? (
-              <Stack sx={{ flexDirection: 'row', flexWrap: 'wrap', gap: '0.25rem' }}>
-                {tags.length > 0
-                  ? tags.map((tag) => (
-                      <Chip key={tag} label={tag} size="small" />
-                    ))
-                  : (
-                      <Typography variant="body2" color="text.disabled">
-                        {t('tagsNone')}
-                      </Typography>
-                    )}
+                {downLabel && (
+                  <Chip label={downLabel} size="small" variant="outlined" />
+                )}
+
+                {playTypeLabel && (
+                  <Chip label={playTypeLabel} size="small" variant="outlined" />
+                )}
+
+                {segment.result && (
+                  <Chip label={segment.result} size="small" variant="outlined" />
+                )}
+
+                {segment.player && (
+                  <Chip label={segment.player} size="small" variant="outlined" />
+                )}
+
+                {tags.map((tag) => (
+                  <Chip key={tag} label={tag} size="small" variant="outlined" />
+                ))}
               </Stack>
             )
           : (
-              <Autocomplete
-                multiple
-                freeSolo
-                options={options}
-                value={segment.tags ?? []}
-                onChange={(_, newValue) => onSetTags?.(segment.id, newValue as string[])}
-                getOptionLabel={(opt) => opt}
-                renderOption={(props, opt) => (
-                  <li {...props} key={opt}>
-                    <Stack sx={{ flexDirection: 'row', alignItems: 'center', gap: '0.5rem' }}>
-                      {autoSet.has(opt) && (
-                        <AutoAwesomeIcon
-                          fontSize="small"
-                          aria-hidden="true"
-                          sx={{ color: (theme) => theme.palette.primary.main, fontSize: '0.875rem' }}
-                        />
-                      )}
-
-                      <span>{opt}</span>
-                    </Stack>
-                  </li>
-                )}
-                renderTags={(value, getTagProps) =>
-                  value.map((tag, i) => (
-                    <Chip
-                      label={tag}
-                      size="small"
-                      {...getTagProps({ index: i })}
-                      key={tag}
-                    />
-                  ))}
-                renderInput={(params) => (
-                  <TextField
-                    {...params}
-                    variant="standard"
-                    size="small"
-                    placeholder={segment.tags?.length
-                      ? undefined
-                      : t('tagsInputPlaceholder')}
-                    inputProps={{
-                      ...params.inputProps,
-                      'aria-label': t('tagsLabel'),
-                    }}
-                  />
-                )}
-              />
+              <Typography variant="body2" color="text.disabled">
+                {t('classificationEmpty')}
+              </Typography>
             )}
       </TableCell>
 
@@ -283,8 +242,6 @@ export default function SegmentTable({
   readOnly,
   activeSegmentId,
   onDelete,
-  onSetPlayType,
-  onSetTags,
   onSegmentClick,
 }: SegmentTableProps) {
   const { t } = useTranslation('gameFootage');
@@ -338,12 +295,8 @@ export default function SegmentTable({
                 {t('colTimeRange') ?? <Skeleton width="5rem" />}
               </TableCell>
 
-              <TableCell sx={{ width: '10rem' }}>
-                {t('colPlayType') ?? <Skeleton width="5rem" />}
-              </TableCell>
-
               <TableCell>
-                {t('colTags') ?? <Skeleton width="3rem" />}
+                {t('colClassification') ?? <Skeleton width="6rem" />}
               </TableCell>
 
               {!readOnly && <TableCell sx={{ width: '3rem' }} />}
@@ -362,8 +315,6 @@ export default function SegmentTable({
                     index={index}
                     readOnly={readOnly}
                     isActive={segment.id === activeSegmentId}
-                    onSetPlayType={onSetPlayType}
-                    onSetTags={onSetTags}
                     onSegmentClick={onSegmentClick}
                     onDeleteRequest={handleDeleteClick}
                     rowRefRegistry={rowRefs.current}

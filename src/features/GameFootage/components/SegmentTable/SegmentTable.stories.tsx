@@ -11,8 +11,6 @@ const meta: Meta<typeof SegmentTable> = {
   },
   args: {
     onDelete: action('onDelete'),
-    onSetPlayType: action('onSetPlayType'),
-    onSetTags: action('onSetTags'),
     onSegmentClick: action('onSegmentClick'),
     activeSegmentId: null,
   },
@@ -31,9 +29,9 @@ export const Empty: Story = {
 export const WithSegments: Story = {
   args: {
     segments: [
-      { id: '1', start: 10, end: 25, duration: 15, playType: 'Pass', tags: ['offense', 'air'] },
-      { id: '2', start: 42, end: 83, duration: 41, playType: 'Run', tags: ['offense', 'rush'] },
-      { id: '3', start: 120, end: 122, duration: 2, playType: 'Defense', tags: ['defense', 'quick'] },
+      { id: '1', start: 10, end: 25, duration: 15, side: 'offense', down: 2, playType: 'Pass', result: 'Touchdown', tags: ['Quick Pass', 'Red Zone'] },
+      { id: '2', start: 42, end: 83, duration: 41, side: 'offense', down: 1, playType: 'Run', result: 'Big Gain' },
+      { id: '3', start: 120, end: 122, duration: 2, side: 'defense', result: 'Flag Pull', tags: ['Man Coverage'] },
     ],
   },
 };
@@ -42,6 +40,15 @@ export const WithActiveSegment: Story = {
   args: {
     ...WithSegments.args,
     activeSegmentId: '2',
+  },
+};
+
+export const Unclassified: Story = {
+  args: {
+    segments: [
+      { id: '1', start: 10, end: 25, duration: 15 },
+      { id: '2', start: 42, end: 83, duration: 41 },
+    ],
   },
 };
 

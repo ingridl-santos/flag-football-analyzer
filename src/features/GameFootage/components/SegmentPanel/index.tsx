@@ -1,19 +1,41 @@
-import { Alert, Button, Card, CardContent, CircularProgress, Divider, Skeleton, Stack, Typography } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Alert,
+  Button,
+  Card,
+  CardContent,
+  CircularProgress,
+  Divider,
+  Skeleton,
+  Stack,
+  Typography,
+} from '@mui/material';
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { type Segment } from '../../../../redux/SegmentSlice';
+import { type PlayDown, type PlaySide, type Segment } from '../../../../redux/SegmentSlice';
+import PlayClassifier from '../PlayClassifier';
 import SegmentTable from '../SegmentTable';
 
 export interface SegmentPanelProps {
   videoType: 'file' | 'youtube' | null;
   segments: Segment[];
   readOnly?: boolean;
+  classifierMode?: boolean;
+  activeSegment?: Segment | null;
   activeSegmentId: string | null;
   isExportingZip: boolean;
   exportZipProgress: number;
   exportError?: string | null;
   onDelete?: (id: string) => void;
-  onSetPlayType?: (id: string, playType: string) => void;
+  onSetSide?: (id: string, side: PlaySide | undefined) => void;
+  onSetDown?: (id: string, down: PlayDown | undefined) => void;
+  onSetPlayType?: (id: string, playType: string | undefined) => void;
+  onSetResult?: (id: string, result: string | undefined) => void;
+  onSetPlayer?: (id: string, player: string | undefined) => void;
   onSetTags?: (id: string, tags: string[]) => void;
   onSegmentClick?: (id: string) => void;
   onExportCsv?: () => void;
@@ -25,12 +47,18 @@ export default function SegmentPanel({
   videoType,
   segments,
   readOnly,
+  classifierMode,
+  activeSegment,
   activeSegmentId,
   isExportingZip,
   exportZipProgress,
   exportError,
   onDelete,
+  onSetSide,
+  onSetDown,
   onSetPlayType,
+  onSetResult,
+  onSetPlayer,
   onSetTags,
   onSegmentClick,
   onExportCsv,
@@ -38,6 +66,12 @@ export default function SegmentPanel({
   onExportZip,
 }: SegmentPanelProps) {
   const { t } = useTranslation('gameFootage');
+
+  const activeSegmentNumber = useMemo(() => {
+    if (!activeSegment) return null;
+    const index = segments.findIndex((s) => s.id === activeSegment.id);
+    return index >= 0 ? index + 1 : null;
+  }, [activeSegment, segments]);
 
   return (
     <Card>
@@ -107,23 +141,25 @@ export default function SegmentPanel({
           {exportError && (
             <Alert severity="error">
               <Stack sx={{ gap: '0.25rem' }}>
-                <span>{t('exportZipError')}</span>
+                <Typography variant="body2" component="p">{t('exportZipError')}</Typography>
 
-                <details>
-                  <summary>
+                <Accordion>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon fontSize="small" />}>
                     <Typography variant="caption">
                       {t('exportZipErrorDetails')}
                     </Typography>
-                  </summary>
+                  </AccordionSummary>
 
-                  <Typography
-                    variant="caption"
-                    component="pre"
-                    sx={{ wordBreak: 'break-word', whiteSpace: 'pre-wrap', fontFamily: 'monospace' }}
-                  >
-                    {exportError}
-                  </Typography>
-                </details>
+                  <AccordionDetails sx={{ padding: 0, paddingTop: '0.25rem' }}>
+                    <Typography
+                      variant="caption"
+                      component="pre"
+                      sx={{ wordBreak: 'break-word', whiteSpace: 'pre-wrap', fontFamily: 'monospace' }}
+                    >
+                      {exportError}
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
               </Stack>
             </Alert>
           )}
@@ -134,14 +170,42 @@ export default function SegmentPanel({
             </Typography>
           )}
 
+          {classifierMode && (
+            <>
+              {activeSegment && activeSegmentNumber !== null
+                ? (
+                    <PlayClassifier
+                      key={activeSegment.id}
+                      segment={activeSegment}
+                      segmentNumber={activeSegmentNumber}
+                      onSetSide={onSetSide ?? (() => {})}
+                      onSetDown={onSetDown ?? (() => {})}
+                      onSetPlayType={onSetPlayType ?? (() => {})}
+                      onSetResult={onSetResult ?? (() => {})}
+                      onSetPlayer={onSetPlayer ?? (() => {})}
+                      onSetTags={onSetTags ?? (() => {})}
+                    />
+                  )
+                : (
+                    <>
+                      <Typography variant="body2" color="text.secondary">
+                        {t('classifier.noSegmentSelected') ?? (
+                          <Skeleton sx={{ maxWidth: '20rem' }} />
+                        )}
+                      </Typography>
+
+                      <Divider />
+                    </>
+                  )}
+            </>
+          )}
+
           <SegmentTable
             segments={segments}
             hideTitle
             readOnly={readOnly}
             activeSegmentId={activeSegmentId}
             onDelete={onDelete}
-            onSetPlayType={onSetPlayType}
-            onSetTags={onSetTags}
             onSegmentClick={onSegmentClick}
           />
         </Stack>

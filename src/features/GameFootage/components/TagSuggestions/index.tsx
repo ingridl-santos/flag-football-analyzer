@@ -90,22 +90,13 @@ export default function TagSuggestions({
       </Stack>
 
       {hiddenMore.length > 0 && (
-        <Accordion
-          disableGutters
-          elevation={0}
-          sx={{
-            backgroundColor: 'transparent',
-            border: 'none',
-            '&::before': { display: 'none' },
-          }}
-        >
+        <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon fontSize="small" />}
             sx={{
               minHeight: 'unset',
               padding: 0,
               width: 'fit-content',
-              '& .MuiAccordionSummary-content': { margin: 0 },
               '& .MuiAccordionSummary-expandIconWrapper': { marginLeft: '0.125rem' },
             }}
           >
