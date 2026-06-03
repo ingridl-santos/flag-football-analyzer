@@ -1,0 +1,107 @@
+<div>
+  <div
+    class="MuiStack-root css-bphiqh-MuiStack-root"
+  >
+    <div
+      class="MuiStack-root css-19qosyg-MuiStack-root"
+    >
+      <div
+        class="MuiStack-root css-1j68m8z-MuiStack-root"
+      >
+        <h6
+          class="MuiTypography-root MuiTypography-subtitle1 css-11raq2z-MuiTypography-root"
+        >
+          classifier.heading
+        </h6>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-7x1md9-MuiTypography-root"
+        >
+          classifier.clipCounter
+           · 
+          0:42 → 1:23
+           · 
+          0:41
+        </p>
+      </div>
+      <div
+        aria-label="classifier.clipNavigation"
+        class="MuiStack-root css-x58b2l-MuiStack-root"
+        role="group"
+      >
+        <button
+          aria-label="classifier.prevClip"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+            data-testid="ChevronLeftIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="classifier.nextClip"
+          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+          disabled=""
+          tabindex="-1"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+            data-testid="ChevronRightIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiStack-root css-5u2gm5-MuiStack-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-caption css-fzhc8p-MuiTypography-root"
+      >
+        classifier.phaseLabel
+      </span>
+      <div
+        aria-label="classifier.phaseLabel"
+        class="MuiToggleButtonGroup-root css-yhcl14-MuiToggleButtonGroup-root"
+        role="group"
+      >
+        <button
+          aria-pressed="false"
+          class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-ux7rrd-MuiButtonBase-root-MuiToggleButton-root"
+          tabindex="0"
+          type="button"
+          value="offense"
+        >
+          classifier.offense
+        </button>
+        <button
+          aria-pressed="false"
+          class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-ux7rrd-MuiButtonBase-root-MuiToggleButton-root"
+          tabindex="0"
+          type="button"
+          value="defense"
+        >
+          classifier.defense
+        </button>
+      </div>
+    </div>
+    <hr
+      class="MuiDivider-root MuiDivider-fullWidth css-1lg1g87-MuiDivider-root"
+    />
+  </div>
+</div>

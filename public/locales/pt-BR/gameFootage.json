@@ -87,6 +87,10 @@
     "resultLoss": "Perda de Jardas",
     "resultPickSix": "Pick Six",
     "resultTouchdownAllowed": "Touchdown Concedido",
-    "resultForcedIncompletion": "Incompleto Forçado"
+    "resultForcedIncompletion": "Incompletude Forçada",
+    "prevClip": "Clipe anterior",
+    "nextClip": "Próximo clipe",
+    "clipCounter": "Clipe {{current}} de {{total}}",
+    "clipNavigation": "Navegação de clipes"
   }
 }

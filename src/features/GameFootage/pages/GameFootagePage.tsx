@@ -38,11 +38,13 @@ export default function GameFootagePage() {
 
   return (
     <GameFootageTemplate
-      VideoPlayerHoc={<VideoPlayerHoc videoFileRef={videoFileRef} />}
-      ModeToggleHoc={<ModeToggleHoc />}
-      SegmentControlsHoc={(
-        <SegmentControlsHoc onSegmentCreated={handleSegmentCreated} />
+      VideoPlayerHoc={(
+        <VideoPlayerHoc
+          videoFileRef={videoFileRef}
+          controls={<SegmentControlsHoc onSegmentCreated={handleSegmentCreated} />}
+        />
       )}
+      ModeToggleHoc={<ModeToggleHoc />}
       SegmentPanelHoc={<SegmentPanelHoc videoFileRef={videoFileRef} videoPlayerRef={videoPlayerRef} />}
       videoPlayerRef={videoPlayerRef}
       showSegmentCreatedToast={showSegmentCreatedToast}

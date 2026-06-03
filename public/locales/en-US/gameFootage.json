@@ -87,6 +87,10 @@
     "resultLoss": "Loss",
     "resultPickSix": "Pick Six",
     "resultTouchdownAllowed": "Touchdown Allowed",
-    "resultForcedIncompletion": "Forced Incompletion"
+    "resultForcedIncompletion": "Forced Incompletion",
+    "prevClip": "Previous clip",
+    "nextClip": "Next clip",
+    "clipCounter": "Clip {{current}} of {{total}}",
+    "clipNavigation": "Clip navigation"
   }
 }

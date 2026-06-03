@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 export interface GameFootageTemplateProps {
   VideoPlayerHoc: ReactNode;
   ModeToggleHoc: ReactNode;
-  SegmentControlsHoc: ReactNode;
   SegmentPanelHoc: ReactNode;
   videoPlayerRef?: RefObject<HTMLDivElement>;
   showSegmentCreatedToast: boolean;
@@ -16,7 +15,6 @@ export interface GameFootageTemplateProps {
 export default function GameFootageTemplate({
   VideoPlayerHoc,
   ModeToggleHoc,
-  SegmentControlsHoc,
   SegmentPanelHoc,
   videoPlayerRef,
   showSegmentCreatedToast,
@@ -36,8 +34,6 @@ export default function GameFootageTemplate({
         </Box>
 
         {ModeToggleHoc}
-
-        {SegmentControlsHoc}
 
         {SegmentPanelHoc}
       </Stack>

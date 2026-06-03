@@ -1,7 +1,7 @@
 import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { Box, IconButton, Slider, Stack, Typography } from '@mui/material';
-import { SyntheticEvent } from 'react';
+import { ReactNode, SyntheticEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { useSeek } from '../../hooks/useSeek';
@@ -14,6 +14,7 @@ export interface VideoPlayerProps {
   duration: number;
   isPlaying: boolean;
   seekTo?: number | null;
+  endControls?: ReactNode;
   onTimeUpdate: (time: number) => void;
   onDurationChange: (duration: number) => void;
   onPlayStateChange: (isPlaying: boolean) => void;
@@ -27,6 +28,7 @@ export default function VideoPlayer({
   duration,
   isPlaying,
   seekTo,
+  endControls,
   onTimeUpdate,
   onDurationChange,
   onPlayStateChange,
@@ -102,6 +104,12 @@ export default function VideoPlayer({
         <Typography variant="body2">
           {timestamp}
         </Typography>
+
+        {endControls && (
+          <Stack sx={{ marginLeft: 'auto' }}>
+            {endControls}
+          </Stack>
+        )}
       </Stack>
     </Stack>
   );

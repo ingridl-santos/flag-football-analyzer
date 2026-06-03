@@ -1,4 +1,4 @@
-import { RefObject, useCallback, useState } from 'react';
+import { RefObject, useCallback, useEffect, useRef, useState } from 'react';
 
 import { useActiveSegmentId } from '../../../hooks/useActiveSegmentId';
 import { useVideoExport } from '../../../hooks/useVideoExport';
@@ -27,7 +27,7 @@ export interface SegmentPanelHocProps {
 
 export default function SegmentPanelHoc({ videoFileRef, videoPlayerRef }: SegmentPanelHocProps) {
   const dispatch = useAppDispatch();
-  const { videoType, currentTime } = useAppSelector(selectVideoState);
+  const { videoType, currentTime, isPlaying } = useAppSelector(selectVideoState);
   const { segments } = useAppSelector(selectSegmentState);
   const { mode } = useAppSelector(selectAnalysisState);
   const { exportZip, isExporting, exportProgress, exportError } = useVideoExport();
@@ -41,6 +41,72 @@ export default function SegmentPanelHoc({ videoFileRef, videoPlayerRef }: Segmen
   const classifierSegment = classifierSegmentId
     ? (segments.find((s) => s.id === classifierSegmentId) ?? null)
     : null;
+
+  const classifierIndex = classifierSegmentId
+    ? segments.findIndex((s) => s.id === classifierSegmentId)
+    : -1;
+  const hasPrev = classifierIndex > 0;
+  const hasNext = classifierIndex >= 0 && classifierIndex < segments.length - 1;
+
+  // Navigate to a specific segment: seek to its start and pause so the coach
+  // can review and tag before pressing play.
+  const handleNavigateToSegment = useCallback((id: string) => {
+    const segment = segments.find((s) => s.id === id);
+
+    if (!segment) return;
+
+    dispatch(requestSeek(segment.start));
+    dispatch(setCurrentTime(segment.start));
+    dispatch(setIsPlaying(false));
+    setClassifierSegmentId(id);
+    videoPlayerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [dispatch, segments, videoPlayerRef]);
+
+  const handleNavigatePrev = useCallback(() => {
+    if (classifierIndex > 0) handleNavigateToSegment(segments[classifierIndex - 1].id);
+  }, [classifierIndex, handleNavigateToSegment, segments]);
+
+  const handleNavigateNext = useCallback(() => {
+    if (classifierIndex >= 0 && classifierIndex < segments.length - 1) {
+      handleNavigateToSegment(segments[classifierIndex + 1].id);
+    }
+  }, [classifierIndex, handleNavigateToSegment, segments]);
+
+  // When switching into tag mode, auto-select the segment currently under the
+  // playhead (if any) or the first segment, so the classifier is never blank.
+  // Refs keep the latest values accessible inside the effect without making
+  // mode-changes re-run on every segment/time update.
+  const segmentsRef = useRef(segments);
+  segmentsRef.current = segments;
+  const activeSegmentIdRef = useRef(activeSegmentId);
+  activeSegmentIdRef.current = activeSegmentId;
+  const handleNavigateToSegmentRef = useRef(handleNavigateToSegment);
+  handleNavigateToSegmentRef.current = handleNavigateToSegment;
+
+  const prevModeRef = useRef(mode);
+  useEffect(() => {
+    const wasTag = prevModeRef.current === 'tag';
+    prevModeRef.current = mode;
+
+    if (mode !== 'tag' || wasTag) return;
+    if (segmentsRef.current.length === 0) return;
+
+    const target
+      = segmentsRef.current.find((s) => s.id === activeSegmentIdRef.current)
+        ?? segmentsRef.current[0];
+    handleNavigateToSegmentRef.current(target.id);
+  }, [mode]);
+
+  // Clamp playback to the classifier segment's boundaries in tag mode: stop and
+  // loop back to the segment start when the playhead reaches (or passes) its end.
+  useEffect(() => {
+    if (mode !== 'tag' || !classifierSegment || !isPlaying) return;
+    if (currentTime >= classifierSegment.end) {
+      dispatch(setIsPlaying(false));
+      dispatch(requestSeek(classifierSegment.start));
+      dispatch(setCurrentTime(classifierSegment.start));
+    }
+  }, [currentTime, mode, classifierSegment, isPlaying, dispatch]);
 
   const handleSegmentClick = useCallback((id: string) => {
     const segment = segments.find((s) => s.id === id);
@@ -109,6 +175,10 @@ export default function SegmentPanelHoc({ videoFileRef, videoPlayerRef }: Segmen
       classifierMode={mode === 'tag'}
       activeSegment={classifierSegment}
       activeSegmentId={activeSegmentId}
+      hasPrev={hasPrev}
+      hasNext={hasNext}
+      onNavigatePrev={handleNavigatePrev}
+      onNavigateNext={handleNavigateNext}
       isExportingZip={isExporting}
       exportZipProgress={exportProgress}
       exportError={exportError}

@@ -18,7 +18,12 @@ const meta: Meta<typeof PlayClassifier> = {
   },
   args: {
     segmentNumber: 3,
+    totalSegments: 5,
+    hasPrev: true,
+    hasNext: true,
     segment: baseSegment,
+    onNavigatePrev: action('onNavigatePrev'),
+    onNavigateNext: action('onNavigateNext'),
     onSetSide: action('onSetSide'),
     onSetDown: action('onSetDown'),
     onSetPlayType: action('onSetPlayType'),
@@ -88,6 +93,31 @@ export const FullyClassifiedDefense: Story = {
       player: '#34, CB',
       tags: ['Man Coverage', 'Press Coverage'],
     },
+  },
+};
+
+export const FirstClip: Story = {
+  args: {
+    segmentNumber: 1,
+    hasPrev: false,
+    hasNext: true,
+  },
+};
+
+export const LastClip: Story = {
+  args: {
+    segmentNumber: 5,
+    hasPrev: true,
+    hasNext: false,
+  },
+};
+
+export const OnlyClip: Story = {
+  args: {
+    segmentNumber: 1,
+    totalSegments: 1,
+    hasPrev: false,
+    hasNext: false,
   },
 };
 

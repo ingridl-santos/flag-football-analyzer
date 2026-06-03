@@ -16,6 +16,8 @@ const meta: Meta<typeof SegmentPanel> = {
   },
   args: {
     onDelete: action('onDelete'),
+    onNavigatePrev: action('onNavigatePrev'),
+    onNavigateNext: action('onNavigateNext'),
     onSetSide: action('onSetSide'),
     onSetDown: action('onSetDown'),
     onSetPlayType: action('onSetPlayType'),
@@ -30,6 +32,8 @@ const meta: Meta<typeof SegmentPanel> = {
     activeSegmentId: null,
     activeSegment: null,
     classifierMode: false,
+    hasPrev: false,
+    hasNext: false,
     isExportingZip: false,
     exportZipProgress: 0,
     segments: [],
@@ -66,6 +70,22 @@ export const ClassifierModeWithSelection: Story = {
     classifierMode: true,
     activeSegment: classifiedSegments[1],
     activeSegmentId: '2',
+    hasPrev: true,
+    hasNext: false,
+  },
+};
+
+export const ClassifierModeNavigating: Story = {
+  args: {
+    segments: [
+      ...classifiedSegments,
+      { id: '3', start: 90, end: 110, duration: 20 },
+    ],
+    classifierMode: true,
+    activeSegment: classifiedSegments[0],
+    activeSegmentId: '1',
+    hasPrev: false,
+    hasNext: true,
   },
 };
 

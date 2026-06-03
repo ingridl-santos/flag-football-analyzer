@@ -1,4 +1,4 @@
-import { ChangeEvent } from 'react';
+import { ChangeEvent, ReactNode } from 'react';
 
 import UploadFileIcon from '@mui/icons-material/UploadFile';
 import { Button, Card, CardContent, Divider, Skeleton, Stack, Typography } from '@mui/material';
@@ -21,6 +21,7 @@ export interface VideoPlayerSectionProps {
   seekTo?: number | null;
   segments: Segment[];
   activeSegmentId: string | null;
+  controls?: ReactNode;
   onFileSelect?: (file: File) => void;
   onYouTubeUrl?: (videoId: string) => void;
   onTimeUpdate?: (time: number) => void;
@@ -42,6 +43,7 @@ export default function VideoPlayerSection({
   seekTo,
   segments,
   activeSegmentId,
+  controls,
   onFileSelect,
   onYouTubeUrl,
   onTimeUpdate,
@@ -117,6 +119,7 @@ export default function VideoPlayerSection({
           duration={duration}
           isPlaying={isPlaying}
           seekTo={seekTo}
+          endControls={controls}
           onTimeUpdate={onTimeUpdate ?? (() => {})}
           onDurationChange={onDurationChange ?? (() => {})}
           onPlayStateChange={onPlayStateChange ?? (() => {})}
@@ -130,6 +133,7 @@ export default function VideoPlayerSection({
           duration={duration}
           isPlaying={isPlaying}
           seekTo={seekTo}
+          endControls={controls}
           onTimeUpdate={onTimeUpdate ?? (() => {})}
           onDurationChange={onDurationChange ?? (() => {})}
           onPlayStateChange={onPlayStateChange ?? (() => {})}

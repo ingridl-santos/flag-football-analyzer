@@ -1,6 +1,7 @@
 import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { Box, IconButton, Stack, Typography } from '@mui/material';
+import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { useSeek } from '../../hooks/useSeek';
@@ -13,6 +14,7 @@ export interface YouTubePlayerProps {
   duration: number;
   isPlaying: boolean;
   seekTo?: number | null;
+  endControls?: ReactNode;
   onTimeUpdate: (time: number) => void;
   onDurationChange: (duration: number) => void;
   onPlayStateChange: (isPlaying: boolean) => void;
@@ -25,6 +27,7 @@ export default function YouTubePlayer({
   duration,
   isPlaying,
   seekTo,
+  endControls,
   onTimeUpdate,
   onDurationChange,
   onPlayStateChange,
@@ -71,6 +74,12 @@ export default function YouTubePlayer({
         <Typography variant="body2">
           {timestamp}
         </Typography>
+
+        {endControls && (
+          <Stack sx={{ marginLeft: 'auto' }}>
+            {endControls}
+          </Stack>
+        )}
       </Stack>
     </Stack>
   );

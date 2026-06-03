@@ -1,4 +1,4 @@
-import { MutableRefObject, useCallback } from 'react';
+import { MutableRefObject, ReactNode, useCallback } from 'react';
 
 import { useActiveSegmentId } from '../../../hooks/useActiveSegmentId';
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks';
@@ -19,9 +19,10 @@ import VideoPlayerSection from '../components/VideoPlayerSection';
 
 export interface VideoPlayerHocProps {
   videoFileRef: MutableRefObject<File | null>;
+  controls?: ReactNode;
 }
 
-export default function VideoPlayerHoc({ videoFileRef }: VideoPlayerHocProps) {
+export default function VideoPlayerHoc({ videoFileRef, controls }: VideoPlayerHocProps) {
   const dispatch = useAppDispatch();
   const videoState = useAppSelector(selectVideoState);
   const { segments } = useAppSelector(selectSegmentState);
@@ -78,6 +79,7 @@ export default function VideoPlayerHoc({ videoFileRef }: VideoPlayerHocProps) {
     <VideoPlayerSection
       videoType={videoState.videoType}
       videoUrl={videoState.videoUrl}
+      controls={controls}
       videoFileName={videoState.videoFileName}
       youtubeVideoId={videoState.youtubeVideoId}
       currentTime={videoState.currentTime}

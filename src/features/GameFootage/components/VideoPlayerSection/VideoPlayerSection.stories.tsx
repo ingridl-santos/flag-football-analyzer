@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { action } from 'storybook/actions';
 
 import VideoPlayerSection from '.';
+import SegmentControls from '../SegmentControls';
 
 const meta: Meta<typeof VideoPlayerSection> = {
   title: 'Features / Game Footage / Components / Video Player Section',
@@ -59,6 +60,23 @@ export const WithSegments: Story = {
       { id: '2', start: 42, end: 83, duration: 41, playType: 'Run', tags: ['offense'] },
     ],
     activeSegmentId: '2',
+  },
+};
+
+export const WithControls: Story = {
+  args: {
+    ...WithVideo.args,
+    controls: (
+      <SegmentControls
+        videoLoaded
+        mode="cut"
+        pendingStart={10}
+        pendingEnd={null}
+        onSetStart={action('onSetStart')}
+        onSetEnd={action('onSetEnd')}
+        onCreateSegment={action('onCreateSegment')}
+      />
+    ),
   },
 };
 

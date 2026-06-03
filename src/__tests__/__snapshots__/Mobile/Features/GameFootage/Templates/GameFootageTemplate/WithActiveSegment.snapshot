@@ -191,44 +191,6 @@
         </button>
       </div>
       <div
-        class="MuiStack-root css-8r4r5m-MuiStack-root"
-      >
-        <div
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1ljvscb-MuiPaper-root-MuiCard-root"
-        >
-          <div
-            class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
-          >
-            <div
-              class="MuiStack-root css-pocecv-MuiStack-root"
-            >
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-7v4xv4-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                setStart
-              </button>
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-7v4xv4-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                setEnd
-              </button>
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-g55t1d-MuiButtonBase-root-MuiButton-root"
-                disabled=""
-                tabindex="-1"
-                type="button"
-              >
-                createSegment
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
         class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1ljvscb-MuiPaper-root-MuiCard-root"
       >
         <div

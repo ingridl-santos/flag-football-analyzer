@@ -1,9 +1,12 @@
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import {
   Autocomplete,
   Box,
   Chip,
   Divider,
+  IconButton,
   Skeleton,
   Stack,
   TextField,
@@ -86,6 +89,11 @@ const ResultChip = memo(function ResultChip({ value, labelKey, selected, onToggl
 export interface PlayClassifierProps {
   segment: Segment;
   segmentNumber: number;
+  totalSegments?: number;
+  hasPrev?: boolean;
+  hasNext?: boolean;
+  onNavigatePrev?: () => void;
+  onNavigateNext?: () => void;
   onSetSide: (id: string, side: PlaySide | undefined) => void;
   onSetDown: (id: string, down: PlayDown | undefined) => void;
   onSetPlayType: (id: string, playType: string | undefined) => void;
@@ -97,6 +105,11 @@ export interface PlayClassifierProps {
 export default function PlayClassifier({
   segment,
   segmentNumber,
+  totalSegments,
+  hasPrev,
+  hasNext,
+  onNavigatePrev,
+  onNavigateNext,
   onSetSide,
   onSetDown,
   onSetPlayType,
@@ -166,20 +179,64 @@ export default function PlayClassifier({
 
   return (
     <Stack sx={{ gap: '1.25rem' }}>
-      <Stack sx={{ gap: '0.125rem' }}>
-        <Typography variant="subtitle1" fontWeight={600}>
-          {t('classifier.heading', { number: segmentNumber }) ?? (
-            <Skeleton width="14rem" />
-          )}
-        </Typography>
+      <Stack
+        sx={{
+          flexDirection: 'row',
+          alignItems: 'flex-start',
+          justifyContent: 'space-between',
+          gap: '0.5rem',
+        }}
+      >
+        <Stack sx={{ gap: '0.125rem', flex: 1 }}>
+          <Typography variant="subtitle1" fontWeight={600}>
+            {t('classifier.heading', { number: segmentNumber }) ?? (
+              <Skeleton width="14rem" />
+            )}
+          </Typography>
 
-        <Typography variant="body2" color="text.secondary">
-          {timeRange}
+          <Typography variant="body2" color="text.secondary">
+            {totalSegments !== undefined && (
+              <>
+                {t('classifier.clipCounter', { current: segmentNumber, total: totalSegments })
+                  ?? <Skeleton width="6rem" />}
 
-          {' · '}
+                {' · '}
+              </>
+            )}
 
-          {formatTime(segment.duration)}
-        </Typography>
+            {timeRange}
+
+            {' · '}
+
+            {formatTime(segment.duration)}
+          </Typography>
+        </Stack>
+
+        {(onNavigatePrev || onNavigateNext) && (
+          <Stack
+            sx={{ flexDirection: 'row', gap: '0.25rem', flexShrink: 0 }}
+            role="group"
+            aria-label={t('classifier.clipNavigation')}
+          >
+            <IconButton
+              size="small"
+              onClick={onNavigatePrev}
+              disabled={!hasPrev}
+              aria-label={t('classifier.prevClip')}
+            >
+              <ChevronLeftIcon fontSize="small" />
+            </IconButton>
+
+            <IconButton
+              size="small"
+              onClick={onNavigateNext}
+              disabled={!hasNext}
+              aria-label={t('classifier.nextClip')}
+            >
+              <ChevronRightIcon fontSize="small" />
+            </IconButton>
+          </Stack>
+        )}
       </Stack>
 
       <Stack sx={{ gap: '0.5rem' }}>

@@ -102,6 +102,36 @@
                     >
                       0:42 / 3:00
                     </p>
+                    <div
+                      class="MuiStack-root css-1ejxx6h-MuiStack-root"
+                    >
+                      <div
+                        class="MuiStack-root css-pocecv-MuiStack-root"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-7v4xv4-MuiButtonBase-root-MuiButton-root"
+                          tabindex="0"
+                          type="button"
+                        >
+                          setStart
+                        </button>
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary css-7v4xv4-MuiButtonBase-root-MuiButton-root"
+                          tabindex="0"
+                          type="button"
+                        >
+                          setEnd
+                        </button>
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-g55t1d-MuiButtonBase-root-MuiButton-root"
+                          disabled=""
+                          tabindex="-1"
+                          type="button"
+                        >
+                          createSegment
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

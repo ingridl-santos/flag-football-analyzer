@@ -28,7 +28,11 @@ interface SegmentPanelBaseProps {
   isExportingZip: boolean;
   exportZipProgress: number;
   exportError?: string | null;
+  hasPrev?: boolean;
+  hasNext?: boolean;
   onDelete?: (id: string) => void;
+  onNavigatePrev?: () => void;
+  onNavigateNext?: () => void;
   onSegmentClick?: (id: string) => void;
   onExportCsv?: () => void;
   onExportJson?: () => void;
@@ -189,6 +193,11 @@ export default function SegmentPanel(props: SegmentPanelProps) {
                       key={activeSegment.id}
                       segment={activeSegment}
                       segmentNumber={activeSegmentNumber}
+                      totalSegments={segments.length}
+                      hasPrev={props.hasPrev}
+                      hasNext={props.hasNext}
+                      onNavigatePrev={props.onNavigatePrev}
+                      onNavigateNext={props.onNavigateNext}
                       onSetSide={props.onSetSide}
                       onSetDown={props.onSetDown}
                       onSetPlayType={props.onSetPlayType}
@@ -211,14 +220,16 @@ export default function SegmentPanel(props: SegmentPanelProps) {
             </>
           )}
 
-          <SegmentTable
-            segments={segments}
-            hideTitle
-            readOnly={readOnly}
-            activeSegmentId={activeSegmentId}
-            onDelete={onDelete}
-            onSegmentClick={onSegmentClick}
-          />
+          {!classifierMode && (
+            <SegmentTable
+              segments={segments}
+              hideTitle
+              readOnly={readOnly}
+              activeSegmentId={activeSegmentId}
+              onDelete={onDelete}
+              onSegmentClick={onSegmentClick}
+            />
+          )}
         </Stack>
       </CardContent>
     </Card>

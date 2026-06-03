@@ -18,6 +18,17 @@ const defaultVideoPlayerSection = (
     isPlaying={false}
     segments={[]}
     activeSegmentId={null}
+    controls={(
+      <SegmentControls
+        videoLoaded={false}
+        mode="cut"
+        pendingStart={null}
+        pendingEnd={null}
+        onSetStart={action('onSetStart')}
+        onSetEnd={action('onSetEnd')}
+        onCreateSegment={action('onCreateSegment')}
+      />
+    )}
     onFileSelect={action('onFileSelect')}
     onYouTubeUrl={action('onYouTubeUrl')}
     onTimeUpdate={action('onTimeUpdate')}
@@ -33,18 +44,6 @@ const defaultModeToggle = (
     videoLoaded={false}
     mode="cut"
     onModeChange={action('onModeChange')}
-  />
-);
-
-const defaultSegmentControls = (
-  <SegmentControls
-    videoLoaded={false}
-    mode="cut"
-    pendingStart={null}
-    pendingEnd={null}
-    onSetStart={action('onSetStart')}
-    onSetEnd={action('onSetEnd')}
-    onCreateSegment={action('onCreateSegment')}
   />
 );
 
@@ -75,7 +74,6 @@ const meta: Meta<typeof GameFootageTemplate> = {
   args: {
     VideoPlayerHoc: defaultVideoPlayerSection,
     ModeToggleHoc: defaultModeToggle,
-    SegmentControlsHoc: defaultSegmentControls,
     SegmentPanelHoc: defaultSegmentPanel,
     showSegmentCreatedToast: false,
     onCloseToast: action('onCloseToast'),
@@ -101,6 +99,17 @@ export const WithVideo: Story = {
         isPlaying={false}
         segments={[]}
         activeSegmentId={null}
+        controls={(
+          <SegmentControls
+            videoLoaded
+            mode="cut"
+            pendingStart={null}
+            pendingEnd={null}
+            onSetStart={action('onSetStart')}
+            onSetEnd={action('onSetEnd')}
+            onCreateSegment={action('onCreateSegment')}
+          />
+        )}
         onFileSelect={action('onFileSelect')}
         onYouTubeUrl={action('onYouTubeUrl')}
         onTimeUpdate={action('onTimeUpdate')}
@@ -115,17 +124,6 @@ export const WithVideo: Story = {
         videoLoaded
         mode="cut"
         onModeChange={action('onModeChange')}
-      />
-    ),
-    SegmentControlsHoc: (
-      <SegmentControls
-        videoLoaded
-        mode="cut"
-        pendingStart={null}
-        pendingEnd={null}
-        onSetStart={action('onSetStart')}
-        onSetEnd={action('onSetEnd')}
-        onCreateSegment={action('onCreateSegment')}
       />
     ),
     SegmentPanelHoc: (
@@ -166,6 +164,17 @@ export const WithSegments: Story = {
         isPlaying={false}
         segments={WITH_SEGMENTS}
         activeSegmentId={null}
+        controls={(
+          <SegmentControls
+            videoLoaded
+            mode="cut"
+            pendingStart={null}
+            pendingEnd={null}
+            onSetStart={action('onSetStart')}
+            onSetEnd={action('onSetEnd')}
+            onCreateSegment={action('onCreateSegment')}
+          />
+        )}
         onFileSelect={action('onFileSelect')}
         onYouTubeUrl={action('onYouTubeUrl')}
         onTimeUpdate={action('onTimeUpdate')}
@@ -180,17 +189,6 @@ export const WithSegments: Story = {
         videoLoaded
         mode="cut"
         onModeChange={action('onModeChange')}
-      />
-    ),
-    SegmentControlsHoc: (
-      <SegmentControls
-        videoLoaded
-        mode="cut"
-        pendingStart={null}
-        pendingEnd={null}
-        onSetStart={action('onSetStart')}
-        onSetEnd={action('onSetEnd')}
-        onCreateSegment={action('onCreateSegment')}
       />
     ),
     SegmentPanelHoc: (
@@ -271,17 +269,6 @@ export const TagModeWithSegments: Story = {
         videoLoaded
         mode="tag"
         onModeChange={action('onModeChange')}
-      />
-    ),
-    SegmentControlsHoc: (
-      <SegmentControls
-        videoLoaded
-        mode="tag"
-        pendingStart={null}
-        pendingEnd={null}
-        onSetStart={action('onSetStart')}
-        onSetEnd={action('onSetEnd')}
-        onCreateSegment={action('onCreateSegment')}
       />
     ),
     SegmentPanelHoc: (

@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Skeleton, Stack, Typography } from '@mui/material';
+import { Button, Skeleton, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 import type { AnalysisMode } from '../../../../redux/AnalysisSlice';
@@ -30,40 +30,34 @@ export default function SegmentControls({
   const canCreateSegment = pendingStart !== null && pendingEnd !== null && pendingStart < pendingEnd;
 
   return (
-    <Stack sx={{ gap: '1rem' }}>
-      <Card>
-        <CardContent>
-          <Stack sx={{ flexDirection: 'row', gap: '1rem', flexWrap: 'wrap' }}>
-            <Button variant="outlined" onClick={onSetStart}>
-              {t('setStart') ?? <Skeleton width="5rem" />}
+    <Stack sx={{ flexDirection: 'row', gap: '1rem', flexWrap: 'wrap' }}>
+      <Button variant="outlined" onClick={onSetStart}>
+        {t('setStart') ?? <Skeleton width="5rem" />}
 
-              {pendingStart !== null && (
-                <Typography variant="caption" sx={{ marginLeft: '0.5rem' }}>
-                  {formatTime(pendingStart)}
-                </Typography>
-              )}
-            </Button>
+        {pendingStart !== null && (
+          <Typography variant="caption" sx={{ marginLeft: '0.5rem' }}>
+            {formatTime(pendingStart)}
+          </Typography>
+        )}
+      </Button>
 
-            <Button variant="outlined" onClick={onSetEnd}>
-              {t('setEnd') ?? <Skeleton width="5rem" />}
+      <Button variant="outlined" onClick={onSetEnd}>
+        {t('setEnd') ?? <Skeleton width="5rem" />}
 
-              {pendingEnd !== null && (
-                <Typography variant="caption" sx={{ marginLeft: '0.5rem' }}>
-                  {formatTime(pendingEnd)}
-                </Typography>
-              )}
-            </Button>
+        {pendingEnd !== null && (
+          <Typography variant="caption" sx={{ marginLeft: '0.5rem' }}>
+            {formatTime(pendingEnd)}
+          </Typography>
+        )}
+      </Button>
 
-            <Button
-              variant="contained"
-              onClick={onCreateSegment}
-              disabled={!canCreateSegment}
-            >
-              {t('createSegment') ?? <Skeleton width="8rem" />}
-            </Button>
-          </Stack>
-        </CardContent>
-      </Card>
+      <Button
+        variant="contained"
+        onClick={onCreateSegment}
+        disabled={!canCreateSegment}
+      >
+        {t('createSegment') ?? <Skeleton width="8rem" />}
+      </Button>
     </Stack>
   );
 }
