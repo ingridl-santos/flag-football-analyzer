@@ -45,7 +45,7 @@ export default function SegmentControls({
             </Button>
 
             <Button variant="outlined" onClick={onSetEnd}>
-              {t('setEnd') ?? <Skeleton width="4.5rem" />}
+              {t('setEnd') ?? <Skeleton width="5rem" />}
 
               {pendingEnd !== null && (
                 <Typography variant="caption" sx={{ marginLeft: '0.5rem' }}>

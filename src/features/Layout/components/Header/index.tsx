@@ -24,7 +24,7 @@ import type { MenuEntry } from '../../types/MenuEntry';
 export interface HeaderProps extends AppBarProps {
   title: string;
   menuEntries: Array<MenuEntry>;
-  onMenuButtonClick: () => void;
+  onMenuButtonClick?: () => void;
 }
 
 export default function Header({
@@ -43,9 +43,9 @@ export default function Header({
     <AppBar
       {...rest}
       sx={{
-        backgroundColor: 'background.paper',
+        backgroundColor: (theme) => theme.palette.background.paper,
         borderBottom: '2px solid',
-        borderColor: 'primary.main',
+        borderColor: (theme) => theme.palette.primary.main,
         ...rest.sx,
       }}
     >

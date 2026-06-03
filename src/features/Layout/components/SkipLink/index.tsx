@@ -16,8 +16,8 @@ const SkipLink = ({ href, children }: SkipLinkProps) => (
       zIndex: 'tooltip',
       paddingX: '1.5rem',
       paddingY: '0.5rem',
-      backgroundColor: 'primary.main',
-      color: 'primary.contrastText',
+      backgroundColor: (theme) => theme.palette.primary.main,
+      color: (theme) => theme.palette.primary.contrastText,
       fontWeight: 700,
       borderRadius: '0 0 0.25rem 0',
       '&:focus': {

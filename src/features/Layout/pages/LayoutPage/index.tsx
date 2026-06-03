@@ -7,7 +7,7 @@ import LayoutTemplate from '../../templates/LayoutTemplate';
 
 const GITHUB_URL = 'https://github.com/ingridl-santos/flag-football-analyzer';
 
-const LayoutPage = () => {
+export default function LayoutPage() {
   const { t } = useTranslation('common');
   const { breadcrumbs } = useAppSelector(selectBreadcrumbs);
 
@@ -18,7 +18,6 @@ const LayoutPage = () => {
         header: {
           title: t('appTitle'),
           menuEntries: [],
-          onMenuButtonClick: () => {},
         },
         footer: {
           githubUrl: GITHUB_URL,
@@ -28,6 +27,4 @@ const LayoutPage = () => {
       <Outlet />
     </LayoutTemplate>
   );
-};
-
-export default LayoutPage;
+}

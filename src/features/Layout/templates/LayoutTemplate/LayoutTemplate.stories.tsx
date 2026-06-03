@@ -15,7 +15,7 @@ const FOOTER_PROPS = {
 };
 
 const meta: Meta<typeof LayoutTemplate> = {
-  title: 'Layout / Templates / Layout Template',
+  title: 'Features / Layout / Templates / Layout Template',
   component: LayoutTemplate,
   parameters: {
     layout: 'fullscreen',

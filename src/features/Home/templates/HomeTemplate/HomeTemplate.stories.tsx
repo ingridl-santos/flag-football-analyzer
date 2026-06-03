@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import HomeTemplate from '.';
 
 const meta: Meta<typeof HomeTemplate> = {
-  title: 'Features / Home / Templates / Home Template',
+  title: 'Features / Home / Home Template',
   component: HomeTemplate,
   parameters: {
     layout: 'padded',
