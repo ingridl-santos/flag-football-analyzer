@@ -1,0 +1,184 @@
+<div>
+  <div
+    class="MuiStack-root css-8r4r5m-MuiStack-root"
+  >
+    <h2
+      class="MuiTypography-root MuiTypography-h3 css-unuo6d-MuiTypography-root"
+    >
+      segments
+    </h2>
+    <div
+      class="MuiTableContainer-root css-rorn0c-MuiTableContainer-root"
+    >
+      <table
+        aria-label="segments"
+        class="MuiTable-root css-1h2c9v3-MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head css-1sjjssz-MuiTableRow-root"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-lruxsp-MuiTableCell-root"
+              scope="col"
+            >
+              colNumber
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-xpfpah-MuiTableCell-root"
+              scope="col"
+            >
+              colTimeRange
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-rf7kbk-MuiTableCell-root"
+              scope="col"
+            >
+              colClassification
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-lcwcvw-MuiTableCell-root"
+              scope="col"
+            />
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root css-4wyatn-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+              >
+                1
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <button
+                aria-label="segmentLabel: 0:10 → 0:25. timelineSeekTo"
+                class="MuiButtonBase-root css-2kae15-MuiButtonBase-root"
+                tabindex="0"
+                type="button"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-14xs56e-MuiTypography-root"
+                >
+                  0:10 → 0:25
+                </p>
+                <span
+                  class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+                >
+                  0:15
+                </span>
+              </button>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-78ft3-MuiTypography-root"
+              >
+                classificationEmpty
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <button
+                aria-label="deleteSegment"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                  />
+                </svg>
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root css-4wyatn-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-byldo4-MuiTypography-root"
+              >
+                2
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <button
+                aria-label="segmentLabel: 0:42 → 1:23. timelineSeekTo"
+                class="MuiButtonBase-root css-2kae15-MuiButtonBase-root"
+                tabindex="0"
+                type="button"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-body2 css-14xs56e-MuiTypography-root"
+                >
+                  0:42 → 1:23
+                </p>
+                <span
+                  class="MuiTypography-root MuiTypography-caption css-nvlz8b-MuiTypography-root"
+                >
+                  0:41
+                </span>
+              </button>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body2 css-78ft3-MuiTypography-root"
+              >
+                classificationEmpty
+              </p>
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dwope3-MuiTableCell-root"
+            >
+              <button
+                aria-label="deleteSegment"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z"
+                  />
+                </svg>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

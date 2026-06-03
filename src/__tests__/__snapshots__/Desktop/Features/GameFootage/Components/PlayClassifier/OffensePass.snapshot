@@ -1,0 +1,311 @@
+<div>
+  <div
+    class="MuiStack-root css-bphiqh-MuiStack-root"
+  >
+    <div
+      class="MuiStack-root css-15zrm6c-MuiStack-root"
+    >
+      <h6
+        class="MuiTypography-root MuiTypography-subtitle1 css-11raq2z-MuiTypography-root"
+      >
+        classifier.heading
+      </h6>
+      <p
+        class="MuiTypography-root MuiTypography-body2 css-7x1md9-MuiTypography-root"
+      >
+        0:42 → 1:23
+         · 
+        0:41
+      </p>
+    </div>
+    <div
+      class="MuiStack-root css-5u2gm5-MuiStack-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-caption css-fzhc8p-MuiTypography-root"
+      >
+        classifier.phaseLabel
+      </span>
+      <div
+        aria-label="classifier.phaseLabel"
+        class="MuiToggleButtonGroup-root css-yhcl14-MuiToggleButtonGroup-root"
+        role="group"
+      >
+        <button
+          aria-pressed="true"
+          class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-ux7rrd-MuiButtonBase-root-MuiToggleButton-root"
+          tabindex="0"
+          type="button"
+          value="offense"
+        >
+          classifier.offense
+        </button>
+        <button
+          aria-pressed="false"
+          class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-ux7rrd-MuiButtonBase-root-MuiToggleButton-root"
+          tabindex="0"
+          type="button"
+          value="defense"
+        >
+          classifier.defense
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiStack-root css-5u2gm5-MuiStack-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-caption css-fzhc8p-MuiTypography-root"
+      >
+        classifier.downLabel
+      </span>
+      <div
+        aria-label="classifier.downLabel"
+        class="MuiToggleButtonGroup-root css-yhcl14-MuiToggleButtonGroup-root"
+        role="group"
+      >
+        <button
+          aria-pressed="false"
+          class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-1n9o4cd-MuiButtonBase-root-MuiToggleButton-root"
+          tabindex="0"
+          type="button"
+          value="1"
+        >
+          classifier.down1
+        </button>
+        <button
+          aria-pressed="false"
+          class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-middleButton css-1n9o4cd-MuiButtonBase-root-MuiToggleButton-root"
+          tabindex="0"
+          type="button"
+          value="2"
+        >
+          classifier.down2
+        </button>
+        <button
+          aria-pressed="true"
+          class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-middleButton css-1n9o4cd-MuiButtonBase-root-MuiToggleButton-root"
+          tabindex="0"
+          type="button"
+          value="3"
+        >
+          classifier.down3
+        </button>
+        <button
+          aria-pressed="false"
+          class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-1n9o4cd-MuiButtonBase-root-MuiToggleButton-root"
+          tabindex="0"
+          type="button"
+          value="4"
+        >
+          classifier.down4
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiStack-root css-5u2gm5-MuiStack-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-caption css-fzhc8p-MuiTypography-root"
+      >
+        classifier.playLabel
+      </span>
+      <div
+        aria-label="classifier.playLabel"
+        class="MuiToggleButtonGroup-root css-yhcl14-MuiToggleButtonGroup-root"
+        role="group"
+      >
+        <button
+          aria-pressed="false"
+          class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-firstButton css-ux7rrd-MuiButtonBase-root-MuiToggleButton-root"
+          tabindex="0"
+          type="button"
+          value="Run"
+        >
+          classifier.run
+        </button>
+        <button
+          aria-pressed="true"
+          class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected MuiToggleButton-sizeSmall MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-ux7rrd-MuiButtonBase-root-MuiToggleButton-root"
+          tabindex="0"
+          type="button"
+          value="Pass"
+        >
+          classifier.pass
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiStack-root css-5u2gm5-MuiStack-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-caption css-fzhc8p-MuiTypography-root"
+      >
+        classifier.resultLabel
+      </span>
+      <div
+        class="MuiStack-root css-1jkm2ww-MuiStack-root"
+      >
+        <div
+          class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-outlinedDefault css-ozs74p-MuiButtonBase-root-MuiChip-root"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+          >
+            classifier.resultTouchdown
+          </span>
+        </div>
+        <div
+          class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-outlinedDefault css-ozs74p-MuiButtonBase-root-MuiChip-root"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+          >
+            classifier.resultCompletion
+          </span>
+        </div>
+        <div
+          class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-outlinedDefault css-ozs74p-MuiButtonBase-root-MuiChip-root"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+          >
+            classifier.resultIncompletion
+          </span>
+        </div>
+        <div
+          class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-outlinedDefault css-ozs74p-MuiButtonBase-root-MuiChip-root"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+          >
+            classifier.resultInterception
+          </span>
+        </div>
+        <div
+          class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-outlinedDefault css-ozs74p-MuiButtonBase-root-MuiChip-root"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+          >
+            classifier.resultSack
+          </span>
+        </div>
+        <div
+          class="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-sizeSmall MuiChip-colorDefault MuiChip-clickable MuiChip-clickableColorDefault MuiChip-outlinedDefault css-ozs74p-MuiButtonBase-root-MuiChip-root"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            class="MuiChip-label MuiChip-labelSmall css-rrn746-MuiChip-label"
+          >
+            classifier.resultFlagPull
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiStack-root css-5u2gm5-MuiStack-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-caption css-fzhc8p-MuiTypography-root"
+      >
+        classifier.playerLabel
+      </span>
+      <div
+        class="MuiFormControl-root MuiTextField-root css-1nag1c2-MuiFormControl-root-MuiTextField-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-sizeSmall css-1s7eke9-MuiInputBase-root-MuiOutlinedInput-root"
+        >
+          <input
+            aria-invalid="false"
+            aria-label="classifier.playerLabel"
+            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall css-5lgxi2-MuiInputBase-input-MuiOutlinedInput-input"
+            id=":stable-mocked-react-id-1:"
+            placeholder="classifier.playerPlaceholder"
+            type="text"
+            value=""
+          />
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-1whs34k-MuiNotchedOutlined-root"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiStack-root css-5u2gm5-MuiStack-root"
+    >
+      <span
+        class="MuiTypography-root MuiTypography-caption css-fzhc8p-MuiTypography-root"
+      >
+        classifier.tagsLabel
+      </span>
+      <div
+        class="MuiAutocomplete-root css-1x6bjyf-MuiAutocomplete-root"
+      >
+        <div
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-sizeSmall MuiAutocomplete-inputRoot css-1h3z9g-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-invalid="false"
+              aria-label="classifier.tagsLabel"
+              autocapitalize="none"
+              autocomplete="off"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSizeSmall MuiAutocomplete-input MuiAutocomplete-inputFocused css-5lgxi2-MuiInputBase-input-MuiOutlinedInput-input"
+              id=":stable-mocked-react-id-2:"
+              placeholder="tagsInputPlaceholder"
+              role="combobox"
+              spellcheck="false"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-r01yff-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-1whs34k-MuiNotchedOutlined-root"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr
+      class="MuiDivider-root MuiDivider-fullWidth css-1lg1g87-MuiDivider-root"
+    />
+  </div>
+</div>
