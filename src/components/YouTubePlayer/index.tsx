@@ -42,7 +42,7 @@ export default function YouTubePlayer({
   useSeek(seekTo, seek, onSeekConsumed);
 
   const PlayPauseIcon = isPlaying ? PauseIcon : PlayArrowIcon;
-  const playPauseLabel = isPlaying ? (t('pause') ?? 'Pause') : (t('play') ?? 'Play');
+  const playPauseLabel = isPlaying ? t('pause', { defaultValue: 'Pause' }) : t('play', { defaultValue: 'Play' });
   const timestamp = `${formatTime(currentTime)} / ${formatTime(duration)}`;
 
   return (

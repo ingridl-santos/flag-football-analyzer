@@ -54,7 +54,7 @@ export default function VideoPlayer({
   };
 
   const PlayPauseIcon = isPlaying ? PauseIcon : PlayArrowIcon;
-  const playPauseLabel = isPlaying ? (t('pause') ?? 'Pause') : (t('play') ?? 'Play');
+  const playPauseLabel = isPlaying ? t('pause', { defaultValue: 'Pause' }) : t('play', { defaultValue: 'Play' });
   const timestamp = `${formatTime(currentTime)} / ${formatTime(duration)}`;
 
   return (
@@ -86,7 +86,7 @@ export default function VideoPlayer({
         max={duration || 1}
         step={0.1}
         onChange={handleSliderChange}
-        aria-label={t('timeline') ?? 'Video timeline'}
+        aria-label={t('timeline', { defaultValue: 'Video timeline' })}
         size="small"
       />
 

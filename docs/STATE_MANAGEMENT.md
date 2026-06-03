@@ -217,6 +217,7 @@ import myNewReducer from './MyNewSlice';
 
 export const store = configureStore({
   reducer: {
+    analysis: analysisReducer,
     breadcrumbs: breadcrumbReducer,
     video: videoReducer,
     segments: segmentReducer,

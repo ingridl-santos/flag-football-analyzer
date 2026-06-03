@@ -9,10 +9,11 @@ The application is a single-page app (SPA) built with React 18, React Router v6 
 `src/index.tsx` bootstraps the app. The provider stack, from outermost to innermost:
 
 ```
-<React.StrictMode>
-  <I18nextProvider>       ← i18next translations
+<I18nextProvider>         ← i18next translations
+  <ErrorBoundary>         ← top-level error boundary
     <Provider store>      ← Redux store
-      <RouterProvider>    ← React Router v6 data router
+      <Suspense>          ← lazy-load boundary
+        <RouterProvider>  ← React Router v6 data router
 ```
 
 Inside the router, `App.tsx` adds:
@@ -156,7 +157,17 @@ export default function SectionAHoc() {
 
 ```tsx
 export default function MyFeaturePage() {
+  const { t } = useTranslation('pageTitles');
   useDocumentTitle(t('myFeature'));
+
+  return (
+    <MyFeatureTemplate
+      SectionAHoc={<SectionAHoc />}
+      SectionBHoc={<SectionBHoc />}
+      SectionCHoc={<SectionCHoc />}
+    />
+  );
+}
 
   return (
     <MyFeatureTemplate
@@ -221,11 +232,21 @@ src/
     ├── Errors/                    # Error boundary pages
     ├── GameFootage/
     │   ├── components/            # Feature-scoped components
+    │   │   ├── ModeToggle/
+    │   │   ├── PlayClassifier/
     │   │   ├── PlayTypeSelector/
-    │   │   ├── SegmentList/
+    │   │   ├── SegmentControls/
+    │   │   ├── SegmentPanel/
     │   │   ├── SegmentTable/
+    │   │   ├── SegmentTimeline/
     │   │   ├── TagSuggestions/
+    │   │   ├── VideoPlayerSection/
     │   │   └── YouTubeUrlInput/
+    │   ├── hocs/                  # Logic wrappers (Redux → components)
+    │   │   ├── ModeToggleHoc.tsx
+    │   │   ├── SegmentControlsHoc.tsx
+    │   │   ├── SegmentPanelHoc.tsx
+    │   │   └── VideoPlayerHoc.tsx
     │   ├── pages/
     │   │   └── GameFootagePage.tsx
     │   └── templates/
@@ -241,12 +262,13 @@ src/
 
 ## Redux Store
 
-The store is configured in `src/redux/store.ts` with three slices:
+The store is configured in `src/redux/store.ts` with four slices:
 
 | Reducer key | Slice file | Purpose |
 |---|---|---|
+| `analysis` | `AnalysisSlice/` | Active analysis mode (`'cut'` \| `'tag'`), controls Game Footage page behaviour |
 | `breadcrumbs` | `BreadcrumbSlice/` | Page breadcrumb trail, managed by pages via `useEffect` |
-| `video` | `VideoSlice/` | Current video (URL/YouTube ID/type), playback state (time, duration, isPlaying) |
+| `video` | `VideoSlice/` | Current video (URL/YouTube ID/type), playback state (time, duration, isPlaying, seekTo) |
 | `segments` | `SegmentSlice/` | Pending segment (start/end/playType/tags) and the saved segments list |
 
 Always use the typed hooks from `src/redux/hooks.ts`:
@@ -262,7 +284,9 @@ All custom hooks live in `src/hooks/`. Each hook **must** have a co-located unit
 
 | Hook | Purpose |
 |---|---|
+| `useActiveSegmentId` | Returns the ID of the segment that contains the current playhead time |
 | `useDocumentTitle` | Sets the browser tab title using the `pageTitles` i18n namespace |
+| `useSeek` | Watches `seekTo` from `VideoSlice` and calls the player's seek method imperatively |
 | `useVideoExport` | Manages FFmpeg.wasm loading and ZIP export of video segments |
 | `useVideoPlayer` | Controls HTML5 video playback (play/pause/seek/time tracking) |
 | `useYouTubePlayer` | Controls YouTube iframe API playback |

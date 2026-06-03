@@ -68,7 +68,7 @@ export default function Header({
                 color="inherit"
                 to={toNamedRoute(ROUTES.home)}
                 sx={{ minWidth: 'unset', paddingX: 0, gap: '0.5rem' }}
-                aria-label={t('header.goHome') ?? 'Home'}
+                aria-label={t('header.goHome', { defaultValue: 'Home' })}
               >
                 <AppLogo width="2.5rem" height="2.5rem" aria-hidden="true" />
 

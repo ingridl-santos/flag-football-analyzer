@@ -72,7 +72,7 @@ export default function Footer({ githubUrl, ...rest }: FooterProps) {
           >
             <IconButton
               component="span"
-              aria-label={t('footer.viewOnGitHub') ?? 'View on GitHub'}
+              aria-label={t('footer.viewOnGitHub', { defaultValue: 'View on GitHub' })}
               size="small"
             >
               <GitHubIcon fontSize="small" />

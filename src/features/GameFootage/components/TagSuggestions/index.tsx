@@ -73,7 +73,7 @@ export default function TagSuggestions({
             size="small"
             icon={<AutoAwesomeIcon />}
             onClick={() => onAddTag(tag)}
-            aria-label={t('addTagSuggestion', { tag }) ?? `Add ${tag}`}
+            aria-label={t('addTagSuggestion', { tag, defaultValue: `Add ${tag}` })}
           />
         ))}
 
@@ -84,7 +84,7 @@ export default function TagSuggestions({
             size="small"
             variant="outlined"
             onClick={() => onAddTag(tag)}
-            aria-label={t('addTagSuggestion', { tag }) ?? `Add ${tag}`}
+            aria-label={t('addTagSuggestion', { tag, defaultValue: `Add ${tag}` })}
           />
         ))}
       </Stack>
@@ -115,7 +115,7 @@ export default function TagSuggestions({
                   size="small"
                   variant="outlined"
                   onClick={() => onAddTag(tag)}
-                  aria-label={t('addTagSuggestion', { tag }) ?? `Add ${tag}`}
+                  aria-label={t('addTagSuggestion', { tag, defaultValue: `Add ${tag}` })}
                 />
               ))}
             </Stack>
